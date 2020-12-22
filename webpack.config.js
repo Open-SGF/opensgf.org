@@ -16,7 +16,20 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist', 'assets'),
         publicPath: '/assets/',
-        filename: process.env.NODE_ENV === 'production' ? '[name].[contenthash].js' : '[name].js',
+        filename: process.env.NODE_ENV === 'production' ? '[name].[chunkhash].js' : '[name].js',
+
+    },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all'
+                }
+            }
+        }
     },
     plugins: [
         new WebpackManifestPlugin({
