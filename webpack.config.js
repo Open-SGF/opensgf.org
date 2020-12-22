@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         new WebpackManifestPlugin({
-            basePath: '/assets/'
+            basePath: '/assets/',
         }),
         new MiniCssExtractPlugin({
             filename: process.env.NODE_ENV === 'production' ? '[name].[contenthash].css' : '[name].css',
