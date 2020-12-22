@@ -1,5 +1,5 @@
 {
-  "name": "tea-stack",
+  "name": "opensgf",
   "version": "1.0.0",
   "description": "A starter template for the TEA stack.",
   "main": "index.js",
@@ -11,10 +11,6 @@
     "start": "npm-run-all clean -p build:* -p start:*",
     "start:eleventy": "eleventy --serve --quiet",
     "start:webpack": "webpack --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mattwaler/tea-stack.git"
   },
   "prettier": {
     "semi": false,
@@ -28,12 +24,6 @@
     "tailwind",
     "alpine"
   ],
-  "author": "Matt Waler",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mattwaler/tea-stack/issues"
-  },
-  "homepage": "https://github.com/mattwaler/tea-stack#readme",
   "dependencies": {
     "alpinejs": "^2.8.0"
   },
