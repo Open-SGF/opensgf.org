@@ -4,10 +4,10 @@
     "description": "A starter template for the TEA stack.",
     "main": "index.js",
     "scripts": {
-        "build": "cross-env NODE_ENV=production npm-run-all -s clean build:webpack build:eleventy",
-        "build:eleventy": "eleventy",
-        "build:webpack": "webpack",
-        "clean": "rm -rf dist",
+        "build": "npm-run-all -s clean build:webpack build:eleventy",
+        "build:eleventy": "cross-env NODE_ENV=production eleventy",
+        "build:webpack": "cross-env NODE_ENV=production webpack",
+        "clean": "rimraf dist",
         "start": "npm-run-all -s clean -p start:webpack start:eleventy",
         "start:eleventy": "eleventy --serve --quiet",
         "start:webpack": "webpack --watch"
@@ -31,6 +31,7 @@
         "postcss": "^8.2.1",
         "postcss-import": "^14.0.0",
         "postcss-loader": "^4.1.0",
+        "rimraf": "^3.0.2",
         "sass": "^1.30.0",
         "sass-loader": "^10.1.0",
         "style-loader": "^2.0.0",
