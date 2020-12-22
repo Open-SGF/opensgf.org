@@ -1,2 +1,2 @@
 import 'alpinejs'
-import './main.pcss'
+import './main.scss'

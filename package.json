@@ -38,6 +38,8 @@
     "postcss": "^8.2.1",
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.1.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.0.2",
     "tailwindcss-debug-screens": "^2.0.0",
