@@ -2,7 +2,8 @@
 {% extends "layout.njk" %}
 
 {% block body %}
-    <main class="container py-8">
-        <h1>This is the {{ title | lower }} page.</h1>
-    </main>
+    {% include 'sections/who-we-are.njk' %}
+    {% include 'sections/projects.njk' %}
+    {% include 'sections/get-involved.njk' %}
+    {% include 'sections/partners.njk' %}
 {% endblock %}

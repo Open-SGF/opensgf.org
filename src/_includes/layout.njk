@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% asset '/assets/main.css' %}">
-    <title>{{ title }} | TEA Stack</title>
+    <title>{{ title }} | Open SGF</title>
     {% block head %}{% endblock %}
 </head>
 <body class="{{ 'debug-screens' if env.devMode }}">
-    {% include 'header.njk' %}
+{% include 'navigation.njk' %}
+<main>
     {% block body %}{% endblock %}
-    <script src="{% asset '/assets/runtime.js' %}" defer></script>
-    <script src="{% asset '/assets/vendor.js' %}" defer></script>
-    <script src="{% asset '/assets/main.js' %}" defer></script>
+</main>
+{% include 'footer.njk' %}
+<script src="{% asset '/assets/runtime.js' %}" defer></script>
+<script src="{% asset '/assets/vendor.js' %}" defer></script>
+<script src="{% asset '/assets/main.js' %}" defer></script>
 </body>
 </html>
