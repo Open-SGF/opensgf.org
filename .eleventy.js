@@ -4,7 +4,7 @@ const path = require('path');
 const manifest = loadManifest();
 
 module.exports = (config) => {
-    config.addPassthroughCopy({ 'src/assets': 'assets' });
+    config.addPassthroughCopy({ 'src/static': './' });
     config.setBrowserSyncConfig({
         files: ['dist/**/*'],
         open: true,
