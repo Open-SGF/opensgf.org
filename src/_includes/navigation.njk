@@ -1,12 +1,17 @@
-<header>
-    <nav class="bg-gray-100">
-        <div class="container py-4 space-x-2">
-            <a
-                class="{{ 'font-black' if page.url == '/' }}"
-                href="/"
-            >
-                Home
-            </a>
+<header class="border-b-4"
+    style="border-image-source: linear-gradient(to right, #133654 80%, #56A4D8 80% 100%); border-image-slice: 1;">
+    <nav class="py-5 md:py-10 grid grid-cols-2 container">
+        <img class="block" src="/open-sgf-logo.svg" alt="Open SGF logo" />
+        <div>
+            <div class="flex md:hidden justify-end">
+                <a href="#"><img src="/hamburger.svg"></a>
+            </div>
+            <div class="hidden md:flex py-4 space-x-5 text-darkBlue justify-end text-center">
+                <a class="py-2" href="#" title="View our Projects">Projects</a>
+                <a class="py-2" href="#" title="See how to get involved">Get Involved</a>
+                <a class="py-2" href="#" title="Our partners">Partners</a>
+                <a class="inline-block bg-blue py-2 px-5 text-white" href="https://www.codeforamerica.org/donate" title="Donate to Code for America" target="_blank">Donate</a>
+            </div>
         </div>
     </nav>
 </header>
