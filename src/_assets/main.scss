@@ -2,10 +2,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.socialIcon {
+.social-icon {
     display: inline-block;
     width: 3rem;
     height: 3rem;
+
+    &:hover svg path {
+        fill: #56A4D8;
+    }
 
     & svg path {
         fill: #ffffff;
