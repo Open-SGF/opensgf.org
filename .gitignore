@@ -1,3 +1,31 @@
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# Mac OS directory preferences
 .DS_Store
-dist
+
+# KDE directory preferences
+.directory
+
+# Logs
+npm-debug.log*
+
+# Dependency directories
 node_modules
+
+# Build output
+dist
+
+# Editor prefrence folders
+.idea
+.vscode
