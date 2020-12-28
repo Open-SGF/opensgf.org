@@ -7,15 +7,15 @@
 <header x-data="{ isOverlayOpen: true }">
     <div class="lg:container px-8 py-5 md:py-10 flex items-center justify-between">
         <a href="/">
-            <img class="block h-8 md:h-12 lg:h-16 xl:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
+            <img class="block h-8 md:h-10 lg:h-16 xl:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
         </a>
-        <div class="flex md:hidden ">
+        <div class="flex md:hidden">
             <button @click="isOverlayOpen = true" title="Open navigation overlay">
                 <img alt="" src="/hamburger.svg">
             </button>
         </div>
-        <nav class="hidden md:flex py-4 space-x-5 justify-end items-center">
-            <ul>
+        <nav class="hidden md:block">
+            <ul class="flex py-4 space-x-5 xl:space-x-8 justify-end items-center">
                 {% for link, title in links %}
                     <li>
                         <a class="nav-link" href="{{ link }}">{{ title }}</a>
@@ -23,7 +23,7 @@
                 {% endfor %}
                 <li>
                     <a
-                        class="inline-block bg-blue py-2 px-5 text-white"
+                        class="inline-block bg-blue py-2 px-5 text-white text-lg lg:text-2xl xl:text-3xl font-mono"
                         href="https://www.codeforamerica.org/donate"
                         title="Donate to Code for America"
                         target="_blank"
@@ -43,30 +43,33 @@
         class="nav-overlay md:hidden"
         :class="{ 'active': isOverlayOpen }"
     >
-        <div>
-            <button class="absolute top-4 right-8" @click="isOverlayOpen = false">
-                <img src="/exit.svg" alt="">
-            </button>
-            <nav>
-                <ul>
-                    {% for link, title in links %}
-                        <li>
-                            <a class="nav-link" href="{{ link }}">{{ title }}</a>
-                        </li>
-                    {% endfor %}
+        <button class="absolute z-10 top-4 right-8" @click="isOverlayOpen = false">
+            <img src="/exit.svg" alt="">
+        </button>
+        <nav class="w-full h-full flex items-center justify-center overlay-content">
+            <ul class="flex flex-col items-center space-y-7 sm:space-y-10">
+                {% for link, title in links %}
                     <li>
                         <a
-                            class="inline-block bg-blue py-2 px-5 text-white"
-                            href="https://www.codeforamerica.org/donate"
-                            title="Donate to Code for America"
-                            target="_blank"
-                        >
-                            Donate
+                            @click="isOverlayOpen = false"
+                            class="nav-link"
+                            href="{{ link }}">
+                            {{ title }}
                         </a>
                     </li>
-                </ul>
-            </nav>
-        </div>
+                {% endfor %}
+                <li class="pt-14">
+                    <a
+                        class="inline-block bg-darkBlue py-2 px-5 text-white shadow-lg font-mono text-3xl sm:text-4xl"
+                        href="https://www.codeforamerica.org/donate"
+                        title="Donate to Code for America"
+                        target="_blank"
+                    >
+                        Donate
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>
 

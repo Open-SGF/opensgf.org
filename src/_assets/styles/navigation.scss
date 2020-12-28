@@ -1,10 +1,11 @@
 .nav-link {
-    @apply text-darkBlue relative py-1;
+    @apply text-white text-3xl sm:text-4xl;
+    @apply md:text-darkBlue font-mono md:text-lg lg:text-2xl xl:text-3xl relative py-1;
     @apply transition duration-300 ease-in-out;
 
     &::before {
         content: '';
-        @apply w-full h-0.5 bg-blue absolute bottom-0 left-0 invisible;
+        @apply w-full h-0.5 bg-white md:bg-blue absolute bottom-0 left-0 invisible;
         @apply transform origin-left scale-x-0;
         @apply transition-all duration-300 ease-in-out;
     }
@@ -12,7 +13,8 @@
     &:hover,
     &:focus,
     &.active {
-        @apply text-blue;
+        @apply md:text-blue;
+
         &::before {
             @apply scale-x-100 visible;
         }
@@ -44,6 +46,14 @@
             @screen md {
                 width: 95px;
             }
+
+            @screen lg {
+                width: 112px;
+            }
+
+            @screen xl {
+                width: 130px;
+            }
         }
     }
 
@@ -74,6 +84,10 @@
         }
     }
 
+    .overlay-content {
+        @apply transition-all duration-200 ease-in-out opacity-0 transform -translate-y-3;
+    }
+
     &.active {
         @apply visible pointer-events-auto;
 
@@ -81,6 +95,10 @@
             @apply transform-gpu translate-x-1/2 -translate-y-1/2;
             --tw-scale-x: 3;
             --tw-scale-y: 3;
+        }
+
+        .overlay-content {
+            @apply opacity-100 duration-500 delay-150 translate-y-0;
         }
     }
 }
