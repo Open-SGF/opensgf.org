@@ -10,12 +10,10 @@ module.exports = {
         },
         fontFamily: {
             'sans': ['Open Sans', 'sans-serif'],
-            'body': ['Open Sans', 'sans-serif'],
-            'title': ['Inconsolata', 'sans-serif']
+            'mono': ['Inconsolata', 'sans-serif']
         },
         container: {
             center: true,
-            padding: '2rem',
         },
         extend: {},
     },

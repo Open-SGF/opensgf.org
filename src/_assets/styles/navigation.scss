@@ -1,0 +1,170 @@
+.nav-link {
+    @apply text-white text-3xl sm:text-4xl;
+    @apply md:text-darkBlue font-mono md:text-lg lg:text-2xl xl:text-3xl relative py-1;
+    @apply transition duration-300 ease-in-out;
+
+    &::before {
+        content: '';
+        @apply w-full h-0.5 bg-white md:bg-blue absolute bottom-0 left-0 invisible;
+        @apply transform origin-left scale-x-0;
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        @apply md:text-blue;
+
+        &::before {
+            @apply scale-x-100 visible;
+        }
+    }
+}
+
+.nav-border {
+    @apply h-1 w-full relative bg-darkBlue;
+
+    .inner-wrapper {
+        @apply absolute left-1/2 bottom-0 z-10 transform -translate-x-1/2 lg:container px-8 w-full;
+    }
+
+    // Needed an extra relative wrapper to hold the before/after elements
+    // or they wouldn't respect the padding of their parent
+    .inner {
+        @apply relative;
+
+        &::before {
+            content: '';
+            @apply absolute left-0 bottom-0 h-1 w-full bg-darkBlue;
+        }
+
+        &::after {
+            content: '';
+            width: 40px;
+            @apply absolute right-0 bottom-0 h-1 bg-blue;
+
+            @screen md {
+                width: 95px;
+            }
+
+            @screen lg {
+                width: 112px;
+            }
+
+            @screen xl {
+                width: 130px;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        @apply absolute right-0 bottom-0 h-1 w-1/3 bg-blue;
+    }
+}
+
+.menu-toggle {
+    $self: &;
+    $size: 40px;
+    @apply relative inline-block z-20;
+    width: $size;
+    height: $size;
+
+    span {
+        @apply relative block my-0 mx-auto;
+        transition-duration: 0s;
+        transition-delay: 200ms;
+
+        &::before,
+        &::after {
+            content: '';
+            @apply absolute left-0;
+        }
+
+        &,
+        &::before,
+        &::after {
+            @apply bg-blue;
+            width: $size;
+            height: 3px;
+        }
+
+        &::before {
+            margin-top: -12px;
+            transition-property: margin, transform, background;
+            transition-duration: 200ms;
+            transition-delay: 200ms, 0ms, 300ms;
+        }
+
+        &::after {
+            margin-top: 12px;
+            transition-property: margin, transform, background,;
+            transition-duration: 200ms;
+            transition-delay: 200ms, 0ms, 300ms;
+        }
+    }
+
+    &.active {
+        span {
+            transition-delay: 200ms;
+            background-color: transparent;
+
+            &::before,
+            &::after {
+                @apply bg-white;
+            }
+
+            &::before {
+                margin-top: 0;
+                transform: rotate(45deg);
+                transition-delay: 0ms, 200ms, 0ms;
+            }
+
+            &::after {
+                margin-top: 0;
+                transform: rotate(-45deg);
+                transition-delay: 0ms, 200ms, 0ms;
+            }
+        }
+    }
+}
+
+.nav-overlay {
+    @apply fixed top-0 left-0 right-0 bottom-0 w-screen h-screen z-10 overflow-hidden invisible pointer-events-none;
+    @apply transition-all duration-500;
+
+    &::before {
+        content: '';
+        @apply absolute top-0 right-0 bg-blue transition-transform ease-in-out duration-500;
+        @apply transform-gpu translate-x-1/2 -translate-y-1/2;
+        --tw-scale-x: .05;
+        --tw-scale-y: .05;
+        border-radius: 50%;
+        z-index: -1;
+        width: 100vh;
+        height: 100vh;
+
+        @media screen and (orientation: landscape) {
+            width: 100vw;
+            height: 100vw;
+        }
+    }
+
+    .overlay-content {
+        @apply transition-all duration-200 ease-in-out opacity-0 transform -translate-y-3;
+    }
+
+    &.active {
+        @apply visible pointer-events-auto;
+
+        &::before {
+            @apply transform-gpu translate-x-1/2 -translate-y-1/2;
+            --tw-scale-x: 3;
+            --tw-scale-y: 3;
+        }
+
+        .overlay-content {
+            @apply opacity-100 duration-500 delay-150 translate-y-0;
+        }
+    }
+}

@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
-    entry: './src/_assets/main.js',
+    entry: './src/_assets/js/main.js',
     mode: process.env.NODE_ENV,
     module: {
         rules: [
@@ -26,10 +26,10 @@ module.exports = {
                 vendor: {
                     test: /[\\/]node_modules[\\/]/,
                     name: 'vendor',
-                    chunks: 'all'
-                }
-            }
-        }
+                    chunks: 'all',
+                },
+            },
+        },
     },
     plugins: [
         new WebpackManifestPlugin({
