@@ -4,35 +4,69 @@
     '#partners': 'Partners'
 } %}
 
-<header>
-    <nav class="lg:container px-8 py-5 md:py-10 flex items-center justify-between">
+<header x-data="{ isOverlayOpen: true }">
+    <div class="lg:container px-8 py-5 md:py-10 flex items-center justify-between">
         <a href="/">
-            <img class="block h-8 md:h-12 lg:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
+            <img class="block h-8 md:h-12 lg:h-16 xl:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
         </a>
         <div class="flex md:hidden ">
-            <button title="Mobile navigation"><img alt="" src="/hamburger.svg"></button>
+            <button @click="isOverlayOpen = true" title="Open navigation overlay">
+                <img alt="" src="/hamburger.svg">
+            </button>
         </div>
-        <ul class="hidden md:flex py-4 space-x-5 justify-end items-center">
-            {% for link, title in links %}
+        <nav class="hidden md:flex py-4 space-x-5 justify-end items-center">
+            <ul>
+                {% for link, title in links %}
+                    <li>
+                        <a class="nav-link" href="{{ link }}">{{ title }}</a>
+                    </li>
+                {% endfor %}
                 <li>
-                    <a class="nav-link" href="{{ link }}">{{ title }}</a>
+                    <a
+                        class="inline-block bg-blue py-2 px-5 text-white"
+                        href="https://www.codeforamerica.org/donate"
+                        title="Donate to Code for America"
+                        target="_blank"
+                    >
+                        Donate
+                    </a>
                 </li>
-            {% endfor %}
-            <li>
-                <a
-                    class="inline-block bg-blue py-2 px-5 text-white"
-                    href="https://www.codeforamerica.org/donate"
-                    title="Donate to Code for America"
-                    target="_blank"
-                >
-                    Donate
-                </a>
-            </li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
+    </div>
     <div class="nav-border">
         <div class="inner-wrapper">
             <div class="inner"></div>
         </div>
     </div>
+    <div
+        class="nav-overlay md:hidden"
+        :class="{ 'active': isOverlayOpen }"
+    >
+        <div>
+            <button class="absolute top-4 right-8" @click="isOverlayOpen = false">
+                <img src="/exit.svg" alt="">
+            </button>
+            <nav>
+                <ul>
+                    {% for link, title in links %}
+                        <li>
+                            <a class="nav-link" href="{{ link }}">{{ title }}</a>
+                        </li>
+                    {% endfor %}
+                    <li>
+                        <a
+                            class="inline-block bg-blue py-2 px-5 text-white"
+                            href="https://www.codeforamerica.org/donate"
+                            title="Donate to Code for America"
+                            target="_blank"
+                        >
+                            Donate
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
+
