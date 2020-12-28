@@ -63,6 +63,72 @@
     }
 }
 
+.menu-toggle {
+    $self: &;
+    $size: 40px;
+    @apply relative inline-block z-20;
+    width: $size;
+    height: $size;
+
+    span {
+        @apply relative block my-0 mx-auto;
+        transition-duration: 0s;
+        transition-delay: 200ms;
+
+        &::before,
+        &::after {
+            content: '';
+            @apply absolute left-0;
+        }
+
+        &,
+        &::before,
+        &::after {
+            @apply bg-blue;
+            width: $size;
+            height: 3px;
+        }
+
+        &::before {
+            margin-top: -12px;
+            transition-property: margin, transform, background;
+            transition-duration: 200ms;
+            transition-delay: 200ms, 0s, 300ms;
+        }
+
+        &::after {
+            margin-top: 12px;
+            transition-property: margin, transform, background,;
+            transition-duration: 200ms;
+            transition-delay: 200ms, 0s, 300ms;
+        }
+    }
+
+    &.active {
+        span {
+            transition-delay: 200ms;
+            background-color: transparent;
+
+            &::before,
+            &::after {
+                @apply bg-white;
+            }
+
+            &::before {
+                margin-top: 0;
+                transform: rotate(45deg);
+                transition-delay: 0s, 200ms, 0s;
+            }
+
+            &::after {
+                margin-top: 0;
+                transform: rotate(-45deg);
+                transition-delay: 0s, 200ms, 0s;
+            }
+        }
+    }
+}
+
 .nav-overlay {
     @apply fixed top-0 left-0 right-0 bottom-0 w-screen h-screen z-10 overflow-hidden invisible pointer-events-none;
     @apply transition-all duration-500;

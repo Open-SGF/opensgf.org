@@ -4,14 +4,19 @@
     '#partners': 'Partners'
 } %}
 
-<header x-data="{ isOverlayOpen: true }">
+<header x-data="{ isOverlayOpen: false }">
     <div class="lg:container px-8 py-5 md:py-10 flex items-center justify-between">
         <a href="/">
             <img class="block h-8 md:h-10 lg:h-16 xl:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
         </a>
         <div class="flex md:hidden">
-            <button @click="isOverlayOpen = true" title="Open navigation overlay">
-                <img alt="" src="/hamburger.svg">
+            <button
+                @click="isOverlayOpen = !isOverlayOpen"
+                title="Open navigation overlay"
+                class="menu-toggle"
+                :class="{ 'active': isOverlayOpen }"
+            >
+                <span></span>
             </button>
         </div>
         <nav class="hidden md:block">
@@ -43,9 +48,6 @@
         class="nav-overlay md:hidden"
         :class="{ 'active': isOverlayOpen }"
     >
-        <button class="absolute z-10 top-4 right-8" @click="isOverlayOpen = false">
-            <img src="/exit.svg" alt="">
-        </button>
         <nav class="w-full h-full flex items-center justify-center overlay-content">
             <ul class="flex flex-col items-center space-y-7 sm:space-y-10">
                 {% for link, title in links %}
