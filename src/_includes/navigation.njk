@@ -5,31 +5,32 @@
 } %}
 
 <header>
-    <nav class="container py-5 md:py-10 grid grid-cols-2">
+    <nav class="lg:container px-8 py-5 md:py-10 flex items-center justify-between">
         <a href="/">
-            <img class="block h-8 md:h-14 lg:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
+            <img class="block h-8 md:h-12 lg:h-20" src="/open-sgf-logo.svg" alt="Open SGF logo"/>
         </a>
-        <div>
-            <div class="flex md:hidden justify-end">
-                <a href="#"><img src="/hamburger.svg"></a>
-            </div>
-            <ul class="hidden md:flex py-4 space-x-5 justify-end items-center">
-                {% for link, title in links %}
-                    <li>
-                        <a class="nav-link" href="{{ link }}">{{ title }}</a>
-                    </li>
-                {% endfor %}
-                <li>
-                    <a
-                        class="inline-block bg-blue py-2 px-5 text-white"
-                        href="https://www.codeforamerica.org/donate"
-                        title="Donate to Code for America"
-                        target="_blank"
-                    >
-                        Donate
-                    </a>
-                </li>
-            </ul>
+        <div class="flex md:hidden ">
+            <button title="Mobile navigation"><img alt="" src="/hamburger.svg"></button>
         </div>
+        <ul class="hidden md:flex py-4 space-x-5 justify-end items-center">
+            {% for link, title in links %}
+                <li>
+                    <a class="nav-link" href="{{ link }}">{{ title }}</a>
+                </li>
+            {% endfor %}
+            <li>
+                <a
+                    class="inline-block bg-blue py-2 px-5 text-white"
+                    href="https://www.codeforamerica.org/donate"
+                    title="Donate to Code for America"
+                    target="_blank"
+                >
+                    Donate
+                </a>
+            </li>
+        </ul>
     </nav>
+    <div class="nav-border">
+        <div class="nav-border-inner"></div>
+    </div>
 </header>
