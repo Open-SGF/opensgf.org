@@ -22,8 +22,14 @@
 .nav-border {
     @apply h-1 w-full relative bg-darkBlue;
 
-    .nav-border-inner {
+    .inner-wrapper {
         @apply absolute left-1/2 bottom-0 z-10 transform -translate-x-1/2 lg:container px-8 w-full;
+    }
+
+    // Needed an extra relative wrapper to hold the before/after elements
+    // or they wouldn't respect the padding of their parent
+    .inner {
+        @apply relative;
 
         &::before {
             content: '';
@@ -32,11 +38,11 @@
 
         &::after {
             content: '';
-            width: 72px;
+            width: 40px;
             @apply absolute right-0 bottom-0 h-1 bg-blue;
 
             @screen md {
-                width: 127px;
+                width: 95px;
             }
         }
     }
