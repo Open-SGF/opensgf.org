@@ -93,14 +93,14 @@
             margin-top: -12px;
             transition-property: margin, transform, background;
             transition-duration: 200ms;
-            transition-delay: 200ms, 0s, 300ms;
+            transition-delay: 200ms, 0ms, 300ms;
         }
 
         &::after {
             margin-top: 12px;
             transition-property: margin, transform, background,;
             transition-duration: 200ms;
-            transition-delay: 200ms, 0s, 300ms;
+            transition-delay: 200ms, 0ms, 300ms;
         }
     }
 
@@ -117,13 +117,13 @@
             &::before {
                 margin-top: 0;
                 transform: rotate(45deg);
-                transition-delay: 0s, 200ms, 0s;
+                transition-delay: 0ms, 200ms, 0ms;
             }
 
             &::after {
                 margin-top: 0;
                 transform: rotate(-45deg);
-                transition-delay: 0s, 200ms, 0s;
+                transition-delay: 0ms, 200ms, 0ms;
             }
         }
     }

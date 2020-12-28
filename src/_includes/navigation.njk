@@ -12,9 +12,11 @@
         <div class="flex md:hidden">
             <button
                 @click="isOverlayOpen = !isOverlayOpen"
-                title="Open navigation overlay"
                 class="menu-toggle"
                 :class="{ 'active': isOverlayOpen }"
+                aria-haspopup="true"
+                :aria-expanded="isOverlayOpen.toString()"
+                :aria-label="isOverlayOpen ? 'Close menu' : 'Open menu'"
             >
                 <span></span>
             </button>
