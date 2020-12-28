@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const htmlMinify = require('html-minifier');
 
 const manifest = loadManifest();
 
@@ -30,6 +31,18 @@ module.exports = (config) => {
         const foundAsset = manifest[assetName];
 
         return foundAsset ? foundAsset : assetName;
+    });
+
+    config.addTransform('html-minify', function (content, outputPath) {
+        if (process.env.NODE_ENV === 'production' && outputPath.endsWith('.html')) {
+            return htmlMinify.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true,
+            });
+        }
+
+        return content;
     });
 
     return {
