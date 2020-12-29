@@ -12,7 +12,7 @@
 </head>
 <body class="{{ 'debug-screens' if env.devMode }}">
 {% include 'navigation.njk' %}
-<main class="my-20 space-y-20 md:space-y-40">
+<main>
     {% block body %}{% endblock %}
 </main>
 {% include 'footer.njk' %}
