@@ -19,6 +19,7 @@ $RECYCLE.BIN/
 
 # Logs
 npm-debug.log*
+*.log
 
 # Dependency directories
 node_modules
