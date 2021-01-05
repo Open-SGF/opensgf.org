@@ -1,1 +1,47 @@
-<section></section>
+{% set projects = [
+    {
+        title: 'SGF Covid Support',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        link: 'https://sgfcovidsupport.org/'
+    },
+    {
+        title: 'SGF Covid Support',
+        description: 'I am a description',
+        link: 'https://sgfcovidsupport.org/'
+    },
+    {
+        title: 'SGF Covid Support',
+        description: 'I am a description',
+        link: 'https://sgfcovidsupport.org/'
+    }
+] %}
+
+<section class="projects">
+    <div class="lg:container px-8">
+        <div class="flex justify-center mb-20">
+            <h2 class="font-mono text-5xl text-darkBlue pb-4 px-4 border-b-2 border-darkBlue border-solid">
+                Projects
+            </h2>
+        </div>
+        <div class="flex flex-wrap -mx-12 -mb-24">
+            {% for project in projects %}
+                <div class="w-1/2 px-12 pb-24">
+                    <div class="shadow-xl bg-white flex flex-col h-full justify-between p-10 card" >
+                        <div>
+                            <h3 class="font-mono text-3xl mb-4">{{ project.title }}</h3>
+                            <p class="font-sans text-xl leading-8">{{ project.description }}</p>
+                        </div>
+                        <div class="flex w-full justify-end mt-4">
+                            <a class="font-mono flex items-center" href="{{ project.link }}">
+                                <p class="mr-4 text-xl">Learn More</p>
+                                <span aria-hidden="true" class="w-8">
+                                {% include 'svgs/long-arrow-right.svg' %}
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
