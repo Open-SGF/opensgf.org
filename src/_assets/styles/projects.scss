@@ -3,7 +3,7 @@
 
     &::before {
         content: "";
-        background: url("/dark-blue-circle-pattern.png");
+        background: url("/img/dark-blue-circle-pattern.png");
         @apply absolute top-1/2 left-0 transform -translate-x-1/2 translate-y-1/2;
     }
 
