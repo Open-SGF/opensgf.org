@@ -1,0 +1,55 @@
+.projects {
+
+    .background {
+        @apply relative;
+
+        &::before {
+            content: "";
+            background: url("/img/dark-blue-circle-pattern.png") no-repeat;
+            background-size: contain;
+            width: 50%;
+            height: 50%;
+            @apply absolute left-0 transform -translate-x-1/3 -translate-y-1/2;
+            top: calc(50% + 100px);
+            z-index: -1;
+        }
+    }
+
+    .card {
+        @apply relative;
+
+        &::after {
+            content: "";
+            @apply bg-blue w-full h-full absolute -top-5 -right-5;
+            z-index: -1;
+        }
+    }
+
+    .card-link {
+        @apply transition duration-300 ease-in-out relative;
+        svg {
+            @apply fill-current
+        }
+
+        p {
+            &::before {
+                content: '';
+                @apply w-full h-0.5 bg-blue absolute bottom-0 left-0 invisible;
+                @apply transform origin-left scale-x-0;
+                @apply transition-all duration-300 ease-in-out;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            @apply text-blue;
+
+            p {
+
+                &::before {
+                    @apply scale-x-100 visible;
+                }
+            }
+        }
+    }
+}
