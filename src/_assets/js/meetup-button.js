@@ -4,7 +4,7 @@ export function meetupButton() {
     const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
     const button = document.querySelector('#meetupButton');
 
-    fetch(${corsAnywhere}https://api.meetup.com/${groupSlug}/events)
+    fetch(`${corsAnywhere}https://api.meetup.com/${groupSlug}/events`)
         .then(res => res.json())
         .then(events => {
             if (typeof events === 'undefined' || events.length === 0) {
