@@ -1,12 +1,33 @@
-.navigation {
+$nav-height: 168px;
+$nav-scrolled-height: 100px;
+$nav-mobile-height: 44px;
+
+.nav {
     @apply fixed top-0 left-0 z-40 w-full bg-white;
 
     & + main {
-        margin-top: 44px;
+        padding-top: $nav-mobile-height;
 
         @screen md {
-            margin-top: 168px;
+            padding-top: $nav-height;
         }
+    }
+
+    &.is-scrolled {
+        .nav-container {
+            @screen md {
+                height: $nav-scrolled-height;
+            }
+        }
+    }
+}
+
+.nav-container {
+    height: $nav-mobile-height;
+    transition: height 250ms ease-in-out;
+
+    @screen md  {
+        height: $nav-height;
     }
 }
 
