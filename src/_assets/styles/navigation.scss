@@ -1,3 +1,15 @@
+.navigation {
+    @apply fixed top-0 left-0 z-40 w-full bg-white;
+
+    & + main {
+        margin-top: 44px;
+
+        @screen md {
+            margin-top: 168px;
+        }
+    }
+}
+
 .nav-link {
     @apply text-white text-3xl sm:text-4xl;
     @apply md:text-darkBlue font-mono md:text-lg lg:text-2xl xl:text-3xl relative py-1;
