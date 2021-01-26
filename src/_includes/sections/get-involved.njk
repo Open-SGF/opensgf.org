@@ -26,8 +26,22 @@
                 than happy to assist you 1&nbsp;on&nbsp;1.
             </p>
             <div class="flex flex-row justify-center flex-wrap sm:flex-nowrap lg:justify-start mt-5 sm:space-x-4 font-mono text-white">
-                <a class="w-full sm:w-auto inline-block bg-discordPurple py-2 px-5 text-center mb-4 sm:mb-0" href="https://discord.gg/jFD8dZP" title="Link to Open SGF Discord server" target="_blank">Join our Discord</a>
-                <a id="meetupButton" class="w-full sm:w-auto inline-block bg-meetupRed py-2 px-5 text-center" href="https://www.meetup.com/open-sgf" title="Link to Open SGF Meetup" target="_blank">Join our Meetup</a>
+                <a
+                    class="w-full sm:w-auto inline-block bg-discordPurple py-2 px-5 text-center mb-4 sm:mb-0"
+                    href="https://discord.gg/jFD8dZP"
+                    target="_blank"
+                >
+                    Join our Discord
+                </a>
+                <a
+                    x-data="app.components.meetupButton()"
+                    x-init="init()"
+                    class="w-full sm:w-auto inline-block bg-meetupRed py-2 px-5 text-center"
+                    href="https://www.meetup.com/open-sgf"
+                    target="_blank"
+                >
+                    Join our Meetup
+                </a>
             </div>
         </div>
     </div>

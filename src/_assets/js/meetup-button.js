@@ -1,16 +1,18 @@
 export function meetupButton() {
+    return {
+        init() {
+            const groupSlug = 'open-sgf';
+            const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
 
-    const groupSlug = 'open-sgf';
-    const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
-    const button = document.querySelector('#meetupButton');
-
-    fetch(`${corsAnywhere}https://api.meetup.com/${groupSlug}/events`)
-        .then(res => res.json())
-        .then(events => {
-            if (typeof events === 'undefined' || events.length === 0) {
-                return;
-            };
-            const nextMeetup = events[0];
-            button.href = nextMeetup.link;
-        });
-};
+            fetch(`${corsAnywhere}https://api.meetup.com/${groupSlug}/events`)
+                .then(res => res.json())
+                .then(events => {
+                    if (!events || events.length === 0) {
+                        return;
+                    }
+                    const nextMeetup = events[0];
+                    this.$el.href = nextMeetup.link;
+                });
+        },
+    };
+}
