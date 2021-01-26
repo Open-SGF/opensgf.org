@@ -25,7 +25,7 @@
     @apply h-1 w-full relative bg-darkBlue;
 
     .inner-wrapper {
-        @apply absolute left-1/2 bottom-0 z-10 transform -translate-x-1/2 lg:container px-8 w-full;
+        @apply absolute left-1/2 bottom-0 z-10 transform -translate-x-1/2 lg:container px-8 xl:px-12 w-full;
     }
 
     // Needed an extra relative wrapper to hold the before/after elements
@@ -98,7 +98,7 @@
 
         &::after {
             margin-top: 12px;
-            transition-property: margin, transform, background,;
+            transition-property: margin, transform, background;
             transition-duration: 200ms;
             transition-delay: 200ms, 0ms, 300ms;
         }
