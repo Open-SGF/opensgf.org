@@ -1,7 +1,10 @@
 import scrollIntoView from 'smooth-scroll-into-view-if-needed';
+import Gumshoe from 'gumshoejs';
 import { throttle } from 'throttle-debounce';
 
 const SCROLL_OFFSET = 80;
+const NAV_LINK_SELECTOR = 'a.js-nav-link';
+const MOBILE_NAV_LINK_SELECTOR = 'a.js-nav-link-mobile';
 
 export function navigation() {
     return {
@@ -28,7 +31,7 @@ export function navigation() {
 }
 
 function initSmoothScroll() {
-    const $navLinks = this.$el.querySelectorAll('a.js-nav-link');
+    const $navLinks = this.$el.querySelectorAll(`${NAV_LINK_SELECTOR}, ${MOBILE_NAV_LINK_SELECTOR}`);
 
     for (const $navLink of $navLinks) {
         if ($navLink.pathname !== window.location.pathname) {
@@ -48,6 +51,19 @@ function initSmoothScroll() {
     }
 }
 
-function initScrollSpy($container) {
+function initScrollSpy() {
+    const spy = new Gumshoe(NAV_LINK_SELECTOR, {
+        navClass: 'active',
+        reflow: true,
+        offset: 168,
+    });
 
+    const mobileSpy = new Gumshoe(MOBILE_NAV_LINK_SELECTOR, {
+        navClass: 'active',
+        reflow: true,
+        offset: 44,
+    });
+
+    spy.detect();
+    mobileSpy.detect();
 }
