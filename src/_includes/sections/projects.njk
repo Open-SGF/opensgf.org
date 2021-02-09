@@ -1,17 +1,7 @@
 {% set projects = [
     {
         title: 'SGF Covid Support',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        link: 'https://sgfcovidsupport.org/'
-    },
-    {
-        title: 'SGF Covid Support',
-        description: 'I am a description',
-        link: 'https://sgfcovidsupport.org/'
-    },
-    {
-        title: 'SGF Covid Support',
-        description: 'I am a description',
+        description: 'A project dedicated to helping people find pharmacies, food, and other support for the Covid-19 pandemic in Springfield, MO. Open SGF partnered with <a href="http://www.codeforchapelhill.com/" target="_blank" class="text-blue underline" title="Code for Chapel Hill website">Code for Chapel Hill</a> to help contribute to the project, and to bring the project to people here in Springfield, MO.',
         link: 'https://sgfcovidsupport.org/'
     }
 ] %}
@@ -29,7 +19,7 @@
                     <div class="shadow-xl bg-white flex flex-col h-full justify-between p-6 lg:p-10 card">
                         <div>
                             <h3 class="font-mono text-2xl xl:text-3xl mb-4">{{ project.title }}</h3>
-                            <p class="font-sans text-md xl:text-xl xl:leading-8">{{ project.description }}</p>
+                            <p class="font-sans text-md xl:text-xl xl:leading-8">{{ project.description | safe }}</p>
                         </div>
                         <div class="flex w-full justify-end mt-4">
                             <a class="font-mono flex items-center card-link" href="{{ project.link }}">
