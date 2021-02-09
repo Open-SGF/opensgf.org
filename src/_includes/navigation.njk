@@ -1,12 +1,12 @@
 {% set links = {
     '#projects': 'Projects',
-    '#get-involved': 'Get Involved',
-    '#partners': 'Partners'
+    '#get-involved': 'Get Involved'
 } %}
 
 <header
     class="nav"
     x-data="app.components.navigation()"
+    x-init="init()"
     @scroll.window="onScroll"
     :class="{ 'is-scrolled': isScrolled }"
 >
@@ -30,7 +30,7 @@
             <ul class="flex py-4 space-x-5 xl:space-x-8 justify-end items-center">
                 {% for link, title in links %}
                     <li>
-                        <a class="nav-link" href="{{ link }}">{{ title }}</a>
+                        <a class="nav-link js-nav-link" href="{{ link }}">{{ title }}</a>
                     </li>
                 {% endfor %}
                 <li>
@@ -61,7 +61,7 @@
                     <li>
                         <a
                             @click="isOverlayOpen = false"
-                            class="nav-link"
+                            class="nav-link js-nav-link"
                             href="{{ link }}">
                             {{ title }}
                         </a>

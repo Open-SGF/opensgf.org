@@ -12,7 +12,8 @@ export function meetupButton() {
                     }
                     const nextMeetup = events[0];
                     this.$el.href = nextMeetup.link;
-                });
+                })
+                .catch((err) => {});
         },
     };
 }
