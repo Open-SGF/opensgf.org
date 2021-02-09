@@ -19,6 +19,8 @@
     ],
     "dependencies": {
         "alpinejs": "^2.8.0",
+        "gumshoejs": "^5.1.2",
+        "smooth-scroll-into-view-if-needed": "^1.1.29",
         "throttle-debounce": "^3.0.1"
     },
     "devDependencies": {
