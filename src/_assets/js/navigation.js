@@ -43,7 +43,7 @@ function initSmoothScroll() {
 
             scrollIntoView($target, {
                 behavior: 'smooth',
-                scrollMode: 'if-needed',
+                scrollMode: 'always',
                 block: 'start',
             });
 
