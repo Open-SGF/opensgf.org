@@ -2,7 +2,8 @@
     {
         title: 'SGF Covid Support',
         description: 'A project dedicated to helping people find pharmacies, food, and other support for the Covid-19 pandemic in Springfield, MO. Open SGF partnered with <a href="http://www.codeforchapelhill.com/" target="_blank" class="text-blue underline" title="Code for Chapel Hill website">Code for Chapel Hill</a> to help contribute to the project, and to bring the project to people here in Springfield, MO.',
-        link: 'https://sgfcovidsupport.org/'
+        link: 'https://sgfcovidsupport.org/',
+        newTab: true
     }
 ] %}
 
@@ -23,7 +24,13 @@
                             <p class="font-sans text-md xl:text-xl xl:leading-8">{{ project.description | safe }}</p>
                         </div>
                         <div class="flex w-full justify-end mt-4">
-                            <a class="font-mono flex items-center card-link" href="{{ project.link }}">
+                            <a
+                                class="font-mono flex items-center card-link"
+                                href="{{ project.link }}"
+                                {% if project.newTab %}
+                                    target="_blank"
+                                {% endif %}
+                            >
                                 <p class="mr-4 text-lg xl:text-xl">Learn More</p>
                                 <span aria-hidden="true" class="w-6 xl:w-8">
                                     {% include 'svgs/long-arrow-right.svg' %}
