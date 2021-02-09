@@ -44,6 +44,7 @@ function initSmoothScroll() {
             scrollIntoView($target, {
                 behavior: 'smooth',
                 scrollMode: 'if-needed',
+                block: 'start',
             });
 
             this.isOverlayOpen = false;
@@ -55,7 +56,7 @@ function initScrollSpy() {
     const spy = new Gumshoe(NAV_LINK_SELECTOR, {
         navClass: 'active',
         reflow: true,
-        offset: 168,
+        offset: 100,
     });
 
     const mobileSpy = new Gumshoe(MOBILE_NAV_LINK_SELECTOR, {

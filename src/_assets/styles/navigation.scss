@@ -201,3 +201,12 @@ $nav-mobile-height: 44px;
         }
     }
 }
+
+.anchor {
+    @apply relative;
+    top: -$nav-mobile-height - 20;
+
+    @screen md {
+        top: -$nav-height - 20;
+    }
+}
