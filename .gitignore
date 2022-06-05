@@ -16,7 +16,7 @@
 /build
 
 # development
-.idea/
+/.idea/
 
 # misc
 .DS_Store
