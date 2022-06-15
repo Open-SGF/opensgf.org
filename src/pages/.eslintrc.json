@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "import/no-named-as-default": "error",
+        "import/prefer-default-export": "error",
+        "import/no-default-export": "off"
+    }
+}

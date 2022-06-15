@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import styles from './Card.module.css';
 
 interface ICard {
@@ -7,7 +7,7 @@ interface ICard {
     button: ReactElement;
 }
 
-export const Card = ({heading, text, button}: ICard) => {
+export const Card = ({ heading, text, button }: ICard) => {
     return (
         <div className={styles.cardContainer}>
             <h2 className={styles.heading}>{heading}</h2>
@@ -17,5 +17,5 @@ export const Card = ({heading, text, button}: ICard) => {
                 {button ? button : ''}
             </div>
         </div>
-    )
-}
+    );
+};

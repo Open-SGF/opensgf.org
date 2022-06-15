@@ -1,13 +1,12 @@
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import styles from './CardSet.module.css';
-import {Card} from './components/TextAndButtonCard/Card'
 
 interface ICardSet {
     volunteerCard: ReactElement;
-    partnerCard: ReactElement
+    partnerCard: ReactElement;
 }
 
-export const CardSet = ({volunteerCard, partnerCard}: ICardSet) => {
+export const CardSet = ({ volunteerCard, partnerCard }: ICardSet) => {
     return (
         <div className={styles.cardSetContainer}>
             <div className={styles.cards}>
@@ -15,8 +14,8 @@ export const CardSet = ({volunteerCard, partnerCard}: ICardSet) => {
                 {partnerCard}
             </div>
         </div>
-    )
-}
+    );
+};
 
 ////////////////////////////////////////////////
 // This is the code to use this component for the volunteer card and partner card set.
