@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react';
-import styles from './CardSet.module.css';
+import styles from './CardSet.module.scss';
 
 interface ICardSet {
     volunteerCard: ReactElement;
