@@ -1,0 +1,23 @@
+.cardContainer {
+    width: 476px;
+    height: 362px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: -5px 6px 15px rgba(155, 209, 255, 0.51);
+    border-radius: 34px;
+    background-color: white;
+}
+
+.heading {
+    align-self: center;
+}
+
+.text {
+    width: 361px;
+    margin: 0 auto;
+}
+
+.button {
+    align-self: center;
+}

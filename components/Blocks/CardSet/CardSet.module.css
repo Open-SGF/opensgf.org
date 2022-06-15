@@ -1,0 +1,16 @@
+.cardSetContainer {
+    width: 100vw;
+    margin-left: -2rem;
+    overflow-x: hidden;
+    background-color: #E9F5ff;
+    padding-top: 95px;
+    padding-bottom: 133px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 75px;
+    width: 100vw;
+}
