@@ -1,12 +1,8 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import styles from '../styles/Home.module.css';
 
 const About: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      About Page
-    </div>
-  )
-}
+    return <div className={styles.container}>About Page</div>;
+};
 
-export default About
+export default About;

@@ -1,12 +1,8 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import styles from '../styles/Home.module.css';
 
 const Volunteer: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      Volunteer Page
-    </div>
-  )
-}
+    return <div className={styles.container}>Volunteer Page</div>;
+};
 
-export default Volunteer
+export default Volunteer;
