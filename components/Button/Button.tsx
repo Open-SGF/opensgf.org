@@ -5,6 +5,10 @@ interface IButton {
     href: string;
 }
 
-export const Button = ({text, href}: IButton) => {
-    return <button className={styles.button}><a href={href}>{text}</a></button>;
-}
+export const Button = ({ text, href }: IButton) => {
+    return (
+        <button className={styles.button}>
+            <a href={href}>{text}</a>
+        </button>
+    );
+};
