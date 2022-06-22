@@ -1,0 +1,50 @@
+@import "_variables";
+
+.trigger {
+    position: relative;
+    border-style: none;
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: Roboto;
+    color: $base-black;
+    cursor: pointer;
+    &hover {
+        color: $base-blue;
+        text-decoration: underline;
+    }
+}
+
+.content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 160px;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18) ;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 30;
+    Link {
+        text-decoration: none;
+        color: $base-black;
+        font-size: 1.25rem;
+        font-weight: 400;
+        
+        &:hover {
+            color: $base-blue;
+            text-decoration: underline;
+        }
+    }
+    p{
+        color: rgba(19, 54, 84, 0.35);
+        line-height: 19px;
+        font-size: 16px;
+        margin-top: 0;
+    }
+}
+
+.show {
+    display: block;
+}

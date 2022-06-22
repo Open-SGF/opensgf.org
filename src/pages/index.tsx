@@ -1,8 +1,23 @@
-import type { NextPage } from 'next';
-import styles from '@/styles/Home.module.scss';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
+import Stats from "../components/Stats";
+import Hero from "../components/Hero";
+import Particles from "../components/Particles";
+import syles from "../styles/particles.module.scss";
 
-const Home: NextPage = () => {
-    return <div className={styles.container}>Home Page</div>;
-};
-
-export default Home;
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>Open SGF | Home</title>
+        <meta name="keywords" content="Open SGF" />
+      </Head>
+      <div>
+      <Hero />
+      {/* <Particles  /> */}
+      <Stats />
+      </div>
+    </>
+  );
+}

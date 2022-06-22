@@ -1,8 +1,11 @@
-import type { NextPage } from 'next';
-import styles from '@/styles/Home.module.scss';
+import React from 'react'
 
-const Volunteer: NextPage = () => {
-    return <div className={styles.container}>Volunteer Page</div>;
-};
+const volunteer = () => {
+  return (
+    <div>
+     <h1>volunteer</h1> 
+    </div>
+  )
+}
 
-export default Volunteer;
+export default volunteer
