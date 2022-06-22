@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const volunteer = () => {
-  return (
-    <div>
-     <h1>volunteer</h1> 
-    </div>
-  )
+export function volunteer() {
+    return (
+        <div>
+            <h1>volunteer</h1>
+        </div>
+    );
 }
 
-export default volunteer
+export default volunteer;

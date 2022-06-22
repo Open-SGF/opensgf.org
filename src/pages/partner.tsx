@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const partner = () => {
-  return (
-    <div>
-     <h1>Partner</h1> 
-    </div>
-  )
+function partner() {
+    return (
+        <div>
+            <h1>partner</h1>
+        </div>
+    );
 }
 
-export default partner
+export default partner;
