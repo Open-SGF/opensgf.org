@@ -1,12 +1,12 @@
 @import "_variables";
-.footer{
+
+.footer {
     display: flex;
     background-color: $dark-blue;
     flex-shrink: 0;
     padding : 3rem;
     height: 216px;
     width: 100vw;
-}
 
 .socials{
     display: flex;

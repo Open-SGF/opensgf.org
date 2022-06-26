@@ -10,23 +10,26 @@
 
   .logo {
     align-items: flex-start;
+
     img {
       width: 100%;
     }
   }
 
-.navlinks{
+.navlinks {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
   margin-left: auto;
   gap : 2rem;
+
   a {
     text-decoration: none;
     color: $base-black;
     font-size: 1.25rem;
     font-weight: 400;
+
     &:hover {
       color: $base-blue;
       text-decoration: underline;
@@ -45,6 +48,7 @@
   font-weight: bold;
   border-radius: 8px;
   border-style: none;
+
   &:hover {
     background-color: $dark-blue;
     color: $base-blue;

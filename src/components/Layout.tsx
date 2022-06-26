@@ -5,7 +5,7 @@ import styles from '../../styles/layout.module.scss';
 export function Layout({ children }: any): JSX.Element {
     return (
         <div className={styles.content}>
-            <div className={styles.pagecontent}>
+            <div className={styles.pageContent}>
                 <Navbar />
                 {children}
             </div>

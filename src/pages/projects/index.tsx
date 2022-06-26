@@ -1,8 +1,5 @@
-import type { NextPage } from 'next';
-import styles from '@/styles/Home.module.scss';
+import styles from '../../../styles/Home.module.scss';
 
-const Projects: NextPage = () => {
+export default function Projects(): JSX.Element {
     return <div className={styles.container}>Projects Page</div>;
-};
-
-export default Projects;
+}

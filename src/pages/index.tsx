@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Hero } from '../components/Hero';
-import { ParticlesComp } from '../components/Particles';
+// import { ParticlesComp } from '../components/Particles';
 import { Stats } from '../components/Stats';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
             </Head>
             <div>
                 <Hero />
-                <ParticlesComp />
+                {/*<ParticlesComp />*/}
                 <Stats />
             </div>
         </>

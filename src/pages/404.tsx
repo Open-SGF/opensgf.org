@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-const NotFound = () => {
+
+export default function NotFound() {
     const router = useRouter();
 
     useEffect(() => {
@@ -23,6 +24,4 @@ const NotFound = () => {
             </p>
         </div>
     );
-};
-
-export default NotFound;
+}

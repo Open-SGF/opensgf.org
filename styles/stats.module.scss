@@ -4,10 +4,10 @@
     gap: 20px;
     justify-content: center;
     align-items: flex-end;
-    height: 250px; 
+    height: 250px;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,13 +17,16 @@
     border-radius: 20px;
     background-color: #e9f5ff;
     box-shadow: -2px 4px 10px rgba(19, 54, 84, 0.21);
-    .image{
+
+    .image {
         margin-top: -40px !important;
     }
-    h1{
+
+    h1 {
         font-size: 36px;
         margin: 0;
     }
+
     p {
         font-size: 18px;
         margin: 0;

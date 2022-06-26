@@ -1,12 +1,11 @@
-/* eslint-disable sort-imports */
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import styles from '../../styles/footer.module.scss';
 
 export function Footer() {
     return (
-        <div className={styles.pagecontainer}>
+        <div className={styles.pageContainer}>
             <footer className={styles.footer}>
                 <Link href="https://codeforamerica.org/">
                     <Image src="/CodeforAmerica.svg" width={200} height={200} alt="CodeforAmerica Logo" />
