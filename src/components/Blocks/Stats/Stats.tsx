@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import styles from '@/styles/stats.module.scss';
+import styles from './Stats.module.scss';
 
 export function Stats() {
     return (

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import styles from '@/styles/hero.module.scss';
+import styles from './Hero.module.scss';
 
 export function Hero() {
     return (

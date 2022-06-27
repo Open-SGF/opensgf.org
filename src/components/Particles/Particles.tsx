@@ -3,7 +3,7 @@ import type { Engine } from 'tsparticles-engine';
 import Particles from 'react-tsparticles';
 import { loadBigCirclesPreset } from 'tsparticles-preset-big-circles';
 import { loadSlim } from 'tsparticles-slim';
-import styles from '@/styles/particles.module.scss';
+import styles from './Particles.module.scss';
 
 export function ParticlesComp() {
     const options = useMemo(() => {

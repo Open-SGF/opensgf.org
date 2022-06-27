@@ -1,5 +1,5 @@
-import { Footer } from './Footer';
-import { Navbar } from './Navbar';
+import { Footer } from '@/components/Footer/Footer';
+import { Navbar } from '@/components/Navbar/Navbar';
 import styles from '@/styles/layout.module.scss';
 
 export function Layout({ children }: any): JSX.Element {

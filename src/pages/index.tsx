@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { Hero } from '@/components/Hero';
+import { Hero } from '@/components/Blocks/Hero/Hero';
 // import { ParticlesComp } from '@/components/Particles';
-import { Stats } from '@/components/Stats';
+import { Stats } from '@/components/Blocks/Stats/Stats';
 
 export default function Home() {
     return (

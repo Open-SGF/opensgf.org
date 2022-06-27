@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/styles/dropdown.module.scss';
+import styles from './Dropdown.module.scss';
 
 export function Dropdown() {
     const toggle = () => {

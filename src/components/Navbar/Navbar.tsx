@@ -1,8 +1,8 @@
-import { Dropdown } from './Dropdown';
+import { Dropdown } from '@/components/Dropdown/Dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import styles from '@/styles/nav.module.scss';
+import styles from './Navbar.module.scss';
 
 export function Navbar() {
     return (
