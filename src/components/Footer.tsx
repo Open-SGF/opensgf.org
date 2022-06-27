@@ -8,20 +8,20 @@ export function Footer() {
         <div className={styles.pageContainer}>
             <footer className={styles.footer}>
                 <Link href="https://codeforamerica.org/">
-                    <Image src="/CodeforAmerica.svg" width={200} height={200} alt="CodeforAmerica Logo" />
+                    <Image src="/images/code-for-america-logo.svg" width={200} height={200} alt="CodeforAmerica Logo" />
                 </Link>
                 <div className={styles.socials}>
                     <Link href="">
-                        <Image src="/Facebook.svg" width={70} height={70} alt="Facebook Logo" />
+                        <Image src="/images/facebook-logo.svg" width={70} height={70} alt="Facebook Logo" />
                     </Link>
                     <Link href="">
-                        <Image src="/meetup.svg" width={70} height={70} alt="Meetup Logo" />
+                        <Image src="/images/meetup-logo.svg" width={70} height={70} alt="Meetup Logo" />
                     </Link>
                     <Link href="">
-                        <Image src="/Discord.svg" width={70} height={70} alt="Discord Logo" />
+                        <Image src="/images/discord-logo.svg" width={70} height={70} alt="Discord Logo" />
                     </Link>
                     <Link href="">
-                        <Image src="/Twitter.svg" width={70} height={70} alt="Twitter Logo" />
+                        <Image src="/images/twitter-logo.svg" width={70} height={70} alt="Twitter Logo" />
                     </Link>
                 </div>
             </footer>

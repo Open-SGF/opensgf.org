@@ -7,7 +7,6 @@ export default function NotFound() {
 
     useEffect(() => {
         setTimeout(() => {
-            // router.go(1)
             router.push('/');
         }, 3000);
     });

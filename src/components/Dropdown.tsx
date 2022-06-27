@@ -7,6 +7,7 @@ export function Dropdown() {
     const toggle = () => {
         return () => {
             const menu: HTMLElement | null = document.getElementById('menu');
+
             if (menu == null) {
                 return undefined;
             }
@@ -16,20 +17,19 @@ export function Dropdown() {
 
     useEffect(() => {
         window.onclick = function (event) {
-            const clickedarea = event.target as HTMLInputElement | null;
+            const clickedArea = event.target as HTMLInputElement | null;
 
-            if (clickedarea == null) {
+            if (clickedArea == null) {
                 return;
             }
 
-            if (clickedarea.classList.contains(styles['trigger'])) {
+            if (clickedArea.classList.contains(styles['trigger'])) {
                 return;
             }
 
             const dropdowns = document.getElementsByClassName(styles['content']);
-            console.log(event.target);
-            let i;
-            for (i = 0; i < dropdowns.length; i++) {
+
+            for (let i = 0; i < dropdowns.length; i++) {
                 const openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains(styles['show'])) {
                     openDropdown.classList.remove(styles['show']);
@@ -43,7 +43,7 @@ export function Dropdown() {
             <button className={styles.trigger} onClick={toggle()}>
                 Join Us
             </button>
-            <Image src="/arrow.svg" width={16} height={8} alt="arrow"/>
+            <Image src="/images/arrow.svg" width={16} height={8} alt="arrow"/>
             <div id="menu" className={styles.content}>
                 <Link href="/partner">Partnering</Link>
                 <p> See what we can help you with </p>

@@ -9,7 +9,7 @@ export function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.logo}>
                 <Link href="/">
-                    <Image src="/Open SGF Logo.svg" width={126.54} height={57.95} alt="Open SGF Logo" />
+                    <Image src="/images/open-sgf-logo.svg" width={126.54} height={57.95} alt="Open SGF Logo" />
                 </Link>
             </div>
             <div className={styles.navlinks}>

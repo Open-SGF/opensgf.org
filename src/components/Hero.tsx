@@ -13,7 +13,7 @@ export function Hero() {
                     est.
                 </p>
             </div>
-            <Image src="/Group.svg" width="350" height="215" alt="Open SGF"/>
+            <Image src="/images/group-working.svg" width="350" height="215" alt="Open SGF"/>
         </div>
     );
 }
