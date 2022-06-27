@@ -17,11 +17,11 @@
     "dependencies": {
         "next": "12.1.6",
         "react": "18.1.0",
-        "react-tsparticles": "^2.0.6",
-        "tsparticles": "^2.0.6",
-        "tsparticles-engine": "^2.0.6",
-        "tsparticles-preset-big-circles": "^2.0.6",
-        "react-dom": "18.1.0"
+        "react-dom": "18.1.0",
+        "react-tsparticles": "^2.1.0",
+        "tsparticles": "^2.1.0",
+        "tsparticles-engine": "^2.1.0",
+        "tsparticles-preset-big-circles": "^2.1.0"
     },
     "devDependencies": {
         "@types/node": "17.0.36",
@@ -40,7 +40,7 @@
         "type": "git",
         "url": "git+https://github.com/Open-SGF/opensgf.org.git"
     },
-        "bugs": {
+    "bugs": {
         "url": "https://github.com/Open-SGF/opensgf.org/issues"
     }
 }
