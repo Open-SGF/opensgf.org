@@ -43,7 +43,7 @@ export function Dropdown() {
             <button className={styles.trigger} onClick={toggle()}>
                 Join Us
             </button>
-            <Image src="/images/arrow.svg" width={16} height={8} alt="arrow"/>
+            <Image src="/images/arrow.svg" width={16} height={8} alt="arrow" />
             <div id="menu" className={styles.content}>
                 <Link href="/partner">Partnering</Link>
                 <p> See what we can help you with </p>
