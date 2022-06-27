@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function partner() {
+export default function donate() {
     return (
         <div>
-            <h1>partner</h1>
+            <h1>Donate</h1>
         </div>
     );
 }
