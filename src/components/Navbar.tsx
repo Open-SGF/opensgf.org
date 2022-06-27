@@ -2,7 +2,7 @@ import { Dropdown } from './Dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import styles from '../../styles/nav.module.scss';
+import styles from '@/styles/nav.module.scss';
 
 export function Navbar() {
     return (

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import styles from '../../styles/hero.module.scss';
+import styles from '@/styles/hero.module.scss';
 
 export function Hero() {
     return (
@@ -13,7 +13,7 @@ export function Hero() {
                     est.
                 </p>
             </div>
-            <Image src="/Group.svg" width="350" height="215" alt="Open SGF"></Image>
+            <Image src="/Group.svg" width="350" height="215" alt="Open SGF"/>
         </div>
     );
 }

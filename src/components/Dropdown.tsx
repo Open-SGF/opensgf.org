@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../../styles/dropdown.module.scss';
+import styles from '@/styles/dropdown.module.scss';
 
 export function Dropdown() {
     const toggle = () => {
@@ -43,7 +43,7 @@ export function Dropdown() {
             <button className={styles.trigger} onClick={toggle()}>
                 Join Us
             </button>
-            <Image src="/arrow.svg" width={16} height={8} alt="arrow"></Image>
+            <Image src="/arrow.svg" width={16} height={8} alt="arrow"/>
             <div id="menu" className={styles.content}>
                 <Link href="/partner">Partnering</Link>
                 <p> See what we can help you with </p>
