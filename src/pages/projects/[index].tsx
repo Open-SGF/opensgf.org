@@ -1,5 +1,5 @@
+import { Hero } from '@/components/Blocks/Hero/Hero';
 import styles from '@/styles/Home.module.scss';
-import {Hero} from "@/components/Blocks/Hero/Hero";
 
 export default function Project(): JSX.Element {
     return (

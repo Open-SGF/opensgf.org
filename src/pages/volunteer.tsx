@@ -1,5 +1,5 @@
+import { Hero } from '@/components/Blocks/Hero/Hero';
 import React from 'react';
-import {Hero} from "@/components/Blocks/Hero/Hero";
 
 export default function volunteer() {
     return (
