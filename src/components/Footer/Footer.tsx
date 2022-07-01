@@ -13,22 +13,22 @@ export function Footer() {
                     </a>
                 </Link>
                 <div className={styles.socials}>
-                    <Link href="" passHref>
+                    <Link href="/" passHref>
                         <a>
                             <Image src="/images/facebook-logo.svg" width={70} height={70} alt="Facebook Logo" />
                         </a>
                     </Link>
-                    <Link href="" passHref>
+                    <Link href="/" passHref>
                         <a>
                             <Image src="/images/meetup-logo.svg" width={70} height={70} alt="Meetup Logo" />
                         </a>
                     </Link>
-                    <Link href="" passHref>
+                    <Link href="/" passHref>
                         <a>
                             <Image src="/images/discord-logo.svg" width={70} height={70} alt="Discord Logo" />
                         </a>
                     </Link>
-                    <Link href="" passHref>
+                    <Link href="/" passHref>
                         <a>
                             <Image src="/images/twitter-logo.svg" width={70} height={70} alt="Twitter Logo" />
                         </a>
