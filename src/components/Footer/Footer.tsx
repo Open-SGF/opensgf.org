@@ -9,7 +9,12 @@ export function Footer() {
             <footer className={styles.footer}>
                 <Link href="https://codeforamerica.org/" passHref>
                     <a>
-                        <Image src="/images/code-for-america-logo.svg" width={200} height={200} alt="CodeforAmerica Logo" />
+                        <Image
+                            src="/images/code-for-america-logo.svg"
+                            width={200}
+                            height={200}
+                            alt="CodeforAmerica Logo"
+                        />
                     </a>
                 </Link>
                 <div className={styles.socials}>
