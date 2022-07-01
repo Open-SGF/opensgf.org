@@ -1,0 +1,96 @@
+.container {
+    width: 100vw;
+    height: calc(100vh - 216px - 119px);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & * {
+        z-index: 1;
+    }
+}
+
+.contentWrapper {
+    height: 400px;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .salesPitch {
+        height: 40%;
+        width: 300px;
+        margin-right: 100px;
+
+        p {
+            margin-top: 2em;
+        }
+    }
+
+    .backgroundBanner {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        height: 60%;
+        width: 100%;
+        z-index: 0;
+
+        background-color: #E9F5FF;
+    }
+}
+
+.contactForm {
+    height: 100%;
+    width: 368px;
+    background-color: white;
+    padding: 2em;
+    box-shadow: -5px 5px 33px 0px #0380DB3D;
+    border-radius: 10px;
+
+
+    .formRow {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-family: Roboto Slab, serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 1em;
+        }
+
+        &:first-child {
+            label {
+                margin-top: 0;
+            }
+        }
+
+        input, textarea {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            resize: none;
+            padding: 0.5em;
+        }
+    }
+
+    button {
+        background-color: #0094FF;
+        height: auto;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 1em;
+        margin-top: 2em;
+    }
+}
+
+

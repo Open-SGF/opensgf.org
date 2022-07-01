@@ -1,20 +1,36 @@
 @import "@/styles/_variables";
 
 .footer {
-    display: flex;
-    background-color: $dark-blue;
-    flex-shrink: 0;
-    padding : 3rem;
+    flex: 1;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+
     height: 216px;
+    max-height: 30vh;
     width: 100vw;
+    padding : 3rem;
+    background-color: $dark-blue;
+
+    display: flex;
+    flex-shrink: 0;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
 }
 
-.socials{
+
+.socials {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
     width: 80vw;
-    img{
+
+    img {
         width: 100%;
         background-color: white;
         clip-path: circle( 1.75rem at center);
