@@ -14,7 +14,7 @@
 - Then, run the development server with `npm run dev`
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-##Contributing
+## Contributing
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Get in Touch!:

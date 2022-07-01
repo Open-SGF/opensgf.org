@@ -1,4 +1,4 @@
-import {ContactForm} from "@/components/Blocks/ContactForm/ContactForm";
+import { ContactForm } from '@/components/Blocks/ContactForm/ContactForm';
 import React from 'react';
 
 export default function partner() {
