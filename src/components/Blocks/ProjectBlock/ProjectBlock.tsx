@@ -4,13 +4,13 @@ import styles from './ProjectBlock.module.scss';
 
 export const ProjectBlock = () => {
     return (
-        <div className={styles.projectBlockContainer}>
+        <div className={styles.container}>
             <div className={styles.sideBySideSet}>
                 <Image
                     src="https://via.placeholder.com/484.png"
                     alt="An image of several people working together."
-                    height="400px"
-                    width="400px"
+                    height="300px"
+                    width="300px"
                 />
                 <div className={styles.textSet}>
                     <h2>Project Section</h2>

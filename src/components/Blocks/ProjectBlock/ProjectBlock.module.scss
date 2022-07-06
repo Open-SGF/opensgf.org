@@ -1,27 +1,31 @@
-.projectBlockContainer {
+.container {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
-    max-width: 915px;
-    margin: 0 auto;
+    align-items: center;
+    row-gap: 50px;
+    max-width: 600px;
+    margin: 100px auto 0 auto;
 }
 
 .sideBySideSet {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 60px;
+
+    .img {
+        height: 300px;
+    }
 }
 
 .textSet {
-    row-gap: 23px;
-
     h2 {
         font-size: 1.75rem;
     }
 
     p {
         font-size: 1.125rem;
+        margin-top: 23px;
     }
 }
 
@@ -29,5 +33,7 @@
     color: #133654;
     font-size: 1.5rem;
     line-height: 2rem;
-    align-self: center;
+    text-decoration: underline;
 }
+
+

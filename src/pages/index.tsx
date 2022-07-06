@@ -33,7 +33,13 @@ export default function Home() {
                 <meta name="keywords" content="Open SGF" />
             </Head>
             <div>
-                <Hero />
+                <Hero>
+                    <h1>Open SGF</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Enim nec dui nunc mattis.
+                    </p>
+                </Hero>
                 {/*<ParticlesComp />*/}
                 <Stats />
                 <ProjectBlock />

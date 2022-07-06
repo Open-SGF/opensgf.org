@@ -1,18 +1,21 @@
 import React, { useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { ArrowDown } from '@/components/Icons/ArrowDown';
 import styles from './Dropdown.module.scss';
 
-export function Dropdown() {
-    const toggle = () => {
-        return () => {
-            const menu: HTMLElement | null = document.getElementById('menu');
+type IDropdown = {
+    children: any;
+    heading: string;
+};
 
-            if (menu == null) {
-                return undefined;
-            }
-            menu.classList.toggle(styles['show']);
-        };
+export function Dropdown({ children, heading }: IDropdown): JSX.Element {
+    const toggle = () => {
+        const menu: HTMLElement | null = document.getElementById('menu');
+
+        if (menu === null) {
+            return;
+        }
+
+        menu.classList.toggle(styles['show']);
     };
 
     useEffect(() => {
@@ -40,15 +43,12 @@ export function Dropdown() {
 
     return (
         <div>
-            <button className={styles.trigger} onClick={toggle()}>
-                Join Us
+            <button className={styles.trigger} onClick={toggle}>
+                {heading}
+                <ArrowDown />
             </button>
-            <Image src="/images/arrow.svg" width={16} height={8} alt="arrow" />
             <div id="menu" className={styles.content}>
-                <Link href="/partner">Partnering</Link>
-                <p> See what we can help you with </p>
-                <Link href="/volunteer">Volunteering</Link>
-                <p>Learn how you can get involved</p>
+                {children}
             </div>
         </div>
     );
