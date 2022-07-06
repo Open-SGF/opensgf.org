@@ -1,6 +1,6 @@
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import Link from 'next/link';
-import { Logo } from '@/components/Icons/Logo'
+import { Logo } from '@/components/Icons/Logo';
 import React from 'react';
 import styles from './Navbar.module.scss';
 

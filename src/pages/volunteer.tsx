@@ -5,12 +5,11 @@ import React from 'react';
 export default function volunteer() {
     return (
         <div>
-            <Hero
-                imageSrc="/images/group-working-two.svg"
-            >
+            <Hero imageSrc="/images/group-working-two.svg">
                 <h1>Volunteer With Us</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Enim nec dui nunc mattis.
                 </p>
                 <h2>Skillsets Needed:</h2>
                 <ul>

@@ -36,7 +36,8 @@ export default function Home() {
                 <Hero>
                     <h1>Open SGF</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Enim nec dui nunc mattis.
                     </p>
                 </Hero>
                 {/*<ParticlesComp />*/}

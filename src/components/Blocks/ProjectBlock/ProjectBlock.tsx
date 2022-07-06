@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ProjectBlock.module.scss';
 
@@ -5,7 +6,7 @@ export const ProjectBlock = () => {
     return (
         <div className={styles.container}>
             <div className={styles.sideBySideSet}>
-                <img
+                <Image
                     src="https://via.placeholder.com/484.png"
                     alt="An image of several people working together."
                     height="300px"
@@ -20,9 +21,9 @@ export const ProjectBlock = () => {
                     </p>
                 </div>
             </div>
-            <a href="/projects" className={styles.projectsLink}>
+            <Link href="/projects" className={styles.projectsLink}>
                 View All Projects
-            </a>
+            </Link>
         </div>
     );
 };

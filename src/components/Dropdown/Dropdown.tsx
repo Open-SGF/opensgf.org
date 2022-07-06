@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
+import { ArrowDown } from '@/components/Icons/ArrowDown';
 import styles from './Dropdown.module.scss';
-import {ArrowDown} from "@/components/Icons/ArrowDown";
 
 type IDropdown = {
-    children: any,
-    heading: string
-}
+    children: any;
+    heading: string;
+};
 
 export function Dropdown({ children, heading }: IDropdown): JSX.Element {
     const toggle = () => {
@@ -44,11 +44,11 @@ export function Dropdown({ children, heading }: IDropdown): JSX.Element {
     return (
         <div>
             <button className={styles.trigger} onClick={toggle}>
-                { heading }
+                {heading}
                 <ArrowDown />
             </button>
             <div id="menu" className={styles.content}>
-                { children }
+                {children}
             </div>
         </div>
     );
