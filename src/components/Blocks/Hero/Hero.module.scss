@@ -1,16 +1,11 @@
 @import '@/styles/_variables.scss';
 
 .container {
-    display: relative;
     display: flex;
+    margin-top: 25px;
     gap: 200px;
     justify-content: center;
     align-items: flex-end;
-    height: 400px;
-
-    img {
-        z-index: -1;
-    }
 }
 
 .message {

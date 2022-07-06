@@ -9,7 +9,8 @@
     font-family: Roboto;
     color: $base-black;
     cursor: pointer;
-    &hover {
+
+    &:hover {
         color: $base-blue;
         text-decoration: underline;
     }
@@ -25,7 +26,7 @@
     box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18) ;
     border-radius: 5px;
     list-style: none;
-    z-index: 30;
+
     Link {
         text-decoration: none;
         color: $base-black;
@@ -37,7 +38,8 @@
             text-decoration: underline;
         }
     }
-    p{
+
+    p {
         color: rgba(19, 54, 84, 0.35);
         line-height: 19px;
         font-size: 16px;
