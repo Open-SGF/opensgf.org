@@ -45,13 +45,11 @@
 }
 
 .contactForm {
-    height: 100%;
     width: 368px;
     background-color: white;
     padding: 2em;
     box-shadow: -5px 5px 33px 0px #0380DB3D;
     border-radius: 10px;
-
 
     .formRow {
         display: flex;
@@ -76,8 +74,15 @@
         input, textarea {
             border: 1px solid rgba(0, 0, 0, 0.15);
             border-radius: 5px;
-            resize: none;
             padding: 0.5em;
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+            resize: none;
+        }
+
+        textarea {
+            height: 10em;
         }
     }
 
