@@ -1,0 +1,80 @@
+.projectDetails {
+    width: 600px;
+    margin: 50px auto 0 auto;
+
+    .linksWrapper, .techStackWrapper, .contributorsWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding: 45px 0 45px 0;
+        z-index: 5;
+        font-size: 1.12rem;
+
+        .verticalLine {
+            position: absolute;
+            top: 0;
+            left: 38.5px;
+            z-index: 4;
+            width: 3px;
+            height: 100%;
+            background-color: #133654;
+        }
+
+        .icon {
+            display: block;
+            z-index: inherit;
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+            margin: auto 0;
+            background-color: white;
+        }
+
+        .text {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                margin-bottom: 30px;
+                font-size: 1.62rem;
+            }
+
+            .tools, .contributors {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .tools {
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 30px;
+                }
+
+                img {
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 50%;
+                }
+            }
+
+            .contributors {
+                justify-content: space-between;
+
+                img {
+                    height: 85px;
+                    width: 85px;
+                    border-radius: 50%;
+                    box-shadow: -3px 1px 9px 0px #0000002B;
+                    margin-bottom: 30px;
+                }
+
+                h3 {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

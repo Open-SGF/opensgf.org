@@ -10,7 +10,7 @@ type IDropdown = {
 export function Hero({ children, imageSrc = '/images/group-working.svg' }: IDropdown) {
     return (
         <div className={styles.container}>
-            <div className={styles.message}>{children}</div>
+            <div className={styles.message}>{ children }</div>
             <Image src={imageSrc} width="350" height="215" alt="Open SGF" />
         </div>
     );
