@@ -1,4 +1,4 @@
-@import "@/styles/_variables";
+@import "/styles/_variables";
 
 .trigger {
     position: relative;
@@ -6,7 +6,7 @@
     background-color: white;
     font-size: 1.25rem;
     font-weight: 400;
-    font-family: Roboto;
+    font-family: Roboto, serif;
     color: $base-black;
     cursor: pointer;
 
@@ -22,8 +22,7 @@
     flex-direction: column;
     width: 160px;
     padding: 10px;
-    gap: 10px;
-    box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18) ;
+    box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18);
     border-radius: 5px;
     list-style: none;
 
