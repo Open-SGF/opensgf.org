@@ -1,3 +1,7 @@
+import { Button } from '@/components/Button/Button';
+import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
+import { CardSet } from '@/components/Blocks/CardSet/CardSet';
+import { ProjectBlock } from '@/components/Blocks/ProjectBlock/ProjectBlock';
 import Head from 'next/head';
 import { Hero } from '@/components/Blocks/Hero/Hero';
 import { Stats } from '@/components/Blocks/Stats/Stats';
@@ -6,8 +10,26 @@ import styles from "@/styles/index.module.scss"
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
-    return (
+    export default function Home() {
+        const contactButton = <Button text="Contact" href="/" />;
+
+        const volunteerCard = (
+            <Card
+                heading="Volunteer With Us"
+                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates iste recusandae quam aliquam vel porro aliquid sapiente perferendis, autem delectus repellat eveniet laboriosam voluptas. Magni nobis rerum ipsa perspiciatis veritatis."
+                button={contactButton}
+            />
+        );
+
+        const partnerCard = (
+            <Card
+                heading="Partner With Us"
+                text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates iste recusandae quam aliquam vel porro aliquid sapiente perferendis, autem delectus repellat eveniet laboriosam voluptas. Magni nobis rerum ipsa perspiciatis veritatis."
+                button={contactButton}
+            />
+        );
+
+        return (
         <>
             <Head>
                 <title>Open SGF | Home</title>
@@ -27,7 +49,9 @@ export default function Home() {
                     text={<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore reprehenderit repudiandae tenetur velit voluptates!</p>}
                     image={<Image src={"/images/Laptop-phone.svg"} alt='laptop' width={500} height={500}/> }
                 />
-                {/*<Link href={"/projects"}><a>View All Projects</a></Link>*/}
+                <Stats />
+                <ProjectBlock />
+                <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>
         </>
     );
