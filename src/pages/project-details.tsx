@@ -5,7 +5,5 @@ import { ParticlesComp } from '@/components/Particles/Particles';
 import React from 'react';
 
 export default function ProjectDetails() {
-    return (
-        <div></div>
-    );
+    return <div></div>;
 }

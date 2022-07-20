@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../styles/dropdown.module.scss';
+import Link from 'next/link';
+// eslint-disable-next-line
+import styles from './Dropdown.module.scss';
 
 export function Dropdown() {
     const toggle = () => {
