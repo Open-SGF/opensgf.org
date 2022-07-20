@@ -4,13 +4,13 @@ import styles from './EventCard.module.scss';
 export function EventCard() {
     return (
         <div className={styles.container}>
-            <div className={styles.headerStripe}></div>
+            <div className={styles.headerStripe}/>
             <div className={styles.body}>
-                <img src="" alt="image" />
+                <img src="./images/meetup-logo.svg" alt="image" />
                 <div className={styles.textContent}>
-                    <div>Lorem Ipsum</div>
-                    <div>Lorem Ipsum</div>
-                    <div>Lorem Ipsum</div>
+                    <div className={styles.eventDate}>Lorem Ipsum</div>
+                    <div className={styles.eventTitle}>Lorem Ipsum</div>
+                    <div className={styles.eventDescription}>Lorem Ipsum</div>
                 </div>
             </div>
         </div>
