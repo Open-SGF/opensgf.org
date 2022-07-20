@@ -1,0 +1,30 @@
+ .container {
+    position: relative;
+    gap: 40px;
+    width: 944px;
+    margin: 50px auto 0 auto;
+
+     h1 {
+         margin-top: 25px;
+         font-size: 18px;
+         font-weight: 300;
+         line-height: 24px;
+         letter-spacing: 0em;
+         text-align: left;
+     }
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    margin-top: 18px;
+    margin-bottom: 51px;
+
+    &>div {
+        width: 50%;
+        max-width: 388px;
+    }
+}
