@@ -1,26 +1,106 @@
-@import '@/styles/_variables.scss';
+@import '/styles/_variables.scss';
 
 .container {
     display: flex;
-    margin-top: 25px;
-    gap: 200px;
+    gap: 60px;
     justify-content: center;
-    align-items: flex-end;
+    height: 300px;
+    margin: 60px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
 }
 
 .message {
-    width: 300px;
+    width: 500px;
+    font-family: Roboto, serif;
+    color: $base-black;
 
-    h1 {
-        color: $base-black;
-        font-size: 54px;
-        font-family: Roboto;
-        margin: 0;
+    .header{
+        h1{
+            font-size: 54px;
+            line-height: 63px;
+            font-weight: 1000;
+            margin-bottom: 30px;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+        }
     }
 
-    p {
+    .text {
         color: $base-black;
         font-size: 18px;
         font-weight: 300;
+
+        p {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+            color: $base-black;
+        }
+    }
+
+    .lable{
+        h3{
+            padding: 3px;
+            width: 200px;
+            text-align: center;
+            height: 33px;
+            background-color: $base-red;
+            border-radius: 25px;
+            font-family: Roboto Slab,  serif ;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: white;
+            margin: 10px;
+        }
+    }
+
+    .list{
+        ul{
+            list-style: disc;
+        }
+        li{
+            font-family: Roboto Slab, serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: $base-red;
+        }
+    }
+
+
+.graphic{
+    .image{
+        padding: 30px;
+    }
+    .particles{
+        z-index: -10;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
