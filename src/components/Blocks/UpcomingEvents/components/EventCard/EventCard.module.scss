@@ -1,0 +1,20 @@
+.container {
+    max-width: 300px;
+    box-shadow: -4px 4px 10px 0px #00579645;
+}
+
+.headerStripe {
+    width: 100%;
+    height: 20px;
+    background-color: red;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .textContent {
+        display: block;
+    }
+}

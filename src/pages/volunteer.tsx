@@ -3,6 +3,7 @@ import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
 import React from 'react';
+import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
 
 export default function volunteer() {
     return (
@@ -34,7 +35,7 @@ export default function volunteer() {
                 }
                 particles={<ParticlesComp />}
             />
-            <div>Upcoming Events Block</div>
+            <UpcomingEvents />
             <IconSet />
         </div>
     );
