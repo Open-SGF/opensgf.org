@@ -3,12 +3,12 @@
 .trigger {
     position: relative;
     border-style: none;
-    background-color: white;
     font-size: 1.25rem;
     font-weight: 400;
     font-family: Roboto, serif;
     color: $base-black;
     cursor: pointer;
+    background-color: rgba(0,0,0,0);
 
     &:hover {
         color: $base-blue;
@@ -25,6 +25,7 @@
     box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18);
     border-radius: 5px;
     list-style: none;
+    background-color: white;
 
     Link {
         text-decoration: none;
@@ -39,7 +40,7 @@
     }
 
     p {
-        color: rgba(19, 54, 84, 0.35);
+        color: rgb(19, 54, 84, );
         line-height: 19px;
         font-size: 16px;
         margin-top: 0;
@@ -48,4 +49,20 @@
 
 .show {
     display: block;
+}
+
+@media (screen and max-width: 600px){
+    .trigger {
+        color: white;
+        font-size: 30px;
+    }
+
+    .content {
+        box-shadow: none;
+        background-color: rgba(0,0,0,0);
+
+        p{
+            color: white;
+        }
+    }
 }

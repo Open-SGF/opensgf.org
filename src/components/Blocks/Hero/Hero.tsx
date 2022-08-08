@@ -2,14 +2,9 @@ import React, { useEffect } from 'react';
 import styles from './Hero.module.scss';
 
 export function Hero(props) {
-    useEffect(() => {
-        const container: HTMLElement | null = document.getElementById('container');
-        if (props.bool == true) {
-            container.classList.add(styles['reverse']);
-        }
-    });
     return (
-        <div id="container" className={styles.container}>
+        <div id="container" className={props.bool ? styles.reversecontainer :
+            styles.container}>
             <div className={styles.message}>
                 <div className={styles.header}>{props.header}</div>
                 <div className={styles.text}>{props.text}</div>

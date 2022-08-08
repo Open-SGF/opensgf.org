@@ -47,7 +47,6 @@ export default function Home() {
                     }
                     image={<Image src={'/images/group-working.svg'} alt="group working " width={360} height={220} />}
                     particles={<ParticlesComp />}
-                    bool={true}
                 />
                 <Stats />
                 <Hero
@@ -58,10 +57,10 @@ export default function Home() {
                             labore reprehenderit repudiandae tenetur velit voluptates!
                         </p>
                     }
-                    image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={500} height={500} />}
+                    image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={600} height={600} />}
+                    bool={true}
                 />
-                <Stats />
-                <ProjectBlock />
+                {/*<ProjectBlock />*/}
                 <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>
         </>

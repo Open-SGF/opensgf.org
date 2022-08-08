@@ -1,8 +1,6 @@
 .particles{
-    position: absolute;
     width: 600px;
     height: 800px;
-    top: -10px;
     z-index: -15;
-
+    overflow: visible;
 }

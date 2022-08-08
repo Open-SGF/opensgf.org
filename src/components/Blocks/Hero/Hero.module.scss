@@ -5,10 +5,15 @@
     gap: 60px;
     justify-content: center;
     height: 300px;
-    margin: 60px;
+    margin: 200px 60px 60px;
 }
 
-.reverse {
+.reversecontainer {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    height: 300px;
+    margin: 60px;
     flex-direction: row-reverse;
 }
 
@@ -16,6 +21,8 @@
     width: 500px;
     font-family: Roboto, serif;
     color: $base-black;
+    padding-right: 50px;
+    justify-content: center;
 
     .header{
         h1{
@@ -79,28 +86,44 @@
 
 
 .graphic{
+    position: relative;
     .image{
-        padding: 30px;
     }
     .particles{
         z-index: -10;
+        position: absolute;
+        top: -180px;
+        left: -80px;
     }
 }
 
+@media screen and (max-width:600px){
 
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
 
+    .reversecontainer{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+        .particles{
+            top: -400px;
+        }
+    }
 
+    .graphic{
+        .particles{
+            position: absolute;
+            left: -120px;
+            width: 10px;
+            top: -400px;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .message{
+        width: 300px;
+        text-align: center;
+    }
+}

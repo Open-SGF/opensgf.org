@@ -3,17 +3,27 @@
 
 .navbar {
     display: flex;
+    position: fixed;
     width: 100vw;
+    height: 60px;
     align-items: center;
-    padding: 50px;
-    z-index: 25;
+    top: 0;
+    transition: top 0.3s;
+    background-color: rgba(255,255,255,.9);
+    z-index: 4;
+    margin-bottom: 50px;
 }
+.hidden{
+    top: -60px
+}
+
+
+
 
 .navlinks {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 100%;
     margin-left: auto;
     gap : 60px;
 
@@ -47,3 +57,48 @@
         color: $base-blue;
     }
 }
+
+.icon{
+    display: none;
+    z-index: 1;
+}
+
+.logo{
+    width: 30%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .icon {
+        display: block;
+        z-index: 1;
+        margin-left: auto;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0, 0.9);
+        transition: 0.5s;
+        overflow: hidden;
+        justify-content: flex-start;
+        gap: 200px;
+    }
+
+    .navlinks a {
+        padding: 8px;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+
+}
+
+

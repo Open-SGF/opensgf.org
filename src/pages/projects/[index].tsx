@@ -6,6 +6,7 @@ import { Gallery } from '@/components/Gallery';
 import React from 'react';
 import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
+import ProjectNav from '@/components/Blocks/ProjectNav/ProjectNav';
 
 export default function Project(): JSX.Element {
     return (
@@ -33,7 +34,10 @@ export default function Project(): JSX.Element {
             <ProjectDetails />
             <ChatBubble />
             <Gallery />
-            <div>Previous Next Button Block</div>
+            <div className={styles.projectNav}>
+            <ProjectNav text={"Previous"}/>
+            <ProjectNav text={"Next"}/>
+            </div>
         </div>
     );
 }
