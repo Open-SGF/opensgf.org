@@ -9,16 +9,9 @@
     align-items: center;
     top: 0;
     transition: top 0.3s;
-    background-color: rgba(255,255,255,.9);
     z-index: 4;
     margin-bottom: 50px;
 }
-.hidden{
-    top: -60px
-}
-
-
-
 
 .navlinks {
     display: flex;

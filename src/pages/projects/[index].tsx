@@ -35,8 +35,8 @@ export default function Project(): JSX.Element {
             <ChatBubble />
             <Gallery />
             <div className={styles.projectNav}>
-            <ProjectNav text={"Previous"}/>
-            <ProjectNav text={"Next"}/>
+                <ProjectNav text={'Previous'} />
+                <ProjectNav text={'Next'} />
             </div>
         </div>
     );

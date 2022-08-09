@@ -21,8 +21,9 @@
     width: 500px;
     font-family: Roboto, serif;
     color: $base-black;
-    padding-right: 50px;
     justify-content: center;
+    background-color: rgba(255,255,255,.9);
+
 
     .header{
         h1{
@@ -118,7 +119,7 @@
             position: absolute;
             left: -120px;
             width: 10px;
-            top: -400px;
+            top: -100 x;
         }
     }
 
