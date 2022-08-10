@@ -6,9 +6,13 @@ import { Logo } from '@/components/Icons/Logo';
 import styles from './Navbar.module.scss';
 
 export function Navbar() {
+
+        this.Navlinks = React.createRef();
+
     function openNav() {
-        const x = document.getElementById('Navlinks');
+        const x = this.NavLinks
         x.style.height = '100%';
+
     }
 
     function closeNav() {
@@ -44,9 +48,9 @@ export function Navbar() {
         }, [lastScrollY]);
 
         return (
-            <nav className={styles.navbar} id={'Navbar'}>
+            <nav className={styles.navbar} ref={this.Navlinks}>
                 <div className={styles.logo}>
-                    <Logo url="/" />
+                    <Logo url="/"/>
                 </div>
                 <div className={styles.navlinks} id={'Navlinks'}>
                     <Link href="/projects" passHref>
@@ -74,9 +78,10 @@ export function Navbar() {
                     </Link>
                 </div>
                 <a href={'#!'} className={styles.icon} onClick={openNav}>
-                    <Image src="/images/bars-solid.svg" width={30} height={30} alt="bars" />
+                    <Image src="/images/bars-solid.svg" width={30} height={30} alt="bars"/>
                 </a>
             </nav>
+
         );
     };
 }
