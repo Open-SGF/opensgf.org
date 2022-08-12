@@ -14,12 +14,20 @@
     background-color: white;
 }
 
-.navlinks {
+.navLinks {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
     gap : 60px;
+
+    .open {
+        height: 100%;
+    }
+
+    .closed {
+        height: 0;
+    }
 
     a {
         text-decoration: none;
@@ -52,12 +60,12 @@
     }
 }
 
-.icon{
+.icon {
     display: none;
     z-index: 1;
 }
 
-.logo{
+.logo {
     width: 30%;
 }
 
@@ -84,15 +92,14 @@
         overflow: hidden;
         justify-content: flex-start;
         gap: 200px;
-    }
 
-    .navlinks a {
-        padding: 8px;
-        text-decoration: none;
-        color: white;
-        font-size: 30px;
+        a {
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+        }
     }
-
 }
 
 

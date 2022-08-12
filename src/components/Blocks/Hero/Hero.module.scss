@@ -8,7 +8,7 @@
     margin: 200px 60px 60px;
 }
 
-.reversecontainer {
+.reverseContainer {
     display: flex;
     gap: 60px;
     justify-content: center;
@@ -23,20 +23,19 @@
     color: $base-black;
     justify-content: center;
 
-
-    .header{
-        h1{
+    .header {
+        h1 {
             font-size: 54px;
             line-height: 63px;
             font-weight: 1000;
             margin-bottom: 30px;
         }
+
         h2{
             font-weight: 600;
             font-size: 24px;
             line-height: 28px;
             margin-bottom: 20px;
-        }
         }
     }
 
@@ -53,7 +52,7 @@
         }
     }
 
-    .lable{
+    .label{
         h3{
             padding: 3px;
             width: 200px;
@@ -74,6 +73,7 @@
         ul{
             list-style: disc;
         }
+
         li{
             font-family: Roboto Slab, serif;
             font-style: normal;
@@ -83,12 +83,12 @@
             color: $base-red;
         }
     }
+}
 
 
-.graphic{
+.graphic {
     position: relative;
-    .image{
-    }
+
     .particles{
         z-index: -10;
         position: absolute;
@@ -104,10 +104,11 @@
         flex-direction: column;
     }
 
-    .reversecontainer{
+    .reverseContainer{
         display: flex;
         flex-direction: column-reverse;
         gap: 0;
+
         .particles{
             top: -400px;
         }
