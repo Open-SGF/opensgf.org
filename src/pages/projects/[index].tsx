@@ -8,7 +8,7 @@ import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
 import ProjectNav from '@/components/Blocks/ProjectNav/ProjectNav';
 
-export function Project(): JSX.Element {
+export default function Project(): JSX.Element {
     return (
         <div className={styles.container}>
             <Hero

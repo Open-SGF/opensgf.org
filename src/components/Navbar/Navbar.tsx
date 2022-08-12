@@ -10,14 +10,14 @@ export function Navbar() {
     const [scrollY, setScrollY] = useState(0);
 
     const handleScroll = () => {
-        const { pageYOffset, scrollY } = window;
-        console.log("yOffset", pageYOffset, "scrollY", scrollY);
         window.scrollY > scrollY ? setShow(false) : setShow(true)
         setScrollY(window.scrollY);
     }
 
-    const handleClick = (element) => {
-        // TODO: measure if the clicked element is part of the navbar. If not, close the navbar on mobile.
+    const handleClick = (event) => {
+        if (!event.target.matches('#navbar, #navbar *')) {
+            setShow(false)
+        }
     }
 
     useEffect(() => {
@@ -26,16 +26,16 @@ export function Navbar() {
             return
         }
         const options = { passive: true }
-        body.addEventListener("scroll", handleScroll, options);
-        body.addEventListener('click', handleClick)
+        window.addEventListener("scroll", handleScroll, options);
+        window.addEventListener('click', handleClick)
         return () => {
-            body.removeEventListener("scroll", handleScroll, options);
-            body.addEventListener('click', handleClick)
+            window.removeEventListener("scroll", handleScroll, options);
+            window.addEventListener('click', handleClick)
         };
     }, [scrollY]);
 
     return (
-        <nav className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
+        <nav id='navbar' className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
             <div className={styles.logo}>
                 <Logo url="/"/>
             </div>
