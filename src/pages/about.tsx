@@ -1,6 +1,6 @@
+import { Gallery } from '@/components/Gallery';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import styles from '@/styles/About.module.scss';
-import { Gallery } from '@/components/Gallery';
 
 export default function About() {
     return (

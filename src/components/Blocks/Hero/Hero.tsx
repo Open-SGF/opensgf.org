@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './Hero.module.scss';
 
 export function Hero(props: any) {

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,34 +10,34 @@ export function Navbar() {
     const [scrollY, setScrollY] = useState(0);
 
     const handleScroll = () => {
-        window.scrollY > scrollY ? setShow(false) : setShow(true)
+        window.scrollY > scrollY ? setShow(false) : setShow(true);
         setScrollY(window.scrollY);
-    }
+    };
 
     const handleClick = (event: any) => {
         if (!event.target.matches('#navbar, #navbar *')) {
-            setShow(false)
+            setShow(false);
         }
-    }
+    };
 
     useEffect(() => {
-        const body = document.querySelector('body')
+        const body = document.querySelector('body');
         if (!body) {
-            return
+            return;
         }
-        const options = { passive: true } as EventListenerOptions
-        window.addEventListener("scroll", handleScroll, options);
-        window.addEventListener('click', handleClick)
+        const options = { passive: true } as EventListenerOptions;
+        window.addEventListener('scroll', handleScroll, options);
+        window.addEventListener('click', handleClick);
         return () => {
-            window.removeEventListener("scroll", handleScroll, options);
-            window.addEventListener('click', handleClick)
+            window.removeEventListener('scroll', handleScroll, options);
+            window.addEventListener('click', handleClick);
         };
-    }, [scrollY]);
+    }, [scrollY, handleScroll]);
 
     return (
-        <nav id='navbar' className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
+        <nav id="navbar" className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
             <div className={styles.logo}>
-                <Logo url="/"/>
+                <Logo url="/" />
             </div>
             <div className={styles.navLinks}>
                 <Link href="/projects" passHref>
@@ -53,19 +53,17 @@ export function Navbar() {
                     </Link>
                     <p>Learn how you can get involved</p>
                 </Dropdown>
-                <Link href="/about" passHref >
+                <Link href="/about" passHref>
                     <a>About</a>
                 </Link>
                 <Link href="/donate" passHref>
                     <a>
-                        <button className={styles.btn} >
-                            Donate
-                        </button>
+                        <button className={styles.btn}>Donate</button>
                     </a>
                 </Link>
             </div>
             <a href={'#!'} className={styles.icon}>
-                <Image src="/images/bars-solid.svg" width={30} height={30} alt="bars"/>
+                <Image src="/images/bars-solid.svg" width={30} height={30} alt="bars" />
             </a>
         </nav>
     );
