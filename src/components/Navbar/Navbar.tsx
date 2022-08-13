@@ -14,7 +14,7 @@ export function Navbar() {
         setScrollY(window.scrollY);
     }
 
-    const handleClick = (event) => {
+    const handleClick = (event: any) => {
         if (!event.target.matches('#navbar, #navbar *')) {
             setShow(false)
         }
@@ -25,7 +25,7 @@ export function Navbar() {
         if (!body) {
             return
         }
-        const options = { passive: true }
+        const options = { passive: true } as EventListenerOptions
         window.addEventListener("scroll", handleScroll, options);
         window.addEventListener('click', handleClick)
         return () => {
