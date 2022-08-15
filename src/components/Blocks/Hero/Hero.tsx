@@ -12,7 +12,7 @@ export function Hero(props: any) {
             </div>
             <div className={styles.graphic}>
                 <div className={styles.image}>{props.image}</div>
-                <div className={styles.particles}>{props.particles}</div>
+                {/*<div className={styles.particles}>{props.particles}</div>*/}
             </div>
             {props.bool}
         </div>

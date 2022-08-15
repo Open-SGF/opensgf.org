@@ -1,60 +1,12 @@
 ﻿@import '@/styles/_variables';
 
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    justify-self: center;
-    gap: 10px;
-    margin-top: 80px;
-}
-
-.grid {
-    display: grid;
+.cardWrapper {
     position: absolute;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 12px;
-    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    max-width: calc(100% - (2 * 216px));
+    margin: 0 216px;
 }
 
-.card1{
-    position: relative;
-    background-image: url("https://via.placeholder.com/300");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 304px;
-    height: 169px;
-    border-radius: 15px;
-    overflow: visible;
 
-    h3{
-        position: absolute;
-        color: white;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 28px;
-        padding: 10px;
-        width: 65%;
-        bottom: 0;
-    }
-
-    button{
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        top: -20px;
-        right: -20px;
-        border-radius: 30px;
-        border-style: none;
-        background-color: $light-red;
-        color: white;
-        box-shadow: -4px 2px 4px
-            rgba(3, 137, 252, 0.24)
-    }
-}
-
-@media (screen max-width 600px){
-
-
-}

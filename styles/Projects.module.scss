@@ -1,0 +1,13 @@
+@import '_mixins';
+@import '_variables';
+
+.title {
+    margin: 187px 216px 30px 216px;
+    font-family: 'Roboto', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #133654;
+}
