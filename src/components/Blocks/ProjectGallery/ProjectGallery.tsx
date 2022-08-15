@@ -1,9 +1,10 @@
-﻿import styles from './ProjectGallery.module.scss';
-import { Card } from "@/components/Blocks/ProjectGallery/components/Card/Card";
+﻿import { Card } from '@/components/Blocks/ProjectGallery/components/Card/Card';
+import styles from './ProjectGallery.module.scss';
 
 export function ProjectGallery() {
     const projects = [
         {
+            id: 0,
             title: 'Motherhood Reclaimed Website',
             link: '/projects/project',
             image: {
@@ -14,6 +15,7 @@ export function ProjectGallery() {
             helpWanted: true,
         },
         {
+            id: 1,
             title: 'MOJobs Mobile App',
             link: '/projects/project',
             image: {
@@ -24,6 +26,7 @@ export function ProjectGallery() {
             helpWanted: false,
         },
         {
+            id: 2,
             title: 'SGF Covid Support',
             link: '/projects/project',
             image: {
@@ -32,12 +35,14 @@ export function ProjectGallery() {
             },
             inProgress: true,
             helpWanted: false,
-        }
-    ]
+        },
+    ];
 
     return (
         <div className={styles.cardWrapper}>
-            {projects.map(project => <Card project={project}/>)}
+            {projects.map((project) => (
+                <Card project={project} key={project.id} />
+            ))}
         </div>
     );
 }

@@ -1,5 +1,5 @@
-import styles from '@/styles/Projects.module.scss';
 import { ProjectGallery } from '@/components/Blocks/ProjectGallery/ProjectGallery';
+import styles from '@/styles/Projects.module.scss';
 
 export default function Projects(): JSX.Element {
     return (

@@ -9,18 +9,18 @@ export function Navbar() {
     const [show, setShow] = useState(true);
     const [scrollY, setScrollY] = useState(0);
 
-    const handleScroll = () => {
-        window.scrollY > scrollY ? setShow(false) : setShow(true);
-        setScrollY(window.scrollY);
-    };
-
-    const handleClick = (event: any) => {
-        if (!event.target.matches('#navbar, #navbar *')) {
-            setShow(false);
-        }
-    };
-
     useEffect(() => {
+        const handleScroll = () => {
+            window.scrollY > scrollY ? setShow(false) : setShow(true);
+            setScrollY(window.scrollY);
+        };
+
+        const handleClick = (event: any) => {
+            if (!event.target.matches('#navbar, #navbar *')) {
+                setShow(false);
+            }
+        };
+
         const body = document.querySelector('body');
         if (!body) {
             return;
@@ -32,7 +32,7 @@ export function Navbar() {
             window.removeEventListener('scroll', handleScroll, options);
             window.addEventListener('click', handleClick);
         };
-    }, [scrollY, handleScroll]);
+    }, [scrollY]);
 
     return (
         <nav id="navbar" className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>

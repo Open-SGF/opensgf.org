@@ -1,9 +1,8 @@
 ﻿import Image from 'next/image';
 import styles from './ProjectNav.module.scss';
 
-const ProjectGallery = props => {
-    //Destructuring
-    const {text} = props;
+export function ProjectNav(props: any) {
+    const { text } = props;
     return (
         <div className={text == 'Next' ? styles.flippedcontainer : styles.container}>
             <Image
@@ -20,5 +19,3 @@ const ProjectGallery = props => {
         </div>
     );
 }
-
-export default ProjectGallery;

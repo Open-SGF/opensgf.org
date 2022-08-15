@@ -1,12 +1,12 @@
 import { ChatBubble } from '@/components/Blocks/ChatBubble/ChatBubble';
-import { Hero } from '@/components/Blocks/Hero/Hero';
-import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
-import styles from '@/styles/Home.module.scss';
 import { Gallery } from '@/components/Gallery';
-import React from 'react';
+import { Hero } from '@/components/Blocks/Hero/Hero';
 import Image from 'next/image';
+import styles from '@/styles/Home.module.scss';
 import { ParticlesComp } from '@/components/Particles/Particles';
-import ProjectNav from '@/components/Blocks/ProjectNav/ProjectNav';
+import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
+import { ProjectNav } from '@/components/Blocks/ProjectNav/ProjectNav';
+import React from 'react';
 
 export default function Project(): JSX.Element {
     return (

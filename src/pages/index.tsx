@@ -4,11 +4,8 @@ import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Head from 'next/head';
 import { Hero } from '@/components/Blocks/Hero/Hero';
 import Image from 'next/image';
-// import Link from 'next/link';
 import { ParticlesComp } from '@/components/Particles/Particles';
-import { ProjectBlock } from '@/components/Blocks/ProjectBlock/ProjectBlock';
 import { Stats } from '@/components/Blocks/Stats/Stats';
-// import styles from '@/styles/index.module.scss';
 
 export default function Home() {
     const contactButton = <Button text="Contact" href="/" />;
@@ -60,7 +57,6 @@ export default function Home() {
                     image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={600} height={600} />}
                     bool={true}
                 />
-                {/*<ProjectBlock />*/}
                 <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>
         </>
