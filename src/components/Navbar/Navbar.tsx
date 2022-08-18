@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,12 +7,12 @@ import styles from './Navbar.module.scss';
 
 export function Navbar() {
     const [show, setShow] = useState(true);
-    const [scrollY, setScrollY] = useState(0);
+    const previousScrollYRef = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            window.scrollY > scrollY ? setShow(false) : setShow(true);
-            setScrollY(window.scrollY);
+            setShow(!(window.scrollY > previousScrollYRef.current))
+            previousScrollYRef.current = window.scrollY;
         };
 
         const handleClick = (event: any) => {
@@ -21,21 +21,20 @@ export function Navbar() {
             }
         };
 
-        const body = document.querySelector('body');
-        if (!body) {
-            return;
-        }
-        const options = { passive: true } as EventListenerOptions;
-        window.addEventListener('scroll', handleScroll, options);
+        window.addEventListener('scroll', handleScroll);
         window.addEventListener('click', handleClick);
+
         return () => {
-            window.removeEventListener('scroll', handleScroll, options);
+            window.removeEventListener('scroll', handleScroll);
             window.addEventListener('click', handleClick);
         };
-    }, [scrollY]);
+    }, []);
 
     return (
-        <nav id="navbar" className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
+        <nav
+            id="navbar"
+            className={`${styles.navbar} ${show ? styles.open : styles.closed}`}
+        >
             <div className={styles.logo}>
                 <Logo url="/" />
             </div>
