@@ -17,6 +17,7 @@ export function Navbar(): JSX.Element {
         };
 
         const handleClick = (event: any) => {
+            // TODO: replace with the react way of grabbing elements
             if (!event.target.matches('#navbar, #navbar *')) {
                 setOpen(false);
             }

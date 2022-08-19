@@ -13,7 +13,8 @@ export function Dropdown({ children, heading, forceClosed }: IDropdown): JSX.Ele
 
     useEffect(() => {
         const handleClick = (event: any) => {
-            if (!event.target.matches('#navbar, #navbar *')) {
+            // TODO: replace with react way of referencing elements.
+            if (!event.target.matches('#dropdown, #dropdown *')) {
                 setShow(false);
             }
         };
@@ -26,9 +27,11 @@ export function Dropdown({ children, heading, forceClosed }: IDropdown): JSX.Ele
     }, []);
 
     return (
-        <div className={styles.dropdown}>
+        <div id="dropdown" className={styles.dropdown}>
             <button className={styles.trigger} onClick={() => setShow(!show)}>
-                {heading}
+                <span>
+                    {heading}
+                </span>
                 <ArrowDown />
             </button>
             <div className={`${styles.content}  ${show && !forceClosed ? styles.shown : ''}`}>

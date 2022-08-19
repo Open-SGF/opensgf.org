@@ -10,6 +10,14 @@
         color: $base-black;
         cursor: pointer;
         background-color: rgba(0,0,0,0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+
+        img {
+            margin-left: 18px;
+        }
 
         &:hover {
             color: $base-blue;
