@@ -1,0 +1,45 @@
+﻿@import '/styles/_variables.scss';
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 10px;
+    width: 300px;
+}
+
+.flippedContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 300px;
+    text-align: end;
+}
+
+.image{
+    transform: rotate(90deg);
+}
+
+.nextImage{
+    transform: rotate(-90deg);
+}
+
+.buttonText{
+    font-family: Roboto,  serif;
+    font-style: normal;
+    color: $base-black;
+    font-weight: 400;
+
+    h3{
+        font-size: 24px;
+        line-height: 28px;
+        margin: 6px;
+    }
+
+    p{
+        margin: 6px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+}

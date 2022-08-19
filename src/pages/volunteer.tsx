@@ -26,12 +26,7 @@ export default function volunteer() {
                     </ul>
                 }
                 image={
-                    <Image
-                        src={'/images/volunteer-working.svg'}
-                        alt="volunteers-working"
-                        width={362}
-                        height={175}
-                    ></Image>
+                    <Image src={'/images/volunteer-working.svg'} alt="volunteers-working" width={362} height={175} />
                 }
                 particles={<ParticlesComp />}
             />

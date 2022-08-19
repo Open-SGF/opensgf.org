@@ -116,7 +116,7 @@ export function ParticlesComp() {
                 size: {
                     mode: 'percent',
                     height: 0,
-                    width: 30,
+                    width: 10,
                 },
                 direction: 'top',
                 position: {

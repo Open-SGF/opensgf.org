@@ -1,0 +1,46 @@
+.card {
+    position: relative;
+    width: 411px;
+    height: 218px;
+    border-radius: 15px;
+    overflow: visible;
+
+    .iconCallout {
+        position: absolute;
+        right: -13px;
+        top: -24px;
+        z-index: 10;
+    }
+
+    .title {
+        position: absolute;
+        bottom: 26px;
+        left: 26px;
+        z-index: 5;
+        color: white;
+        font-family: 'Roboto', 'sans-serif';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        cursor: pointer;
+    }
+
+    .shadow {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+        background-color: rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+    }
+
+    .imageWrapper {
+        border-radius: inherit;
+
+        & > div, & span, & img {
+            border-radius: inherit;
+        }
+    }
+}

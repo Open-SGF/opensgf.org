@@ -5,10 +5,15 @@
     gap: 60px;
     justify-content: center;
     height: 300px;
-    margin: 60px;
+    margin: 200px 60px 60px;
 }
 
-.reverse {
+.reverseContainer {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    height: 300px;
+    margin: 60px;
     flex-direction: row-reverse;
 }
 
@@ -16,20 +21,21 @@
     width: 500px;
     font-family: Roboto, serif;
     color: $base-black;
+    justify-content: center;
 
-    .header{
-        h1{
+    .header {
+        h1 {
             font-size: 54px;
             line-height: 63px;
             font-weight: 1000;
             margin-bottom: 30px;
         }
+
         h2{
             font-weight: 600;
             font-size: 24px;
             line-height: 28px;
             margin-bottom: 20px;
-        }
         }
     }
 
@@ -46,7 +52,7 @@
         }
     }
 
-    .lable{
+    .label{
         h3{
             padding: 3px;
             width: 200px;
@@ -67,6 +73,7 @@
         ul{
             list-style: disc;
         }
+
         li{
             font-family: Roboto Slab, serif;
             font-style: normal;
@@ -76,31 +83,48 @@
             color: $base-red;
         }
     }
-
-
-.graphic{
-    .image{
-        padding: 30px;
-    }
-    .particles{
-        z-index: -10;
-    }
 }
 
 
+.graphic {
+    position: relative;
 
+    .particles{
+        z-index: -10;
+        position: absolute;
+        top: -180px;
+        left: -80px;
+    }
+}
 
+@media screen and (max-width:600px){
 
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
 
+    .reverseContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
 
+        .particles{
+            top: -400px;
+        }
+    }
 
+    .graphic{
+        .particles{
+            position: absolute;
+            left: -120px;
+            width: 10px;
+            top: -100 x;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
+    .message{
+        width: 300px;
+        text-align: center;
+    }
+}

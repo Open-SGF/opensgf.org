@@ -1,11 +1,12 @@
 import { ChatBubble } from '@/components/Blocks/ChatBubble/ChatBubble';
-import { Hero } from '@/components/Blocks/Hero/Hero';
-import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
-import styles from '@/styles/Home.module.scss';
 import { Gallery } from '@/components/Gallery';
-import React from 'react';
+import { Hero } from '@/components/Blocks/Hero/Hero';
 import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
+import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
+import { ProjectNav } from '@/components/Blocks/ProjectNav/ProjectNav';
+import React from 'react';
+import styles from '@/styles/Home.module.scss';
 
 export default function Project(): JSX.Element {
     return (
@@ -28,12 +29,15 @@ export default function Project(): JSX.Element {
                         <li>Marketing</li>
                     </ul>
                 }
-                bool={true}
+                swapSides={true}
             />
             <ProjectDetails />
             <ChatBubble />
             <Gallery />
-            <div>Previous Next Button Block</div>
+            <div className={styles.projectNav}>
+                <ProjectNav buttonText={'Previous'} />
+                <ProjectNav buttonText={'Next'} />
+            </div>
         </div>
     );
 }

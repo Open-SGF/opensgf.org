@@ -33,3 +33,14 @@
         margin: 0;
     }
 }
+
+@media  (screen and max-width: 600px) {
+
+    .container{
+       flex-direction: column;
+        gap: 60px;
+        height: 600px;
+        align-items: center;
+        margin-top: 160px;
+    }
+}

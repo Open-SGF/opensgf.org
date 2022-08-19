@@ -21,3 +21,14 @@
 .button {
     align-self: center;
 }
+
+@media (screen and max-width: 600px){
+
+    .cardContainer{
+        width: 70vw;
+    }
+
+    .text{
+        width: 60vw;
+    }
+}

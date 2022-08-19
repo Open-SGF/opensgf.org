@@ -17,7 +17,8 @@
     justify-content: space-between;
     padding: 15px 37px 27px 18px;
 
-    img {
+    .imageWrapper {
+        position: relative;
         width: 95px;
         height: 95px;
         margin-right: 25px;

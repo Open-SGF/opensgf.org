@@ -4,11 +4,8 @@ import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Head from 'next/head';
 import { Hero } from '@/components/Blocks/Hero/Hero';
 import Image from 'next/image';
-// import Link from 'next/link';
 import { ParticlesComp } from '@/components/Particles/Particles';
-import { ProjectBlock } from '@/components/Blocks/ProjectBlock/ProjectBlock';
 import { Stats } from '@/components/Blocks/Stats/Stats';
-// import styles from '@/styles/index.module.scss';
 
 export default function Home() {
     const contactButton = <Button text="Contact" href="/" />;
@@ -47,7 +44,6 @@ export default function Home() {
                     }
                     image={<Image src={'/images/group-working.svg'} alt="group working " width={360} height={220} />}
                     particles={<ParticlesComp />}
-                    bool={true}
                 />
                 <Stats />
                 <Hero
@@ -58,10 +54,9 @@ export default function Home() {
                             labore reprehenderit repudiandae tenetur velit voluptates!
                         </p>
                     }
-                    image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={500} height={500} />}
+                    image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={600} height={600} />}
+                    swapSides={true}
                 />
-                <Stats />
-                <ProjectBlock />
                 <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>
         </>
