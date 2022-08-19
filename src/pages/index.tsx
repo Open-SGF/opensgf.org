@@ -55,7 +55,7 @@ export default function Home() {
                         </p>
                     }
                     image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={600} height={600} />}
-                    bool={true}
+                    swapSides={true}
                 />
                 <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>

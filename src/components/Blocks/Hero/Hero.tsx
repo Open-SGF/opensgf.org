@@ -3,7 +3,7 @@ import styles from './Hero.module.scss';
 
 export function Hero(props: any) {
     return (
-        <div id="container" className={props.bool ? styles.reverseContainer : styles.container}>
+        <div id="container" className={props.swapSides ? styles.reverseContainer : styles.container}>
             <div className={styles.message}>
                 <div className={styles.header}>{props.header}</div>
                 <div className={styles.text}>{props.text}</div>
@@ -14,7 +14,6 @@ export function Hero(props: any) {
                 <div className={styles.image}>{props.image}</div>
                 {/*<div className={styles.particles}>{props.particles}</div>*/}
             </div>
-            {props.bool}
         </div>
     );
 }

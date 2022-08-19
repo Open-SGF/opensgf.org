@@ -28,7 +28,6 @@ export function Dropdown() {
             }
 
             const dropdowns = document.getElementsByClassName(styles['content']);
-            console.log(event.target);
             let i;
             for (i = 0; i < dropdowns.length; i++) {
                 const openDropdown = dropdowns[i];

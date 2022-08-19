@@ -29,7 +29,7 @@ export default function Project(): JSX.Element {
                         <li>Marketing</li>
                     </ul>
                 }
-                bool={true}
+                swapSides={true}
             />
             <ProjectDetails />
             <ChatBubble />
