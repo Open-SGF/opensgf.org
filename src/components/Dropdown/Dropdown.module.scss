@@ -17,6 +17,13 @@
 
         img {
             margin-left: 18px;
+            transition: transform 0.1s;
+        }
+
+        &.open {
+            img {
+                transform: rotate(180deg);
+            }
         }
 
         &:hover {
@@ -41,7 +48,7 @@
         display: none;
         padding: 27px 30px 27px 20px;
 
-        &.shown {
+        &.open {
             display: block;
         }
 

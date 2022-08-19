@@ -28,13 +28,13 @@ export function Dropdown({ children, heading, forceClosed }: IDropdown): JSX.Ele
 
     return (
         <div id="dropdown" className={styles.dropdown}>
-            <button className={styles.trigger} onClick={() => setShow(!show)}>
+            <button className={`${styles.trigger} ${show && !forceClosed ? styles.open : ''}`} onClick={() => setShow(!show)}>
                 <span>
                     {heading}
                 </span>
                 <ArrowDown />
             </button>
-            <div className={`${styles.content}  ${show && !forceClosed ? styles.shown : ''}`}>
+            <div className={`${styles.content}  ${show && !forceClosed ? styles.open : ''}`}>
                 {children}
             </div>
         </div>
