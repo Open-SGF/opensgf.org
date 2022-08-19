@@ -14,7 +14,8 @@
     border-radius: 50%;
     background-color: $light-red;
     color: white;
-    box-shadow: -4px 2px 4px rgba(3, 137, 252, 0.24)
+    box-shadow: -4px 2px 4px rgba(3, 137, 252, 0.24);
+    cursor: pointer;
 }
 
 .bubbleTail {
@@ -26,4 +27,5 @@
     width: 25px;
     clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
     background-color: $light-red;
+    cursor: pointer;
 }

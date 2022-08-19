@@ -1,12 +1,12 @@
 ﻿@import '@/styles/_variables';
 
 .cardWrapper {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 21px;
     max-width: calc(100% - (2 * 216px));
-    margin: 0 216px;
+    margin: 0 216px 30px 216px;
 }
 
 
