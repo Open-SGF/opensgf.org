@@ -2,11 +2,11 @@ import { ChatBubble } from '@/components/Blocks/ChatBubble/ChatBubble';
 import { Gallery } from '@/components/Gallery';
 import { Hero } from '@/components/Blocks/Hero/Hero';
 import Image from 'next/image';
-import styles from '@/styles/Home.module.scss';
 import { ParticlesComp } from '@/components/Particles/Particles';
 import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
 import { ProjectNav } from '@/components/Blocks/ProjectNav/ProjectNav';
 import React from 'react';
+import styles from '@/styles/Home.module.scss';
 
 export default function Project(): JSX.Element {
     return (

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ export function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setShow(!(window.scrollY > previousScrollYRef.current))
+            setShow(!(window.scrollY > previousScrollYRef.current));
             previousScrollYRef.current = window.scrollY;
         };
 
@@ -31,10 +31,7 @@ export function Navbar() {
     }, []);
 
     return (
-        <nav
-            id="navbar"
-            className={`${styles.navbar} ${show ? styles.open : styles.closed}`}
-        >
+        <nav id="navbar" className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
             <div className={styles.logo}>
                 <Logo url="/" />
             </div>
