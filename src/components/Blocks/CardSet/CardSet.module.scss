@@ -15,14 +15,13 @@
     width: 100vw;
 }
 
-@media ( screen and max-width: 600px ){
+@media ( screen and max-width: 600px ) {
     .cards {
         flex-direction: column;
         align-items: center;
+    }
 }
 
-    .cardSetContainer {
-        text-align: center;
-    }
-
+.cardSetContainer {
+    text-align: center;
 }

@@ -7,7 +7,7 @@
     width: 300px;
 }
 
-.flippedcontainer{
+.flippedContainer{
     display: flex;
     flex-direction: row-reverse;
     margin-left: auto;
@@ -21,11 +21,11 @@
     transform: rotate(90deg);
 }
 
-.nextimage{
+.nextImage{
     transform: rotate(-90deg);
 }
 
-.text{
+.buttonText{
     font-family: Roboto,  serif;
     font-style: normal;
     color: $base-black;
