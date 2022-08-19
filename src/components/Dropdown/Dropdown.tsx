@@ -1,53 +1,37 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { ArrowDown } from '@/components/Icons/ArrowDown';
 import styles from './Dropdown.module.scss';
 
 type IDropdown = {
     children: any;
     heading: string;
+    forceClosed: boolean;
 };
 
-export function Dropdown({ children, heading }: IDropdown): JSX.Element {
-    const toggle = () => {
-        const menu: HTMLElement | null = document.getElementById('menu');
-
-        if (menu === null) {
-            return;
-        }
-
-        menu.classList.toggle(styles['show']);
-    };
+export function Dropdown({ children, heading, forceClosed }: IDropdown): JSX.Element {
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
-        window.onclick = function (event) {
-            const clickedArea = event.target as HTMLInputElement | null;
-
-            if (clickedArea == null) {
-                return;
+        const handleClick = (event: any) => {
+            if (!event.target.matches('#navbar, #navbar *')) {
+                setShow(false);
             }
+        };
 
-            if (clickedArea.classList.contains(styles['trigger'])) {
-                return;
-            }
+        window.addEventListener('click', handleClick);
 
-            const dropdowns = document.getElementsByClassName(styles['content']);
-
-            for (let i = 0; i < dropdowns.length; i++) {
-                const openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains(styles['show'])) {
-                    openDropdown.classList.remove(styles['show']);
-                }
-            }
+        return () => {
+            window.removeEventListener('click', handleClick);
         };
     }, []);
 
     return (
-        <div>
-            <button className={styles.trigger} onClick={toggle}>
+        <div className={styles.dropdown}>
+            <button className={styles.trigger} onClick={() => setShow(!show)}>
                 {heading}
                 <ArrowDown />
             </button>
-            <div id="menu" className={styles.content}>
+            <div className={`${styles.content}  ${show && !forceClosed ? styles.shown : ''}`}>
                 {children}
             </div>
         </div>

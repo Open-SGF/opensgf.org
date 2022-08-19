@@ -7,6 +7,7 @@ import styles from './Navbar.module.scss';
 
 export function Navbar(): JSX.Element {
     const [show, setShow] = useState(true);
+    const [open, setOpen] = useState(false);
     const previousScrollYRef = useRef(0);
 
     useEffect(() => {
@@ -17,7 +18,7 @@ export function Navbar(): JSX.Element {
 
         const handleClick = (event: any) => {
             if (!event.target.matches('#navbar, #navbar *')) {
-                setShow(false);
+                setOpen(false);
             }
         };
 
@@ -26,12 +27,12 @@ export function Navbar(): JSX.Element {
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.addEventListener('click', handleClick);
+            window.removeEventListener('click', handleClick);
         };
     }, []);
 
     return (
-        <nav id="navbar" className={`${styles.navbar} ${show ? styles.open : styles.closed}`}>
+        <nav id="navbar" className={`${styles.navbar} ${show ? styles.shown : styles.hidden}`}>
             <div className={styles.logo}>
                 <Logo url="/" />
             </div>
@@ -39,7 +40,7 @@ export function Navbar(): JSX.Element {
                 <Link href="/projects" passHref>
                     <a>Projects</a>
                 </Link>
-                <Dropdown heading="Join Us">
+                <Dropdown heading="Join Us" forceClosed={false}>
                     <Link href="/partner">
                         <a>Partnering</a>
                     </Link>
@@ -58,8 +59,8 @@ export function Navbar(): JSX.Element {
                     </a>
                 </Link>
             </div>
-            <a href={'#!'} className={styles.icon}>
-                <Image src="/images/bars-solid.svg" width={30} height={30} alt="bars" />
+            <a href={'#!'} className={styles.hamburgerIcon}>
+                <Image src="/images/hamburger-icon-solid.svg" width={30} height={30} alt="bars" />
             </a>
         </nav>
     );

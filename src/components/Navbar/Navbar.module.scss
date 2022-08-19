@@ -5,13 +5,54 @@
     display: flex;
     position: fixed;
     width: 100vw;
-    height: 60px;
+    padding: 50px 85px 50px 58px;
     align-items: center;
     top: 0;
     transition: top 0.3s;
     z-index: 4;
     margin-bottom: 50px;
     background-color: white;
+
+    &.shown {
+        top: 0;
+    }
+
+    &.hidden {
+        top: -164px;
+    }
+
+    &.closed {
+
+    }
+
+    &.open {
+
+    }
+
+    @media screen and (max-width: 600px) {
+        &.closed {
+            top: -164px;
+        }
+
+        &.open {
+            top: 0;
+        }
+    }
+
+    .hamburgerIcon {
+        display: none;
+        z-index: 1;
+
+        @media screen and (max-width: 600px) {
+            display: block;
+            z-index: 1;
+            margin-left: auto;
+        }
+    }
+
+    .logo {
+        width: 30%;
+    }
 }
 
 .navLinks {
@@ -20,14 +61,6 @@
     justify-content: flex-end;
     margin-left: auto;
     gap : 60px;
-
-    .open {
-        height: 100%;
-    }
-
-    .closed {
-        height: 0;
-    }
 
     a {
         text-decoration: none;
@@ -40,45 +73,27 @@
             text-decoration: underline;
         }
     }
-}
 
-.btn {
-    align-items: center;
-    justify-content: center;
-    background-color: $base-blue;
-    width: 110px;
-    height: 40px;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    border-style: none;
+    .btn {
+        align-items: center;
+        justify-content: center;
+        background-color: $base-blue;
+        width: 110px;
+        height: 40px;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        border-style: none;
 
-    &:hover {
-        background-color: $dark-blue;
-        color: $base-blue;
-    }
-}
-
-.icon {
-    display: none;
-    z-index: 1;
-}
-
-.logo {
-    width: 30%;
-}
-
-
-@media screen and (max-width: 600px) {
-
-    .icon {
-        display: block;
-        z-index: 1;
-        margin-left: auto;
+        &:hover {
+            background-color: $dark-blue;
+            color: $base-blue;
+            cursor: pointer;
+        }
     }
 
-    .navlinks {
+    @media screen and (max-width: 600px) {
         display: flex;
         flex-direction: column;
         height: 0;
@@ -101,5 +116,3 @@
         }
     }
 }
-
-

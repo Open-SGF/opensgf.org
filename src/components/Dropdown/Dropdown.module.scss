@@ -1,68 +1,82 @@
 @import "/styles/_variables";
 
-.trigger {
-    position: relative;
-    border-style: none;
-    font-size: 1.25rem;
-    font-weight: 400;
-    font-family: Roboto, serif;
-    color: $base-black;
-    cursor: pointer;
-    background-color: rgba(0,0,0,0);
-
-    &:hover {
-        color: $base-blue;
-        text-decoration: underline;
-    }
-}
-
-.content {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    width: 160px;
-    padding: 10px;
-    box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18);
-    border-radius: 5px;
-    list-style: none;
-    background-color: white;
-
-    Link {
-        text-decoration: none;
-        color: $base-black;
+.dropdown {
+    .trigger {
+        position: relative;
+        border-style: none;
         font-size: 1.25rem;
         font-weight: 400;
+        font-family: Roboto, serif;
+        color: $base-black;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0);
 
         &:hover {
             color: $base-blue;
             text-decoration: underline;
         }
-    }
 
-    p {
-        color: rgb(19, 54, 84, );
-        line-height: 19px;
-        font-size: 16px;
-        margin-top: 0;
-    }
-}
-
-.show {
-    display: block;
-}
-
-@media (screen and max-width: 600px){
-    .trigger {
-        color: white;
-        font-size: 30px;
+        @media (screen and max-width: 600px){
+            color: white;
+            font-size: 30px;
+        }
     }
 
     .content {
-        box-shadow: none;
-        background-color: rgba(0,0,0,0);
+        position: absolute;
+        flex-direction: column;
+        width: 238px;
+        box-shadow: -5px 5px 19px rgba(0, 148, 255, 0.18);
+        border-radius: 5px;
+        list-style: none;
+        background-color: white;
+        display: none;
+        padding: 27px 30px 27px 20px;
 
-        p{
-            color: white;
+        &.shown {
+            display: block;
+        }
+
+        a {
+            display: block;
+            margin: 28px 0 6px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        Link {
+            text-decoration: none;
+            color: $base-black;
+            font-size: 1.25rem;
+            font-weight: 400;
+
+            &:hover {
+                color: $base-blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: rgba(19, 54, 84, 0.35);
+            margin-top: 0;
+        }
+
+        @media (screen and max-width: 600px){
+            box-shadow: none;
+            background-color: rgba(0,0,0,0);
+
+            p{
+                color: white;
+            }
         }
     }
 }
