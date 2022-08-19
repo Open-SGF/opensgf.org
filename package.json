@@ -15,7 +15,6 @@
         "lint:fix": "npm run lint -- --fix"
     },
     "dependencies": {
-        "babel-preset-react": "^6.24.1",
         "next": "12.1.6",
         "react": "18.1.0",
         "react-dom": "18.1.0",
