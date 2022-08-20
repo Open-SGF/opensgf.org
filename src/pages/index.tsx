@@ -2,7 +2,7 @@ import { Button } from '@/components/Button/Button';
 import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
 import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Head from 'next/head';
-import { Hero } from '@/components/Blocks/Hero/Hero';
+import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
 import { Stats } from '@/components/Blocks/Stats/Stats';
@@ -33,26 +33,30 @@ export default function Home(): JSX.Element {
                 <meta name="keywords" content="Open SGF" />
             </Head>
             <div>
-                <Hero
-                    header={<h1>Open SGF</h1>}
+                <ImageText
                     text={
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores debitis
-                            doloremque dolorum eligendi fugit iste iure, maiores, maxime odio provident rerum sit ut,
-                            vitae? Architecto facere pariatur quo.
-                        </p>
+                        <div>
+                            <h1>Open SGF</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores debitis
+                                doloremque dolorum eligendi fugit iste iure, maiores, maxime odio provident rerum sit ut,
+                                vitae? Architecto facere pariatur quo.
+                            </p>
+                        </div>
                     }
                     image={<Image src={'/images/group-working.svg'} alt="group working " width={360} height={220} />}
                     particles={<ParticlesComp />}
                 />
                 <Stats />
-                <Hero
-                    header={<h2>Project Section</h2>}
+                <ImageText
                     text={
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto
-                            labore reprehenderit repudiandae tenetur velit voluptates!
-                        </p>
+                        <div>
+                            <h2>Project Section</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto
+                                labore reprehenderit repudiandae tenetur velit voluptates!
+                            </p>
+                        </div>
                     }
                     image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={600} height={600} />}
                     swapSides={true}

@@ -1,6 +1,6 @@
 import { ChatBubble } from '@/components/Blocks/ChatBubble/ChatBubble';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
-import { Hero } from '@/components/Blocks/Hero/Hero';
+import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
 import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
@@ -11,24 +11,24 @@ import styles from '@/styles/pages/Home.module.scss';
 export default function Project(): JSX.Element {
     return (
         <div className={styles.container}>
-            <Hero
-                header={<h2>Project Name</h2>}
+            <ImageText
                 text={
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore
-                        reprehenderit repudiandae tenetur velit voluptates!
-                    </p>
+                    <div>
+                        <h2>Project Name</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore
+                            reprehenderit repudiandae tenetur velit voluptates!
+                        </p>
+                        <h3>Skills/Help Needed</h3>
+                        <ul>
+                            <li>Design</li>
+                            <li>Development</li>
+                            <li>Marketing</li>
+                        </ul>
+                    </div>
                 }
                 image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={500} height={500} />}
                 particles={<ParticlesComp />}
-                label={<h3>Skills/Help Needed</h3>}
-                list={
-                    <ul>
-                        <li>Design</li>
-                        <li>Development</li>
-                        <li>Marketing</li>
-                    </ul>
-                }
                 swapSides={true}
             />
             <ProjectDetails />
