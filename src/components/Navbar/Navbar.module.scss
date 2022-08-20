@@ -2,14 +2,14 @@
 @import '/styles/_variables';
 
 .navbar {
-    display: flex;
     position: fixed;
-    width: 100vw;
-    padding: 50px 85px 50px 58px;
-    align-items: center;
     top: 0;
-    transition: top 0.3s;
+    width: 100vw;
     z-index: 4;
+    display: flex;
+    align-items: center;
+    transition: top 0.3s;
+    padding: 50px 85px 50px 58px;
     margin-bottom: 50px;
     background-color: white;
 
@@ -21,31 +21,12 @@
         top: -164px;
     }
 
-    &.closed {
-
-    }
-
-    &.open {
-
-    }
-
-    @media screen and (max-width: 600px) {
-        &.closed {
-            top: -164px;
-        }
-
-        &.open {
-            top: 0;
-        }
-    }
-
     .hamburgerIcon {
         display: none;
         z-index: 1;
 
         @media screen and (max-width: 600px) {
             display: block;
-            z-index: 1;
             margin-left: auto;
         }
     }
@@ -60,7 +41,7 @@
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-    gap : 60px;
+    gap: 60px;
 
     a {
         text-decoration: none;
@@ -93,20 +74,35 @@
         }
     }
 
+
+    &.closed {
+
+    }
+
+    &.open {
+
+    }
+
     @media screen and (max-width: 600px) {
-        display: flex;
-        flex-direction: column;
-        height: 0;
-        width: 100%;
         position: fixed;
         z-index: 3;
         left: 0;
         top: 0;
         background-color: rgba(0,0,0, 0.9);
         transition: 0.5s;
+        flex-direction: column;
+        width: 100%;
         overflow: hidden;
         justify-content: flex-start;
-        gap: 200px;
+        gap: 50px;
+
+        &.closed {
+            height: 0;
+        }
+
+        &.open {
+            height: auto;
+        }
 
         a {
             padding: 8px;

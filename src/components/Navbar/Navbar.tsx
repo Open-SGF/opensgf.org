@@ -37,7 +37,7 @@ export function Navbar(): JSX.Element {
             <div className={styles.logo}>
                 <Logo url="/" />
             </div>
-            <div className={styles.navLinks}>
+            <div className={`${styles.navLinks} ${open ? styles.open : styles.closed}`}>
                 <Link href="/projects" passHref>
                     <a>Projects</a>
                 </Link>
@@ -60,9 +60,9 @@ export function Navbar(): JSX.Element {
                     </a>
                 </Link>
             </div>
-            <a href={'#!'} className={styles.hamburgerIcon}>
+            <button className={styles.hamburgerIcon} onClick={() => setOpen(true)}>
                 <Image src="/images/hamburger-icon-solid.svg" width={30} height={30} alt="bars" />
-            </a>
+            </button>
         </nav>
     );
 }
