@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '@/components/Icons/ArrowDown';
 import styles from './Dropdown.module.scss';
 
@@ -28,15 +28,14 @@ export function Dropdown({ children, heading, forceClosed }: IDropdown): JSX.Ele
 
     return (
         <div id="dropdown" className={styles.dropdown}>
-            <button className={`${styles.trigger} ${show && !forceClosed ? styles.open : ''}`} onClick={() => setShow(!show)}>
-                <span>
-                    {heading}
-                </span>
+            <button
+                className={`${styles.trigger} ${show && !forceClosed ? styles.open : ''}`}
+                onClick={() => setShow(!show)}
+            >
+                <span>{heading}</span>
                 <ArrowDown />
             </button>
-            <div className={`${styles.content}  ${show && !forceClosed ? styles.open : ''}`}>
-                {children}
-            </div>
+            <div className={`${styles.content}  ${show && !forceClosed ? styles.open : ''}`}>{children}</div>
         </div>
     );
 }
