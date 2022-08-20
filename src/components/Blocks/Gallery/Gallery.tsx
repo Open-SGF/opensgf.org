@@ -1,4 +1,4 @@
-﻿import styles from '../../styles/gallery.module.scss';
+﻿import styles from './Gallery.module.scss';
 
 export function Gallery(): JSX.Element {
     return (
