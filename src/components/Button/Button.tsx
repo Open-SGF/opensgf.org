@@ -5,7 +5,7 @@ interface IButton {
     href: string;
 }
 
-export const Button = ({ text, href }: IButton) => {
+export const Button = ({ text, href }: IButton): JSX.Element => {
     return (
         <button className={styles.button}>
             <a href={href}>{text}</a>

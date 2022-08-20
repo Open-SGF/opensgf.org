@@ -21,7 +21,7 @@ export default function Project(): JSX.Element {
                 }
                 image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={500} height={500} />}
                 particles={<ParticlesComp />}
-                lable={<h3>Skills/Help Needed</h3>}
+                label={<h3>Skills/Help Needed</h3>}
                 list={
                     <ul>
                         <li>Design</li>

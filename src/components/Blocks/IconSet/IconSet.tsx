@@ -1,7 +1,7 @@
 import { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import styles from './IconSet.module.scss';
 
-export const IconSet = () => {
+export function IconSet(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.iconWrapper}>
@@ -11,4 +11,4 @@ export const IconSet = () => {
             </div>
         </div>
     );
-};
+}

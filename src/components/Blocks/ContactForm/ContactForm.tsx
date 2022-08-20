@@ -1,6 +1,6 @@
 import styles from './ContactForm.module.scss';
 
-export const ContactForm = () => {
+export function ContactForm(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
@@ -33,4 +33,4 @@ export const ContactForm = () => {
             </div>
         </div>
     );
-};
+}

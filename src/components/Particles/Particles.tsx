@@ -5,7 +5,7 @@ import { loadBubblesPreset } from 'tsparticles-preset-bubbles';
 import { loadSlim } from 'tsparticles-slim';
 import styles from './Particles.module.scss';
 
-export function ParticlesComp() {
+export function ParticlesComp(): JSX.Element {
     const options = useMemo(() => {
         return {
             fullScreen: {

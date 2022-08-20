@@ -3,7 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Card.module.scss';
 
-export function Card({ project, project: { image } }: any) {
+interface ICard {
+    project: {
+        helpWanted: boolean,
+        link: string,
+        title: string,
+        image: {
+            src: string,
+            alt: string
+        }
+    }
+}
+
+export function Card({ project, project: { image } }: ICard): JSX.Element {
     return (
         <div className={styles.card}>
             {project.helpWanted && (

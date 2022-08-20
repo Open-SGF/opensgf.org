@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './Icon.module.scss';
 
-export const Icon = () => {
+export function Icon(): JSX.Element {
     return (
         <div className={styles.icon}>
             <div className={styles.imageWrapper}>
@@ -11,4 +11,4 @@ export const Icon = () => {
             <span className={styles.position}>Job Description</span>
         </div>
     );
-};
+}

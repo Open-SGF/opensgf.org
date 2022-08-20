@@ -2,7 +2,7 @@ import { Gallery } from '@/components/Gallery';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import styles from '@/styles/About.module.scss';
 
-export default function About() {
+export default function About(): JSX.Element {
     return (
         <div className={styles.container}>
             <h1>About Us</h1>

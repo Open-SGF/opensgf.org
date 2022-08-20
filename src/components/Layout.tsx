@@ -2,7 +2,11 @@ import { Footer } from '@/components/Footer/Footer';
 import { Navbar } from '@/components/Navbar/Navbar';
 import styles from './layout.module.scss';
 
-export function Layout({ children }: any): JSX.Element {
+interface ILayout {
+    children: any
+}
+
+export function Layout({ children }: ILayout): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.contentWrapper}>

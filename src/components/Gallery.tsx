@@ -1,6 +1,6 @@
 ﻿import styles from '../../styles/gallery.module.scss';
 
-export function Gallery() {
+export function Gallery(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.image1} />

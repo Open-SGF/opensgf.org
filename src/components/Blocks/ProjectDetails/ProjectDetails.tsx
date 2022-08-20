@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ProjectDetails.module.scss';
 
-export function ProjectDetails() {
+export function ProjectDetails(): JSX.Element {
     return (
         <div className={styles.projectDetails}>
             <div className={styles.linksWrapper}>

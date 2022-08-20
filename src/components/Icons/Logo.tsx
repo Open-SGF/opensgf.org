@@ -8,7 +8,7 @@ interface ILogo {
     width?: number;
 }
 
-export function Logo({ url = false, width = 133, height = 61 }: ILogo) {
+export function Logo({ url = false, width = 133, height = 61 }: ILogo): JSX.Element {
     if (typeof url === 'string') {
         return (
             <Link href={url} passHref className={styles.logo}>
