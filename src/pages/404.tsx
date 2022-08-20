@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-export default function NotFound() {
+export default function NotFound(): JSX.Element {
     const router = useRouter();
 
     useEffect(() => {

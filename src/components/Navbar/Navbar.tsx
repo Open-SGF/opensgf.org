@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Logo } from '@/components/Icons/Logo';
 import styles from './Navbar.module.scss';
 
-export function Navbar() {
+export function Navbar(): JSX.Element {
     const [show, setShow] = useState(true);
     const previousScrollYRef = useRef(0);
 

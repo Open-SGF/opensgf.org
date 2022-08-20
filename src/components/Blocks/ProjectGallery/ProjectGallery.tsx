@@ -1,7 +1,7 @@
 ﻿import { Card } from '@/components/Blocks/ProjectGallery/components/Card/Card';
 import styles from './ProjectGallery.module.scss';
 
-export function ProjectGallery() {
+export function ProjectGallery(): JSX.Element {
     const projects = [
         {
             id: 0,

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './EventCard.module.scss';
 
-export function EventCard() {
+export function EventCard(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.headerStripe} />

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { ParticlesComp } from '@/components/Particles/Particles';
 import { Stats } from '@/components/Blocks/Stats/Stats';
 
-export default function Home() {
+export default function Home(): JSX.Element {
     const contactButton = <Button text="Contact" href="/" />;
 
     const volunteerCard = (

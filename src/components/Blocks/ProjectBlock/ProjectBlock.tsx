@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ProjectBlock.module.scss';
 
-export const ProjectBlock = () => {
+export function ProjectBlock(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.sideBySideSet}>
@@ -26,4 +26,4 @@ export const ProjectBlock = () => {
             </Link>
         </div>
     );
-};
+}

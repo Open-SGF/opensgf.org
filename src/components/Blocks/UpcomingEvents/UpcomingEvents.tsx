@@ -2,7 +2,7 @@ import { EventCard } from '@/components/Blocks/UpcomingEvents/components/EventCa
 import React from 'react';
 import styles from './UpcomingEvents.module.scss';
 
-export function UpcomingEvents() {
+export function UpcomingEvents(): JSX.Element {
     return (
         <div className={styles.container}>
             <hr />

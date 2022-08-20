@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './Footer.module.scss';
 
-export function Footer() {
+export function Footer(): JSX.Element {
     return (
         <div className={styles.pageContainer}>
             <footer className={styles.footer}>

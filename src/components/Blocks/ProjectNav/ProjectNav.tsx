@@ -1,8 +1,11 @@
 ﻿import Image from 'next/image';
 import styles from './ProjectNav.module.scss';
 
-export function ProjectNav(props: any) {
-    const { buttonText } = props;
+interface IProjectNav {
+    buttonText: string;
+}
+
+export function ProjectNav({ buttonText }: IProjectNav): JSX.Element {
     return (
         <div className={buttonText == 'Next' ? styles.flippedContainer : styles.container}>
             <Image

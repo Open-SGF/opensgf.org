@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './ChatBubble.module.scss';
-export const ChatBubble = () => {
+
+export function ChatBubble(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.row}>
@@ -41,4 +42,4 @@ export const ChatBubble = () => {
             </div>
         </div>
     );
-};
+}

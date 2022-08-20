@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './Stats.module.scss';
 
-export function Stats() {
+export function Stats(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.card}>

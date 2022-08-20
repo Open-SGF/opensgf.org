@@ -5,7 +5,7 @@ import { ParticlesComp } from '@/components/Particles/Particles';
 import React from 'react';
 import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
 
-export default function volunteer() {
+export default function volunteer(): JSX.Element {
     return (
         <div>
             <Hero
@@ -17,7 +17,7 @@ export default function volunteer() {
                         fugiat modi? Ab animi fugit rerum.
                     </p>
                 }
-                lable={<h3> Skills/Help Needed</h3>}
+                label={<h3> Skills/Help Needed</h3>}
                 list={
                     <ul>
                         <li>Developement</li>
