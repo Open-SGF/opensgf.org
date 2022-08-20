@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './IconCallout.module.scss';
 
 interface IIconCallout {
-    link: string
+    link: string;
 }
 
 export function IconCallout({ link }: IIconCallout): JSX.Element {

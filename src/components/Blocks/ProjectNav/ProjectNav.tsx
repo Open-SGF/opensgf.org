@@ -2,7 +2,7 @@
 import styles from './ProjectNav.module.scss';
 
 interface IProjectNav {
-    buttonText: string
+    buttonText: string;
 }
 
 export function ProjectNav({ buttonText }: IProjectNav): JSX.Element {

@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './Hero.module.scss';
 
 interface IHero {
-    header: JSX.Element,
-    text: JSX.Element,
-    label?: JSX.Element,
-    list?: JSX.Element,
-    image: JSX.Element,
-    particles?: JSX.Element,
-    swapSides?: boolean
+    header: JSX.Element;
+    text: JSX.Element;
+    label?: JSX.Element;
+    list?: JSX.Element;
+    image: JSX.Element;
+    particles?: JSX.Element;
+    swapSides?: boolean;
 }
 
 export function Hero(props: IHero): JSX.Element {

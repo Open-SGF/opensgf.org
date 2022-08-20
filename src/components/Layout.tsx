@@ -3,7 +3,7 @@ import { Navbar } from '@/components/Navbar/Navbar';
 import styles from './layout.module.scss';
 
 interface ILayout {
-    children: any
+    children: any;
 }
 
 export function Layout({ children }: ILayout): JSX.Element {

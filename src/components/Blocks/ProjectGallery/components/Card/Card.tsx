@@ -5,14 +5,14 @@ import styles from './Card.module.scss';
 
 interface ICard {
     project: {
-        helpWanted: boolean,
-        link: string,
-        title: string,
+        helpWanted: boolean;
+        link: string;
+        title: string;
         image: {
-            src: string,
-            alt: string
-        }
-    }
+            src: string;
+            alt: string;
+        };
+    };
 }
 
 export function Card({ project, project: { image } }: ICard): JSX.Element {
