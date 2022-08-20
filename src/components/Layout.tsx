@@ -8,7 +8,7 @@ interface ILayout {
 
 export function Layout({ children }: ILayout): JSX.Element {
     return (
-        <div className={styles.container}>
+        <div className={styles.pageContainer}>
             <div className={styles.contentWrapper}>
                 <Navbar />
                 {children}

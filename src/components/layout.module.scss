@@ -1,11 +1,11 @@
-.container {
+.pageContainer {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
 .contentWrapper {
-    flex: 1 0 auto;
-    width: 100vw !important;
+    width: 100%;
 }

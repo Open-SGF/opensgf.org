@@ -1,6 +1,6 @@
-import { Gallery } from '@/components/Gallery';
+import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
-import styles from '@/styles/About.module.scss';
+import styles from '@/styles/pages/About.module.scss';
 
 export default function About(): JSX.Element {
     return (
