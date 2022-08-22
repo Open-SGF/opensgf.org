@@ -22,15 +22,15 @@
     }
 
     &.bottomShadow {
-        border-bottom: 2px solid gold;
+        box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
     }
 
     .hamburgerIcon {
         display: none;
-        z-index: 1;
         padding: 0;
         border: none;
         background-color: white;
+        z-index: 6;
 
         @media screen and (max-width: 600px) {
             display: block;
@@ -40,6 +40,19 @@
 
     .logo {
         width: 30%;
+        z-index: 6;
+    }
+
+    @media screen and (max-width: 600px) {
+        .backgroundCover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            z-index: 5;
+        }
     }
 }
 
@@ -82,11 +95,7 @@
     }
 
 
-    &.closed {
-
-    }
-
-    &.open {
+    &.closed, &.open {
 
     }
 
@@ -102,6 +111,7 @@
         overflow: hidden;
         justify-content: flex-start;
         gap: 50px;
+        box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
 
         &.closed {
             top: -300%;

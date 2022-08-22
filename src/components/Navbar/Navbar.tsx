@@ -1,14 +1,55 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Logo } from '@/components/Icons/Logo';
 import styles from './Navbar.module.scss';
+import {Accordion} from "@/components/Accordion/Accordion";
+
+const useMediaQuery = (width: any) => {
+    const [targetReached, setTargetReached] = useState(false);
+
+    const updateTarget = useCallback((e: any) => {
+        if (e.matches) {
+            setTargetReached(true);
+        } else {
+            setTargetReached(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        const media = window.matchMedia(`(max-width: ${width}px)`);
+        media.addListener(updateTarget);
+
+        // Check on mount (callback is not called until a change occurs)
+        if (media.matches) {
+            setTargetReached(true);
+        }
+
+        return () => media.removeListener(updateTarget);
+    }, []);
+
+    return targetReached;
+};
 
 export function Navbar(): JSX.Element {
+    const isBreakpoint = useMediaQuery(768)
     const [show, setShow] = useState(true);
     const [open, setOpen] = useState(false);
     const previousScrollYRef = useRef(0);
+
+    const contactLinks = (
+        <>
+            <Link href="/partner">
+                <a>Partnering</a>
+            </Link>
+            <p> See what we can help you with </p>
+            <Link href="/volunteer">
+                <a>Volunteering</a>
+            </Link>
+            <p>Learn how you can get involved</p>
+        </>
+    )
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,16 +88,19 @@ export function Navbar(): JSX.Element {
                 <Link href="/projects" passHref>
                     <a>Projects</a>
                 </Link>
-                <Dropdown heading="Join Us" forceClosed={false}>
-                    <Link href="/partner">
-                        <a>Partnering</a>
-                    </Link>
-                    <p> See what we can help you with </p>
-                    <Link href="/volunteer">
-                        <a>Volunteering</a>
-                    </Link>
-                    <p>Learn how you can get involved</p>
-                </Dropdown>
+                { isBreakpoint ? (
+                    <div>
+                        <Accordion heading="Join Us" forceClosed={false}>
+                            {contactLinks}
+                        </Accordion>
+                    </div>
+                ) : (
+                    <div>
+                        <Dropdown heading="Join Us" forceClosed={false}>
+                            {contactLinks}
+                        </Dropdown>
+                    </div>
+                )}
                 <Link href="/about" passHref>
                     <a>About</a>
                 </Link>
@@ -69,6 +113,7 @@ export function Navbar(): JSX.Element {
             <button className={styles.hamburgerIcon} onClick={() => setOpen(!open)}>
                 <Image src="/images/hamburger-icon-solid.svg" width={30} height={30} alt="bars" />
             </button>
+            <div className={styles.backgroundCover}/>
         </nav>
     );
 }
