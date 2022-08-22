@@ -12,13 +12,14 @@ export function Navbar(): JSX.Element {
 
     useEffect(() => {
         const handleScroll = () => {
+            setOpen(false);
             setShow(!(window.scrollY > previousScrollYRef.current));
             previousScrollYRef.current = window.scrollY;
         };
 
         const handleClick = (event: any) => {
             // TODO: replace with the react way of grabbing elements
-            if (!event.target.matches('#navbar, #navbar *')) {
+            if (!event.target.matches('#navbar, #navbar *') || event.target.matches('a')) {
                 setOpen(false);
             }
         };
@@ -33,7 +34,12 @@ export function Navbar(): JSX.Element {
     }, []);
 
     return (
-        <nav id="navbar" className={`${styles.navbar} ${show ? styles.shown : styles.hidden}`}>
+        <nav
+            id="navbar"
+            className={`${styles.navbar} ${show ? styles.shown : styles.hidden} ${
+                previousScrollYRef.current > 0 ? styles.bottomShadow : ''
+            }`}
+        >
             <div className={styles.logo}>
                 <Logo url="/" />
             </div>
@@ -60,7 +66,7 @@ export function Navbar(): JSX.Element {
                     </a>
                 </Link>
             </div>
-            <button className={styles.hamburgerIcon} onClick={() => setOpen(true)}>
+            <button className={styles.hamburgerIcon} onClick={() => setOpen(!open)}>
                 <Image src="/images/hamburger-icon-solid.svg" width={30} height={30} alt="bars" />
             </button>
         </nav>

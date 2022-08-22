@@ -21,9 +21,16 @@
         top: -164px;
     }
 
+    &.bottomShadow {
+        border-bottom: 2px solid gold;
+    }
+
     .hamburgerIcon {
         display: none;
         z-index: 1;
+        padding: 0;
+        border: none;
+        background-color: white;
 
         @media screen and (max-width: 600px) {
             display: block;
@@ -84,11 +91,11 @@
     }
 
     @media screen and (max-width: 600px) {
-        position: fixed;
+        position: absolute;
         z-index: 3;
         left: 0;
-        top: 0;
-        background-color: rgba(0,0,0, 0.9);
+        top: 100%;
+        background-color: white;
         transition: 0.5s;
         flex-direction: column;
         width: 100%;
@@ -97,17 +104,12 @@
         gap: 50px;
 
         &.closed {
-            height: 0;
-        }
-
-        &.open {
-            height: auto;
+            top: -300%;
         }
 
         a {
             padding: 8px;
             text-decoration: none;
-            color: white;
             font-size: 30px;
         }
     }
