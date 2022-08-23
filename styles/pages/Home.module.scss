@@ -3,6 +3,10 @@
 
 .pageWrapper {
     margin: 200px 206px 0 206px;
+
+    @media screen and (max-width: 600px) {
+        margin: 200px 10vw 0 10vw;
+    }
 }
 
 .heroText {
@@ -34,6 +38,7 @@
         font-size: 24px;
         line-height: 28px;
         color: #133654;
+        margin-bottom: 24px;
     }
 
     p {
