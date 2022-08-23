@@ -12,14 +12,14 @@ export default function Project(): JSX.Element {
         <div className={styles.projectDetailsImage}>
             <Image src={'/images/laptop-with-phone.png'} alt="laptop" width={500} height={500} />
         </div>
-    )
+    );
 
     const projectDetailsText: JSX.Element = (
         <div className={styles.projectDetailsText}>
             <h1>Project Name</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto
-                labore reprehenderit repudiandae tenetur velit voluptates!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore
+                reprehenderit repudiandae tenetur velit voluptates!
             </p>
             <h2>Skills/Help Needed</h2>
             <ul>
@@ -28,7 +28,7 @@ export default function Project(): JSX.Element {
                 <li>Marketing</li>
             </ul>
         </div>
-    )
+    );
 
     return (
         <div className={styles.pageWrapper}>
@@ -37,7 +37,7 @@ export default function Project(): JSX.Element {
                 text={projectDetailsText}
                 enableParticles={true}
                 textRight={true}
-                imageTextSizeRatio={.55}
+                imageTextSizeRatio={0.55}
             />
             <ProjectDetails />
             <ChatBubble />

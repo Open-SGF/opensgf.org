@@ -1,5 +1,5 @@
+import React, { useCallback, useEffect, useState } from 'react';
 import { ParticlesComp } from '@/components/Particles/Particles';
-import React, {useCallback, useEffect, useState} from 'react';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
