@@ -2,9 +2,21 @@
 import styles from './ProjectGallery.module.scss';
 
 export function ProjectGallery(): JSX.Element {
-    const projects = [
+    type projectSummary = {
+        id: string;
+        title: string;
+        link: string;
+        image: {
+            src: string;
+            alt: string;
+        };
+        inProgress: boolean;
+        helpWanted: boolean;
+    };
+
+    const projects: Array<projectSummary> = [
         {
-            id: 0,
+            id: '0',
             title: 'Motherhood Reclaimed Website',
             link: '/projects/project',
             image: {
@@ -15,7 +27,7 @@ export function ProjectGallery(): JSX.Element {
             helpWanted: true,
         },
         {
-            id: 1,
+            id: '1',
             title: 'MOJobs Mobile App',
             link: '/projects/project',
             image: {
@@ -26,7 +38,7 @@ export function ProjectGallery(): JSX.Element {
             helpWanted: false,
         },
         {
-            id: 2,
+            id: '2',
             title: 'SGF Covid Support',
             link: '/projects/project',
             image: {
