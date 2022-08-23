@@ -13,10 +13,6 @@
     margin-bottom: 50px;
     background-color: white;
 
-    &.shown {
-        top: 0;
-    }
-
     &.hidden {
         top: -164px;
     }
@@ -26,10 +22,8 @@
     }
 
     .hamburgerIcon {
+        position: relative;
         display: none;
-        padding: 0;
-        border: none;
-        background-color: white;
         z-index: 6;
 
         @media screen and (max-width: 600px) {
@@ -121,6 +115,26 @@
             padding: 8px;
             text-decoration: none;
             font-size: 30px;
+        }
+
+        .contactLink {
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #133654;
+            margin: 25px 0 6px 0;
+
+            &Description {
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(19, 54, 84, 0.35);
+            }
         }
     }
 }

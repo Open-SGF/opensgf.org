@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Accordion } from '@/components/Accordion/Accordion';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
-import Image from 'next/image';
+import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
 import Link from 'next/link';
-import { Logo } from '@/components/Icons/Logo';
+import { Logo } from '@/components/Icons/Logo/Logo';
 import styles from './Navbar.module.scss';
-import {Accordion} from "@/components/Accordion/Accordion";
 
-const useMediaQuery = (width: any) => {
+const useMediaQuery = (width: number) => {
     const [targetReached, setTargetReached] = useState(false);
 
     const updateTarget = useCallback((e: any) => {
@@ -33,23 +33,27 @@ const useMediaQuery = (width: any) => {
 };
 
 export function Navbar(): JSX.Element {
-    const isBreakpoint = useMediaQuery(768)
+    const isBreakpoint = useMediaQuery(600);
     const [show, setShow] = useState(true);
     const [open, setOpen] = useState(false);
     const previousScrollYRef = useRef(0);
 
     const contactLinks = (
         <>
-            <Link href="/partner">
-                <a>Partnering</a>
-            </Link>
-            <p> See what we can help you with </p>
-            <Link href="/volunteer">
-                <a>Volunteering</a>
-            </Link>
-            <p>Learn how you can get involved</p>
+            <h2 className={styles.contactLink}>
+                <Link href="/partner">
+                    <a>Partnering</a>
+                </Link>
+            </h2>
+            <p className={styles.contactLinkDescription}> See what we can help you with </p>
+            <h2 className={styles.contactLink}>
+                <Link className={styles.contactLink} href="/volunteer">
+                    <a>Volunteering</a>
+                </Link>
+            </h2>
+            <p className={styles.contactLinkDescription}>Learn how you can get involved</p>
         </>
-    )
+    );
 
     useEffect(() => {
         const handleScroll = () => {
@@ -77,7 +81,7 @@ export function Navbar(): JSX.Element {
     return (
         <nav
             id="navbar"
-            className={`${styles.navbar} ${show ? styles.shown : styles.hidden} ${
+            className={`${styles.navbar} ${show ? '' : styles.hidden} ${
                 previousScrollYRef.current > 0 ? styles.bottomShadow : ''
             }`}
         >
@@ -88,15 +92,15 @@ export function Navbar(): JSX.Element {
                 <Link href="/projects" passHref>
                     <a>Projects</a>
                 </Link>
-                { isBreakpoint ? (
+                {isBreakpoint ? (
                     <div>
-                        <Accordion heading="Join Us" forceClosed={false}>
+                        <Accordion heading="Join Us" forceClosed={!show}>
                             {contactLinks}
                         </Accordion>
                     </div>
                 ) : (
                     <div>
-                        <Dropdown heading="Join Us" forceClosed={false}>
+                        <Dropdown heading="Join Us" forceClosed={!show}>
                             {contactLinks}
                         </Dropdown>
                     </div>
@@ -110,10 +114,10 @@ export function Navbar(): JSX.Element {
                     </a>
                 </Link>
             </div>
-            <button className={styles.hamburgerIcon} onClick={() => setOpen(!open)}>
-                <Image src="/images/hamburger-icon-solid.svg" width={30} height={30} alt="bars" />
-            </button>
-            <div className={styles.backgroundCover}/>
+            <div onClick={() => setOpen(!open)} className={styles.hamburgerIcon} >
+                <Hamburger/>
+            </div>
+            <div className={styles.backgroundCover} />
         </nav>
     );
 }

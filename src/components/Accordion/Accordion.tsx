@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowDown } from '@/components/Icons/ArrowDown';
+import { ArrowDown } from '@/components/Icons/ArrowDown/ArrowDown';
 import styles from './Accordion.module.scss';
 
 interface IAccordion {
-    children: any;
+    children: JSX.Element;
     heading: string;
     forceClosed: boolean;
-};
+}
 
 export function Accordion({ children, heading, forceClosed }: IAccordion): JSX.Element {
     const [show, setShow] = useState(false);
@@ -35,9 +35,7 @@ export function Accordion({ children, heading, forceClosed }: IAccordion): JSX.E
                 <span>{heading}</span>
                 <ArrowDown />
             </button>
-            <div className={`${styles.content}  ${show && !forceClosed ? styles.open : ''}`}>
-                {children}
-            </div>
+            <div className={`${styles.content} ${show && !forceClosed ? styles.open : ''}`}>{children}</div>
         </div>
     );
 }

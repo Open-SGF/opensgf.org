@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowDown } from '@/components/Icons/ArrowDown';
+import { ArrowDown } from '@/components/Icons/ArrowDown/ArrowDown';
 import styles from './Dropdown.module.scss';
 
 type IDropdown = {
     children: any;
     heading: string;
-    forceClosed: boolean;
+    forceClosed?: boolean;
 };
 
-export function Dropdown({ children, heading, forceClosed }: IDropdown): JSX.Element {
+export function Dropdown({ children, heading, forceClosed = false }: IDropdown): JSX.Element {
     const [show, setShow] = useState(false);
 
     useEffect(() => {
