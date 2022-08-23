@@ -37,6 +37,7 @@ export function Navbar(): JSX.Element {
     const [show, setShow] = useState(true);
     const [open, setOpen] = useState(false);
     const previousScrollYRef = useRef(0);
+    const previousLowestScrollYRef = useRef(0);
 
     const contactLinks = (
         <>
@@ -58,8 +59,17 @@ export function Navbar(): JSX.Element {
     useEffect(() => {
         const handleScroll = () => {
             setOpen(false);
-            setShow(!(window.scrollY > previousScrollYRef.current));
+
+            if (window.scrollY > previousScrollYRef.current) {
+                setShow(false);
+                previousLowestScrollYRef.current = window.scrollY;
+            }
+
             previousScrollYRef.current = window.scrollY;
+
+            if (window.scrollY === 0 || window.scrollY < previousLowestScrollYRef.current - 100) {
+                setShow(true);
+            }
         };
 
         const handleClick = (event: any) => {

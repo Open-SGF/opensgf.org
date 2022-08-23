@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 4;
+    z-index: 16;
     display: flex;
     align-items: center;
     transition: top 0.3s;
@@ -24,7 +24,7 @@
     .hamburgerIcon {
         position: relative;
         display: none;
-        z-index: 6;
+        z-index: 19;
 
         @media screen and (max-width: 600px) {
             display: block;
@@ -34,7 +34,7 @@
 
     .logo {
         width: 30%;
-        z-index: 6;
+        z-index: 19;
     }
 
     @media screen and (max-width: 600px) {
@@ -45,7 +45,7 @@
             right: 0;
             bottom: 0;
             background-color: white;
-            z-index: 5;
+            z-index: 18;
         }
     }
 }
@@ -95,7 +95,7 @@
 
     @media screen and (max-width: 600px) {
         position: absolute;
-        z-index: 3;
+        z-index: 10;
         left: 0;
         top: 100%;
         background-color: white;
