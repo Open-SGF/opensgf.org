@@ -3,16 +3,16 @@ import styles from './ProjectGallery.module.scss';
 
 export function ProjectGallery(): JSX.Element {
     type projectSummary = {
-        id: string,
-        title: string,
-        link: string,
+        id: string;
+        title: string;
+        link: string;
         image: {
-            src: string,
-            alt: string,
-        },
-        inProgress: boolean,
-        helpWanted: boolean,
-    }
+            src: string;
+            alt: string;
+        };
+        inProgress: boolean;
+        helpWanted: boolean;
+    };
 
     const projects: Array<projectSummary> = [
         {
