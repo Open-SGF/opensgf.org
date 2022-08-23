@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '@/components/Icons/ArrowDown/ArrowDown';
-import styles from './Dropdown.module.scss';
+import styles from './Accordion.module.scss';
 
-type IDropdown = {
-    children: any;
+interface IAccordion {
+    children: JSX.Element;
     heading: string;
-    forceClosed?: boolean;
-};
+    forceClosed: boolean;
+}
 
-export function Dropdown({ children, heading, forceClosed = false }: IDropdown): JSX.Element {
+export function Accordion({ children, heading, forceClosed }: IAccordion): JSX.Element {
     const [show, setShow] = useState(false);
 
     useEffect(() => {
         const handleClick = (event: any) => {
             // TODO: replace with react way of referencing elements.
-            if (!event.target.matches('#dropdown, #dropdown *')) {
+            if (!event.target.matches('#accordion, #accordion *')) {
                 setShow(false);
             }
         };
@@ -27,7 +27,7 @@ export function Dropdown({ children, heading, forceClosed = false }: IDropdown):
     }, []);
 
     return (
-        <div id="dropdown" className={styles.dropdown}>
+        <div id="accordion" className={styles.accordion}>
             <button
                 className={`${styles.trigger} ${show && !forceClosed ? styles.open : ''}`}
                 onClick={() => setShow(!show)}
@@ -35,7 +35,7 @@ export function Dropdown({ children, heading, forceClosed = false }: IDropdown):
                 <span>{heading}</span>
                 <ArrowDown />
             </button>
-            <div className={`${styles.content}  ${show && !forceClosed ? styles.open : ''}`}>{children}</div>
+            <div className={`${styles.content} ${show && !forceClosed ? styles.open : ''}`}>{children}</div>
         </div>
     );
 }

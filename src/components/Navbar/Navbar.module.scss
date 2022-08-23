@@ -2,16 +2,51 @@
 @import '/styles/_variables';
 
 .navbar {
-    display: flex;
     position: fixed;
-    width: 100vw;
-    height: 60px;
-    align-items: center;
     top: 0;
+    width: 100vw;
+    z-index: 16;
+    display: flex;
+    align-items: center;
     transition: top 0.3s;
-    z-index: 4;
-    margin-bottom: 50px;
+    padding: 50px 85px 50px 58px;
     background-color: white;
+
+    &.hidden {
+        top: -164px;
+    }
+
+    &.bottomShadow {
+        box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
+    }
+
+    .hamburgerIcon {
+        position: relative;
+        display: none;
+        z-index: 19;
+
+        @media screen and (max-width: 600px) {
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    .logo {
+        width: 30%;
+        z-index: 19;
+    }
+
+    @media screen and (max-width: 600px) {
+        .backgroundCover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            z-index: 18;
+        }
+    }
 }
 
 .navLinks {
@@ -19,15 +54,7 @@
     align-items: center;
     justify-content: flex-end;
     margin-left: auto;
-    gap : 60px;
-
-    .open {
-        height: 100%;
-    }
-
-    .closed {
-        height: 0;
-    }
+    gap: 60px;
 
     a {
         text-decoration: none;
@@ -40,66 +67,73 @@
             text-decoration: underline;
         }
     }
-}
 
-.btn {
-    align-items: center;
-    justify-content: center;
-    background-color: $base-blue;
-    width: 110px;
-    height: 40px;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    border-style: none;
+    .btn {
+        align-items: center;
+        justify-content: center;
+        background-color: $base-blue;
+        width: 110px;
+        height: 40px;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        border-style: none;
 
-    &:hover {
-        background-color: $dark-blue;
-        color: $base-blue;
-    }
-}
-
-.icon {
-    display: none;
-    z-index: 1;
-}
-
-.logo {
-    width: 30%;
-}
-
-
-@media screen and (max-width: 600px) {
-
-    .icon {
-        display: block;
-        z-index: 1;
-        margin-left: auto;
+        &:hover {
+            background-color: $dark-blue;
+            color: $base-blue;
+            cursor: pointer;
+        }
     }
 
-    .navlinks {
-        display: flex;
-        flex-direction: column;
-        height: 0;
-        width: 100%;
-        position: fixed;
-        z-index: 3;
+
+    &.closed, &.open {
+
+    }
+
+    @media screen and (max-width: 600px) {
+        position: absolute;
+        z-index: 10;
         left: 0;
-        top: 0;
-        background-color: rgba(0,0,0, 0.9);
+        top: 100%;
+        background-color: white;
         transition: 0.5s;
+        flex-direction: column;
+        width: 100%;
         overflow: hidden;
         justify-content: flex-start;
-        gap: 200px;
+        gap: 50px;
+        box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
+
+        &.closed {
+            top: -300%;
+        }
 
         a {
             padding: 8px;
             text-decoration: none;
-            color: white;
             font-size: 30px;
+        }
+
+        .contactLink {
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #133654;
+            margin: 25px 0 6px 0;
+
+            &Description {
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(19, 54, 84, 0.35);
+            }
         }
     }
 }
-
-
