@@ -1,20 +1,34 @@
+import { ParticlesComp } from '@/components/Particles/Particles';
 import React from 'react';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
-    text: JSX.Element;
     image: JSX.Element;
-    particles?: JSX.Element;
-    swapSides?: boolean;
+    text: JSX.Element;
+    enableParticles?: boolean;
+    textRight?: boolean;
+    imageTextSizeRatio?: number;
 }
 
-export function ImageText(props: IImageText): JSX.Element {
+export function ImageText({
+    image,
+    text,
+    imageTextSizeRatio = 0.5,
+    enableParticles = false,
+    textRight = false,
+}: IImageText): JSX.Element {
     return (
-        <div id="container" className={props.swapSides ? styles.reverseContainer : styles.container}>
-            <div className={styles.text}>{props.text}</div>
-            <div className={styles.graphic}>
-                <div className={styles.image}>{props.image}</div>
-                {/*<div className={styles.particles}>{props.particles}</div>*/}
+        <div className={`${styles.container} ${textRight ? 'textRight' : ''}`}>
+            <div className={styles.textWrapper} style={{ width: imageTextSizeRatio * 100 + '%' }}>
+                {text}
+            </div>
+            <div className={styles.graphicWrapper} style={{ width: (1 - imageTextSizeRatio) * 100 + '%' }}>
+                <div className={styles.image}>{image}</div>
+                {enableParticles && (
+                    <div className={styles.particles}>
+                        <ParticlesComp />
+                    </div>
+                )}
             </div>
         </div>
     );
