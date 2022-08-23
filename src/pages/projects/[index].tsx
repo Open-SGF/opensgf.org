@@ -8,27 +8,36 @@ import React from 'react';
 import styles from '@/styles/pages/Project.module.scss';
 
 export default function Project(): JSX.Element {
+    const projectDetailsImage: JSX.Element = (
+        <div className={styles.projectDetailsImage}>
+            <Image src={'/images/laptop-with-phone.png'} alt="laptop" width={500} height={500} />
+        </div>
+    )
+
+    const projectDetailsText: JSX.Element = (
+        <div className={styles.projectDetailsText}>
+            <h1>Project Name</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto
+                labore reprehenderit repudiandae tenetur velit voluptates!
+            </p>
+            <h2>Skills/Help Needed</h2>
+            <ul>
+                <li>Design</li>
+                <li>Development</li>
+                <li>Marketing</li>
+            </ul>
+        </div>
+    )
+
     return (
-        <div className={styles.container}>
+        <div className={styles.pageWrapper}>
             <ImageText
-                image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={500} height={500} />}
-                text={
-                    <div>
-                        <h2>Project Name</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto
-                            labore reprehenderit repudiandae tenetur velit voluptates!
-                        </p>
-                        <h3>Skills/Help Needed</h3>
-                        <ul>
-                            <li>Design</li>
-                            <li>Development</li>
-                            <li>Marketing</li>
-                        </ul>
-                    </div>
-                }
+                image={projectDetailsImage}
+                text={projectDetailsText}
                 enableParticles={true}
                 textRight={true}
+                imageTextSizeRatio={.55}
             />
             <ProjectDetails />
             <ChatBubble />

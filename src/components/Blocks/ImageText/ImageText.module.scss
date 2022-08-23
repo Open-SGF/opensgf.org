@@ -3,11 +3,11 @@
 .container {
     display: flex;
     justify-content: center;
-    height: 460px;
+    min-height: 460px;
     margin: 0 50px;
     gap: 24px;
 
-    & .textRight {
+    &.textRight {
         flex-direction: row-reverse;
     }
 
@@ -34,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 300px;
 
     .particles{
         z-index: -10;

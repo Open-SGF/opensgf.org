@@ -1,0 +1,37 @@
+.pageWrapper {
+    margin: 200px 206px 0 206px;
+
+    @media screen and (max-width: 600px) {
+        margin: 25vh 10vw 0 10vw;
+    }
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    color: #133654;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    ul {
+        display: block;
+        list-style-type: initial;
+        margin-left: 30px;
+    }
+}
+
+.projectNav{
+    display: flex;
+    flex-direction: row;
+}

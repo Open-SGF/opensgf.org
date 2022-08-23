@@ -1,5 +1,55 @@
-.container {
-    padding: 0 2rem;
+.pageWrapper {
+    margin: 200px 206px 0 206px;
+
+    @media screen and (max-width: 600px) {
+        margin: 20vh 10vw 0 10vw;
+    }
+}
+
+.projectDetailsText {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    color: #133654;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    p {
+        font-weight: 300;
+    }
+
+    h2 {
+        display: block;
+        background: #FF6A6B;
+        border-radius: 25px;
+        width: 201px;
+        height: 33px;
+        text-align: center;
+        padding-top: 5px;
+        font-weight: 500;
+        color: #FFFFFF;
+    }
+
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-left: 30px;
+
+         li {
+             font-weight: 500;
+             color: #FF6A6B;
+         }
+    }
 }
 
 .projectNav{
