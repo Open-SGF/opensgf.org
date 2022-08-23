@@ -2,12 +2,37 @@ import { Button } from '@/components/Button/Button';
 import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
 import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Head from 'next/head';
-import { Hero } from '@/components/Blocks/Hero/Hero';
 import Image from 'next/image';
-import { ParticlesComp } from '@/components/Particles/Particles';
+import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import { Stats } from '@/components/Blocks/Stats/Stats';
+import styles from '@/styles/pages/Home.module.scss';
 
 export default function Home(): JSX.Element {
+    const heroImage = <Image src={'/images/group-working.svg'} alt="group working " width={360} height={220} />;
+
+    const heroText = (
+        <div className={styles.heroText}>
+            <h1>Open SGF</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores debitis doloremque
+                dolorum eligendi fugit iste iure, maiores, maxime odio provident rerum sit ut, vitae? Architecto facere
+                pariatur quo.
+            </p>
+        </div>
+    );
+
+    const projectTeaserImage = <Image src={'/images/laptop-with-phone.png'} alt="laptop" width={600} height={600} />;
+
+    const projectTeaserText = (
+        <div className={styles.projectTeaserText}>
+            <h2>Project Section</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore
+                reprehenderit repudiandae tenetur velit voluptates!
+            </p>
+        </div>
+    );
+
     const contactButton = <Button text="Contact" href="/" />;
 
     const volunteerCard = (
@@ -32,31 +57,10 @@ export default function Home(): JSX.Element {
                 <title>Open SGF | Home</title>
                 <meta name="keywords" content="Open SGF" />
             </Head>
-            <div>
-                <Hero
-                    header={<h1>Open SGF</h1>}
-                    text={
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores debitis
-                            doloremque dolorum eligendi fugit iste iure, maiores, maxime odio provident rerum sit ut,
-                            vitae? Architecto facere pariatur quo.
-                        </p>
-                    }
-                    image={<Image src={'/images/group-working.svg'} alt="group working " width={360} height={220} />}
-                    particles={<ParticlesComp />}
-                />
+            <div className={styles.pageWrapper}>
+                <ImageText image={heroImage} text={heroText} enableParticles={true} imageTextSizeRatio={0.435} />
                 <Stats />
-                <Hero
-                    header={<h2>Project Section</h2>}
-                    text={
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto
-                            labore reprehenderit repudiandae tenetur velit voluptates!
-                        </p>
-                    }
-                    image={<Image src={'/images/Laptop-phone.svg'} alt="laptop" width={600} height={600} />}
-                    swapSides={true}
-                />
+                <ImageText image={projectTeaserImage} text={projectTeaserText} textRight={true} />
                 <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>
         </>
