@@ -27,7 +27,7 @@ const useMediaQuery = (width: number) => {
         }
 
         return () => media.removeListener(updateTarget);
-    }, []);
+    }, [updateTarget, width]);
 
     return targetReached;
 };
@@ -124,8 +124,8 @@ export function Navbar(): JSX.Element {
                     </a>
                 </Link>
             </div>
-            <div onClick={() => setOpen(!open)} className={styles.hamburgerIcon} >
-                <Hamburger active={open}/>
+            <div onClick={() => setOpen(!open)} className={styles.hamburgerIcon}>
+                <Hamburger active={open} />
             </div>
             <div className={styles.backgroundCover} />
         </nav>

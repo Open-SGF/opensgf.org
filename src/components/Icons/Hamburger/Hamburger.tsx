@@ -6,9 +6,7 @@ interface IHamburger {
 
 export function Hamburger({ active }: IHamburger): JSX.Element {
     return (
-        <div
-            className={`${styles.navTrigger} ${active ? styles.active : ''}`}
-        >
+        <div className={`${styles.navTrigger} ${active ? styles.active : ''}`}>
             <i />
             <i />
             <i />
