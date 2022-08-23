@@ -115,7 +115,7 @@ export function Navbar(): JSX.Element {
                 </Link>
             </div>
             <div onClick={() => setOpen(!open)} className={styles.hamburgerIcon} >
-                <Hamburger/>
+                <Hamburger active={open}/>
             </div>
             <div className={styles.backgroundCover} />
         </nav>

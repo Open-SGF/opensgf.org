@@ -1,27 +1,13 @@
 import styles from './Hamburger.module.scss';
-import { useState } from 'react';
 
 interface IHamburger {
-    onClick?: () => void;
-    className?: string;
+    active: boolean;
 }
 
-export function Hamburger({ onClick = (() => undefined), className: classesFromParent }: IHamburger): JSX.Element {
-    const [isActive, setActive] = useState(false);
-
-    const toggleClass = () => {
-        setActive(!isActive);
-    };
-
-    const handleClick = () => {
-        toggleClass();
-        onClick();
-    };
-
+export function Hamburger({ active }: IHamburger): JSX.Element {
     return (
         <div
-            className={`${styles.navTrigger} ${classesFromParent} ${isActive ? styles.active : ''}`}
-            onClick={handleClick}
+            className={`${styles.navTrigger} ${active ? styles.active : ''}`}
         >
             <i />
             <i />
