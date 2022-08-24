@@ -1,7 +1,6 @@
  .container {
     position: relative;
     gap: 40px;
-    width: 944px;
     margin: 50px auto 0 auto;
 
      h1 {
@@ -17,14 +16,9 @@
 .cardWrapper {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     gap: 30px;
     margin-top: 18px;
     margin-bottom: 51px;
-
-    &>div {
-        width: 50%;
-        max-width: 388px;
-    }
 }
