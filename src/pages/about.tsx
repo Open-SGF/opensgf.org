@@ -4,7 +4,7 @@ import styles from '@/styles/pages/About.module.scss';
 
 export default function About(): JSX.Element {
     return (
-        <div className={styles.container}>
+        <div className={styles.pageWrapper}>
             <h1>About Us</h1>
             <IconSet />
             <p>
