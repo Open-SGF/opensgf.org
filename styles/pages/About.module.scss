@@ -1,7 +1,12 @@
-.container {
+.pageWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 200px 15vw 0 15vw;
+
+    @media screen and (max-width: 600px) {
+        margin: 25vh 10vw 0 10vw;
+    }
 
     h1 {
         font-family: 'Roboto', sans-serif;
