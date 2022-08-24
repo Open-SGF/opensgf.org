@@ -3,21 +3,21 @@ import Link from 'next/link';
 import styles from './ProjectDetails.module.scss';
 
 type contributor = {
-    name: string,
+    name: string;
     image: {
-        src: string,
-        alt: string
-    },
-    linkUrl: string
-}
+        src: string;
+        alt: string;
+    };
+    linkUrl: string;
+};
 
 interface IProjectDetails {
-    links: Array<{url: string, label: string}>,
-    toolsUsed: Array<{label: string, image:{src: string, alt: string}}>,
-    contributors: Array<contributor>
+    links: Array<{ url: string; label: string }>;
+    toolsUsed: Array<{ label: string; image: { src: string; alt: string } }>;
+    contributors: Array<contributor>;
 }
 
-export function ProjectDetails({links, toolsUsed, contributors}: IProjectDetails): JSX.Element {
+export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetails): JSX.Element {
     return (
         <div className={styles.projectDetails}>
             <div className={styles.linksWrapper}>
@@ -29,7 +29,7 @@ export function ProjectDetails({links, toolsUsed, contributors}: IProjectDetails
                     <h2>Links</h2>
                     <ul>
                         {links.map((link) => (
-                            <li>
+                            <li key={link.url}>
                                 <Link href={link.url} passHref>
                                     <a>
                                         <span className={styles.link}>{link.label}</span>
@@ -48,8 +48,8 @@ export function ProjectDetails({links, toolsUsed, contributors}: IProjectDetails
                 <div className={styles.text}>
                     <h2>Tech Stack</h2>
                     <ul className={styles.tools}>
-                        {toolsUsed.map(({label, image}) => (
-                            <li>
+                        {toolsUsed.map(({ label, image }) => (
+                            <li key={label}>
                                 <Image src={image.src} height="70" width="70" alt={image.alt} />
                                 <span>{label}</span>
                             </li>
@@ -65,8 +65,8 @@ export function ProjectDetails({links, toolsUsed, contributors}: IProjectDetails
                 <div className={styles.text}>
                     <h2>Contributors</h2>
                     <ul className={styles.contributors}>
-                        {contributors.map(({name, image, linkUrl}) => (
-                            <li>
+                        {contributors.map(({ name, image, linkUrl }) => (
+                            <li key={name}>
                                 <Link href={linkUrl} passHref>
                                     <a>
                                         <div className={styles.image}>

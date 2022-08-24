@@ -12,12 +12,9 @@ export default function Project(): JSX.Element {
         id: '0',
         slug: 'template-project',
         name: 'Example Project Name',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore reprehenderit repudiandae tenetur velit voluptates!',
-        skillsNeeded: [
-            'Design',
-            'Development',
-            'Marketing'
-        ],
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore reprehenderit repudiandae tenetur velit voluptates!',
+        skillsNeeded: ['Design', 'Development', 'Marketing'],
         links: [
             {
                 label: 'https://github.com/Open-SGF/opensgf.org',
@@ -26,7 +23,7 @@ export default function Project(): JSX.Element {
             {
                 label: 'https://github.com/Open-SGF/opensgf.org',
                 url: 'https://github.com/Open-SGF/opensgf.org',
-            }
+            },
         ],
         toolsUsed: [
             {
@@ -34,21 +31,21 @@ export default function Project(): JSX.Element {
                 image: {
                     src: 'https://via.placeholder.com/70.png',
                     alt: 'Example Alt Text',
-                }
+                },
             },
             {
                 label: 'Typescript',
                 image: {
                     src: 'https://via.placeholder.com/70.png',
                     alt: 'Example Alt Text',
-                }
+                },
             },
             {
                 label: 'Node',
                 image: {
                     src: 'https://via.placeholder.com/70.png',
                     alt: 'Example Alt Text',
-                }
+                },
             },
         ],
         contributors: [
@@ -56,30 +53,32 @@ export default function Project(): JSX.Element {
                 name: 'John Smith',
                 image: {
                     src: 'https://via.placeholder.com/85.png',
-                    alt: 'Image alt text.'
+                    alt: 'Image alt text.',
                 },
-                linkUrl: 'https://github.com/ethanzitting'
+                linkUrl: 'https://github.com/ethanzitting',
             },
             {
                 name: 'John Smith',
                 image: {
                     src: 'https://via.placeholder.com/85.png',
-                    alt: 'Image alt text.'
+                    alt: 'Image alt text.',
                 },
-                linkUrl: 'https://github.com/ethanzitting'
+                linkUrl: 'https://github.com/ethanzitting',
             },
             {
                 name: 'John Smith',
                 image: {
                     src: 'https://via.placeholder.com/85.png',
-                    alt: 'Image alt text.'
+                    alt: 'Image alt text.',
                 },
-                linkUrl: 'https://github.com/ethanzitting'
-            }
+                linkUrl: 'https://github.com/ethanzitting',
+            },
         ],
-        clientIssue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.',
-        ourSolution: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.'
-    }
+        clientIssue:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.',
+        ourSolution:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.',
+    };
 
     const projectDetailsImage: JSX.Element = (
         <div className={styles.projectDetailsImage}>
@@ -93,8 +92,8 @@ export default function Project(): JSX.Element {
             <p>{project.description} </p>
             <h2>Skills/Help Needed</h2>
             <ul>
-                {project.skillsNeeded.map(skill => (
-                    <li>{skill}</li>
+                {project.skillsNeeded.map((skill) => (
+                    <li key={skill}>{skill}</li>
                 ))}
             </ul>
         </div>
@@ -109,7 +108,7 @@ export default function Project(): JSX.Element {
                 textRight={true}
                 imageTextSizeRatio={0.55}
             />
-            <ProjectDetails links={project.links} toolsUsed={project.toolsUsed} contributors={project.contributors}/>
+            <ProjectDetails links={project.links} toolsUsed={project.toolsUsed} contributors={project.contributors} />
             <ChatBubble />
             <Gallery />
             <div className={styles.projectNav}>
