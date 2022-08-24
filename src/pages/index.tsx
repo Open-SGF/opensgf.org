@@ -4,6 +4,7 @@ import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
+import { ImageTextLink } from '@/components/Blocks/ImageTextLink/ImageTextLink';
 import { Stats } from '@/components/Blocks/Stats/Stats';
 import styles from '@/styles/pages/Home.module.scss';
 
@@ -60,7 +61,12 @@ export default function Home(): JSX.Element {
             <div className={styles.pageWrapper}>
                 <ImageText image={heroImage} text={heroText} enableParticles={true} imageTextSizeRatio={0.435} />
                 <Stats />
-                <ImageText image={projectTeaserImage} text={projectTeaserText} textRight={true} />
+                <ImageTextLink
+                    image={projectTeaserImage}
+                    text={projectTeaserText}
+                    textRight={true}
+                    link={{ text: 'View All Projects', url: '/projects' }}
+                />
                 <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
             </div>
         </>

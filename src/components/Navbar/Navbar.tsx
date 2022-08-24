@@ -42,13 +42,13 @@ export function Navbar(): JSX.Element {
     const contactLinks = (
         <>
             <h2 className={styles.contactLink}>
-                <Link href="/partner">
+                <Link href="/partner" passHref>
                     <a>Partnering</a>
                 </Link>
             </h2>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <h2 className={styles.contactLink}>
-                <Link className={styles.contactLink} href="/volunteer">
+                <Link className={styles.contactLink} href="/volunteer" passHref>
                     <a>Volunteering</a>
                 </Link>
             </h2>
