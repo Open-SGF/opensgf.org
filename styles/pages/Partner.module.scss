@@ -1,0 +1,7 @@
+.pageWrapper {
+    margin: 200px 206px 0 206px;
+
+    @media screen and (max-width: 600px) {
+        margin: 25vh 10vw 0 10vw;
+    }
+}

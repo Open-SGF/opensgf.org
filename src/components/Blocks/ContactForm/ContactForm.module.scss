@@ -1,6 +1,5 @@
 .container {
-    width: 100vw;
-    height: calc(100vh - 216px - 119px);
+    width: 100%;
     position: relative;
 
     display: flex;
@@ -11,36 +10,70 @@
     & * {
         z-index: 1;
     }
+
+    @media screen and (max-width: 600px) {
+        margin-bottom: 30px;
+    }
 }
 
 .contentWrapper {
     height: 400px;
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 600px) {
+        height: initial;
+        flex-direction: column;
+    }
+
     .salesPitch {
-        height: 40%;
         width: 300px;
         margin-right: 100px;
 
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+
+            color: #133654;
+        }
+
         p {
-            margin-top: 2em;
+            margin-top: 27px;
+            font-family: 'Roboto Slab', serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+
+            color: #133654;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 80%;
+            margin: 0 auto 50px auto;
         }
     }
 
     .backgroundBanner {
         position: absolute;
-        top: 20%;
-        left: 0;
-        height: 60%;
-        width: 100%;
+        top: 10%;
+        left: -50vw;
+        height: 80%;
+        width: 200vw;
         z-index: 0;
-
         background-color: #E9F5FF;
+
+        @media screen and (max-width: 600px) {
+            top: -5%;
+            height: 60%;
+        }
     }
 }
 
@@ -50,6 +83,11 @@
     padding: 2em;
     box-shadow: -5px 5px 33px 0px #0380DB3D;
     border-radius: 10px;
+
+    @media screen and (max-width: 600px) {
+        width: 90%;
+        margin: 0 auto;
+    }
 
     .formRow {
         display: flex;
