@@ -2,6 +2,11 @@
     width: 600px;
     margin: 50px auto 0 auto;
 
+    @media screen and (max-width: 600px) {
+        width: 80%;
+        margin-top: 50px 0 0 0;
+    }
+
     .linksWrapper, .techStackWrapper, .contributorsWrapper {
         display: flex;
         flex-direction: row;
@@ -36,6 +41,10 @@
             display: flex;
             flex-direction: column;
 
+            @media screen and (max-width: 600px) {
+                width: 70%;
+            }
+
             h2 {
                 margin-bottom: 30px;
                 font-size: 1.62rem;
@@ -47,10 +56,27 @@
             }
 
             .tools {
+                display: flex;
+
+                @media screen and (max-width: 600px) {
+                    flex-direction: column;
+                    align-items: center;
+
+                    h2 {
+                        text-align: center;
+                    }
+                }
+
                 li {
                     display: flex;
                     align-items: center;
                     padding-right: 30px;
+
+                    @media screen and (max-width: 600px) {
+                        width: 100%;
+                        padding: 0;
+                        padding-bottom: 15px;
+                    }
                 }
 
                 img {
@@ -62,13 +88,34 @@
 
             .contributors {
                 justify-content: space-between;
+                display: flex;
 
-                img {
+                @media screen and (max-width: 600px) {
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        text-align: center;
+                    }
+
+                    li {
+                        padding-bottom: 30px;
+                    }
+                }
+
+                .image, img {
                     height: 85px;
                     width: 85px;
                     border-radius: 50%;
+                }
+
+                .image {
                     box-shadow: -3px 1px 9px 0px #0000002B;
                     margin-bottom: 30px;
+
+                    @media screen and (max-width: 600px) {
+                        margin-bottom: 15px;
+                    }
                 }
 
                 h3 {

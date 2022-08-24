@@ -8,6 +8,78 @@ import React from 'react';
 import styles from '@/styles/pages/Project.module.scss';
 
 export default function Project(): JSX.Element {
+    const project = {
+        id: '0',
+        slug: 'template-project',
+        name: 'Example Project Name',
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore reprehenderit repudiandae tenetur velit voluptates!',
+        skillsNeeded: ['Design', 'Development', 'Marketing'],
+        links: [
+            {
+                label: 'https://github.com/Open-SGF/opensgf.org',
+                url: 'https://github.com/Open-SGF/opensgf.org',
+            },
+            {
+                label: 'https://github.com/Open-SGF/opensgf.org',
+                url: 'https://github.com/Open-SGF/opensgf.org',
+            },
+        ],
+        toolsUsed: [
+            {
+                label: 'React',
+                image: {
+                    src: 'https://via.placeholder.com/70.png',
+                    alt: 'Example Alt Text',
+                },
+            },
+            {
+                label: 'Typescript',
+                image: {
+                    src: 'https://via.placeholder.com/70.png',
+                    alt: 'Example Alt Text',
+                },
+            },
+            {
+                label: 'Node',
+                image: {
+                    src: 'https://via.placeholder.com/70.png',
+                    alt: 'Example Alt Text',
+                },
+            },
+        ],
+        contributors: [
+            {
+                name: 'John Smith',
+                image: {
+                    src: 'https://via.placeholder.com/85.png',
+                    alt: 'Image alt text.',
+                },
+                linkUrl: 'https://github.com/ethanzitting',
+            },
+            {
+                name: 'John Smith',
+                image: {
+                    src: 'https://via.placeholder.com/85.png',
+                    alt: 'Image alt text.',
+                },
+                linkUrl: 'https://github.com/ethanzitting',
+            },
+            {
+                name: 'John Smith',
+                image: {
+                    src: 'https://via.placeholder.com/85.png',
+                    alt: 'Image alt text.',
+                },
+                linkUrl: 'https://github.com/ethanzitting',
+            },
+        ],
+        clientIssue:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.',
+        ourSolution:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.',
+    };
+
     const projectDetailsImage: JSX.Element = (
         <div className={styles.projectDetailsImage}>
             <Image src={'/images/laptop-with-phone.png'} alt="laptop" width={500} height={500} />
@@ -16,16 +88,13 @@ export default function Project(): JSX.Element {
 
     const projectDetailsText: JSX.Element = (
         <div className={styles.projectDetailsText}>
-            <h1>Project Name</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore
-                reprehenderit repudiandae tenetur velit voluptates!
-            </p>
+            <h1>{project.name}</h1>
+            <p>{project.description} </p>
             <h2>Skills/Help Needed</h2>
             <ul>
-                <li>Design</li>
-                <li>Development</li>
-                <li>Marketing</li>
+                {project.skillsNeeded.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                ))}
             </ul>
         </div>
     );
@@ -39,7 +108,7 @@ export default function Project(): JSX.Element {
                 textRight={true}
                 imageTextSizeRatio={0.55}
             />
-            <ProjectDetails />
+            <ProjectDetails links={project.links} toolsUsed={project.toolsUsed} contributors={project.contributors} />
             <ChatBubble />
             <Gallery />
             <div className={styles.projectNav}>

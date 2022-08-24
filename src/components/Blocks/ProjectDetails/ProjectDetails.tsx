@@ -2,59 +2,81 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ProjectDetails.module.scss';
 
-export function ProjectDetails(): JSX.Element {
+type contributor = {
+    name: string;
+    image: {
+        src: string;
+        alt: string;
+    };
+    linkUrl: string;
+};
+
+interface IProjectDetails {
+    links: Array<{ url: string; label: string }>;
+    toolsUsed: Array<{ label: string; image: { src: string; alt: string } }>;
+    contributors: Array<contributor>;
+}
+
+export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetails): JSX.Element {
     return (
         <div className={styles.projectDetails}>
             <div className={styles.linksWrapper}>
                 <div className={styles.verticalLine} />
-                <Image className={styles.icon} src="/images/hyperlink.svg" width="60" height="60" alt="" />
+                <div className={styles.icon}>
+                    <Image src="/images/hyperlink.svg" width="60" height="60" alt="" />
+                </div>
                 <div className={styles.text}>
                     <h2>Links</h2>
                     <ul>
-                        <li>
-                            <Link href="/">Github Repository</Link>
-                        </li>
-                        <li>
-                            <Link href="/">Live Preview</Link>
-                        </li>
+                        {links.map((link) => (
+                            <li key={link.url}>
+                                <Link href={link.url} passHref>
+                                    <a>
+                                        <span className={styles.link}>{link.label}</span>
+                                    </a>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
             <div className={styles.techStackWrapper}>
                 <div className={styles.verticalLine} />
-                <Image className={styles.icon} src="/images/monitor.svg" width="60" height="60" alt="" />
+                <div className={styles.icon}>
+                    <Image src="/images/monitor.svg" width="60" height="60" alt="" />
+                </div>
                 <div className={styles.text}>
                     <h2>Tech Stack</h2>
                     <ul className={styles.tools}>
-                        <li>
-                            <Image src="https://via.placeholder.com/70" height="70" width="70" alt="" />
-                            <span>Tool Text</span>
-                        </li>
-                        <li>
-                            <Image src="https://via.placeholder.com/70" height="70" width="70" alt="" />
-                            <span>Tool Text</span>
-                        </li>
+                        {toolsUsed.map(({ label, image }) => (
+                            <li key={label}>
+                                <Image src={image.src} height="70" width="70" alt={image.alt} />
+                                <span>{label}</span>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
             <div className={styles.contributorsWrapper}>
                 <div className={styles.verticalLine} />
-                <Image className={styles.icon} src="/images/networking.svg" width="60" height="60" alt="" />
+                <div className={styles.icon}>
+                    <Image src="/images/networking.svg" width="60" height="60" alt="" />
+                </div>
                 <div className={styles.text}>
                     <h2>Contributors</h2>
                     <ul className={styles.contributors}>
-                        <li>
-                            <Image src="https://via.placeholder.com/85" height="85" width="85" alt="" />
-                            <h3>Person Name</h3>
-                        </li>
-                        <li>
-                            <Image src="https://via.placeholder.com/85" height="85" width="85" alt="" />
-                            <h3>Person Name</h3>
-                        </li>
-                        <li>
-                            <Image src="https://via.placeholder.com/85" height="85" width="85" alt="" />
-                            <h3>Person Name</h3>
-                        </li>
+                        {contributors.map(({ name, image, linkUrl }) => (
+                            <li key={name}>
+                                <Link href={linkUrl} passHref>
+                                    <a>
+                                        <div className={styles.image}>
+                                            <Image src={image.src} height="85" width="85" alt={image.src} />
+                                        </div>
+                                        <h3>{name}</h3>
+                                    </a>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
