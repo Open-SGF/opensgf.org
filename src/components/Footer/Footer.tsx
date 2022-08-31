@@ -18,24 +18,36 @@ export function Footer(): JSX.Element {
                     </a>
                 </Link>
                 <div className={styles.socials}>
-                    <Link href="/" passHref>
+                    <Link href="https://www.facebook.com/" passHref>
                         <a>
-                            <Image src="/images/facebook-logo.svg" width={70} height={70} alt="Facebook Logo" />
+                            <div className={styles.imageWrapper}>
+                                <Image src="/images/facebook-logo.svg" layout="fill" alt="Facebook Logo" />
+                                <div className={styles.backgroundFill}/>
+                            </div>
                         </a>
                     </Link>
-                    <Link href="/" passHref>
+                    <Link href="https://www.meetup.com/" passHref>
                         <a>
-                            <Image src="/images/meetup-logo.svg" width={70} height={70} alt="Meetup Logo" />
+                            <div className={styles.imageWrapper}>
+                                <Image src="/images/meetup-logo.svg" layout="fill" alt="Meetup Logo" />
+                                <div className={styles.backgroundFill}/>
+                            </div>
                         </a>
                     </Link>
-                    <Link href="/" passHref>
+                    <Link href="https://discord.com/" passHref>
                         <a>
-                            <Image src="/images/discord-logo.svg" width={70} height={70} alt="Discord Logo" />
+                            <div className={styles.imageWrapper}>
+                                <Image src="/images/discord-logo.svg" layout="fill" alt="Discord Logo" />
+                                <div className={styles.backgroundFill}/>
+                            </div>
                         </a>
                     </Link>
-                    <Link href="/" passHref>
+                    <Link href="https://twitter.com/?lang=en" passHref>
                         <a>
-                            <Image src="/images/twitter-logo.svg" width={70} height={70} alt="Twitter Logo" />
+                            <div className={styles.imageWrapper}>
+                                <Image src="/images/twitter-logo.svg" layout="fill" alt="Twitter Logo" />
+                                <div className={styles.backgroundFill}/>
+                            </div>
                         </a>
                     </Link>
                 </div>
