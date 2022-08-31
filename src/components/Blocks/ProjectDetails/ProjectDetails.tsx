@@ -28,8 +28,8 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                 <div className={styles.text}>
                     <h2>Links</h2>
                     <ul>
-                        {links.map((link) => (
-                            <li key={link.url}>
+                        {links.map((link, index) => (
+                            <li key={link.url + index}>
                                 <Link href={link.url} passHref>
                                     <a>
                                         <span className={styles.link}>{link.label}</span>
@@ -65,8 +65,8 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                 <div className={styles.text}>
                     <h2>Contributors</h2>
                     <ul className={styles.contributors}>
-                        {contributors.map(({ name, image, linkUrl }) => (
-                            <li key={name}>
+                        {contributors.map(({ name, image, linkUrl }, index) => (
+                            <li key={name + index}>
                                 <Link href={linkUrl} passHref>
                                     <a>
                                         <div className={styles.image}>

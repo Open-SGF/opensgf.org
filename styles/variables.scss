@@ -1,0 +1,29 @@
+$base-black: #133654;
+$base-blue:  #0094FF;
+$dark-blue: #005898;
+$base-red:  #FF6A6B;
+$light-red: #FF6061;
+
+$primary-font: 'Halant', serif;
+$secondary-font: grandma, sans-serif;
+
+$navigation-desktop-height: 104px;
+
+$z-index: (
+    skip-nav: 20,
+    navigation: 10,
+    default: 0,
+);
+
+$breakpoints: (
+    x-tiny: 350,
+    tiny: 400,
+    x-small: 480,
+    mid-small: 600,
+    small: 768,
+    medium: 960,
+    mid-large: 1050,
+    large: 1224,
+    x-large: 1440,
+    xx-large: 1525
+);
