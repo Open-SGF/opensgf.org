@@ -1,3 +1,6 @@
+@import '@/styles/utils/mixins';
+@import '@/styles/variables';
+
 .container {
     width: 100%;
     position: relative;
@@ -11,7 +14,7 @@
         z-index: 1;
     }
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         margin-bottom: 30px;
     }
 }
@@ -25,7 +28,7 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         height: initial;
         flex-direction: column;
     }
@@ -55,7 +58,7 @@
             color: #133654;
         }
 
-        @media screen and (max-width: 600px) {
+        @include mq-below(mid-small) {
             width: 80%;
             margin: 0 auto 50px auto;
         }
@@ -70,7 +73,7 @@
         z-index: 0;
         background-color: #E9F5FF;
 
-        @media screen and (max-width: 600px) {
+        @include mq-below(mid-small) {
             top: -5%;
             height: 60%;
         }
@@ -84,7 +87,7 @@
     box-shadow: -5px 5px 33px 0px #0380DB3D;
     border-radius: 10px;
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         width: 90%;
         margin: 0 auto;
     }

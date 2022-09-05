@@ -1,7 +1,10 @@
+@import '@/styles/utils/mixins';
+@import '@/styles/variables';
+
 .pageWrapper {
     padding: 187px 15vw 5vh 15vw;
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         padding: 20vh 10vw 5vh 10vw;
     }
 }

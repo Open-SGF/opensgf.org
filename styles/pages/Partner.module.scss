@@ -1,7 +1,10 @@
+@import '@/styles/utils/mixins';
+@import '@/styles/variables';
+
 .pageWrapper {
     margin: 200px 206px 0 206px;
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         margin: 25vh 10vw 0 10vw;
     }
 }

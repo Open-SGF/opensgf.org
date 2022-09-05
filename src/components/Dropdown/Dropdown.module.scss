@@ -1,3 +1,4 @@
+@import '@/styles/utils/mixins';
 @import '@/styles/variables';
 
 .dropdown {
@@ -31,7 +32,7 @@
             text-decoration: underline;
         }
 
-        @media (screen and max-width: 600px){
+        @include mq-below(mid-small) {
             font-size: 30px;
         }
     }
@@ -84,7 +85,7 @@
             margin-top: 0;
         }
 
-        @media (screen and max-width: 600px){
+        @include mq-below(mid-small) {
             box-shadow: none;
             background-color: rgba(0,0,0,0);
 

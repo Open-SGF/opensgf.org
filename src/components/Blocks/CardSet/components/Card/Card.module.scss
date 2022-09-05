@@ -1,3 +1,6 @@
+@import '@/styles/utils/mixins';
+@import '@/styles/variables';
+
 .cardContainer {
     width: 476px;
     height: 362px;
@@ -22,7 +25,7 @@
     align-self: center;
 }
 
-@media (screen and max-width: 600px){
+@include mq-below(mid-small) {
     .cardContainer{
         width: 70vw;
     }

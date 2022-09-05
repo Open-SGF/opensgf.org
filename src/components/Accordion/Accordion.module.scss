@@ -1,3 +1,4 @@
+@import '@/styles/utils/mixins';
 @import '@/styles/variables';
 
 .accordion {
@@ -33,7 +34,7 @@
             text-decoration: underline;
         }
 
-        @media (screen and max-width: 600px){
+        @include mq-below(mid-small) {
             font-size: 30px;
         }
     }
