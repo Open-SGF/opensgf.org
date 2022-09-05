@@ -17,7 +17,7 @@
     }
 
     &.bottomShadow {
-        box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
+        box-shadow: 0 29px 67px -28px rgba(0, 0, 0, 0.75);
     }
 
     .hamburgerIcon {
@@ -118,20 +118,14 @@
 
         .contactLink {
             display: block;
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
             color: #133654;
             margin: 25px 0 6px 0;
 
             &Description {
-                font-family: 'Roboto', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 19px;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
                 color: rgba(19, 54, 84, 0.35);
             }
         }

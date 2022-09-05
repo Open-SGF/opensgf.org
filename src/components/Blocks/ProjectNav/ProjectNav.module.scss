@@ -26,20 +26,13 @@
 }
 
 .buttonText{
-    font-family: Roboto,  serif;
-    font-style: normal;
-    color: $base-black;
-    font-weight: 400;
-
     h3{
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
         margin: 6px;
     }
 
     p{
         margin: 6px;
-        font-size: 18px;
-        line-height: 21px;
     }
 }

@@ -10,26 +10,9 @@
 }
 
 .projectDetailsText {
-    font-size: 18px;
-    line-height: 24px;
-    font-family: 'Roboto Slab', sans-serif;
-    font-style: normal;
     display: flex;
     flex-direction: column;
     gap: 23px;
-    color: #133654;
-
-    h1 {
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    p {
-        font-weight: 300;
-    }
 
     h2 {
         display: block;

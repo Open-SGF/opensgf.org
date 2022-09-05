@@ -6,8 +6,6 @@
         position: relative;
         border-style: none;
         font-size: 1.25rem;
-        font-weight: 400;
-        font-family: Roboto, serif;
         color: $base-black;
         cursor: pointer;
         background-color: rgba(0,0,0,0);
@@ -35,7 +33,7 @@
         }
 
         @include mq-below(mid-small) {
-            font-size: 30px;
+            font-size: 3rem;
         }
     }
 

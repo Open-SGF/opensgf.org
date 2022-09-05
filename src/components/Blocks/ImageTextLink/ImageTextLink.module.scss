@@ -2,14 +2,10 @@
 @import '@/styles/variables';
 
 .link {
-    font-family: 'Roboto Slab', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
     text-decoration: underline;
     text-align: center;
-    color: #133654;
 
     @include mq-below(mid-small) {
         margin-top: 30px;
