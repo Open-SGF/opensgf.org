@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import '@/styles/variables';
 
 html {
     font-size: 62.5%; // 1rem = 10px
@@ -10,13 +11,13 @@ body * {
     line-height: 2.4rem;
     font-weight: 300;
     font-style: normal;
-    font-family: 'Roboto Slab', sans-serif;
-    color: #133654;
+    font-family: $secondary-font;
+    color: $base-black;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5 .h5, h6, .h6 {
     font-weight: 400;
-    font-family: 'Roboto'
+    font-family: $primary-font;
 }
 
 h1, .h1 {

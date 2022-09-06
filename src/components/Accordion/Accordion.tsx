@@ -4,7 +4,7 @@ import styles from './Accordion.module.scss';
 
 interface IAccordion {
     children: JSX.Element;
-    heading: string;
+    heading: JSX.Element;
     forceClosed: boolean;
 }
 
@@ -32,7 +32,7 @@ export function Accordion({ children, heading, forceClosed }: IAccordion): JSX.E
                 className={`${styles.trigger} ${show && !forceClosed ? styles.open : ''}`}
                 onClick={() => setShow(!show)}
             >
-                <span>{heading}</span>
+                {heading}
                 <ArrowDown />
             </button>
             <div className={`${styles.content} ${show && !forceClosed ? styles.open : ''}`}>{children}</div>

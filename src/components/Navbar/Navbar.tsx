@@ -41,17 +41,17 @@ export function Navbar(): JSX.Element {
 
     const contactLinks = (
         <>
-            <h2 className={styles.contactLink}>
+            <div className={styles.contactLink}>
                 <Link href="/partner" passHref>
-                    <a>Partnering</a>
+                    <a className="h4" >Partnering</a>
                 </Link>
-            </h2>
+            </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
-            <h2 className={styles.contactLink}>
+            <div className={styles.contactLink}>
                 <Link className={styles.contactLink} href="/volunteer" passHref>
-                    <a>Volunteering</a>
+                    <a className="h4" >Volunteering</a>
                 </Link>
-            </h2>
+            </div>
             <p className={styles.contactLinkDescription}>Learn how you can get involved</p>
         </>
     );
@@ -100,27 +100,27 @@ export function Navbar(): JSX.Element {
             </div>
             <div className={`${styles.navLinks} ${open ? styles.open : styles.closed}`}>
                 <Link href="/projects" passHref>
-                    <a>Projects</a>
+                    <a className="h2" >Projects</a>
                 </Link>
                 {isBreakpoint ? (
                     <div>
-                        <Accordion heading="Join Us" forceClosed={!show}>
+                        <Accordion heading={(<div className="h2">Join Us</div>)} forceClosed={!show}>
                             {contactLinks}
                         </Accordion>
                     </div>
                 ) : (
                     <div>
-                        <Dropdown heading="Join Us" forceClosed={!show}>
+                        <Dropdown heading={(<div className="h2">Join Us</div>)} forceClosed={!show}>
                             {contactLinks}
                         </Dropdown>
                     </div>
                 )}
                 <Link href="/about" passHref>
-                    <a>About</a>
+                    <a className="h2">About</a>
                 </Link>
                 <Link href="/donate" passHref>
                     <a>
-                        <button className={styles.btn}>Donate</button>
+                        <button className={`${styles.btn} h1`}>Donate</button>
                     </a>
                 </Link>
             </div>

@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
         </div>
     );
 
-    const contactButton = <Button text="Contact" href="/" />;
+    const contactButton = <Button text="Contact" className="h3" href="/" />;
 
     const volunteerCard = (
         <Card

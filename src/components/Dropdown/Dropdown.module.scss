@@ -7,7 +7,7 @@
         border-style: none;
         font-size: 1.25rem;
         font-weight: 400;
-        font-family: Roboto, serif;
+        font-family: $secondary-font;
         color: $base-black;
         cursor: pointer;
         background-color: rgba(0,0,0,0);
@@ -75,8 +75,6 @@
         }
 
         p {
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
             font-weight: 400;
             font-size: 1.6rem;
             line-height: 1.9rem;
