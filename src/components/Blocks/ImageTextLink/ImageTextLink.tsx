@@ -34,7 +34,7 @@ export function ImageTextLink({
             />
             <Link href={link.url} passHref>
                 <a>
-                    <h3 className={styles.link}>{link.text}</h3>
+                    <h3 className={`${styles.link} h1`}>{link.text}</h3>
                 </a>
             </Link>
         </div>

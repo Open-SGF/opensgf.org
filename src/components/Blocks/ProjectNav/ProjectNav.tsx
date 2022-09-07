@@ -16,7 +16,7 @@ export function ProjectNav({ buttonText }: IProjectNav): JSX.Element {
                 alt={'arrow'}
             />
             <div className={styles.buttonText}>
-                <h3>View {buttonText} Project</h3>
+                <h3 className="h1">View {buttonText} Project</h3>
                 <p>project name</p>
             </div>
         </div>

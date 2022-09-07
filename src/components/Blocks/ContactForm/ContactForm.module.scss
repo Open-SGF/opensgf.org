@@ -1,5 +1,4 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .container {
     width: 100%;
@@ -80,8 +79,13 @@
         flex-direction: column;
 
         label {
-            font-size: 1.6rem;
-            line-height: 2.1rem;
+            @include responsive-font((
+                min-size: 1.1rem,
+                max-size: 1.6rem,
+                lower-bound: breakpoint(x-tiny),
+                upper-bound: breakpoint(large)
+            ));
+            line-height: 1.31;
             letter-spacing: 0;
             text-align: left;
             margin-top: 10px;

@@ -90,7 +90,7 @@ export default function Project(): JSX.Element {
         <div className={styles.projectDetailsText}>
             <h1>{project.name}</h1>
             <p>{project.description} </p>
-            <h2>Skills/Help Needed</h2>
+            <h2 className="p">Skills/Help Needed</h2>
             <ul>
                 {project.skillsNeeded.map((skill) => (
                     <li key={skill}>{skill}</li>

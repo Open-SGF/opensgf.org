@@ -1,11 +1,9 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .accordion {
     .trigger {
         position: relative;
         border-style: none;
-        font-size: 1.25rem;
         color: $base-black;
         cursor: pointer;
         background-color: rgba(0,0,0,0);
@@ -33,7 +31,6 @@
         }
 
         @include mq-below(mid-small) {
-            font-size: 3rem;
         }
     }
 

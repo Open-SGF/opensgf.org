@@ -20,7 +20,7 @@ export default function volunteer(): JSX.Element {
                 labore libero modi mollitia nesciunt quae quibusdam! Ad animi eveniet excepturi fugiat modi? Ab animi
                 fugit rerum.
             </p>
-            <h2> Skillsets Needed</h2>
+            <h2 className="p"> Skillsets Needed</h2>
             <ul>
                 <li>Lorem Ipsum</li>
                 <li>Lorem Ipsum</li>

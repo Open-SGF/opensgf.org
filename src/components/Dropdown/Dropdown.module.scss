@@ -1,11 +1,9 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .dropdown {
     .trigger {
         position: relative;
         border-style: none;
-        font-size: 1.25rem;
         font-weight: 400;
         font-family: $secondary-font;
         color: $base-black;
@@ -33,7 +31,6 @@
         }
 
         @include mq-below(mid-small) {
-            font-size: 3rem;
         }
     }
 
@@ -64,7 +61,6 @@
         Link {
             text-decoration: none;
             color: $base-black;
-            font-size: 1.25rem;
             font-weight: 400;
 
             &:hover {
@@ -76,7 +72,6 @@
 
         p {
             font-weight: 400;
-            font-size: 1.6rem;
             line-height: 1.9rem;
 
             color: rgba(19, 54, 84, 0.35);

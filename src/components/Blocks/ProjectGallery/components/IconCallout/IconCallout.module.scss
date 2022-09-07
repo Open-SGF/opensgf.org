@@ -1,4 +1,4 @@
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .container {
     position: relative;
@@ -16,6 +16,14 @@
     color: white;
     box-shadow: -4px 2px 4px rgba(3, 137, 252, 0.24);
     cursor: pointer;
+    line-height: 1.2;
+
+    @include responsive-font((
+        min-size: 10rem,
+        max-size: 1.5rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
 }
 
 .bubbleTail {

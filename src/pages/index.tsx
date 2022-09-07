@@ -25,7 +25,7 @@ export default function Home(): JSX.Element {
     const projectTeaserImage = <Image src={'/images/laptop-with-phone.png'} alt="laptop" width={600} height={600} />;
 
     const projectTeaserText = (
-        <div className={styles.projectTeaserText}>
+        <div className={`${styles.projectTeaserText} h1`}>
             <h2>Project Section</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore

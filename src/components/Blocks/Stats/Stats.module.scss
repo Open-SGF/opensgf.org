@@ -1,5 +1,4 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .container {
     position: relative;
@@ -35,7 +34,12 @@
     }
 
     h3 {
-        font-size: 3.6rem;
+        @include responsive-font((
+            min-size: 2.4rem,
+            max-size: 3.6rem,
+            lower-bound: breakpoint(x-tiny),
+            upper-bound: breakpoint(large)
+        ));
         margin: 0;
     }
 

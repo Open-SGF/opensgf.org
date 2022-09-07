@@ -1,5 +1,4 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .navbar {
     position: fixed;
@@ -69,11 +68,10 @@
         align-items: center;
         justify-content: center;
         background-color: $base-blue;
-        width: 110px;
-        height: 40px;
         color: white;
         border-radius: 8px;
         border-style: none;
+        padding: 13px 37px 13px 33px;
 
         &:hover {
             background-color: $dark-blue;
@@ -108,18 +106,15 @@
         a {
             padding: 8px;
             text-decoration: none;
-            font-size: 30px;
         }
 
         .contactLink {
             display: block;
-            font-size: 1.8rem;
             line-height: 2.1rem;
             color: #133654;
             margin: 25px 0 6px 0;
 
             &Description {
-                font-size: 1.6rem;
                 line-height: 1.9rem;
                 color: rgba(19, 54, 84, 0.35);
             }

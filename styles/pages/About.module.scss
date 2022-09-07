@@ -1,5 +1,4 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .pageWrapper {
     display: flex;
@@ -12,9 +11,6 @@
     }
 
     h1 {
-        font-weight: 400;
-        font-size: 2.4rem;
-        line-height: 2.8rem;
         margin-bottom: 30px;
     }
 

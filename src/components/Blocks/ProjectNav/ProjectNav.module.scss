@@ -1,4 +1,4 @@
-﻿@import '@/styles/variables';
+﻿@import '@/styles/utils/all';
 
 .container{
     display: flex;
@@ -27,8 +27,6 @@
 
 .buttonText{
     h3{
-        font-size: 2.4rem;
-        line-height: 2.8rem;
         margin: 6px;
     }
 

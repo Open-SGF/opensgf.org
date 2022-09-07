@@ -1,5 +1,4 @@
-@import '@/styles/utils/mixins';
-@import '@/styles/variables';
+@import '@/styles/utils/all';
 
 .pageWrapper {
     padding: 187px 15vw 5vh 15vw;
@@ -11,8 +10,4 @@
 
 .title {
     margin-bottom: 30px;
-    font-family: $primary-font;
-    font-weight: 400;
-    font-size: 2.4rem;
-    line-height: 2.8rem;
 }
