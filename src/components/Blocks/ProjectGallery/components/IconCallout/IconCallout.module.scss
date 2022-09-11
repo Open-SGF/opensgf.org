@@ -19,7 +19,7 @@
     line-height: 1.2;
 
     @include responsive-font((
-        min-size: 10rem,
+        min-size: 1rem,
         max-size: 1.5rem,
         lower-bound: breakpoint(x-tiny),
         upper-bound: breakpoint(large)
