@@ -1,5 +1,5 @@
+import type { Engine, RecursivePartial } from 'tsparticles-engine'
 import React, { useCallback, useMemo } from 'react';
-import type { Engine } from 'tsparticles-engine';
 import Particles from 'react-tsparticles';
 import { loadBubblesPreset } from 'tsparticles-preset-bubbles';
 import { loadSlim } from 'tsparticles-slim';
@@ -139,5 +139,11 @@ export function ParticlesComp(): JSX.Element {
         loadSlim(engine);
         loadBubblesPreset(engine);
     }, []);
-    return <Particles className={styles.particles} init={particlesInit} options={options} />;
+    return (
+        <Particles 
+            className={styles.particles} 
+            init={particlesInit} 
+            options={options as RecursivePartial<typeof options} 
+        />
+    );
 }
