@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import '@/styles/utils/all';
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
+body * {
+    @include responsive-font((
+        min-size: 1.2rem,
+        max-size: 1.8rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.33;
+    font-weight: 300;
+    font-style: normal;
+    font-family: $secondary-font;
+    color: $base-black;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5 .h5, h6, .h6 {
+    font-weight: 400;
+    font-family: $primary-font;
+}
+
+h1, .h1 {
+    font-family: $primary-font;
+    @include responsive-font((
+        min-size: 1.6rem,
+        max-size: 2.4rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.17;
+}
+
+h2, .h2 {
+    @include responsive-font((
+        min-size: 1.5rem,
+        max-size: 2.2rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.18;
+}
+
+h3, .h3 {
+    @include responsive-font((
+        min-size: 1.3rem,
+        max-size: 2rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.2;
+}
+
+h4, .h4 {
+    @include responsive-font((
+        min-size: 1.2rem,
+        max-size: 1.8rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.2;
+}
+
+h5, .h5 {
+    @include responsive-font((
+        min-size: 1.1rem,
+        max-size: 1.6rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.2;
+}
+
+h6, .h6 {
+    @include responsive-font((
+        min-size: 0.9rem,
+        max-size: 1.4rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height:1.2;
+}
+
+p, .p {
+    @include responsive-font((
+        min-size: 1.2rem,
+        max-size: 1.8rem,
+        lower-bound: breakpoint(x-tiny),
+        upper-bound: breakpoint(large)
+    ));
+    line-height: 1.333;
+}

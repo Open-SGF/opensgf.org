@@ -1,20 +1,13 @@
-@import '../_mixins';
-@import '../_variables';
+@import '@/styles/utils/all';
 
 .pageWrapper {
     padding: 187px 15vw 5vh 15vw;
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         padding: 20vh 10vw 5vh 10vw;
     }
 }
 
 .title {
     margin-bottom: 30px;
-    font-family: 'Roboto', 'sans-serif';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #133654;
 }

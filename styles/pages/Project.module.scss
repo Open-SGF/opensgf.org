@@ -1,32 +1,29 @@
-.pageWrapper {
-    margin: 200px 206px 0 206px;
+@import '@/styles/utils/all';
 
-    @media screen and (max-width: 600px) {
+.pageWrapper {
+    margin: 200px calc(50vw - 517px) 0 calc(50vw - 517px);
+
+    @include mq-below(x-large) {
+        margin: 200px 17vw 0 17vw;
+    }
+
+    @include mq-below(large) {
+        margin: 200px 15vw 0 15vw;
+    }
+
+    @include mq-below(medium) {
+        margin: 20vh 12vw 0 12vw;
+    }
+
+    @include mq-below(mid-small) {
         margin: 20vh 10vw 0 10vw;
     }
 }
 
 .projectDetailsText {
-    font-size: 18px;
-    line-height: 24px;
-    font-family: 'Roboto Slab', sans-serif;
-    font-style: normal;
     display: flex;
     flex-direction: column;
     gap: 23px;
-    color: #133654;
-
-    h1 {
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    p {
-        font-weight: 300;
-    }
 
     h2 {
         display: block;

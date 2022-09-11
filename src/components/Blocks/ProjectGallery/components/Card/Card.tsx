@@ -24,7 +24,7 @@ export function Card({ project, project: { image } }: ICard): JSX.Element {
                 </div>
             )}
             <Link href={project.link}>
-                <h2 className={styles.title}>{project.title}</h2>
+                <h2 className={`${styles.title} h1`}>{project.title}</h2>
             </Link>
             <Link href={project.link}>
                 <div className={styles.shadow} />

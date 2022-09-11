@@ -14,7 +14,7 @@ export function ChatBubble(): JSX.Element {
                             height="300px"
                         />
                         <div className={styles.bubbleChat}>
-                            <div className={styles.bubbleHeader}>Client Issue</div>
+                            <div className={`${styles.bubbleHeader} h1`}>Client Issue</div>
                             <div className={styles.chat}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.
@@ -31,7 +31,7 @@ export function ChatBubble(): JSX.Element {
                             height="300px"
                         />
                         <div className={styles.bubbleChat}>
-                            <div className={styles.bubbleHeader}>Our Solution</div>
+                            <div className={`${styles.bubbleHeader} h1`}>Our Solution</div>
                             <div className={styles.chat}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.

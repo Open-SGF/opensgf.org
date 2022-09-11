@@ -1,3 +1,5 @@
+@import '@/styles/utils/all';
+
 .container {
     width: 100%;
     max-width: 300px;
@@ -32,26 +34,39 @@
         width: 100%;
 
         .eventDate {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16px;
-            letter-spacing: 0em;
+            @include responsive-font((
+                min-size: 0.9rem,
+                max-size: 1.4rem,
+                lower-bound: breakpoint(x-tiny),
+                upper-bound: breakpoint(large)
+            ));
+            line-height: 1.14;
+            letter-spacing: 0;
             text-align: left;
         }
 
         .eventTitle {
-            font-size: 20px;
             font-weight: 600;
-            line-height: 23px;
-            letter-spacing: 0em;
+            @include responsive-font((
+                min-size: 1.7rem,
+                max-size: 2rem,
+                lower-bound: breakpoint(x-tiny),
+                upper-bound: breakpoint(large)
+            ));
+            line-height: 1.15;
+            letter-spacing: 0;
             text-align: left;
         }
 
         .eventDescription {
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 16px;
-            letter-spacing: 0em;
+            @include responsive-font((
+                min-size: 0.8rem,
+                max-size: 1.2rem,
+                lower-bound: breakpoint(x-tiny),
+                upper-bound: breakpoint(large)
+            ));
+            line-height: 1.33;
+            letter-spacing: 0;
             text-align: left;
         }
     }

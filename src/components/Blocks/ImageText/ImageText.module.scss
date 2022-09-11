@@ -1,4 +1,4 @@
-@import '/styles/_variables.scss';
+@import '@/styles/utils/all';
 
 .container {
     display: flex;
@@ -11,7 +11,7 @@
         flex-direction: row-reverse;
     }
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         flex-direction: column;
         margin: 0 2vw;
 

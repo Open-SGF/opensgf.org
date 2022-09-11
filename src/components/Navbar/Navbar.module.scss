@@ -1,5 +1,4 @@
-@import '/styles/_mixins';
-@import '/styles/_variables';
+@import '@/styles/utils/all';
 
 .navbar {
     position: fixed;
@@ -17,7 +16,7 @@
     }
 
     &.bottomShadow {
-        box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
+        box-shadow: 0 29px 67px -28px rgba(0, 0, 0, 0.75);
     }
 
     .hamburgerIcon {
@@ -25,7 +24,7 @@
         display: none;
         z-index: 19;
 
-        @media screen and (max-width: 600px) {
+        @include mq-below(mid-small) {
             display: block;
             margin-left: auto;
         }
@@ -36,7 +35,7 @@
         z-index: 19;
     }
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         .backgroundCover {
             position: absolute;
             top: 0;
@@ -58,9 +57,6 @@
 
     a {
         text-decoration: none;
-        color: $base-black;
-        font-size: 1.25rem;
-        font-weight: 400;
 
         &:hover {
             color: $base-blue;
@@ -72,13 +68,10 @@
         align-items: center;
         justify-content: center;
         background-color: $base-blue;
-        width: 110px;
-        height: 40px;
         color: white;
-        font-size: 1rem;
-        font-weight: bold;
         border-radius: 8px;
         border-style: none;
+        padding: 13px 37px 13px 33px;
 
         &:hover {
             background-color: $dark-blue;
@@ -92,7 +85,7 @@
 
     }
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         position: absolute;
         z-index: 10;
         left: 0;
@@ -113,25 +106,16 @@
         a {
             padding: 8px;
             text-decoration: none;
-            font-size: 30px;
         }
 
         .contactLink {
             display: block;
-            font-family: 'Roboto', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
+            line-height: 2.1rem;
             color: #133654;
             margin: 25px 0 6px 0;
 
             &Description {
-                font-family: 'Roboto', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 19px;
+                line-height: 1.9rem;
                 color: rgba(19, 54, 84, 0.35);
             }
         }

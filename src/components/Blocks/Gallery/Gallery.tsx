@@ -1,13 +1,36 @@
-﻿import styles from './Gallery.module.scss';
+﻿import Image from 'next/image';
+import styles from './Gallery.module.scss';
 
 export function Gallery(): JSX.Element {
+    const images = [
+        {
+            src: '/images/rectangle-1.png',
+            alt: 'alt text',
+        },
+        {
+            src: '/images/rectangle-2.png',
+            alt: 'alt text',
+        },
+        {
+            src: '/images/rectangle-3.png',
+            alt: 'alt text',
+        },
+        {
+            src: '/images/rectangle-4.png',
+            alt: 'alt text',
+        },
+        {
+            src: '/images/rectangle-5.png',
+            alt: 'alt text',
+        },
+    ];
     return (
         <div className={styles.container}>
-            <div className={styles.image1} />
-            <div className={styles.image2} />
-            <div className={styles.image3} />
-            <div className={styles.image4} />
-            <div className={styles.image5} />
+            {images.map((image, index) => (
+                <div className={styles.imageWrapper} key={index}>
+                    <Image src={image.src} alt={image.alt} layout="fill" />
+                </div>
+            ))}
         </div>
     );
 }

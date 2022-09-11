@@ -1,10 +1,12 @@
+@import '@/styles/utils/all';
+
 .projectDetails {
     width: 600px;
     margin: 50px auto 0 auto;
 
-    @media screen and (max-width: 600px) {
+    @include mq-below(mid-small) {
         width: 80%;
-        margin-top: 50px 0 0 0;
+        margin: 50px 0 0 0;
     }
 
     .linksWrapper, .techStackWrapper, .contributorsWrapper {
@@ -14,7 +16,6 @@
         position: relative;
         padding: 45px 0 45px 0;
         z-index: 5;
-        font-size: 1.12rem;
 
         .verticalLine {
             position: absolute;
@@ -41,13 +42,12 @@
             display: flex;
             flex-direction: column;
 
-            @media screen and (max-width: 600px) {
+            @include mq-below(mid-small) {
                 width: 70%;
             }
 
             h2 {
                 margin-bottom: 30px;
-                font-size: 1.62rem;
             }
 
             .tools, .contributors {
@@ -58,7 +58,7 @@
             .tools {
                 display: flex;
 
-                @media screen and (max-width: 600px) {
+                @include mq-below(mid-small) {
                     flex-direction: column;
                     align-items: center;
 
@@ -72,10 +72,9 @@
                     align-items: center;
                     padding-right: 30px;
 
-                    @media screen and (max-width: 600px) {
+                    @include mq-below(mid-small) {
                         width: 100%;
-                        padding: 0;
-                        padding-bottom: 15px;
+                        padding: 0 0 15px 0;
                     }
                 }
 
@@ -90,7 +89,7 @@
                 justify-content: space-between;
                 display: flex;
 
-                @media screen and (max-width: 600px) {
+                @include mq-below(mid-small) {
                     flex-direction: column;
                     align-items: center;
 
@@ -113,7 +112,7 @@
                     box-shadow: -3px 1px 9px 0px #0000002B;
                     margin-bottom: 30px;
 
-                    @media screen and (max-width: 600px) {
+                    @include mq-below(mid-small) {
                         margin-bottom: 15px;
                     }
                 }

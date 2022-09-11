@@ -1,3 +1,5 @@
+@import '@/styles/utils/all';
+
 .container {
     position: relative;
     display: flex;
@@ -6,6 +8,14 @@
     align-items: flex-end;
     height: 250px;
     margin-top: 50px;
+
+    @include mq-below(mid-small) {
+        flex-direction: column;
+        gap: 60px;
+        height: 600px;
+        align-items: center;
+        margin-top: 160px;
+    }
 }
 
 .card {
@@ -23,24 +33,17 @@
         margin-top: -40px !important;
     }
 
-    h1 {
-        font-size: 36px;
+    h3 {
+        @include responsive-font((
+            min-size: 2.4rem,
+            max-size: 3.6rem,
+            lower-bound: breakpoint(x-tiny),
+            upper-bound: breakpoint(large)
+        ));
         margin: 0;
     }
 
     p {
-        font-size: 18px;
         margin: 0;
-    }
-}
-
-@media  (screen and max-width: 600px) {
-
-    .container{
-       flex-direction: column;
-        gap: 60px;
-        height: 600px;
-        align-items: center;
-        margin-top: 160px;
     }
 }

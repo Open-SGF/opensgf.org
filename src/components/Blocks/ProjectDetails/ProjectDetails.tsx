@@ -26,10 +26,10 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                     <Image src="/images/hyperlink.svg" width="60" height="60" alt="" />
                 </div>
                 <div className={styles.text}>
-                    <h2>Links</h2>
+                    <h2 className="h1">Links</h2>
                     <ul>
-                        {links.map((link) => (
-                            <li key={link.url}>
+                        {links.map((link, index) => (
+                            <li key={link.url + index}>
                                 <Link href={link.url} passHref>
                                     <a>
                                         <span className={styles.link}>{link.label}</span>
@@ -46,7 +46,7 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                     <Image src="/images/monitor.svg" width="60" height="60" alt="" />
                 </div>
                 <div className={styles.text}>
-                    <h2>Tech Stack</h2>
+                    <h2 className="h1">Tech Stack</h2>
                     <ul className={styles.tools}>
                         {toolsUsed.map(({ label, image }) => (
                             <li key={label}>
@@ -63,16 +63,16 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                     <Image src="/images/networking.svg" width="60" height="60" alt="" />
                 </div>
                 <div className={styles.text}>
-                    <h2>Contributors</h2>
+                    <h2 className="h1">Contributors</h2>
                     <ul className={styles.contributors}>
-                        {contributors.map(({ name, image, linkUrl }) => (
-                            <li key={name}>
+                        {contributors.map(({ name, image, linkUrl }, index) => (
+                            <li key={name + index}>
                                 <Link href={linkUrl} passHref>
                                     <a>
                                         <div className={styles.image}>
                                             <Image src={image.src} height="85" width="85" alt={image.src} />
                                         </div>
-                                        <h3>{name}</h3>
+                                        <h3 className="p">{name}</h3>
                                     </a>
                                 </Link>
                             </li>
