@@ -4,10 +4,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 200px 15vw 0 15vw;
+    margin: 200px calc(50vw - 517px) 0 calc(50vw - 517px);
+
+    @include mq-below(x-large) {
+        margin: 200px 17vw 0 17vw;
+    }
+
+    @include mq-below(large) {
+        margin: 200px 15vw 0 15vw;
+    }
+
+    @include mq-below(medium) {
+        margin: 20vh 12vw 0 12vw;
+    }
 
     @include mq-below(mid-small) {
-        margin: 25vh 10vw 0 10vw;
+        margin: 20vh 10vw 0 10vw;
     }
 
     h1 {

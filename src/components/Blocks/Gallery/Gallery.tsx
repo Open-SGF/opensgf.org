@@ -4,23 +4,23 @@ import Image from 'next/image';
 export function Gallery(): JSX.Element {
     const images = [
         {
-            src: '/images/rectangle-1.svg',
+            src: '/images/rectangle-1.png',
             alt: 'alt text'
         },
         {
-            src: '/images/rectangle-2.svg',
+            src: '/images/rectangle-2.png',
             alt: 'alt text'
         },
         {
-            src: '/images/rectangle-3.svg',
+            src: '/images/rectangle-3.png',
             alt: 'alt text'
         },
         {
-            src: '/images/rectangle-4.svg',
+            src: '/images/rectangle-4.png',
             alt: 'alt text'
         },
         {
-            src: '/images/rectangle-5.svg',
+            src: '/images/rectangle-5.png',
             alt: 'alt text'
         }
     ]

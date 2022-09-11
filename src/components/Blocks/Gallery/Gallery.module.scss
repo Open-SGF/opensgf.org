@@ -1,19 +1,20 @@
 ﻿@import '@/styles/utils/all';
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr ;
-    margin: 10px;
-    height: 400px;
+    gap: 32px 20px;
+    min-height: 400px;
+    width: 100%;
     align-content: center;
 
-    @include mq-below(mid-large){
+    @include mq-below(mid-large) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
 
-    @include mq-below(mid-small){
+    @include mq-below(mid-small) {
         display: flex;
         flex-direction: column;
     }
@@ -21,6 +22,11 @@
 
 .imageWrapper {
     position: relative;
+    border-radius: 15px;
+
+    span, img {
+        border-radius: 15px;
+    }
 
     &:nth-child(1) {
         grid-row: 1/4;
@@ -63,6 +69,6 @@
 
     @include mq-below(mid-small) {
         width: 100%;
-        height: auto;
+        height: 200px;
     }
 }
