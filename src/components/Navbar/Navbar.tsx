@@ -43,13 +43,13 @@ export function Navbar(): JSX.Element {
         <>
             <div className={styles.contactLink}>
                 <Link href="/partner" passHref>
-                    <a className="h4" >Partnering</a>
+                    <a className="h4">Partnering</a>
                 </Link>
             </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <div className={styles.contactLink}>
                 <Link className={styles.contactLink} href="/volunteer" passHref>
-                    <a className="h4" >Volunteering</a>
+                    <a className="h4">Volunteering</a>
                 </Link>
             </div>
             <p className={styles.contactLinkDescription}>Learn how you can get involved</p>
@@ -100,17 +100,17 @@ export function Navbar(): JSX.Element {
             </div>
             <div className={`${styles.navLinks} ${open ? styles.open : styles.closed}`}>
                 <Link href="/projects" passHref>
-                    <a className="h2" >Projects</a>
+                    <a className="h2">Projects</a>
                 </Link>
                 {isBreakpoint ? (
                     <div>
-                        <Accordion heading={(<div className="h2">Join Us</div>)} forceClosed={!show}>
+                        <Accordion heading={<div className="h2">Join Us</div>} forceClosed={!show}>
                             {contactLinks}
                         </Accordion>
                     </div>
                 ) : (
                     <div>
-                        <Dropdown heading={(<div className="h2">Join Us</div>)} forceClosed={!show}>
+                        <Dropdown heading={<div className="h2">Join Us</div>} forceClosed={!show}>
                             {contactLinks}
                         </Dropdown>
                     </div>

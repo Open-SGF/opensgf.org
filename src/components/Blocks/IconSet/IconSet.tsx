@@ -5,9 +5,9 @@ export function IconSet(): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.iconWrapper}>
-                <Icon key={1}/>
-                <Icon key={2}/>
-                <Icon key={3}/>
+                <Icon key={1} />
+                <Icon key={2} />
+                <Icon key={3} />
             </div>
         </div>
     );

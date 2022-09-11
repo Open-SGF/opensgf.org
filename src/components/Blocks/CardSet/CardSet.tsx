@@ -13,7 +13,7 @@ export const CardSet = ({ volunteerCard, partnerCard }: ICardSet) => {
                 {volunteerCard}
                 {partnerCard}
             </div>
-            <div className={styles.backgroundCover}/>
+            <div className={styles.backgroundCover} />
         </div>
     );
 };
