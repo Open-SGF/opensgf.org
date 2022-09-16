@@ -15,14 +15,10 @@
     height: 216px;
     max-height: 30vh;
     width: 100vw;
-    padding: 75px;
+    padding: 5.2%;
     background-color: $dark-blue;
 
     flex-shrink: 0;
-
-    @media screen and (max-width: 600px) {
-        padding: 20px;
-    }
 
     a {
         display: flex;
@@ -40,9 +36,17 @@
     width: 332px;
     max-width: 70%;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
         max-width: 50%;
         gap: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+        max-width: 170px;
+    }
+
+    @media screen and (max-width: 500px) {
+        max-width: 130px;
     }
 
     .imageWrapper {
@@ -55,6 +59,11 @@
 
         & * {
             z-index: 5;
+        }
+
+        @media screen and (max-width: 400px) {
+            height: 35px;
+            width: 35px;
         }
 
         span, span img {

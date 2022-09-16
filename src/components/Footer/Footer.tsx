@@ -4,6 +4,29 @@ import React from 'react';
 import styles from './Footer.module.scss';
 
 export function Footer(): JSX.Element {
+    const socialIcons = [
+        {
+            url: 'https://www.facebook.com/',
+            src: '/images/facebook-logo.svg',
+            alt: 'Facebook Logo',
+        },
+        {
+            url: 'https://www.meetup.com/',
+            src: '/images/meetup-logo.svg',
+            alt: 'Meetup Logo',
+        },
+        {
+            url: 'https://discord.com/',
+            src: '/images/discord-logo.svg',
+            alt: 'Discord Logo',
+        },
+        {
+            url: 'https://twitter.com/?lang=en',
+            src: '/images/twitter-logo.svg',
+            alt: 'Twitter Logo',
+        }
+    ]
+
     return (
         <div className={styles.pageContainer}>
             <footer className={styles.footer}>
@@ -11,45 +34,25 @@ export function Footer(): JSX.Element {
                     <a>
                         <Image
                             src="/images/code-for-america-logo.svg"
-                            width={200}
-                            height={200}
+                            width={275}
+                            height={95}
                             alt="CodeforAmerica Logo"
                         />
                     </a>
                 </Link>
                 <div className={styles.socials}>
-                    <Link href="https://www.facebook.com/" passHref>
-                        <a>
-                            <div className={styles.imageWrapper}>
-                                <Image src="/images/facebook-logo.svg" layout="fill" alt="Facebook Logo" />
-                                <div className={styles.backgroundFill}/>
+                    { socialIcons.map(({url, src, alt}) => {
+                        return (
+                            <div className={styles.imageWrapper} key={url}>
+                                <Link href={url} passHref>
+                                    <a>
+                                        <Image src={src} layout="fill" alt={alt} />
+                                        <div className={styles.backgroundFill}/>
+                                    </a>
+                                </Link>
                             </div>
-                        </a>
-                    </Link>
-                    <Link href="https://www.meetup.com/" passHref>
-                        <a>
-                            <div className={styles.imageWrapper}>
-                                <Image src="/images/meetup-logo.svg" layout="fill" alt="Meetup Logo" />
-                                <div className={styles.backgroundFill}/>
-                            </div>
-                        </a>
-                    </Link>
-                    <Link href="https://discord.com/" passHref>
-                        <a>
-                            <div className={styles.imageWrapper}>
-                                <Image src="/images/discord-logo.svg" layout="fill" alt="Discord Logo" />
-                                <div className={styles.backgroundFill}/>
-                            </div>
-                        </a>
-                    </Link>
-                    <Link href="https://twitter.com/?lang=en" passHref>
-                        <a>
-                            <div className={styles.imageWrapper}>
-                                <Image src="/images/twitter-logo.svg" layout="fill" alt="Twitter Logo" />
-                                <div className={styles.backgroundFill}/>
-                            </div>
-                        </a>
-                    </Link>
+                        )
+                    }) }
                 </div>
             </footer>
         </div>
