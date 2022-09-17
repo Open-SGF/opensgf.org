@@ -36,7 +36,7 @@
     width: 332px;
     max-width: 70%;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 600px) {
         max-width: 50%;
         gap: 20px;
     }
@@ -57,13 +57,13 @@
         z-index: 5;
         overflow: hidden;
 
-        & * {
-            z-index: 5;
-        }
-
         @media screen and (max-width: 400px) {
             height: 35px;
             width: 35px;
+        }
+
+        & * {
+            z-index: 5;
         }
 
         span, span img {
