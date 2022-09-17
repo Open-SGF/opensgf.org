@@ -24,8 +24,8 @@ export function Footer(): JSX.Element {
             url: 'https://twitter.com/?lang=en',
             src: '/images/twitter-logo.svg',
             alt: 'Twitter Logo',
-        }
-    ]
+        },
+    ];
 
     return (
         <div className={styles.pageContainer}>
@@ -41,18 +41,18 @@ export function Footer(): JSX.Element {
                     </a>
                 </Link>
                 <div className={styles.socials}>
-                    { socialIcons.map(({url, src, alt}) => {
+                    {socialIcons.map(({ url, src, alt }) => {
                         return (
                             <div className={styles.imageWrapper} key={url}>
                                 <Link href={url} passHref>
                                     <a>
                                         <Image src={src} layout="fill" alt={alt} />
-                                        <div className={styles.backgroundFill}/>
+                                        <div className={styles.backgroundFill} />
                                     </a>
                                 </Link>
                             </div>
-                        )
-                    }) }
+                        );
+                    })}
                 </div>
             </footer>
         </div>
