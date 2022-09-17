@@ -4,7 +4,15 @@ import React from 'react';
 import styles from './Footer.module.scss';
 
 export function Footer(): JSX.Element {
-    const socialIcons = [
+    type IconData = {
+        url: string;
+        src: string;
+        alt: string;
+    };
+
+    type IconDataArray = IconData[];
+
+    const socialIcons: IconDataArray = [
         {
             url: 'https://www.facebook.com/',
             src: '/images/facebook-logo.svg',
@@ -27,6 +35,23 @@ export function Footer(): JSX.Element {
         },
     ];
 
+    type IconElementGenerator = (iconDataArray: IconDataArray) => JSX.Element[];
+
+    const socialIconElementGenerator: IconElementGenerator = (iconDataArray) => {
+        return iconDataArray.map(({ url, src, alt }) => {
+            return (
+                <div className={styles.imageWrapper} key={url}>
+                    <Link href={url} passHref>
+                        <a>
+                            <Image src={src} layout="fill" alt={alt} />
+                            <div className={styles.backgroundFill} />
+                        </a>
+                    </Link>
+                </div>
+            );
+        });
+    };
+
     return (
         <div className={styles.pageContainer}>
             <footer className={styles.footer}>
@@ -40,20 +65,7 @@ export function Footer(): JSX.Element {
                         />
                     </a>
                 </Link>
-                <div className={styles.socials}>
-                    {socialIcons.map(({ url, src, alt }) => {
-                        return (
-                            <div className={styles.imageWrapper} key={url}>
-                                <Link href={url} passHref>
-                                    <a>
-                                        <Image src={src} layout="fill" alt={alt} />
-                                        <div className={styles.backgroundFill} />
-                                    </a>
-                                </Link>
-                            </div>
-                        );
-                    })}
-                </div>
+                <div className={styles.socials}>{socialIconElementGenerator(socialIcons)}</div>
             </footer>
         </div>
     );
