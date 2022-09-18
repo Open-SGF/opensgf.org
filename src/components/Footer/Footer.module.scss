@@ -1,4 +1,4 @@
-@import '@/styles/utils/all';
+ @import '@/styles/utils/all';
 
 .pageContainer {
     margin-top: auto;
@@ -33,7 +33,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    width: 332px;
+    width: 170px;
     max-width: 70%;
 
     @media screen and (max-width: 600px) {
