@@ -14,24 +14,14 @@ export function Footer(): JSX.Element {
 
     const socialIcons: IconDataArray = [
         {
-            url: 'https://www.facebook.com/',
-            src: '/images/facebook-logo.svg',
-            alt: 'Facebook Logo',
-        },
-        {
-            url: 'https://www.meetup.com/',
+            url: 'https://www.meetup.com/open-sgf/',
             src: '/images/meetup-logo.svg',
             alt: 'Meetup Logo',
         },
         {
-            url: 'https://discord.com/',
+            url: 'https://discord.gg/jFD8dZP',
             src: '/images/discord-logo.svg',
             alt: 'Discord Logo',
-        },
-        {
-            url: 'https://twitter.com/?lang=en',
-            src: '/images/twitter-logo.svg',
-            alt: 'Twitter Logo',
         },
     ];
 
