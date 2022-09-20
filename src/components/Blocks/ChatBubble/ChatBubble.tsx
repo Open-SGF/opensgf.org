@@ -1,6 +1,7 @@
 import { ChatBubbleLeft } from '@/components/Icons/ChatBubbleLeft/ChatBubbleLeft';
 import { ChatBubbleRight } from '@/components/Icons/ChatBubbleRight/ChatBubbleRight';
 import styles from './ChatBubble.module.scss';
+import variables from '@/styles/utils/variables.module.scss';
 
 export function ChatBubble(): JSX.Element {
     const clientIssue =
@@ -12,7 +13,7 @@ export function ChatBubble(): JSX.Element {
         <div className={styles.container}>
             <div className={styles.bubble}>
                 <div className={styles.imageWrapper}>
-                    <ChatBubbleLeft />
+                    <ChatBubbleLeft color={variables.lightBlue}/>
                 </div>
                 <div className={styles.textWrapper}>
                     <div className={`${styles.title} h1`}>Client Issue</div>
@@ -21,7 +22,7 @@ export function ChatBubble(): JSX.Element {
             </div>
             <div className={styles.bubble}>
                 <div className={styles.imageWrapper}>
-                    <ChatBubbleRight />
+                    <ChatBubbleRight color={variables.darkBlue}/>
                 </div>
                 <div className={styles.textWrapper}>
                     <div className={`${styles.title} h1`}>Our Solution</div>

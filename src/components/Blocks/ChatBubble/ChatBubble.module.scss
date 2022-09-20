@@ -23,16 +23,9 @@
     }
 
     .imageWrapper {
-        color: $light-blue;
-
         svg {
             width: 100%;
             height: auto;
-        }
-
-        // TODO: remove this coupling between the ChatBubble Block and ChatBubble Icon
-        svg g path {
-            color: $light-blue;
         }
     }
 
@@ -43,15 +36,6 @@
         @include mq-below(mid-large) {
             margin-top: auto;
             margin-left: auto;
-        }
-
-        // TODO: remove this coupling between the ChatBubble Block and ChatBubble Icon
-        .imageWrapper {
-            color: $dark-blue;
-
-            svg g path {
-                color: $dark-blue;
-            }
         }
     }
 

@@ -33,4 +33,6 @@ $breakpoints: (
 
 :export {
     breakpointSmall: map-get($breakpoints, 'small');
+    lightBlue: $light-blue;
+    darkBlue: $dark-blue;
 }
