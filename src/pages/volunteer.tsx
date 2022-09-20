@@ -1,3 +1,4 @@
+import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
@@ -30,11 +31,32 @@ export default function volunteer(): JSX.Element {
         </div>
     );
 
+    const socialIcons: Icon[] = [
+        {
+            image: {
+                url: 'https://www.meetup.com/open-sgf/',
+                src: '/images/meetup-logo.svg',
+                alt: 'Meetup Logo',
+            },
+            title: <div className="h1">Meetup</div>,
+        },
+        {
+            image: {
+                url: 'https://discord.gg/jFD8dZP',
+                src: '/images/discord-logo.svg',
+                alt: 'Discord Logo',
+            },
+            title: <div className="h1">Discord</div>,
+        },
+    ];
+
     return (
         <div className={styles.pageWrapper}>
             <ImageText image={heroImage} text={heroText} enableParticles={true} />
             <UpcomingEvents />
-            <IconSet />
+            <div className={styles.socialIconWrapper}>
+                <IconSet icons={socialIcons} />
+            </div>
         </div>
     );
 }

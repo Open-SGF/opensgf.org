@@ -1,9 +1,11 @@
 .container {
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .iconWrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 15px;
 }

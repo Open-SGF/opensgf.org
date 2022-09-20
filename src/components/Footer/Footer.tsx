@@ -10,9 +10,7 @@ export function Footer(): JSX.Element {
         alt: string;
     };
 
-    type IconDataArray = IconData[];
-
-    const socialIcons: IconDataArray = [
+    const socialIcons: IconData[] = [
         {
             url: 'https://www.meetup.com/open-sgf/',
             src: '/images/meetup-logo.svg',
@@ -25,7 +23,7 @@ export function Footer(): JSX.Element {
         },
     ];
 
-    type IconElementGenerator = (iconDataArray: IconDataArray) => JSX.Element[];
+    type IconElementGenerator = (iconDataArray: IconData[]) => JSX.Element[];
 
     const socialIconElementGenerator: IconElementGenerator = (iconDataArray) => {
         return iconDataArray.map(({ url, src, alt }) => {

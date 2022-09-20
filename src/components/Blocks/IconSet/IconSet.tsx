@@ -1,13 +1,17 @@
 import { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import styles from './IconSet.module.scss';
 
-export function IconSet(): JSX.Element {
+type IIconSet = {
+    icons: Icon[];
+};
+
+export function IconSet({ icons }: IIconSet): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.iconWrapper}>
-                <Icon key={1} />
-                <Icon key={2} />
-                <Icon key={3} />
+                {icons.map((icon, index) => (
+                    <Icon key={index} icon={icon} />
+                ))}
             </div>
         </div>
     );
