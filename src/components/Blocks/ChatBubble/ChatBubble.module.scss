@@ -1,43 +1,79 @@
+@import '@/styles/utils/all';
+
 .container {
-    margin: 45px;
-}
-.row {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    gap: 13px;
+    margin-top: 159px;
+
+    @include mq-below(mid-large) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    @include mq-below(x-small) {
+        margin-top: 100px;
+    }
 }
 
-.columnOne {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.columnTwo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
-    color: #ffffff;
-}
-
-.columnBubble {
+.bubble {
     position: relative;
-}
 
-.bubbleChat {
-    position: absolute;
-    top: 25%;
-}
+    @include mq-below(mid-large) {
+        max-width: 526px;
+    }
 
-.bubbleHeader {
-    text-align: center;
-    margin: 10px 0;
-}
+    .imageWrapper {
+        color: $light-blue;
 
-.chat {
-    margin: 0 10%;
+        svg {
+            width: 100%;
+            height: auto;
+        }
+
+        // TODO: remove this coupling between the ChatBubble Block and ChatBubble Icon
+        svg g path {
+            color: $light-blue;
+        }
+    }
+
+    &:nth-child(2) {
+        color: white;
+        margin-top: 105px;
+
+        @include mq-below(mid-large) {
+            margin-top: auto;
+            margin-left: auto;
+        }
+
+        // TODO: remove this coupling between the ChatBubble Block and ChatBubble Icon
+        .imageWrapper {
+            color: $dark-blue;
+
+            svg g path {
+                color: $dark-blue;
+            }
+        }
+    }
+
+
+    .textWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: inherit;
+        padding: 4% 4% 14% 4%;
+
+        .title {
+            text-align: center;
+            margin: 10px 0;
+            color: inherit;
+        }
+
+        .body {
+            margin: 0 10%;
+            color: inherit;
+        }
+    }
 }
