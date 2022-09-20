@@ -1,4 +1,4 @@
-@import '@/styles/utils/all';
+ @import '@/styles/utils/all';
 
 .pageContainer {
     margin-top: auto;
@@ -6,37 +6,79 @@
 
 .footer {
     flex: 1;
+    display: flex;
+    gap: 20px;
     border-top: 1px solid #eaeaea;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     height: 216px;
     max-height: 30vh;
     width: 100vw;
-    padding : 3rem;
+    padding: 5.2%;
     background-color: $dark-blue;
 
-    display: flex;
     flex-shrink: 0;
 
     a {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-grow: 1;
+        border-radius: 50%;
     }
 }
 
 
 .socials {
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    width: 80vw;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 170px;
+    max-width: 70%;
 
-    img {
-        width: 100%;
-        background-color: white;
-        clip-path: circle( 1.75rem at center);
+    @media screen and (max-width: 600px) {
+        max-width: 50%;
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+        max-width: 170px;
+    }
+
+    @media screen and (max-width: 500px) {
+        max-width: 130px;
+    }
+
+    .imageWrapper {
+        height: 53px;
+        width: 53px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+
+        @media screen and (max-width: 400px) {
+            height: 35px;
+            width: 35px;
+        }
+
+        & * {
+            z-index: 5;
+        }
+
+        span, span img {
+            border-radius: 50%;
+        }
+
+        .backgroundFill {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background-color: white;
+            z-index: 3;
+            border-radius: 50%;
+        }
     }
 }
