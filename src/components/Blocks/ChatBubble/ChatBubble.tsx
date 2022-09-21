@@ -13,7 +13,7 @@ export function ChatBubble(): JSX.Element {
         <div className={styles.container}>
             <div className={styles.bubble}>
                 <div className={styles.imageWrapper}>
-                    <ChatBubbleLeft color={variables.lightBlue}/>
+                    <ChatBubbleLeft color={variables.lightBlue} />
                 </div>
                 <div className={styles.textWrapper}>
                     <div className={`${styles.title} h1`}>Client Issue</div>
@@ -22,7 +22,7 @@ export function ChatBubble(): JSX.Element {
             </div>
             <div className={styles.bubble}>
                 <div className={styles.imageWrapper}>
-                    <ChatBubbleRight color={variables.darkBlue}/>
+                    <ChatBubbleRight color={variables.darkBlue} />
                 </div>
                 <div className={styles.textWrapper}>
                     <div className={`${styles.title} h1`}>Our Solution</div>

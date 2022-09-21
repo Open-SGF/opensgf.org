@@ -2,7 +2,7 @@ type IChatBubbleRight = {
     color: string;
 };
 
-export function ChatBubbleRight({color}: IChatBubbleRight): JSX.Element {
+export function ChatBubbleRight({ color }: IChatBubbleRight): JSX.Element {
     return (
         <svg width="569" height="291" viewBox="0 0 569 291" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_103_4)">
