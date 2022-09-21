@@ -13,7 +13,6 @@ export function Accordion({ children, heading, forceClosed = false }: IAccordion
 
     useEffect(() => {
         const handleClick = (event: any) => {
-            // TODO: replace with react way of referencing elements.
             if (!event.target.matches('#accordion, #accordion *')) {
                 setShow(false);
             }

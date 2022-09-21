@@ -96,7 +96,7 @@ export function Navbar(): JSX.Element {
                 <Link href="/about" passHref>
                     <a className="h2">About</a>
                 </Link>
-                <Link href="/donate" passHref>
+                <Link href="https://www.codeforamerica.org/donate" passHref>
                     <a>
                         <button className={`${styles.btn} h1`}>Donate</button>
                     </a>
