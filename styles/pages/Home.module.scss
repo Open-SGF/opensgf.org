@@ -1,16 +1,15 @@
 @import '@/styles/utils/all';
 
 .pageWrapper {
-    margin: 200px 15vw 0 15vw;
+    margin: 0 15vw 0 15vw;
 
     @include mq-below(mid-small) {
-        margin: 200px 10vw 0 10vw;
+        margin: 0 10vw 0 10vw;
     }
 }
 
 .heroText {
     h1 {
-        line-height: 1.16rem;
         @include responsive-font((
             min-size: 3.6rem,
             max-size: 5.4rem,

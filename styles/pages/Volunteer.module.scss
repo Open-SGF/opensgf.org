@@ -1,10 +1,10 @@
 @import '@/styles/utils/all';
 
 .pageWrapper {
-    margin: 200px 15vw 0 15vw;
+    margin: 0 15vw 0 15vw;
 
     @include mq-below(mid-small) {
-        margin: 25vh 10vw 0 10vw;
+        margin: 15px 10vw 0 10vw;
     }
 }
 

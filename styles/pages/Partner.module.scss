@@ -1,9 +1,9 @@
 @import '@/styles/utils/all';
 
 .pageWrapper {
-    margin: 200px 206px 0 206px;
+    margin: 86px 206px 110px 206px;
 
     @include mq-below(mid-small) {
-        margin: 25vh 10vw 0 10vw;
+        margin: 86px 10vw 110px 10vw;
     }
 }

@@ -34,10 +34,7 @@ const useMediaQuery = (width: number) => {
 
 export function Navbar(): JSX.Element {
     const isBreakpoint = useMediaQuery(600);
-    const [show, setShow] = useState(true);
     const [open, setOpen] = useState(false);
-    const previousScrollYRef = useRef(0);
-    const previousLowestScrollYRef = useRef(0);
 
     const contactLinks = (
         <>
@@ -57,21 +54,6 @@ export function Navbar(): JSX.Element {
     );
 
     useEffect(() => {
-        const handleScroll = () => {
-            setOpen(false);
-
-            if (window.scrollY > previousScrollYRef.current) {
-                setShow(false);
-                previousLowestScrollYRef.current = window.scrollY;
-            }
-
-            previousScrollYRef.current = window.scrollY;
-
-            if (window.scrollY === 0 || window.scrollY < previousLowestScrollYRef.current - 100) {
-                setShow(true);
-            }
-        };
-
         const handleClick = (event: any) => {
             // TODO: replace with the react way of grabbing elements
             if (!event.target.matches('#navbar, #navbar *') || event.target.matches('a')) {
@@ -79,11 +61,9 @@ export function Navbar(): JSX.Element {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
         window.addEventListener('click', handleClick);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('click', handleClick);
         };
     }, []);
@@ -91,9 +71,7 @@ export function Navbar(): JSX.Element {
     return (
         <nav
             id="navbar"
-            className={`${styles.navbar} ${show ? '' : styles.hidden} ${
-                previousScrollYRef.current > 0 ? styles.bottomShadow : ''
-            }`}
+            className={`${styles.navbar}`}
         >
             <div className={styles.logo}>
                 <Logo url="/" />
@@ -104,13 +82,13 @@ export function Navbar(): JSX.Element {
                 </Link>
                 {isBreakpoint ? (
                     <div>
-                        <Accordion heading={<div className="h2">Join Us</div>} forceClosed={!show}>
+                        <Accordion heading={<div className="h2">Join Us</div>}>
                             {contactLinks}
                         </Accordion>
                     </div>
                 ) : (
                     <div>
-                        <Dropdown heading={<div className="h2">Join Us</div>} forceClosed={!show}>
+                        <Dropdown heading={<div className="h2">Join Us</div>}>
                             {contactLinks}
                         </Dropdown>
                     </div>

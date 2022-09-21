@@ -1,8 +1,7 @@
 @import '@/styles/utils/all';
 
 .navbar {
-    position: fixed;
-    top: 0;
+    position: relative;
     width: 100vw;
     z-index: 16;
     display: flex;
@@ -10,14 +9,6 @@
     transition: top 0.3s;
     padding: 50px 85px 50px 58px;
     background-color: white;
-
-    &.hidden {
-        top: -164px;
-    }
-
-    &.bottomShadow {
-        box-shadow: 0 29px 67px -28px rgba(0, 0, 0, 0.75);
-    }
 
     .hamburgerIcon {
         position: relative;

@@ -5,10 +5,10 @@ import styles from './Accordion.module.scss';
 interface IAccordion {
     children: JSX.Element;
     heading: JSX.Element;
-    forceClosed: boolean;
+    forceClosed?: boolean;
 }
 
-export function Accordion({ children, heading, forceClosed }: IAccordion): JSX.Element {
+export function Accordion({ children, heading, forceClosed = false }: IAccordion): JSX.Element {
     const [show, setShow] = useState(false);
 
     useEffect(() => {
