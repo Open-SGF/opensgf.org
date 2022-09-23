@@ -10,24 +10,24 @@ export default function About(): JSX.Element {
                 src: '/images/man-profile-2.png',
                 alt: 'Meetup Logo',
             },
-            title: <div className={'h3 ' + styles.name}>Fred Lawler</div>,
-            subtitle: <div className={'h6 ' + styles.position}>Co-Organizer</div>,
+            title: <figcaption className={'h3 ' + styles.name}>Fred Lawler</figcaption>,
+            subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
         },
         {
             image: {
                 src: '/images/man-profile-1.png',
                 alt: 'Discord Logo',
             },
-            title: <div className={'h3 ' + styles.name}>Levi Zitting</div>,
-            subtitle: <div className={'h6 ' + styles.position}>Co-Organizer</div>,
+            title: <figcaption className={'h3 ' + styles.name}>Levi Zitting</figcaption>,
+            subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
         },
         {
             image: {
                 src: '/images/man-profile-3.png',
                 alt: 'Discord Logo',
             },
-            title: <div className={'h3 ' + styles.name}>Ethan Zitting</div>,
-            subtitle: <div className={'h6 ' + styles.position}>Co-Organizer</div>,
+            title: <figcaption className={'h3 ' + styles.name}>Ethan Zitting</figcaption>,
+            subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
         },
     ];
 
@@ -37,7 +37,7 @@ export default function About(): JSX.Element {
             <IconSet icons={teamIcons} />
             <p className={styles.groupDescription}>
                 A group who takes on tech volunteer work around the community. We meet every Tuesday and host occasional
-                socials. Connect with us and{' '}
+                socials.
             </p>
             <Gallery />
         </div>

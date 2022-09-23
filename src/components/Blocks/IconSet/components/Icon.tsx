@@ -18,8 +18,8 @@ type IIcon = {
 
 export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): JSX.Element {
     const imageElement: JSX.Element = <Image src={image.src} alt={image.alt} layout="fill" />;
-    const titleElement: JSX.Element = <span className={styles.title}>{title}</span>;
-    const subtitleElement: JSX.Element = <span className={styles.subtitle}>{subtitle}</span>;
+    const titleElement: JSX.Element = <figcaption className={styles.title}>{title}</figcaption>;
+    const subtitleElement: JSX.Element = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
 
     type WrapElementInLink = (element: JSX.Element, url: string) => JSX.Element;
 
@@ -33,18 +33,18 @@ export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon
 
     if (image.url) {
         return (
-            <div className={styles.icon}>
+            <figure className={styles.icon}>
                 <div className={styles.imageWrapper}>{wrapInLink(imageElement, image.url)}</div>
                 {title ? wrapInLink(titleElement, image.url) : <></>}
                 {subtitle ? wrapInLink(subtitleElement, image.url) : <></>}
-            </div>
+            </figure>
         );
     }
     return (
-        <div className={styles.icon}>
+        <figure className={styles.icon}>
             <div className={styles.imageWrapper}>{imageElement}</div>
             {title ? titleElement : <></>}
             {subtitle ? subtitleElement : <></>}
-        </div>
+        </figure>
     );
 }
