@@ -4,8 +4,5 @@
     font-family: $secondary-font;
     text-decoration: underline;
     text-align: center;
-
-    @include mq-below(mid-small) {
-        margin-top: 30px;
-    }
+    margin-top: 50px;
 }

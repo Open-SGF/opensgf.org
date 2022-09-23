@@ -6,6 +6,24 @@
     @include mq-below(mid-small) {
         margin: 0 10vw 0 10vw;
     }
+
+    &>* {
+        &:first-child {
+            margin-top: 100px;
+        }
+
+        &:nth-child(2) {
+            margin-top: 50px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 50px;
+        }
+
+        &:nth-child(4) {
+            margin-top: 90px;
+        }
+    }
 }
 
 .heroText {

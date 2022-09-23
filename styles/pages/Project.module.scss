@@ -18,6 +18,12 @@
     @include mq-below(mid-small) {
         margin: 0 10vw 0 10vw;
     }
+
+    &>* {
+        &:first-child {
+            margin-top: 50px;
+        }
+    }
 }
 
 .projectDetailsText {
