@@ -6,7 +6,6 @@
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 32px 20px;
     min-height: 400px;
-    width: 100%;
     align-content: center;
 
     @include mq-below(mid-large) {

@@ -1,7 +1,7 @@
 @import '@/styles/utils/all';
 
 .projectDetails {
-    width: 600px;
+    max-width: 700px;
     margin: 50px auto 0 auto;
 
     @include mq-below(mid-small) {

@@ -20,7 +20,7 @@ export function Card({ project, project: { image } }: ICard): JSX.Element {
         <div className={styles.card}>
             {project.helpWanted && (
                 <div className={styles.iconCallout}>
-                    <IconCallout link={project.link} />
+                    <IconCallout link={project.link} text="Help Needed"/>
                 </div>
             )}
             <Link href={project.link}>
