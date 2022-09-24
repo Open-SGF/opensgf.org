@@ -32,7 +32,7 @@ export function Stats(): JSX.Element {
 
     return (
         <div className={styles.container}>
-            {stats.map(({image, numberFigure, unitName}, index) => (
+            {stats.map(({ image, numberFigure, unitName }, index) => (
                 <div className={styles.card} key={index}>
                     <div className={styles.image}>
                         <Image src={image.src} width={72} height={72} alt={image.alt} />

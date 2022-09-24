@@ -69,10 +69,7 @@ export function Navbar(): JSX.Element {
     }, []);
 
     return (
-        <nav
-            id="navbar"
-            className={`${styles.navbar}`}
-        >
+        <nav id="navbar" className={`${styles.navbar}`}>
             <div className={styles.logo}>
                 <Logo url="/" />
             </div>
@@ -82,15 +79,11 @@ export function Navbar(): JSX.Element {
                 </Link>
                 {isBreakpoint ? (
                     <div>
-                        <Accordion heading={<div className="h2">Join Us</div>}>
-                            {contactLinks}
-                        </Accordion>
+                        <Accordion heading={<div className="h2">Join Us</div>}>{contactLinks}</Accordion>
                     </div>
                 ) : (
                     <div>
-                        <Dropdown heading={<div className="h2">Join Us</div>}>
-                            {contactLinks}
-                        </Dropdown>
+                        <Dropdown heading={<div className="h2">Join Us</div>}>{contactLinks}</Dropdown>
                     </div>
                 )}
                 <Link href="/about" passHref>
