@@ -1,4 +1,4 @@
-import { ChatBubble } from '@/components/Blocks/ChatBubble/ChatBubble';
+import { ChatBubbles } from '@/components/Blocks/ChatBubbles/ChatBubbles';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
@@ -109,7 +109,7 @@ export default function Project(): JSX.Element {
                 imageTextSizeRatio={0.55}
             />
             <ProjectDetails links={project.links} toolsUsed={project.toolsUsed} contributors={project.contributors} />
-            <ChatBubble />
+            <ChatBubbles />
             <Gallery />
             <div className={styles.projectNav}>
                 <ProjectNav buttonText={'Previous'} />

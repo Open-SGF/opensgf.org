@@ -3,6 +3,7 @@
 $base-black: #133654;
 $base-blue:  #0094FF;
 $dark-blue: #005898;
+$light-blue: #E9F5FF;
 $base-red:  #FF6A6B;
 $light-red: #FF6061;
 
@@ -32,4 +33,6 @@ $breakpoints: (
 
 :export {
     breakpointSmall: map-get($breakpoints, 'small');
+    lightBlue: $light-blue;
+    darkBlue: $dark-blue;
 }
