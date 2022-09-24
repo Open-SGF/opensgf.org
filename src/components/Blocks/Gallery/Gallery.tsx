@@ -26,8 +26,8 @@ export function Gallery(): JSX.Element {
     ];
     return (
         <div className={styles.container}>
-            {images.map((image, index) => (
-                <div className={styles.imageWrapper} key={index}>
+            {images.map((image) => (
+                <div className={styles.imageWrapper} key={image.src}>
                     <Image src={image.src} alt={image.alt} layout="fill" />
                 </div>
             ))}

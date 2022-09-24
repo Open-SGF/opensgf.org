@@ -1,8 +1,7 @@
 @import '@/styles/utils/all';
 
 .navbar {
-    position: fixed;
-    top: 0;
+    position: relative;
     width: 100vw;
     z-index: 16;
     display: flex;
@@ -11,31 +10,32 @@
     padding: 50px 85px 50px 58px;
     background-color: white;
 
-    &.hidden {
-        top: -164px;
+    @include mq-below(small) {
+        padding: 35px 85px 35px 38px;
     }
 
-    &.bottomShadow {
-        box-shadow: 0 29px 67px -28px rgba(0, 0, 0, 0.75);
-    }
-
-    .hamburgerIcon {
+    .hamburgerWrapper {
         position: relative;
         display: none;
         z-index: 19;
 
-        @include mq-below(mid-small) {
+        @include mq-below(small) {
             display: block;
             margin-left: auto;
         }
     }
 
     .logo {
-        width: 30%;
+        min-width: 20vw;
         z-index: 19;
+        margin-right: 25px;
+
+        @include mq-below(mid-small) {
+            max-width: 30vw;
+        }
     }
 
-    @include mq-below(mid-small) {
+    @include mq-below(small) {
         .backgroundCover {
             position: absolute;
             top: 0;
@@ -54,6 +54,10 @@
     justify-content: flex-end;
     margin-left: auto;
     gap: 60px;
+
+    @include mq-below(medium) {
+        gap: 30px;
+    }
 
     a {
         text-decoration: none;
@@ -80,12 +84,28 @@
         }
     }
 
+    .contactLink {
+        display: block;
+        line-height: 2.1rem;
+        color: #133654;
+        margin: 25px 0 6px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &Description {
+            line-height: 1.9rem;
+            color: rgba(19, 54, 84, 0.35);
+        }
+    }
+
 
     &.closed, &.open {
 
     }
 
-    @include mq-below(mid-small) {
+    @include mq-below(small) {
         position: absolute;
         z-index: 10;
         left: 0;
@@ -98,26 +118,19 @@
         justify-content: flex-start;
         gap: 50px;
         box-shadow: 0px 29px 67px -28px rgba(0,0,0,0.75);
+        padding-bottom: 20px;
 
         &.closed {
             top: -300%;
         }
 
+        .contactLink:first-child {
+            margin-top: 25px;
+        }
+
         a {
             padding: 8px;
             text-decoration: none;
-        }
-
-        .contactLink {
-            display: block;
-            line-height: 2.1rem;
-            color: #133654;
-            margin: 25px 0 6px 0;
-
-            &Description {
-                line-height: 1.9rem;
-                color: rgba(19, 54, 84, 0.35);
-            }
         }
     }
 }

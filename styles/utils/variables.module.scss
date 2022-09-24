@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $base-black: #133654;
 $base-blue:  #0094FF;
 $dark-blue: #005898;
@@ -27,3 +29,7 @@ $breakpoints: (
     x-large: 1440,
     xx-large: 1525
 );
+
+:export {
+    breakpointSmall: map-get($breakpoints, 'small');
+}

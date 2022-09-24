@@ -6,7 +6,6 @@
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 32px 20px;
     min-height: 400px;
-    width: 100%;
     align-content: center;
 
     @include mq-below(mid-large) {
@@ -26,6 +25,15 @@
 
     span, img {
         border-radius: 15px;
+    }
+
+    span {
+        width: 100%;
+        height: 100%;
+
+        img {
+            object-fit: cover;
+        }
     }
 
     &:nth-child(1) {

@@ -1,22 +1,36 @@
 @import '@/styles/utils/all';
 
 .pageWrapper {
-    margin: 200px calc(50vw - 517px) 0 calc(50vw - 517px);
+    margin: 0 calc(50vw - 558px) 0 calc(50vw - 558px);
 
     @include mq-below(x-large) {
-        margin: 200px 17vw 0 17vw;
+        margin: 0 11.3vw 0 11.3vw;
     }
 
     @include mq-below(large) {
-        margin: 200px 15vw 0 15vw;
+        margin: 0 10vw 0 10vw;
     }
 
     @include mq-below(medium) {
-        margin: 20vh 12vw 0 12vw;
+        margin: 0 8vw 0 8vw;
     }
 
     @include mq-below(mid-small) {
-        margin: 20vh 10vw 0 10vw;
+        margin: 0 6vw 0 6vw;
+    }
+
+    &>* {
+        &:first-child {
+            margin-top: 50px;
+        }
+
+        &:nth-child(3) {
+            margin-left: 15px;
+        }
+
+        &:nth-child(4) {
+            margin: 0 111px 0 111px;
+        }
     }
 }
 

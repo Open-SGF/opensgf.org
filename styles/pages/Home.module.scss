@@ -1,16 +1,33 @@
 @import '@/styles/utils/all';
 
 .pageWrapper {
-    margin: 200px 15vw 0 15vw;
+    margin: 0 15vw 0 15vw;
 
     @include mq-below(mid-small) {
-        margin: 200px 10vw 0 10vw;
+        margin: 0 10vw 0 10vw;
+    }
+
+    &>* {
+        &:first-child {
+            margin-top: 100px;
+        }
+
+        &:nth-child(2) {
+            margin-top: 50px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 50px;
+        }
+
+        &:nth-child(4) {
+            margin-top: 90px;
+        }
     }
 }
 
 .heroText {
     h1 {
-        line-height: 1.16rem;
         @include responsive-font((
             min-size: 3.6rem,
             max-size: 5.4rem,

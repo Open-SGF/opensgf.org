@@ -1,10 +1,10 @@
 @import '@/styles/utils/all';
 
 .pageWrapper {
-    padding: 187px 15vw 5vh 15vw;
+    padding: 20px 15vw 5vh 15vw;
 
     @include mq-below(mid-small) {
-        padding: 20vh 10vw 5vh 10vw;
+        padding: 20px 10vw 5vh 10vw;
     }
 }
 

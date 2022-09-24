@@ -13,7 +13,6 @@ export function Dropdown({ children, heading, forceClosed = false }: IDropdown):
 
     useEffect(() => {
         const handleClick = (event: any) => {
-            // TODO: replace with react way of referencing elements.
             if (!event.target.matches('#dropdown, #dropdown *')) {
                 setShow(false);
             }

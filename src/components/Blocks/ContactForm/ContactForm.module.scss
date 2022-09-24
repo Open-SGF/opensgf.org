@@ -40,6 +40,10 @@
             margin-top: 27px;
         }
 
+        @include mq-below(small) {
+            margin-right: 50px;
+        }
+
         @include mq-below(mid-small) {
             width: 80%;
             margin: 0 auto 50px auto;

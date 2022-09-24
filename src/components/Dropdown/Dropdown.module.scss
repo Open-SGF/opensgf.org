@@ -29,9 +29,6 @@
             color: $base-blue;
             text-decoration: underline;
         }
-
-        @include mq-below(mid-small) {
-        }
     }
 
     .content {
@@ -78,7 +75,7 @@
             margin-top: 0;
         }
 
-        @include mq-below(mid-small) {
+        @include mq-below(small) {
             box-shadow: none;
             background-color: rgba(0,0,0,0);
 
