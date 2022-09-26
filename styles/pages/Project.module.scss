@@ -30,6 +30,10 @@
 
         &:nth-child(4) {
             margin: 0 111px 0 111px;
+
+            @include mq-below(mid-large) {
+                margin: 0;
+            }
         }
     }
 }
