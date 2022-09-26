@@ -17,6 +17,7 @@
 
 .bubble {
     position: relative;
+    min-width: calc(50% - 7px);
 
     @include mq-below(mid-large) {
         max-width: 526px;
