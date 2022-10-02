@@ -1,6 +1,6 @@
 backend:
     name: test-repo
-    repo: ethanzitting/opensgf.org
+    repo: open-sgf/opensgf.org
     branch: dev
 local_backend: true
 media_folder: "public/images"
