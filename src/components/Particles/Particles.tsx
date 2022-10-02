@@ -1,5 +1,5 @@
+import type { Engine, RecursivePartial } from 'tsparticles-engine';
 import React, { useCallback, useMemo } from 'react';
-import type { Engine } from 'tsparticles-engine';
 import Particles from 'react-tsparticles';
 import { loadBubblesPreset } from 'tsparticles-preset-bubbles';
 import { loadSlim } from 'tsparticles-slim';
@@ -129,15 +129,15 @@ export function ParticlesComp(): JSX.Element {
         };
     }, []);
 
-    //
-    // particlesJS.load('particles-js', '/vendors/particles.js-master/particles.json', function() {
-    //     console.log('callback - particles.js config loaded');
-    //         let el = document.querySelector(".particles-js-canvas-el"); el.setAttribute("height", "300px");
-    // });
-
     const particlesInit = useCallback((engine: Engine): any => {
         loadSlim(engine);
         loadBubblesPreset(engine);
     }, []);
-    return <Particles className={styles.particles} init={particlesInit} options={options} />;
+    return (
+        <Particles
+            className={styles.particles}
+            init={particlesInit}
+            options={options as RecursivePartial<typeof options>}
+        />
+    );
 }
