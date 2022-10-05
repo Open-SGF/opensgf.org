@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3701b349-13d2-40b8-a955-16e595d73fd1/deploy-status)](https://app.netlify.com/sites/open-sgf/deploys)
+
 ## Designs: 
 - [Figma](https://www.figma.com/file/Dz0zK03VUz06YvQ0NNbzFI/Open-SGF-Wireframes?node-id=0%3A1)
 
