@@ -1,7 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3701b349-13d2-40b8-a955-16e595d73fd1/deploy-status)](https://app.netlify.com/sites/open-sgf/deploys)
 
 ## Staging Preview
-[dev--opensgf.netlify.app](https://dev--opensgf.netlify.app)  
+This will be a 404 until we change the build directory from `dist` to `.next` in the Netlify settings on launch.
+
+[dev--open-sgf.netlify.app](https://dev--open-sgf.netlify.app)  
 
 
 ## Designs
