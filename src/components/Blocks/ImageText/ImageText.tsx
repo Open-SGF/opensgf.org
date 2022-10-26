@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { ParticlesComp } from '@/components/Particles/Particles';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
@@ -57,7 +56,6 @@ export function ImageText({
                 <div className={styles.image}>{image}</div>
                 {enableParticles && (
                     <div className={styles.particles}>
-                        <ParticlesComp />
                     </div>
                 )}
             </div>
