@@ -2,12 +2,12 @@ import { ChatBubble } from '@/components/Icons/ChatBubble/ChatBubble';
 import styles from './ChatBubbles.module.scss';
 import variables from '@/styles/utils/variables.module.scss';
 
-export function ChatBubbles(): JSX.Element {
-    const clientIssue =
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.';
-    const ourSolution =
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis.';
+interface IChatBubbles {
+    leftText: string;
+    rightText: string;
+}
 
+export function ChatBubbles({ leftText, rightText }: IChatBubbles): JSX.Element {
     return (
         <div className={styles.container}>
             <div className={styles.bubble}>
@@ -16,7 +16,7 @@ export function ChatBubbles(): JSX.Element {
                 </div>
                 <div className={styles.textWrapper}>
                     <div className={`${styles.title} h1`}>Client Issue</div>
-                    <div className={styles.body}>{clientIssue}</div>
+                    <div className={styles.body}>{leftText}</div>
                 </div>
             </div>
             <div className={styles.bubble}>
@@ -25,7 +25,7 @@ export function ChatBubbles(): JSX.Element {
                 </div>
                 <div className={styles.textWrapper}>
                     <div className={`${styles.title} h1`}>Our Solution</div>
-                    <div className={styles.body}>{ourSolution}</div>
+                    <div className={styles.body}>{rightText}</div>
                 </div>
             </div>
         </div>

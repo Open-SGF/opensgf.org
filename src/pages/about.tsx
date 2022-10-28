@@ -7,24 +7,24 @@ export default function About(): JSX.Element {
     const teamIcons: Icon[] = [
         {
             image: {
-                src: '/images/man-profile-2.png',
-                alt: 'Meetup Logo',
+                src: '/images/fred-lawler-headshot.jpg',
+                alt: 'Image of Fred Lawler',
             },
             title: <figcaption className={'h3 ' + styles.name}>Fred Lawler</figcaption>,
             subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
         },
         {
             image: {
-                src: '/images/man-profile-1.png',
-                alt: 'Discord Logo',
+                src: '/images/levi-zitting-headshot.jpg',
+                alt: 'Image of Levi Zitting',
             },
             title: <figcaption className={'h3 ' + styles.name}>Levi Zitting</figcaption>,
             subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
         },
         {
             image: {
-                src: '/images/man-profile-3.png',
-                alt: 'Discord Logo',
+                src: '/images/ethan-zitting-headshot.jpg',
+                alt: 'Image of Ethan Zitting',
             },
             title: <figcaption className={'h3 ' + styles.name}>Ethan Zitting</figcaption>,
             subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
