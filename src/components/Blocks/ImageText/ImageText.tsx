@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { ParticlesComp } from '@/components/Particles/Particles';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
@@ -55,11 +54,7 @@ export function ImageText({
             </div>
             <div className={styles.graphicWrapper} style={{ width: graphicWrapperWidth }}>
                 <div className={styles.image}>{image}</div>
-                {enableParticles && (
-                    <div className={styles.particles}>
-                        <ParticlesComp />
-                    </div>
-                )}
+                {enableParticles && <div className={styles.particles}></div>}
             </div>
         </div>
     );
