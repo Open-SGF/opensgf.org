@@ -54,10 +54,7 @@ export function ImageText({
             </div>
             <div className={styles.graphicWrapper} style={{ width: graphicWrapperWidth }}>
                 <div className={styles.image}>{image}</div>
-                {enableParticles && (
-                    <div className={styles.particles}>
-                    </div>
-                )}
+                {enableParticles && <div className={styles.particles}></div>}
             </div>
         </div>
     );
