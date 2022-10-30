@@ -7,9 +7,9 @@ export function ContactForm(): JSX.Element {
                 <div className={styles.salesPitch}>
                     <h1>Partner With Us</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Enim nec dui nunc mattis. Amet consectetur adipiscing elit ut
-                        aliquam purus.{' '}
+                        We help non-profits in South-West Missouri with their technical problems. We are primarly
+                        skilled with websites, but our technical exertise is fairly broad. Reach out if you think we
+                        could help your cause.
                     </p>
                 </div>
                 <div className={styles.contactForm}>

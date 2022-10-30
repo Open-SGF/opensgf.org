@@ -2,6 +2,7 @@ import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
+import type { MeetupEvent } from '@/components/Blocks/UpcomingEvents/components/EventCard/EventCard';
 import React from 'react';
 import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
 import styles from '@/styles/pages/Volunteer.module.scss';
@@ -17,19 +18,53 @@ export default function volunteer(): JSX.Element {
         <div className={styles.heroText}>
             <h1>Volunteer With Us</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur enim exercitationem impedit iure
-                labore libero modi mollitia nesciunt quae quibusdam! Ad animi eveniet excepturi fugiat modi? Ab animi
-                fugit rerum.
+                Open SGF, a Code for America Brigade, provides a forum for local designers; mobile, web, and application
+                developers to tackle technical problems for our community. Many organizations lack the necessary funding
+                to produce quality technical solutions for their problems. This group aims to close that gap by bringing
+                people together to work on these projects weekly. We welcome all skill levels, and no coding experience
+                is necessary.
             </p>
-            <h2 className="p"> Skillsets Needed</h2>
+            <h2 className="p">Where We Could Use Help</h2>
             <ul>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
+                <li>Web Development</li>
+                <li>Web Design</li>
+                <li>Project Management</li>
             </ul>
         </div>
     );
+
+    const events: MeetupEvent[] = [
+        {
+            id: '0',
+            image: {
+                src: '/images/rectangle-1.png',
+                alt: '',
+            },
+            date: '1970-01-01',
+            title: 'Title',
+            description: 'Description',
+        },
+        {
+            id: '0',
+            image: {
+                src: '/images/rectangle-1.png',
+                alt: '',
+            },
+            date: '1970-01-01',
+            title: 'Title',
+            description: 'Description',
+        },
+        {
+            id: '0',
+            image: {
+                src: '/images/rectangle-1.png',
+                alt: '',
+            },
+            date: '1970-01-01',
+            title: 'Title',
+            description: 'Description',
+        },
+    ];
 
     const socialIcons: Icon[] = [
         {
@@ -53,7 +88,7 @@ export default function volunteer(): JSX.Element {
     return (
         <div className={styles.pageWrapper}>
             <ImageText image={heroImage} text={heroText} enableParticles={true} />
-            <UpcomingEvents />
+            <UpcomingEvents events={events} />
             <div className={styles.socialIconWrapper}>
                 <IconSet icons={socialIcons} />
             </div>
