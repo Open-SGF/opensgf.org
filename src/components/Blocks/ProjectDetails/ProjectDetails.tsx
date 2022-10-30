@@ -1,20 +1,12 @@
+import type { Contributor } from '@/utils/api';
 import Image from 'next/image';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './ProjectDetails.module.scss';
 
-type contributor = {
-    name: string;
-    image: {
-        src: string;
-        alt: string;
-    };
-    linkUrl: string;
-};
-
 interface IProjectDetails {
     links: Array<{ url: string; label: string }>;
     toolsUsed: Array<{ label: string; image: { src: string; alt: string } }>;
-    contributors: Array<contributor>;
+    contributors: Contributor[];
 }
 
 export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetails): JSX.Element {
@@ -62,18 +54,27 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                 </div>
                 <div className={styles.text}>
                     <h2 className="h1">Contributors</h2>
-                    <ul className={styles.contributors}>
-                        {contributors.map(({ name, image, linkUrl }, index) => (
-                            <li key={name + index}>
-                                <SmartLink to={linkUrl}>
-                                    <div className={styles.image}>
-                                        <Image src={image.src} height="85" width="85" alt={image.src} />
-                                    </div>
-                                    <h3 className="p">{name}</h3>
-                                </SmartLink>
-                            </li>
-                        ))}
-                    </ul>
+                    {Array.isArray(contributors) && contributors.length > 0 ? (
+                        <ul className={styles.contributors}>
+                            {contributors.map(({ login, avatar_url, html_url }) => (
+                                <li key={login}>
+                                    <SmartLink to={html_url}>
+                                        <div className={styles.image}>
+                                            <Image
+                                                src={avatar_url}
+                                                height="85"
+                                                width="85"
+                                                alt={`The github profile picture for ${login}`}
+                                            />
+                                        </div>
+                                        <h3 className="p">{login}</h3>
+                                    </SmartLink>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <div>There was an error loading the contributors</div>
+                    )}
                 </div>
             </div>
         </div>
