@@ -1,3 +1,4 @@
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Button.module.scss';
 
 interface IButton {
@@ -9,7 +10,7 @@ interface IButton {
 export const Button = ({ text, href, className }: IButton): JSX.Element => {
     return (
         <button className={`${styles.button} ${className}`}>
-            <a href={href}>{text}</a>
+            <SmartLink to={href}>{text}</SmartLink>
         </button>
     );
 };

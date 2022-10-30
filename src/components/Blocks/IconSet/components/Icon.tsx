@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Icon.module.scss';
 
 export type Icon = {
@@ -25,9 +25,9 @@ export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon
 
     const wrapInLink: WrapElementInLink = (element, url) => {
         return (
-            <Link href={url} passHref>
+            <SmartLink to={url}>
                 <a>{element}</a>
-            </Link>
+            </SmartLink>
         );
     };
 

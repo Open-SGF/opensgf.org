@@ -38,13 +38,14 @@ export default function Home(): JSX.Element {
         </div>
     );
 
-    const contactButton = <Button text="Contact" className="h3" href="/" />;
+    const volunteerButton = <Button text="Volunteer" className="h3" href="/volunteer" />;
+    const partnerButton = <Button text="Partner" className="h3" href="/partner" />;
 
     const volunteerCard = (
         <Card
             heading="Volunteer With Us"
             text="Are you a developer, designer, or a community person interested in bringing technological solutions to problems for our community? Come join us at our Code & Demo nights!"
-            button={contactButton}
+            button={volunteerButton}
         />
     );
 
@@ -52,7 +53,7 @@ export default function Home(): JSX.Element {
         <Card
             heading="Partner With Us"
             text="Are you a non-profit that needs help with your website or some other technical aspect of your project?"
-            button={contactButton}
+            button={partnerButton}
         />
     );
 

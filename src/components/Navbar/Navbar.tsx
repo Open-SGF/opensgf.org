@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Accordion } from '@/components/Accordion/Accordion';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
-import Link from 'next/link';
 import { Logo } from '@/components/Icons/Logo/Logo';
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Navbar.module.scss';
 import variables from '@/styles/utils/variables.module.scss';
 
@@ -40,15 +40,11 @@ export function Navbar(): JSX.Element {
     const contactLinks = (
         <>
             <div className={styles.contactLink}>
-                <Link href="/partner" passHref>
-                    <a className="h4">Partnering</a>
-                </Link>
+                <SmartLink to="/partner">Partnering</SmartLink>
             </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <div className={styles.contactLink}>
-                <Link href="/volunteer" passHref>
-                    <a className="h4">Volunteering</a>
-                </Link>
+                <SmartLink to="/volunteer">Volunteering</SmartLink>
             </div>
             <p className={styles.contactLinkDescription}>Learn how you can get involved</p>
         </>
@@ -74,9 +70,7 @@ export function Navbar(): JSX.Element {
                 <Logo url="/" />
             </div>
             <div className={`${styles.navLinks} ${open ? styles.open : styles.closed}`}>
-                <Link href="/projects" passHref>
-                    <a className="h2">Projects</a>
-                </Link>
+                <SmartLink to="/projects">Projects</SmartLink>
                 {isBreakpoint ? (
                     <div>
                         <Accordion heading={<div className="h2">Join Us</div>}>{contactLinks}</Accordion>
@@ -86,14 +80,10 @@ export function Navbar(): JSX.Element {
                         <Dropdown heading={<div className="h2">Join Us</div>}>{contactLinks}</Dropdown>
                     </div>
                 )}
-                <Link href="/about" passHref>
-                    <a className="h2">About</a>
-                </Link>
-                <Link href="https://www.codeforamerica.org/donate" passHref>
-                    <a>
-                        <button className={`${styles.btn} h1`}>Donate</button>
-                    </a>
-                </Link>
+                <SmartLink to="/about">About</SmartLink>
+                <SmartLink to="https://www.codeforamerica.org/donate">
+                    <button className={`${styles.btn} h1`}>Donate</button>
+                </SmartLink>
             </div>
             <div onClick={() => setOpen(!open)} className={styles.hamburgerWrapper}>
                 <Hamburger active={open} />
