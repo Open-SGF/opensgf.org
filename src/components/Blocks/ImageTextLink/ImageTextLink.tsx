@@ -1,6 +1,6 @@
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
-import Link from 'next/link';
 import React from 'react';
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './ImageTextLink.module.scss';
 
 interface IImageTextLink {
@@ -32,11 +32,9 @@ export function ImageTextLink({
                 imageTextSizeRatio={imageTextSizeRatio}
                 enableParticles={enableParticles}
             />
-            <Link href={link.url} passHref>
-                <a>
-                    <h3 className={`${styles.link} h1`}>{link.text}</h3>
-                </a>
-            </Link>
+            <SmartLink to={link.url}>
+                <h3 className={`${styles.link} h1`}>{link.text}</h3>
+            </SmartLink>
         </div>
     );
 }

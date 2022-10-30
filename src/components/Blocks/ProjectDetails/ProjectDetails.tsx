@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './ProjectDetails.module.scss';
 
 type contributor = {
@@ -30,11 +30,9 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                     <ul>
                         {links.map((link, index) => (
                             <li key={link.url + index}>
-                                <Link href={link.url} passHref>
-                                    <a>
-                                        <span className={styles.link}>{link.label}</span>
-                                    </a>
-                                </Link>
+                                <SmartLink to={link.url}>
+                                    <span className={styles.link}>{link.label}</span>
+                                </SmartLink>
                             </li>
                         ))}
                     </ul>
@@ -67,14 +65,12 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                     <ul className={styles.contributors}>
                         {contributors.map(({ name, image, linkUrl }, index) => (
                             <li key={name + index}>
-                                <Link href={linkUrl} passHref>
-                                    <a>
-                                        <div className={styles.image}>
-                                            <Image src={image.src} height="85" width="85" alt={image.src} />
-                                        </div>
-                                        <h3 className="p">{name}</h3>
-                                    </a>
-                                </Link>
+                                <SmartLink to={linkUrl}>
+                                    <div className={styles.image}>
+                                        <Image src={image.src} height="85" width="85" alt={image.src} />
+                                    </div>
+                                    <h3 className="p">{name}</h3>
+                                </SmartLink>
                             </li>
                         ))}
                     </ul>

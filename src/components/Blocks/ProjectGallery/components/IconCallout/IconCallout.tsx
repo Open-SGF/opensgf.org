@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './IconCallout.module.scss';
 
 interface IIconCallout {
@@ -9,12 +9,12 @@ interface IIconCallout {
 export function IconCallout({ link, text }: IIconCallout): JSX.Element {
     return (
         <div className={styles.container}>
-            <Link href={link}>
+            <SmartLink to={link}>
                 <button className={styles.bubble}>{text}</button>
-            </Link>
-            <Link href={link}>
+            </SmartLink>
+            <SmartLink to={link}>
                 <div className={styles.bubbleTail} />
-            </Link>
+            </SmartLink>
         </div>
     );
 }

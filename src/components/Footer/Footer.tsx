@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Footer.module.scss';
 
 export function Footer(): JSX.Element {
@@ -29,12 +29,10 @@ export function Footer(): JSX.Element {
         return iconDataArray.map(({ url, src, alt }) => {
             return (
                 <div className={styles.imageWrapper} key={url}>
-                    <Link href={url} passHref>
-                        <a>
-                            <Image src={src} layout="fill" alt={alt} />
-                            <div className={styles.backgroundFill} />
-                        </a>
-                    </Link>
+                    <SmartLink to={url}>
+                        <Image src={src} layout="fill" alt={alt} />
+                        <div className={styles.backgroundFill} />
+                    </SmartLink>
                 </div>
             );
         });
@@ -43,16 +41,9 @@ export function Footer(): JSX.Element {
     return (
         <div className={styles.pageContainer}>
             <footer className={styles.footer}>
-                <Link href="https://codeforamerica.org/" passHref>
-                    <a>
-                        <Image
-                            src="/images/code-for-america-logo.svg"
-                            width={275}
-                            height={95}
-                            alt="CodeforAmerica Logo"
-                        />
-                    </a>
-                </Link>
+                <SmartLink to="https://codeforamerica.org/">
+                    <Image src="/images/code-for-america-logo.svg" width={275} height={95} alt="CodeforAmerica Logo" />
+                </SmartLink>
                 <div className={styles.socials}>{socialIconElementGenerator(socialIcons)}</div>
             </footer>
         </div>
