@@ -15,9 +15,11 @@ export default function Home(): JSX.Element {
         <div className={styles.heroText}>
             <h1>Open SGF</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci asperiores debitis doloremque
-                dolorum eligendi fugit iste iure, maiores, maxime odio provident rerum sit ut, vitae? Architecto facere
-                pariatur quo.
+                Open SGF, a Code for America brigade, provides a forum for local designers; mobile, web, and application
+                developers to tackle technical problems for our community. Many organizations lack the necessary funding
+                to produce quality technical solutions for their problems. This group aims to close that gap by bringing
+                people together to work on these projects weekly. We welcome all skill levels, and no coding experience
+                is necessary.
             </p>
         </div>
     );
@@ -26,10 +28,12 @@ export default function Home(): JSX.Element {
 
     const projectTeaserText = (
         <div className={`${styles.projectTeaserText} h1`}>
-            <h2>Project Section</h2>
+            <h2>Motherhood Reclaimed</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cum est harum illum iusto labore
-                reprehenderit repudiandae tenetur velit voluptates!
+                Motherhood Reclaimed seeks to work with mothers to uncover primary causes of family instability, often
+                rooted in unstable identity and unprocessed trauma. It seeks to provide education and support for
+                healthy relationships and meaningful life engagement, including long-term employment and financial
+                stability.
             </p>
         </div>
     );
@@ -39,7 +43,7 @@ export default function Home(): JSX.Element {
     const volunteerCard = (
         <Card
             heading="Volunteer With Us"
-            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates iste recusandae quam aliquam vel porro aliquid sapiente perferendis, autem delectus repellat eveniet laboriosam voluptas. Magni nobis rerum ipsa perspiciatis veritatis."
+            text="Are you a developer, designer, or a community person interested in bringing technological solutions to problems for our community? Come join us at our Code & Demo nights!"
             button={contactButton}
         />
     );
@@ -47,7 +51,7 @@ export default function Home(): JSX.Element {
     const partnerCard = (
         <Card
             heading="Partner With Us"
-            text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates iste recusandae quam aliquam vel porro aliquid sapiente perferendis, autem delectus repellat eveniet laboriosam voluptas. Magni nobis rerum ipsa perspiciatis veritatis."
+            text="Are you a non-profit that needs help with your website or some other technical aspect of your project?"
             button={contactButton}
         />
     );

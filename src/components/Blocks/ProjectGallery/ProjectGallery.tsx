@@ -17,35 +17,24 @@ export function ProjectGallery(): JSX.Element {
     const projects: Array<projectSummary> = [
         {
             id: '0',
-            title: 'Motherhood Reclaimed Website',
-            link: '/projects/project',
+            title: 'MOJobs Mobile App',
+            link: '/projects/mo-jobs',
             image: {
-                src: 'https://via.placeholder.com/300.png',
-                alt: 'A preview of motherhoodreclaimed.org',
+                src: '/images/mo-jobs-landing.jpg',
+                alt: 'A preview of the MOJobs mobile app.',
             },
             inProgress: true,
             helpWanted: true,
         },
         {
             id: '1',
-            title: 'MOJobs Mobile App',
-            link: '/projects/project',
+            title: 'Motherhood Reclaimed Website',
+            link: '/projects/motherhood-reclaimed',
             image: {
-                src: 'https://via.placeholder.com/300.png',
-                alt: 'A preview of the MOJobs mobile app.',
+                src: '/images/motherhood-reclaimed-landing.jpg',
+                alt: 'A preview of motherhoodreclaimed.org',
             },
-            inProgress: true,
-            helpWanted: false,
-        },
-        {
-            id: '2',
-            title: 'SGF Covid Support',
-            link: '/projects/project',
-            image: {
-                src: 'https://via.placeholder.com/300.png',
-                alt: 'A preview of the SGF Covid Support project.',
-            },
-            inProgress: true,
+            inProgress: false,
             helpWanted: false,
         },
     ];
