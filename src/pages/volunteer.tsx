@@ -1,3 +1,4 @@
+import type { GetServerSideProps } from 'next';
 import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
@@ -5,9 +6,16 @@ import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import type { MeetupEvent } from '@/components/Blocks/UpcomingEvents/components/EventCard/EventCard';
 import React from 'react';
 import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
+import { getMeetupEvents } from '@/utils/api';
 import styles from '@/styles/pages/Volunteer.module.scss';
 
-export default function volunteer(): JSX.Element {
+export const getServerSideProps: GetServerSideProps = async () => {
+    const events = await getMeetupEvents();
+
+    return { props: { events } };
+};
+
+export default function volunteer({ events }: { events: MeetupEvent[] }): JSX.Element {
     const heroImage: JSX.Element = (
         <div className={styles.heroImage}>
             <Image src={'/images/volunteer-working.svg'} alt="volunteers-working" width={362} height={175} />
@@ -32,39 +40,6 @@ export default function volunteer(): JSX.Element {
             </ul>
         </div>
     );
-
-    const events: MeetupEvent[] = [
-        {
-            id: '0',
-            image: {
-                src: '/images/rectangle-1.png',
-                alt: '',
-            },
-            date: '1970-01-01',
-            title: 'Title',
-            description: 'Description',
-        },
-        {
-            id: '0',
-            image: {
-                src: '/images/rectangle-1.png',
-                alt: '',
-            },
-            date: '1970-01-01',
-            title: 'Title',
-            description: 'Description',
-        },
-        {
-            id: '0',
-            image: {
-                src: '/images/rectangle-1.png',
-                alt: '',
-            },
-            date: '1970-01-01',
-            title: 'Title',
-            description: 'Description',
-        },
-    ];
 
     const socialIcons: Icon[] = [
         {
