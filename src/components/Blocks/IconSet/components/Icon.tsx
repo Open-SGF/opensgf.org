@@ -24,11 +24,7 @@ export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon
     type WrapElementInLink = (element: JSX.Element, url: string) => JSX.Element;
 
     const wrapInLink: WrapElementInLink = (element, url) => {
-        return (
-            <SmartLink to={url}>
-                <a>{element}</a>
-            </SmartLink>
-        );
+        return <SmartLink to={url}>{element}</SmartLink>;
     };
 
     if (image.url) {

@@ -14,7 +14,7 @@ export function UpcomingEvents({ events }: IUpcomingEvents): JSX.Element {
             <h2 className="p">View Upcoming Events</h2>
             <div className={styles.cardWrapper}>
                 {events.map((event) => (
-                    <EventCard event={event} key={event.id} />
+                    <EventCard event={event} key={event.eventUrl} />
                 ))}
             </div>
             <hr />
