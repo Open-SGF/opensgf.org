@@ -1,4 +1,4 @@
-import { Button } from '@/components/Button/Button';
+import { Button } from '@/components/atoms/Button/Button';
 import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
 import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Head from 'next/head';
@@ -38,8 +38,8 @@ export default function Home(): JSX.Element {
         </div>
     );
 
-    const volunteerButton = <Button text="Volunteer" className="h3" href="/volunteer" />;
-    const partnerButton = <Button text="Partner" className="h3" href="/partner" />;
+    const volunteerButton = <Button text="Volunteer" href="/volunteer" />;
+    const partnerButton = <Button text="Partner" href="/partner" />;
 
     const volunteerCard = (
         <Card
