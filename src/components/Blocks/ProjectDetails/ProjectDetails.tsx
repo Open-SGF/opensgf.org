@@ -2,14 +2,18 @@ import type { Contributor } from '@/utils/api';
 import Image from 'next/image';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './ProjectDetails.module.scss';
+import { tools } from '@/utils/toolData';
 
 interface IProjectDetails {
-    links: Array<{ url: string; label: string }>;
-    toolsUsed: Array<{ label: string; image: { src: string; alt: string } }>;
+    project: any;
     contributors: Contributor[];
 }
 
-export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetails): JSX.Element {
+export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.Element {
+    const toolsUsed = project.toolsUsed.map((tool) => {
+        return tools.find(({ label }) => label === tool);
+    });
+
     return (
         <div className={styles.projectDetails}>
             <div className={styles.linksWrapper}>
@@ -20,7 +24,7 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                 <div className={styles.text}>
                     <h2 className="h1">Links</h2>
                     <ul>
-                        {links.map((link, index) => (
+                        {project.links.map((link, index) => (
                             <li key={link.url + index}>
                                 <SmartLink to={link.url}>
                                     <span className={styles.link}>{link.label}</span>
@@ -47,14 +51,14 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                     </ul>
                 </div>
             </div>
-            <div className={styles.contributorsWrapper}>
-                <div className={styles.verticalLine} />
-                <div className={styles.icon}>
-                    <Image src="/images/networking.svg" width="60" height="60" alt="" />
-                </div>
-                <div className={styles.text}>
-                    <h2 className="h1">Contributors</h2>
-                    {Array.isArray(contributors) && contributors.length > 0 ? (
+            {Array.isArray(contributors) && contributors.length > 0 ? (
+                <div className={styles.contributorsWrapper}>
+                    <div className={styles.verticalLine} />
+                    <div className={styles.icon}>
+                        <Image src="/images/networking.svg" width="60" height="60" alt="" />
+                    </div>
+                    <div className={styles.text}>
+                        <h2 className="h1">Contributors</h2>
                         <ul className={styles.contributors}>
                             {contributors.map(({ login, avatar_url, html_url }) => (
                                 <li key={login}>
@@ -72,11 +76,11 @@ export function ProjectDetails({ links, toolsUsed, contributors }: IProjectDetai
                                 </li>
                             ))}
                         </ul>
-                    ) : (
-                        <div>There was an error loading the contributors</div>
-                    )}
+                    </div>
                 </div>
-            </div>
+            ) : (
+                ''
+            )}
         </div>
     );
 }

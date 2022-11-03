@@ -1,4 +1,3 @@
-import { moJobsProjectData, motherhoodReclaimedData } from '@/utils/projectData';
 import { ChatBubbles } from '@/components/Blocks/ChatBubbles/ChatBubbles';
 import type { Contributor } from '@/utils/api';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
@@ -9,49 +8,54 @@ import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetail
 import { ProjectNav } from '@/components/Blocks/ProjectNav/ProjectNav';
 import React from 'react';
 import { getProjectContributors } from '@/utils/api';
+import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Project.module.scss';
 
 export const getServerSideProps: GetServerSideProps = async ({ query: { index: url } }) => {
-    let contributors;
-    let projectData;
+    const projectData = projects.find(({ slug }: { slug: string }) => slug === url);
 
-    if (url === 'mo-jobs') {
-        const apiContributors = await getProjectContributors('portal-to-work-api');
-        const clientContributors = await getProjectContributors('portal-to-work-client');
-
-        contributors = mergeContributors(apiContributors, clientContributors);
-        projectData = moJobsProjectData;
-    } else if (url === 'motherhood-reclaimed') {
-        contributors = await getProjectContributors('motherhood-reclaimed-website');
-        projectData = motherhoodReclaimedData;
-    } else {
+    if (!projectData) {
         return {
             notFound: true,
         };
     }
 
-    contributors.sort((a: { total: number }, b: { total: number }) => b.total - a.total);
+    const contributors = await getContributors(projectData);
 
     return { props: { contributors, projectData } };
 };
 
-function mergeContributors(groupA: Contributor[], groupB: Contributor[]): Contributor[] {
-    const contributors = new Map();
+async function getContributors(projectData) {
+    const repoNames = projectData.repos.map(({ name }) => name);
 
-    for (const contributor of [...groupA, ...groupB]) {
+    const contributorPromises = repoNames.map((name) => getProjectContributors(name));
+
+    const allContributors = await Promise.all(contributorPromises);
+
+    const uniqueContributors = mergeDuplicateContributors(allContributors.flat(1));
+
+    uniqueContributors.sort((a: { total: number }, b: { total: number }) => b.total - a.total);
+
+    return uniqueContributors;
+}
+
+function mergeDuplicateContributors(contributors: Contributor[]): Contributor[] {
+    const contributorMap = new Map();
+
+    for (const contributor of contributors) {
         const { total, id } = contributor;
 
-        const existingContributions = contributors.get(id);
+        const existingContributions = contributorMap.get(id);
 
         if (existingContributions) {
             const newTotal = existingContributions.total + total;
-            contributors.set(id, { ...contributor, total: newTotal });
+            contributorMap.set(id, { ...contributor, total: newTotal });
         } else {
-            contributors.set(id, contributor);
+            contributorMap.set(id, contributor);
         }
     }
 
-    return Array.from(contributors.values());
+    return Array.from(contributorMap.values());
 }
 
 interface IProject {
@@ -94,7 +98,7 @@ export default function Project({ contributors, projectData }: IProject): JSX.El
                 textRight={true}
                 imageTextSizeRatio={0.55}
             />
-            <ProjectDetails links={projectData.links} toolsUsed={projectData.toolsUsed} contributors={contributors} />
+            <ProjectDetails project={projectData} contributors={contributors} />
             <ChatBubbles leftText={projectData.clientIssue} rightText={projectData.ourSolution} />
             <Gallery />
             <div className={styles.projectNav}>

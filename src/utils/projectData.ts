@@ -1,170 +1,74 @@
-export const moJobsProjectData = {
-    id: '0',
-    slug: 'mo-jobs',
-    name: 'MOJobs Mobile App',
-    description:
-        'An easy, free phone app for finding nearby job postings relative' + ' to your location or home address.',
-    skillsNeeded: ['Development', 'Project Management'],
-    links: [
-        {
-            label: 'https://github.com/Open-SGF/portal-to-work-client',
-            url: 'https://github.com/Open-SGF/portal-to-work-client',
+export const projects = [
+    {
+        id: '0',
+        name: 'MOJobs Mobile App',
+        slug: 'mo-jobs',
+        siteUrl: '/projects/mo-jobs',
+        image: {
+            src: '/images/mo-jobs-landing.jpg',
+            alt: 'A preview of the MOJobs mobile app.',
         },
-        {
-            label: 'https://github.com/Open-SGF/portal-to-work-api',
-            url: 'https://github.com/Open-SGF/portal-to-work-api',
-        },
-    ],
-    toolsUsed: [
-        {
-            label: 'Fastify',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
+        inProgress: true,
+        helpWanted: true,
+        repos: [
+            {
+                name: 'motherhood-reclaimed-website',
             },
-        },
-        {
-            label: 'PostgreSQL',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
+        ],
+        repoName: 'motherhood-reclaimed-website',
+        description:
+            'An easy, free phone app for finding nearby job postings relative' + ' to your location or home address.',
+        skillsNeeded: ['Development', 'Project Management'],
+        links: [
+            {
+                label: 'https://github.com/Open-SGF/portal-to-work-client',
+                url: 'https://github.com/Open-SGF/portal-to-work-client',
             },
-        },
-        {
-            label: 'Typescript',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
+            {
+                label: 'https://github.com/Open-SGF/portal-to-work-api',
+                url: 'https://github.com/Open-SGF/portal-to-work-api',
             },
+        ],
+        toolsUsed: ['Fastify', 'PostgreSQL', 'Typescript', 'TypeORM', 'Vue', 'Ionic'],
+        clientIssue: 'People without cars should have an easier time finding close' + ' jobs.',
+        ourSolution: 'Make a free, easy mobile app that shows jobs nearby by foot, or' + ' by bus route.',
+    },
+    {
+        id: '1',
+        name: 'Motherhood Reclaimed',
+        slug: 'motherhood-reclaimed',
+        siteUrl: '/projects/motherhood-reclaimed',
+        image: {
+            src: '/images/motherhood-reclaimed-landing.jpg',
+            alt: 'A preview of motherhoodreclaimed.org',
         },
-        {
-            label: 'TypeORM',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
+        inProgress: false,
+        helpWanted: false,
+        repos: [
+            {
+                name: 'portal-to-work-api',
             },
-        },
-        {
-            label: 'Vue',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
+            {
+                name: 'portal-to-work-client',
             },
-        },
-        {
-            label: 'Ionic',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
+        ],
+        description: 'A website for an organization focused on reunited children with' + ' their mothers.',
+        skillsNeeded: [],
+        links: [
+            {
+                label: 'https://www.motherhoodreclaimed.org/',
+                url: 'https://www.motherhoodreclaimed.org/',
             },
-        },
-    ],
-    contributors: [
-        {
-            name: 'Levi Zitting',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
+            {
+                label: 'https://github.com/Open-SGF/motherhood-reclaimed-website',
+                url: 'https://github.com/Open-SGF/motherhood-reclaimed-website',
             },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-        {
-            name: 'Ethan Zitting',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
-            },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-        {
-            name: 'Zach Bradshaw',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
-            },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-    ],
-    clientIssue: 'People without cars should have an easier time finding close' + ' jobs.',
-    ourSolution: 'Make a free, easy mobile app that shows jobs nearby by foot, or' + ' by bus route.',
-};
-
-export const motherhoodReclaimedData = {
-    id: '0',
-    slug: 'motherhood-reclaimed',
-    name: 'Motherhood Reclaimed',
-    description: 'A website for an organization focused on reunited children with' + ' their mothers.',
-    skillsNeeded: [],
-    links: [
-        {
-            label: 'https://www.motherhoodreclaimed.org/',
-            url: 'https://www.motherhoodreclaimed.org/',
-        },
-        {
-            label: 'https://github.com/Open-SGF/motherhood-reclaimed-website',
-            url: 'https://github.com/Open-SGF/motherhood-reclaimed-website',
-        },
-    ],
-    toolsUsed: [
-        {
-            label: 'CraftCMS',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
-            },
-        },
-        {
-            label: 'Node',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
-            },
-        },
-        {
-            label: 'MySQL',
-            image: {
-                src: 'https://via.placeholder.com/70.png',
-                alt: 'Example Alt Text',
-            },
-        },
-    ],
-    contributors: [
-        {
-            name: 'Ethan Zitting',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
-            },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-        {
-            name: 'Levi Zitting',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
-            },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-        {
-            name: 'Shannon Treadway',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
-            },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-        {
-            name: 'Aaron Merrick',
-            image: {
-                src: 'https://via.placeholder.com/85.png',
-                alt: 'Image alt text.',
-            },
-            linkUrl: 'https://github.com/ethanzitting',
-        },
-    ],
-    clientIssue: 'Client needed a website to help share their mission to' + ' potential partners',
-    ourSolution:
-        'We worked with them to come up with a design they liked and' +
-        ' then launched their website with a CMS so they could edit the' +
-        ' content as needed.',
-};
+        ],
+        toolsUsed: ['CraftCMS', 'Node', 'MySQL'],
+        clientIssue: 'Client needed a website to help share their mission to' + ' potential partners',
+        ourSolution:
+            'We worked with them to come up with a design they liked and' +
+            ' then launched their website with a CMS so they could edit the' +
+            ' content as needed.',
+    },
+];
