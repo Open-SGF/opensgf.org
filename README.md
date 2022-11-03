@@ -17,7 +17,7 @@ This will be a 404 until we change the build directory from `dist` to `.next` in
 - SCSS
 
 ## Setting Up your Environment
-- Install Node 16.
+- Install Node 18.
 - Install the dependencies with `npm install`
 - Then, run the development server with `npm run dev`
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
