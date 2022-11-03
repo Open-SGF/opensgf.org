@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Accordion } from '@/components/Accordion/Accordion';
+import { Button } from '@/components/atoms/Button/Button';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
 import { Logo } from '@/components/Icons/Logo/Logo';
@@ -81,9 +82,7 @@ export function Navbar(): JSX.Element {
                     </div>
                 )}
                 <SmartLink to="/about">About</SmartLink>
-                <SmartLink to="https://www.codeforamerica.org/donate">
-                    <button className={`${styles.btn} h1`}>Donate</button>
-                </SmartLink>
+                <Button href="https://www.codeforamerica.org/donate" text="Donate" />
             </div>
             <div onClick={() => setOpen(!open)} className={styles.hamburgerWrapper}>
                 <Hamburger active={open} />

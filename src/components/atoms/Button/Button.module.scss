@@ -1,9 +1,15 @@
+@import '@/styles/utils/all';
+
 .button {
-    background-color: #0094ff;
+    background-color: $base-blue;
     border: transparent;
     border-radius: 8px;
     color: #ffffff;
     padding: 15px 40px;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     a {
         font: inherit;

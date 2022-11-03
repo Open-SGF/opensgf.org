@@ -1,3 +1,4 @@
+import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 
 export function ContactForm(): JSX.Element {
@@ -26,7 +27,7 @@ export function ContactForm(): JSX.Element {
                             <label htmlFor="message">Message</label>
                             <textarea id="message" />
                         </div>
-                        <button>Submit</button>
+                        <Button text="Submit" />
                     </form>
                 </div>
                 <div className={styles.backgroundBanner} />
