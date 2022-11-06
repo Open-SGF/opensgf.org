@@ -66,7 +66,7 @@ interface IProject {
 export default function Project({ contributors, projectData }: IProject): JSX.Element {
     const projectDetailsImage: JSX.Element = (
         <div className={styles.projectDetailsImage}>
-            <Image src={'/images/laptop-with-phone.png'} alt="laptop" width={500} height={500} />
+            <Image src={projectData.showCaseImage.src} alt={projectData.showCaseImage.alt} width={500} height={500} />
         </div>
     );
 

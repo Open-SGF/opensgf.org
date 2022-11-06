@@ -4,9 +4,13 @@ export const projects = [
         name: 'MOJobs Mobile App',
         slug: 'mo-jobs',
         siteUrl: '/projects/mo-jobs',
-        image: {
+        landingImage: {
             src: '/images/mo-jobs-landing.jpg',
-            alt: 'A preview of the MOJobs mobile app.',
+            alt: 'A preview of the MOJobs website.',
+        },
+        showCaseImage: {
+            src: '/images/mo-jobs-showcase.png',
+            alt: 'A preview of the desktop and mobile versions of the' + ' website for motherhood reclaimed.',
         },
         inProgress: true,
         helpWanted: true,
@@ -38,9 +42,13 @@ export const projects = [
         name: 'Motherhood Reclaimed',
         slug: 'motherhood-reclaimed',
         siteUrl: '/projects/motherhood-reclaimed',
-        image: {
+        landingImage: {
             src: '/images/motherhood-reclaimed-landing.jpg',
             alt: 'A preview of motherhoodreclaimed.org',
+        },
+        showCaseImage: {
+            src: '/images/motherhood-reclaimed-showcase.png',
+            alt: 'A preview of the desktop and mobile versions of the' + ' website for motherhood reclaimed.',
         },
         inProgress: false,
         helpWanted: false,
