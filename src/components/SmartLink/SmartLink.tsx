@@ -9,16 +9,12 @@ interface ISmartLink {
 export function SmartLink({ to, children }: ISmartLink): JSX.Element {
     if (to.includes('https://') || to.includes('http://') || to.includes('.')) {
         return (
-            <Link href={to} passHref>
+            <Link href={to} passHref legacyBehavior>
                 <a target="_blank" rel="noopener noreferrer">
                     {children}
                 </a>
             </Link>
         );
     }
-    return (
-        <Link href={to} passHref>
-            <a>{children}</a>
-        </Link>
-    );
+    return <Link href={to}>{children}</Link>;
 }
