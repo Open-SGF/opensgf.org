@@ -9,7 +9,7 @@ import { Stats } from '@/components/Blocks/Stats/Stats';
 import styles from '@/styles/pages/Home.module.scss';
 
 export default function Home(): JSX.Element {
-    const heroImage = <Image src={'/images/group-working.svg'} alt="group working " width={360} height={220} />;
+    const heroImage = <Image src={'/images/icons/group-working.svg'} alt="group working " width={360} height={220} />;
 
     const heroText = (
         <div className={styles.heroText}>

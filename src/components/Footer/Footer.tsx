@@ -13,12 +13,12 @@ export function Footer(): JSX.Element {
     const socialIcons: IconData[] = [
         {
             url: 'https://www.meetup.com/open-sgf/',
-            src: '/images/meetup-logo.svg',
+            src: '/images/logos/meetup-logo.svg',
             alt: 'Meetup Logo',
         },
         {
             url: 'https://discord.gg/jFD8dZP',
-            src: '/images/discord-logo.svg',
+            src: '/images/logos/discord-logo.svg',
             alt: 'Discord Logo',
         },
     ];
@@ -42,7 +42,7 @@ export function Footer(): JSX.Element {
         <div className={styles.pageContainer}>
             <footer className={styles.footer}>
                 <SmartLink to="https://codeforamerica.org/">
-                    <Image src="/images/code-for-america-logo.svg" width={275} height={95} alt="CodeforAmerica Logo" />
+                    <Image src="/images/logos/code-for-america-logo.svg" width={275} height={95} alt="CodeforAmerica Logo" />
                 </SmartLink>
                 <div className={styles.socials}>{socialIconElementGenerator(socialIcons)}</div>
             </footer>

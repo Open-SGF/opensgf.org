@@ -12,13 +12,13 @@ export function Logo({ url = false, width = 133, height = 61 }: ILogo): JSX.Elem
     if (typeof url === 'string') {
         return (
             <SmartLink to={url}>
-                <Image src="/images/open-sgf-logo.svg" width={width} height={height} alt="Open SGF Logo" />
+                <Image src="/images/logos/open-sgf-logo.svg" width={width} height={height} alt="Open SGF Logo" />
             </SmartLink>
         );
     } else {
         return (
             <Image
-                src="/images/open-sgf-logo.svg"
+                src="/images/logos/open-sgf-logo.svg"
                 width={width}
                 height={height}
                 alt="Open SGF Logo"

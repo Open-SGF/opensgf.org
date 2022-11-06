@@ -19,7 +19,7 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
             <div className={styles.linksWrapper}>
                 <div className={styles.verticalLine} />
                 <div className={styles.icon}>
-                    <Image src="/images/hyperlink.svg" width="60" height="60" alt="" />
+                    <Image src="/images/icons/hyperlink.svg" width="60" height="60" alt="" />
                 </div>
                 <div className={styles.text}>
                     <h2 className="h1">Links</h2>
@@ -37,12 +37,12 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
             <div className={styles.techStackWrapper}>
                 <div className={styles.verticalLine} />
                 <div className={styles.icon}>
-                    <Image src="/images/monitor.svg" width="60" height="60" alt="" />
+                    <Image src="/images/icons/monitor.svg" width="60" height="60" alt="" />
                 </div>
                 <div className={styles.text}>
                     <h2 className="h1">Tech Stack</h2>
                     <ul className={styles.tools}>
-                        {toolsUsed.map(({ label, image }) => (
+                        {toolsUsed.map(({ label, image }: { label: any; image: any }) => (
                             <li key={label}>
                                 <Image src={image.src} height="70" width="70" alt={image.alt} />
                                 <span>{label}</span>
@@ -55,7 +55,7 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
                 <div className={styles.contributorsWrapper}>
                     <div className={styles.verticalLine} />
                     <div className={styles.icon}>
-                        <Image src="/images/networking.svg" width="60" height="60" alt="" />
+                        <Image src="/images/icons/networking.svg" width="60" height="60" alt="" />
                     </div>
                     <div className={styles.text}>
                         <h2 className="h1">Contributors</h2>

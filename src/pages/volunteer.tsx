@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function volunteer({ events }: { events: MeetupEvent[] }): JSX.Element {
     const heroImage: JSX.Element = (
         <div className={styles.heroImage}>
-            <Image src={'/images/volunteer-working.svg'} alt="volunteers-working" width={362} height={175} />
+            <Image src={'/images/icons/volunteer-working.svg'} alt="volunteers-working" width={362} height={175} />
         </div>
     );
 
@@ -45,7 +45,7 @@ export default function volunteer({ events }: { events: MeetupEvent[] }): JSX.El
         {
             image: {
                 url: 'https://www.meetup.com/open-sgf/',
-                src: '/images/meetup-logo.svg',
+                src: '/images/logos/meetup-logo.svg',
                 alt: 'Meetup Logo',
             },
             title: <div className="h1">Meetup</div>,
@@ -53,7 +53,7 @@ export default function volunteer({ events }: { events: MeetupEvent[] }): JSX.El
         {
             image: {
                 url: 'https://discord.gg/jFD8dZP',
-                src: '/images/discord-logo.svg',
+                src: '/images/logos/discord-logo.svg',
                 alt: 'Discord Logo',
             },
             title: <div className="h1">Discord</div>,

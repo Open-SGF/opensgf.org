@@ -6,7 +6,7 @@ export function Stats(): JSX.Element {
     const stats = [
         {
             image: {
-                src: '/images/code.svg',
+                src: '/images/icons/code.svg',
                 alt: 'code',
             },
             numberFigure: 100,
@@ -14,7 +14,7 @@ export function Stats(): JSX.Element {
         },
         {
             image: {
-                src: '/images/blueprint.svg',
+                src: '/images/icons/blueprint.svg',
                 alt: 'blueprint',
             },
             numberFigure: 4,
@@ -22,7 +22,7 @@ export function Stats(): JSX.Element {
         },
         {
             image: {
-                src: '/images/healthcare.svg',
+                src: '/images/icons/healthcare.svg',
                 alt: 'healthcare',
             },
             numberFigure: 1500,

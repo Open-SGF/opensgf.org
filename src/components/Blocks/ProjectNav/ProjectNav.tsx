@@ -10,7 +10,7 @@ export function ProjectNav({ buttonText }: IProjectNav): JSX.Element {
         <div className={buttonText == 'Next' ? styles.flippedContainer : styles.container}>
             <Image
                 className={buttonText == 'Next' ? styles.nextImage : styles.image}
-                src="/images/arrow.svg"
+                src="/images/icons/arrow.svg"
                 width={28}
                 height={49}
                 alt={'arrow'}
