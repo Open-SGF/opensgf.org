@@ -100,11 +100,6 @@
         }
     }
 
-
-    &.closed, &.open {
-
-    }
-
     @include mq-below(small) {
         position: absolute;
         z-index: 10;
