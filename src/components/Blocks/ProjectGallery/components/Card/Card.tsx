@@ -7,7 +7,7 @@ interface ICard {
     project: any;
 }
 
-export function Card({ project, project: { image } }: ICard): JSX.Element {
+export function Card({ project, project: { landingImage } }: ICard): JSX.Element {
     return (
         <div className={styles.card}>
             {project.helpWanted && (
@@ -22,7 +22,7 @@ export function Card({ project, project: { image } }: ICard): JSX.Element {
                 <div className={styles.shadow} />
             </SmartLink>
             <div className={styles.imageWrapper}>
-                <Image src={image.src} alt={image.alt} layout="fill" />
+                <Image src={landingImage.src} alt={landingImage.alt} layout="fill" />
             </div>
         </div>
     );

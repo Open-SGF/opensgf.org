@@ -70,7 +70,6 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
                                                 alt={`The github profile picture for ${login}`}
                                             />
                                         </div>
-                                        <h3 className="p">{login}</h3>
                                     </SmartLink>
                                 </li>
                             ))}
