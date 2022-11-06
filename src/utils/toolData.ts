@@ -1,65 +1,65 @@
 export const tools = [
     {
-        label: 'Fastify',
+        name: 'Fastify',
         image: {
             src: '/images/logos/fastify-logo.png',
-            alt: 'Example Alt Text',
+            alt: 'Logo for Fastify',
         },
     },
     {
-        label: 'PostgreSQL',
+        name: 'PostgreSQL',
         image: {
             src: '/images/logos/postgresql-logo.png',
-            alt: 'Example Alt Text',
+            alt: 'Logo for PostgresQL',
         },
     },
     {
-        label: 'Typescript',
+        name: 'Typescript',
         image: {
             src: '/images/logos/typescript-logo.svg',
-            alt: 'Example Alt Text',
+            alt: 'Logo for Typescript',
         },
     },
     {
-        label: 'TypeORM',
+        name: 'TypeORM',
         image: {
             src: '/images/logos/typeorm-logo.svg',
-            alt: 'Example Alt Text',
+            alt: 'Logo for TypeORM',
         },
     },
     {
-        label: 'Vue',
+        name: 'Vue',
         image: {
             src: '/images/logos/vue-js-logo.svg',
-            alt: 'Example Alt Text',
+            alt: 'Logo for VueJS',
         },
     },
     {
-        label: 'Ionic',
+        name: 'Ionic',
         image: {
             src: '/images/logos/ionic-logo.png',
-            alt: 'Example Alt Text',
+            alt: 'Logo for the Ionic Framework',
         },
     },
     {
-        label: 'CraftCMS',
+        name: 'CraftCMS',
         image: {
             src: '/images/logos/craft-cms-logo.svg',
-            alt: 'Example Alt Text',
+            alt: 'Logo for CraftCMS',
         },
     },
     {
-        label: 'Node',
+        name: 'Node',
         image: {
             src: '/images/logos/node-logo.svg',
-            alt: 'Example Alt Text',
+            alt: 'Logo for NodeJS',
         },
     },
     {
-        label: 'MySQL',
+        name: 'MySQL',
         image: {
             src: '/images/logos/mysql-logo.svg',
-            alt: 'Example Alt Text',
+            alt: 'Logo for MySQL',
         },
     },
 ];

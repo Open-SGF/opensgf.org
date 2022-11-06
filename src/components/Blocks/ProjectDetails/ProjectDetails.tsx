@@ -11,7 +11,7 @@ interface IProjectDetails {
 
 export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.Element {
     const toolsUsed = project.toolsUsed.map((tool) => {
-        return tools.find(({ label }) => label === tool);
+        return tools.find(({ name }) => name === tool);
     });
 
     return (
@@ -42,10 +42,9 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
                 <div className={styles.text}>
                     <h2 className="h1">Tech Stack</h2>
                     <ul className={styles.tools}>
-                        {toolsUsed.map(({ label, image }: { label: any; image: any }) => (
-                            <li key={label}>
+                        {toolsUsed.map(({ name, image }: { name: any; image: any }) => (
+                            <li key={name}>
                                 <Image src={image.src} height="70" width="70" alt={image.alt} />
-                                <span>{label}</span>
                             </li>
                         ))}
                     </ul>
