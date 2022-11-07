@@ -30,7 +30,7 @@ export function Footer(): JSX.Element {
             return (
                 <div className={styles.imageWrapper} key={url}>
                     <SmartLink to={url}>
-                        <Image src={src} layout="fill" alt={alt} />
+                        <Image src={src} fill alt={alt} />
                         <div className={styles.backgroundFill} />
                     </SmartLink>
                 </div>

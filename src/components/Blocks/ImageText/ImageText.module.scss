@@ -3,7 +3,8 @@
 .container {
     display: flex;
     justify-content: center;
-    margin: 0 50px;
+    align-items: center;
+    margin: 0;
     gap: 24px;
 
     &.textRight {
@@ -29,10 +30,19 @@
 .graphicWrapper {
     position: relative;
     width: auto;
-    overflow: hidden;
+    height: fit-content;
+    min-height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    img {
+        position: static !important;
+        margin: auto;
+        max-width: 100%;
+        height: auto !important;
+    }
 
     .particles{
         z-index: -10;

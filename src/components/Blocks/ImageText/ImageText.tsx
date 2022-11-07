@@ -53,7 +53,7 @@ export function ImageText({
                 {text}
             </div>
             <div className={styles.graphicWrapper} style={{ width: graphicWrapperWidth }}>
-                <div className={styles.image}>{image}</div>
+                {image}
                 {enableParticles && <div className={styles.particles}></div>}
             </div>
         </div>
