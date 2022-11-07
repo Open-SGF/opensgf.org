@@ -2,12 +2,13 @@ import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import styles from '@/styles/pages/About.module.scss';
+import { projects } from '@/utils/projectData';
 
 export default function About(): JSX.Element {
     const teamIcons: Icon[] = [
         {
             image: {
-                src: '/images/fred-lawler-headshot.jpg',
+                src: '/images/people/fred-lawler-headshot.jpg',
                 alt: 'Image of Fred Lawler',
             },
             title: <figcaption className={'h3 ' + styles.name}>Fred Lawler</figcaption>,
@@ -15,7 +16,7 @@ export default function About(): JSX.Element {
         },
         {
             image: {
-                src: '/images/levi-zitting-headshot.jpg',
+                src: '/images/people/levi-zitting-headshot.jpg',
                 alt: 'Image of Levi Zitting',
             },
             title: <figcaption className={'h3 ' + styles.name}>Levi Zitting</figcaption>,
@@ -23,7 +24,7 @@ export default function About(): JSX.Element {
         },
         {
             image: {
-                src: '/images/ethan-zitting-headshot.jpg',
+                src: '/images/people/ethan-zitting-headshot.jpg',
                 alt: 'Image of Ethan Zitting',
             },
             title: <figcaption className={'h3 ' + styles.name}>Ethan Zitting</figcaption>,
@@ -42,7 +43,7 @@ export default function About(): JSX.Element {
                 people together to work on these projects weekly. We welcome all skill levels, and no coding experience
                 is necessary.
             </p>
-            <Gallery />
+            <Gallery images={projects.flatMap((project) => project.siteScreenshots)} />
         </div>
     );
 }

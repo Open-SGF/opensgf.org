@@ -100,7 +100,7 @@ export default function Project({ contributors, projectData }: IProject): JSX.El
             />
             <ProjectDetails project={projectData} contributors={contributors} />
             <ChatBubbles leftText={projectData.clientIssue} rightText={projectData.ourSolution} />
-            <Gallery />
+            <Gallery images={projectData.siteScreenshots}/>
             <div className={styles.projectNav}>
                 <ProjectNav buttonText={'Previous'} />
                 <ProjectNav buttonText={'Next'} />

@@ -26,6 +26,10 @@ export async function getProjectContributors(projectRepoName: string): Promise<C
 
         const contributors = await response.json();
 
+        if (!Array.isArray(contributors) || contributors.length === 0) {
+            return [];
+        }
+
         return contributors.map(({ total, author }: { total: unknown; author: any }): Contributor => {
             return {
                 total: Number(total) ?? 0,

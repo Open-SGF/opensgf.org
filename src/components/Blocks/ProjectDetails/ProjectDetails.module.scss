@@ -78,12 +78,6 @@
                         padding: 0 0 15px 0;
                     }
                 }
-
-                img {
-                    height: 70px;
-                    width: 70px;
-                    border-radius: 50%;
-                }
             }
 
             .contributors {
@@ -120,6 +114,26 @@
 
                 h3 {
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .techStackWrapper {
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            .toolIcon {
+                border-radius: 0;
+                height: 50px;
+                width: fit-content;
+                position: relative;
+
+                img {
+                    position: static !important;
+                    border-radius: 0;
                 }
             }
         }

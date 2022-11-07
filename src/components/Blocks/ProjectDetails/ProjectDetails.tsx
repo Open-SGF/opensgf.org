@@ -43,8 +43,8 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
                     <h2 className="h1">Tech Stack</h2>
                     <ul className={styles.tools}>
                         {toolsUsed.map(({ name, image }: { name: any; image: any }) => (
-                            <li key={name}>
-                                <Image src={image.src} height="70" width="70" alt={image.alt} />
+                            <li key={name} className={styles.toolIcon}>
+                                <Image src={image.src} fill alt={image.alt} />
                             </li>
                         ))}
                     </ul>

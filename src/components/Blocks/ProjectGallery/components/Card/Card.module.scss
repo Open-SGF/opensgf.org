@@ -22,6 +22,10 @@
         cursor: pointer;
     }
 
+    a {
+        border-radius: inherit;
+    }
+
     .shadow {
         position: relative;
         z-index: 3;
@@ -32,20 +36,8 @@
         cursor: pointer;
     }
 
-    .imageWrapper {
+    img {
         border-radius: inherit;
-
-        & > div, & span, & img {
-            border-radius: inherit;
-        }
-
-        span {
-            min-width: 100%;
-            min-height: 100%;
-
-            img {
-                object-fit: cover;
-            }
-        }
+        object-fit: cover;
     }
 }

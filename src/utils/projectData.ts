@@ -36,6 +36,20 @@ export const projects = [
         toolsUsed: ['Fastify', 'PostgreSQL', 'Typescript', 'TypeORM', 'Vue', 'Ionic'],
         clientIssue: 'People without cars should have an easier time finding close' + ' jobs.',
         ourSolution: 'Make a free, easy mobile app that shows jobs nearby by foot, or' + ' by bus route.',
+        siteScreenshots: [
+            {
+                src: '/images/mo-jobs-screenshot-one.jpg',
+                alt: '',
+            },
+            {
+                src: '/images/mo-jobs-screenshot-two.jpg',
+                alt: '',
+            },
+            {
+                src: '/images/mo-jobs-screenshot-three.jpg',
+                alt: '',
+            },
+        ],
     },
     {
         id: '1',
@@ -78,5 +92,19 @@ export const projects = [
             'We worked with them to come up with a design they liked and' +
             ' then launched their website with a CMS so they could edit the' +
             ' content as needed.',
+        siteScreenshots: [
+            {
+                src: '/images/mo-rec-screenshot-one.jpg',
+                alt: '',
+            },
+            {
+                src: '/images/mo-rec-screenshot-two.jpg',
+                alt: '',
+            },
+            {
+                src: '/images/mo-rec-screenshot-three.jpg',
+                alt: '',
+            },
+        ],
     },
 ];

@@ -24,9 +24,7 @@ export default function Home(): JSX.Element {
         </div>
     );
 
-    const projectTeaserImage = (
-        <Image src={'/images/motherhood-reclaimed-showcase.png'} alt="laptop" width={600} height={600} />
-    );
+    const projectTeaserImage = <Image src={'/images/motherhood-reclaimed-showcase.png'} alt="laptop" fill />;
 
     const projectTeaserText = (
         <div className={`${styles.projectTeaserText} h1`}>

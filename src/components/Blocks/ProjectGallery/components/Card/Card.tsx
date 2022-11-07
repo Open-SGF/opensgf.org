@@ -21,9 +21,7 @@ export function Card({ project, project: { landingImage } }: ICard): JSX.Element
             <SmartLink to={project.siteUrl}>
                 <div className={styles.shadow} />
             </SmartLink>
-            <div className={styles.imageWrapper}>
-                <Image src={landingImage.src} alt={landingImage.alt} layout="fill" />
-            </div>
+            <Image src={landingImage.src} alt={landingImage.alt} fill />
         </div>
     );
 }
