@@ -1,8 +1,8 @@
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
-import styles from '@/styles/pages/About.module.scss';
 import { projects } from '@/utils/projectData';
+import styles from '@/styles/pages/About.module.scss';
 
 export default function About(): JSX.Element {
     const teamIcons: Icon[] = [

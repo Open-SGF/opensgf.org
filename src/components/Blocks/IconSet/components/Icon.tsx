@@ -17,7 +17,7 @@ type IIcon = {
 };
 
 export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): JSX.Element {
-    const imageElement: JSX.Element = <Image src={image.src} alt={image.alt} layout="fill" />;
+    const imageElement: JSX.Element = <Image src={image.src} alt={image.alt} fill />;
     const titleElement: JSX.Element = <figcaption className={styles.title}>{title}</figcaption>;
     const subtitleElement: JSX.Element = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
 
