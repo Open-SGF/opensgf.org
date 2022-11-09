@@ -13,13 +13,8 @@ export default async function handler(req: any, res: any) {
                 title,
                 eventUrl,
                 description,
-                duration,
-                endTime,
-                going,
                 imageUrl,
                 dateTime,
-                timezone,
-                shortUrl,
               }
             }
           }
@@ -37,21 +32,15 @@ export default async function handler(req: any, res: any) {
         const { data } = await response.json();
 
         const events = data.group.upcomingEvents.edges.map(({ node }: { node: any }): MeetupEvent => {
-            const { title, eventUrl, description, duration, endTime, going, imageUrl, dateTime, timezone, shortUrl } =
-                node;
+            const { title, eventUrl, description, imageUrl, dateTime } = node;
 
             return {
                 title,
                 eventUrl,
                 description,
-                duration,
-                endTime,
-                going,
                 imageUrl,
                 imageAlt: 'Main image for event: ' + title,
                 dateTime,
-                timezone,
-                shortUrl,
             };
         });
 
