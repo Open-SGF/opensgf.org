@@ -5,11 +5,11 @@ export const projects = [
         slug: 'mo-jobs',
         siteUrl: '/projects/mo-jobs',
         landingImage: {
-            src: '/images/mo-jobs-landing.jpg',
+            src: '/images/projects/mo-jobs-landing-half.jpg',
             alt: 'A preview of the MOJobs website.',
         },
         showCaseImage: {
-            src: '/images/mo-jobs-showcase.png',
+            src: '/images/projects/mo-jobs-showcase.png',
             alt: 'A preview of the desktop and mobile versions of the' + ' website for motherhood reclaimed.',
         },
         inProgress: true,
@@ -38,15 +38,19 @@ export const projects = [
         ourSolution: 'Make a free, easy mobile app that shows jobs nearby by foot, or' + ' by bus route.',
         siteScreenshots: [
             {
-                src: '/images/mo-jobs-screenshot-one.jpg',
+                src: '/images/projects/mo-jobs-screenshot-full-one.jpg',
                 alt: '',
             },
             {
-                src: '/images/mo-jobs-screenshot-two.jpg',
+                src: '/images/projects/mo-jobs-screenshot-half-one.jpg',
                 alt: '',
             },
             {
-                src: '/images/mo-jobs-screenshot-three.jpg',
+                src: '/images/projects/mo-jobs-screenshot-half-one.jpg',
+                alt: '',
+            },
+            {
+                src: '/images/projects/mo-jobs-screenshot-full-two.jpg',
                 alt: '',
             },
         ],
@@ -57,11 +61,11 @@ export const projects = [
         slug: 'motherhood-reclaimed',
         siteUrl: '/projects/motherhood-reclaimed',
         landingImage: {
-            src: '/images/motherhood-reclaimed-landing.jpg',
+            src: '/images/projects/mo-rec-landing.jpg',
             alt: 'A preview of motherhoodreclaimed.org',
         },
         showCaseImage: {
-            src: '/images/motherhood-reclaimed-showcase.png',
+            src: '/images/projects/mo-rec-showcase.png',
             alt: 'A preview of the desktop and mobile versions of the' + ' website for motherhood reclaimed.',
         },
         inProgress: false,
@@ -94,15 +98,19 @@ export const projects = [
             ' content as needed.',
         siteScreenshots: [
             {
-                src: '/images/mo-rec-screenshot-one.jpg',
+                src: '/images/projects/mo-rec-screenshot-mobile-two.jpg',
                 alt: '',
             },
             {
-                src: '/images/mo-rec-screenshot-two.jpg',
+                src: '/images/projects/mo-rec-screenshot-desktop-one.jpg',
                 alt: '',
             },
             {
-                src: '/images/mo-rec-screenshot-three.jpg',
+                src: '/images/projects/mo-rec-screenshot-desktop-one.jpg',
+                alt: '',
+            },
+            {
+                src: '/images/projects/mo-rec-screenshot-mobile-three.jpg',
                 alt: '',
             },
         ],

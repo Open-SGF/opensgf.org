@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import { ImageTextLink } from '@/components/Blocks/ImageTextLink/ImageTextLink';
 import { Stats } from '@/components/Blocks/Stats/Stats';
+import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Home.module.scss';
 
 export default function Home(): JSX.Element {
@@ -24,7 +25,7 @@ export default function Home(): JSX.Element {
         </div>
     );
 
-    const projectTeaserImage = <Image src={'/images/motherhood-reclaimed-showcase.png'} alt="laptop" fill />;
+    const projectTeaserImage = <Image src={projects[1].showCaseImage.src} alt="laptop" fill />;
 
     const projectTeaserText = (
         <div className={`${styles.projectTeaserText} h1`}>
