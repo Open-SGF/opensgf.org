@@ -24,6 +24,8 @@
         position: static !important;
         overflow: hidden;
         max-height: 100%;
+        box-shadow: -5px 6px 10px 0px #0055933D;
+
 
         &:nth-child(1) {
             grid-column: 1/2;

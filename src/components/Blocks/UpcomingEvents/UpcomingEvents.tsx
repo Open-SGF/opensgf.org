@@ -8,6 +8,10 @@ interface IUpcomingEvents {
 }
 
 export function UpcomingEvents({ events }: IUpcomingEvents): JSX.Element {
+    if (!events || events.length < 1) {
+        return <></>;
+    }
+
     return (
         <div className={styles.container}>
             <hr />

@@ -5,7 +5,6 @@ import type { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
-import { ProjectNav } from '@/components/Blocks/ProjectNav/ProjectNav';
 import React from 'react';
 import { getProjectContributors } from '@/utils/api';
 import { projects } from '@/utils/projectData';
@@ -101,10 +100,6 @@ export default function Project({ contributors, projectData }: IProject): JSX.El
             <ProjectDetails project={projectData} contributors={contributors} />
             <ChatBubbles leftText={projectData.clientIssue} rightText={projectData.ourSolution} />
             <Gallery images={projectData.siteScreenshots} />
-            <div className={styles.projectNav}>
-                <ProjectNav buttonText={'Previous'} />
-                <ProjectNav buttonText={'Next'} />
-            </div>
         </div>
     );
 }

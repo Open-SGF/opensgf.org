@@ -32,6 +32,13 @@ export default function About(): JSX.Element {
         },
     ];
 
+    const images = [
+        projects[1].siteScreenshots[0],
+        projects[0].siteScreenshots[1],
+        projects[1].siteScreenshots[2],
+        projects[0].siteScreenshots[3],
+    ];
+
     return (
         <div className={styles.pageWrapper}>
             <h1>About Us</h1>
@@ -43,7 +50,7 @@ export default function About(): JSX.Element {
                 people together to work on these projects weekly. We welcome all skill levels, and no coding experience
                 is necessary.
             </p>
-            <Gallery images={projects.flatMap((project) => project.siteScreenshots)} />
+            <Gallery images={images} />
         </div>
     );
 }

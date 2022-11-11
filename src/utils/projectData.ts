@@ -2,6 +2,7 @@ export const projects = [
     {
         id: '0',
         name: 'MOJobs Mobile App',
+        title: 'MOJobs Mobile App',
         slug: 'mo-jobs',
         siteUrl: '/projects/mo-jobs',
         landingImage: {
@@ -58,6 +59,7 @@ export const projects = [
     {
         id: '1',
         name: 'Motherhood Reclaimed',
+        title: 'Motherhood Reclaimed Website',
         slug: 'motherhood-reclaimed',
         siteUrl: '/projects/motherhood-reclaimed',
         landingImage: {
