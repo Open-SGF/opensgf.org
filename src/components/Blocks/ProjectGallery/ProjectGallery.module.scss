@@ -3,6 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 21px;
+
+    h2 {
+        max-width: 50%;
+        text-wrap: normal;
+    }
 }
-
-

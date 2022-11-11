@@ -39,9 +39,11 @@
 
     img {
         position: static !important;
+        object-fit: contain;
         margin: auto;
         max-width: 100%;
         height: auto !important;
+        max-height: 500px;
     }
 
     .particles{

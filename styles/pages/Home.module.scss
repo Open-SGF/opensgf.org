@@ -9,7 +9,7 @@
 
     &>* {
         &:first-child {
-            margin-top: 100px;
+            margin: 100px 70px 0 70px;
 
             @include mq-below(mid-small) {
                 margin-top: 0;
@@ -17,11 +17,11 @@
         }
 
         &:nth-child(2) {
-            margin-top: 50px;
+            margin-top: 85px;
         }
 
         &:nth-child(3) {
-            margin-top: 50px;
+            margin: 160px 80px 0 80px
         }
 
         &:nth-child(4) {

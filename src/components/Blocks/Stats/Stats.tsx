@@ -6,27 +6,27 @@ export function Stats(): JSX.Element {
     const stats = [
         {
             image: {
-                src: '/images/icons/code.svg',
-                alt: 'code',
+                src: '/images/icons/healthcare.svg',
+                alt: 'healthcare',
             },
-            numberFigure: 100,
-            unitName: 'Code For America Brigades',
+            numberFigure: 1500,
+            unitName: 'Hours Volunteered',
         },
         {
             image: {
                 src: '/images/icons/blueprint.svg',
                 alt: 'blueprint',
             },
-            numberFigure: 4,
+            numberFigure: 3,
             unitName: 'Projects Completed',
         },
         {
             image: {
-                src: '/images/icons/healthcare.svg',
-                alt: 'healthcare',
+                src: '/images/icons/code.svg',
+                alt: 'code',
             },
-            numberFigure: 1500,
-            unitName: 'Hours Volunteered',
+            numberFigure: '60+',
+            unitName: 'Code For America Brigades',
         },
     ];
 

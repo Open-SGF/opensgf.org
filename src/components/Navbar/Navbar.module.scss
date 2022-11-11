@@ -59,7 +59,14 @@
         gap: 30px;
     }
 
-    a {
+    &>a {
+        font-family: 'Roboto', sans-serif;
+        @include responsive-font((
+            min-size: 1.7rem,
+            max-size: 2.2rem,
+            lower-bound: breakpoint(x-tiny),
+            upper-bound: breakpoint(large)
+        ));
         text-decoration: none;
 
         &:hover {
@@ -90,6 +97,17 @@
         color: #133654;
         margin: 25px 0 6px 0;
 
+        a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            @include responsive-font((
+                min-size: 0.9rem,
+                max-size: 1.8rem,
+                lower-bound: breakpoint(x-tiny),
+                upper-bound: breakpoint(large)
+            ));
+        }
+
         &:first-child {
             margin-top: 0;
         }
@@ -97,6 +115,14 @@
         &Description {
             line-height: 1.9rem;
             color: rgba(19, 54, 84, 0.35);
+
+            font-family: 'Roboto', sans-serif;
+            @include responsive-font((
+                min-size: 0.8rem,
+                max-size: 1.6rem,
+                lower-bound: breakpoint(x-tiny),
+                upper-bound: breakpoint(large)
+            ));
         }
     }
 

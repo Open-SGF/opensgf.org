@@ -16,11 +16,9 @@ export default function Home(): JSX.Element {
         <div className={styles.heroText}>
             <h1>Open SGF</h1>
             <p>
-                Open SGF, a Code for America brigade, provides a forum for local designers; mobile, web, and application
-                developers to tackle technical problems for our community. Many organizations lack the necessary funding
-                to produce quality technical solutions for their problems. This group aims to close that gap by bringing
-                people together to work on these projects weekly. We welcome all skill levels, and no coding experience
-                is necessary.
+                We are a Code for America brigade out of Springfield, Missouri. We provide a forum for local designers,
+                and developers to tackle technical problems for our community. We meet weekly and welcome all skill
+                levels. No coding experience is necessary.
             </p>
         </div>
     );
