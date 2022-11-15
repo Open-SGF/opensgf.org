@@ -31,19 +31,29 @@
     position: relative;
     width: auto;
     height: fit-content;
-    min-height: 250px;
+    min-height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
+
+    @include mq-below(mid-small) {
+        min-height: 300px;
+    }
 
 
     img {
-        position: static !important;
+        &:first-child {
+            position: static !important;
+            margin: auto;
+            max-width: 100%;
+            height: auto !important;
+            max-height: 400px;
+            z-index: 10;
+        }
+
         object-fit: contain;
-        margin: auto;
-        max-width: 100%;
-        height: auto !important;
-        max-height: 500px;
+        overflow: visible !important;
     }
 
     .particles{

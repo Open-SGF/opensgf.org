@@ -64,9 +64,7 @@ interface IProject {
 
 export default function Project({ contributors, projectData }: IProject): JSX.Element {
     const projectDetailsImage: JSX.Element = (
-        <div className={styles.projectDetailsImage}>
-            <Image src={projectData.showCaseImage.src} alt={projectData.showCaseImage.alt} width={500} height={500} />
-        </div>
+        <Image src={projectData.showCaseImage.src} alt={projectData.showCaseImage.alt} width={500} height={500} />
     );
 
     const projectDetailsText: JSX.Element = (
@@ -93,9 +91,9 @@ export default function Project({ contributors, projectData }: IProject): JSX.El
             <ImageText
                 image={projectDetailsImage}
                 text={projectDetailsText}
-                enableParticles={true}
+                dotsUrl="/images/icons/dots-two.png"
                 textRight={true}
-                imageTextSizeRatio={0.55}
+                imageTextSizeRatio={0.5}
             />
             <ProjectDetails project={projectData} contributors={contributors} />
             <ChatBubbles leftText={projectData.clientIssue} rightText={projectData.ourSolution} />

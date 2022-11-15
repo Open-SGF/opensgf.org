@@ -6,7 +6,7 @@ import styles from './ImageTextLink.module.scss';
 interface IImageTextLink {
     image: JSX.Element;
     text: JSX.Element;
-    enableParticles?: boolean;
+    dotsUrl?: string;
     textRight?: boolean;
     imageTextSizeRatio?: number;
     link: {
@@ -20,7 +20,7 @@ export function ImageTextLink({
     text,
     link,
     imageTextSizeRatio = 0.5,
-    enableParticles = false,
+    dotsUrl = '',
     textRight = false,
 }: IImageTextLink): JSX.Element {
     return (
@@ -30,7 +30,7 @@ export function ImageTextLink({
                 text={text}
                 textRight={textRight}
                 imageTextSizeRatio={imageTextSizeRatio}
-                enableParticles={enableParticles}
+                dotsUrl={dotsUrl}
             />
             <SmartLink to={link.url}>
                 <h3 className={`${styles.link} h1`}>{link.text}</h3>

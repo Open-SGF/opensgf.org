@@ -63,7 +63,12 @@ export default function Home(): JSX.Element {
                 <meta name="keywords" content="Open SGF" />
             </Head>
             <div className={styles.pageWrapper}>
-                <ImageText image={heroImage} text={heroText} enableParticles={true} imageTextSizeRatio={0.435} />
+                <ImageText
+                    image={heroImage}
+                    text={heroText}
+                    dotsUrl="/images/icons/dots-one.png"
+                    imageTextSizeRatio={0.35}
+                />
                 <Stats />
                 <ImageTextLink
                     image={projectTeaserImage}
