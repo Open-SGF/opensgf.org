@@ -4,15 +4,15 @@
     margin: 0 calc(50vw - 558px) 0 calc(50vw - 558px);
 
     @include mq-below(x-large) {
-        margin: 0 11.3vw 0 11.3vw;
+        margin: 0 11.3vw 0 9vw;
     }
 
     @include mq-below(large) {
-        margin: 0 10vw 0 10vw;
+        margin: 0 10vw 0 8vw;
     }
 
     @include mq-below(medium) {
-        margin: 0 8vw 0 8vw;
+        margin: 0 8vw 0 7vw;
     }
 
     @include mq-below(mid-small) {

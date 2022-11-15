@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
     image: JSX.Element;
     text: JSX.Element;
-    enableParticles?: boolean;
+    dotsUrl?: string;
     textRight?: boolean;
     imageTextSizeRatio?: number;
 }
@@ -38,7 +39,7 @@ export function ImageText({
     image,
     text,
     imageTextSizeRatio = 0.5,
-    enableParticles = false,
+    dotsUrl = '',
     textRight = false,
 }: IImageText): JSX.Element {
     const isBreakpoint = useMediaQuery(600);
@@ -54,7 +55,7 @@ export function ImageText({
             </div>
             <div className={styles.graphicWrapper} style={{ width: graphicWrapperWidth }}>
                 {image}
-                {enableParticles && <div className={styles.particles}></div>}
+                {dotsUrl && <Image src={dotsUrl} alt="" fill />}
             </div>
         </div>
     );
