@@ -6,6 +6,12 @@
     @include mq-below(mid-small) {
         margin: 15px 10vw 0 10vw;
     }
+
+    &>* {
+        &:nth-child(2) {
+            margin-top: 80px;
+        }
+    }
 }
 
 .heroText {

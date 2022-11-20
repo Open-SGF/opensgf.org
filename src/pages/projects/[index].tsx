@@ -24,10 +24,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query: { index: u
     return { props: { contributors, projectData } };
 };
 
-async function getContributors(projectData) {
-    const repoNames = projectData.repos.map(({ name }) => name);
+async function getContributors(projectData: any) {
+    const repoNames = projectData.repos.map(({ name }: { name: any }) => name);
 
-    const contributorPromises = repoNames.map((name) => getProjectContributors(name));
+    const contributorPromises = repoNames.map((name: any) => getProjectContributors(name));
 
     const allContributors = await Promise.all(contributorPromises);
 

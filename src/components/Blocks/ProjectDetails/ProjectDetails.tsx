@@ -10,7 +10,7 @@ interface IProjectDetails {
 }
 
 export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.Element {
-    const toolsUsed = project.toolsUsed.map((tool) => {
+    const toolsUsed = project.toolsUsed.map((tool: any) => {
         return tools.find(({ name }) => name === tool);
     });
 
@@ -24,7 +24,7 @@ export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.
                 <div className={styles.text}>
                     <h2 className="h1">Links</h2>
                     <ul>
-                        {project.links.map((link, index) => (
+                        {project.links.map((link: any, index: any) => (
                             <li key={link.url + index}>
                                 <SmartLink to={link.url}>
                                     <span className={styles.link}>{link.label}</span>
