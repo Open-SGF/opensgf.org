@@ -32,7 +32,7 @@
             margin: 120px 111px 111px 111px;
 
             @include mq-below(mid-large) {
-                margin: 0;
+                margin: 80px 0 80px 0;
             }
         }
     }
