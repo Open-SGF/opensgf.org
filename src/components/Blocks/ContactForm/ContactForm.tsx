@@ -2,6 +2,24 @@ import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 
 export function ContactForm(): JSX.Element {
+    function handleSubmit(event: any) {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData as unknown as string).toString(),
+        })
+            .then(() => {
+                console.log('Form successfully submitted');
+                myForm.reset();
+            })
+            .catch((error) => alert(error));
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
@@ -14,7 +32,14 @@ export function ContactForm(): JSX.Element {
                     </p>
                 </div>
                 <div className={styles.contactForm}>
-                    <form action="">
+                    <form
+                        onSubmit={handleSubmit}
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-recaptcha="true"
+                    >
+                        <div data-netlify-recaptcha="true"></div>
                         <div className={styles.formRow}>
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" />
