@@ -2,22 +2,25 @@ import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 
 export function ContactForm(): JSX.Element {
-    function handleSubmit(event: any) {
+    async function handleSubmit(event: any) {
         event.preventDefault();
 
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData as unknown as string).toString(),
-        })
-            .then(() => {
-                console.log('Form successfully submitted');
-                myForm.reset();
-            })
-            .catch((error) => alert(error));
+        try {
+            await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData as unknown as string).toString(),
+            });
+
+            console.log('Form successfully submitted.');
+
+            myForm.reset();
+        } catch (e) {
+            alert(e);
+        }
     }
 
     return (
@@ -42,15 +45,15 @@ export function ContactForm(): JSX.Element {
                         <div data-netlify-recaptcha="true"></div>
                         <div className={styles.formRow}>
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" />
+                            <input type="text" id="name" name="name"/>
                         </div>
                         <div className={styles.formRow}>
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" />
+                            <input type="email" id="email" name="email"/>
                         </div>
                         <div className={styles.formRow}>
                             <label htmlFor="message">Message</label>
-                            <textarea id="message" />
+                            <textarea id="message" name="message"/>
                         </div>
                         <Button text="Submit" />
                     </form>
