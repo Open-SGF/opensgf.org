@@ -44,7 +44,7 @@ export default function About(): JSX.Element {
             <h1>About Us</h1>
             <IconSet icons={teamIcons} />
             <p className={styles.groupDescription}>
-                Open SGF, a Code for America Brigade, provides a forum for local designers; mobile, web, and application
+                Open SGF, a volunteer group of designers and developers, provides a forum for local designers; mobile, web, and application
                 developers to tackle technical problems for our community. Many organizations lack the necessary funding
                 to produce quality technical solutions for their problems. This group aims to close that gap by bringing
                 people together to work on these projects weekly. We welcome all skill levels, and no coding experience

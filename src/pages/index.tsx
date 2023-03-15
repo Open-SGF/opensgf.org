@@ -16,14 +16,14 @@ export default function Home(): JSX.Element {
         <div className={styles.heroText}>
             <h1>Open SGF</h1>
             <p>
-                We are a Code for America brigade out of Springfield, Missouri. We provide a forum for local designers,
+                We are a volunteer group of designers and developers out of Springfield, Missouri. We provide a forum for local designers,
                 and developers to tackle technical problems for our community. We meet weekly and welcome all skill
                 levels. No coding experience is necessary.
             </p>
         </div>
     );
 
-    const projectTeaserImage = <Image src={projects[1].showCaseImage.src} alt="laptop" fill />;
+    const projectTeaserImage = <Image src={projects[1].showCaseImage.src} alt="laptop" />;
 
     const projectTeaserText = (
         <div className={`${styles.projectTeaserText} h1`}>
