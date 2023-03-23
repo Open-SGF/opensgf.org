@@ -2,6 +2,27 @@ import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 
 export function ContactForm(): JSX.Element {
+    async function handleSubmit(event: any) {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
+        try {
+            await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData as unknown as string).toString(),
+            });
+
+            console.log('Form successfully submitted.');
+
+            myForm.reset();
+        } catch (e) {
+            alert(e);
+        }
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
