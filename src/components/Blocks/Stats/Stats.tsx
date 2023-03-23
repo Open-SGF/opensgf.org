@@ -26,7 +26,7 @@ export function Stats(): JSX.Element {
                 alt: 'code',
             },
             numberFigure: '60+',
-            unitName: 'Code For America Brigades',
+            unitName: 'Volunteers',
         },
     ];
 
