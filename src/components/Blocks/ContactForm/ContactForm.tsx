@@ -35,7 +35,13 @@ export function ContactForm(): JSX.Element {
                     </p>
                 </div>
                 <div className={styles.contactForm}>
-                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="vinegar">
+                    <form
+                        onSubmit={handleSubmit}
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-honeypot="vinegar"
+                    >
                         <input style={{ display: 'none' }} type="text" name="vinegar" />
                         <div className={styles.formRow}>
                             <label htmlFor="name">Name</label>
