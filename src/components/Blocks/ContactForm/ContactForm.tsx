@@ -9,13 +9,14 @@ export function ContactForm(): JSX.Element {
     };
 
     const handleSubmit = (e: any) => {
+        const foo = Object.values(e.target).filter((n: any) => {
+            return ['form-name', 'name', 'email', 'message'].includes(n.name);
+        });
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'contact', foo: 'bar' }),
-        })
-            .then(() => alert('Success!'))
-            .catch((error) => alert(error));
+            body: encode({ 'form-name': 'contact', ...foo }),
+        });
 
         e.preventDefault();
     };
