@@ -2,26 +2,23 @@ import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 
 export function ContactForm(): JSX.Element {
-    async function handleSubmit(event: any) {
-        event.preventDefault();
+    const encode = (data: any) => {
+        return Object.keys(data)
+            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    };
 
-        const myForm = event.target;
-        const formData = new FormData(myForm);
+    const handleSubmit = (e: any) => {
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', foo: 'bar' }),
+        })
+            .then(() => alert('Success!'))
+            .catch((error) => alert(error));
 
-        try {
-            await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData as unknown as string).toString(),
-            });
-
-            console.log('Form successfully submitted.');
-
-            myForm.reset();
-        } catch (e) {
-            alert(e);
-        }
-    }
+        e.preventDefault();
+    };
 
     return (
         <div className={styles.container}>
@@ -29,8 +26,8 @@ export function ContactForm(): JSX.Element {
                 <div className={styles.salesPitch}>
                     <h1>Partner With Us</h1>
                     <p>
-                        We help non-profits in South-West Missouri with their technical problems. We are primarly
-                        skilled with websites, but our technical exertise is fairly broad. Reach out if you think we
+                        We help non-profits in South-West Missouri with their technical problems. We are primarily
+                        skilled with websites, but our technical expertise is fairly broad. Reach out if you think we
                         could help your cause.
                     </p>
                 </div>
@@ -42,6 +39,7 @@ export function ContactForm(): JSX.Element {
                         data-netlify="true"
                         data-netlify-honeypot="vinegar"
                     >
+                        <input type="hidden" name="form-name" value="contact" />
                         <input style={{ display: 'none' }} type="text" name="vinegar" />
                         <div className={styles.formRow}>
                             <label htmlFor="name">Name</label>
