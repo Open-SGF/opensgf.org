@@ -1,21 +1,40 @@
 import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
+import { useState } from 'react';
 
 export function ContactForm(): JSX.Element {
+    const [formField, setFormField] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const formFieldHandler = (e: any) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setFormField({ ...formField, [name]: value });
+    };
+
     const encode = (data: any) => {
         return Object.keys(data)
             .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
             .join('&');
     };
 
-    const state = { name: 'test', email: 'test', message: 'test' };
+    const clearFormFields = () => {
+        setFormField({
+            name: '',
+            email: '',
+            message: '',
+        });
+    };
 
     const handleSubmit = (e: any) => {
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'contact', ...state }),
-        });
+            body: encode({ 'form-name': 'contact', ...formField }),
+        }).then(() => clearFormFields());
 
         e.preventDefault();
     };
@@ -43,15 +62,32 @@ export function ContactForm(): JSX.Element {
                         <input style={{ display: 'none' }} type="text" name="vinegar" />
                         <div className={styles.formRow}>
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" name="name" />
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formField.name}
+                                onChange={formFieldHandler}
+                            />
                         </div>
                         <div className={styles.formRow}>
                             <label htmlFor="email">Email</label>
-                            <input type="email" id="email" name="email" />
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formField.email}
+                                onChange={formFieldHandler}
+                            />
                         </div>
                         <div className={styles.formRow}>
                             <label htmlFor="message">Message</label>
-                            <textarea id="message" name="message" />
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formField.message}
+                                onChange={formFieldHandler}
+                            />
                         </div>
                         <Button text="Submit" />
                     </form>
