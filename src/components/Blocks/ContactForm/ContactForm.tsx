@@ -34,7 +34,9 @@ export function ContactForm(): JSX.Element {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...formField }),
-        }).then(() => clearFormFields());
+        })
+            .then(() => clearFormFields())
+            .then(() => alert('Thank you!'));
 
         e.preventDefault();
     };
