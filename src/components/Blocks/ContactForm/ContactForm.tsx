@@ -2,23 +2,19 @@ import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 
 export function ContactForm(): JSX.Element {
-    const encode = (data: any) => {
-        return Object.keys(data)
-            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-            .join('&');
-    };
+    const handleSubmit = (event: any) => {
+        event.preventDefault();
 
-    const handleSubmit = (e: any) => {
-        const foo = Object.values(e.target).filter((n: any) => {
-            return ['form-name', 'name', 'email', 'message'].includes(n.name);
-        });
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'contact', ...foo }),
-        });
-
-        e.preventDefault();
+            body: new URLSearchParams(formData as any).toString(),
+        })
+            .then(() => alert('Thank you for your submission'))
+            .catch((error) => alert(error));
     };
 
     return (
