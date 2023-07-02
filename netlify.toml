@@ -4,3 +4,39 @@
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+from = "http://open-sgf.netlify.app/*"
+to = "https://www.opensgf.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://open-sgf.netlify.app/*"
+to = "https://www.opensgf.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://opensgf.org/*"
+to = "https://www.opensgf.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://opensgf.org/*"
+to = "https://www.opensgf.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://www.opensgf.org/*"
+to = "https://www.opensgf.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://www.opensgf.org/*"
+to = "https://www.opensgf.com/:splat"
+status = 301
+force = true
