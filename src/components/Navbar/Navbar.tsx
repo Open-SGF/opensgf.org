@@ -82,7 +82,7 @@ export function Navbar(): JSX.Element {
                     </div>
                 )}
                 <SmartLink to="/about">About</SmartLink>
-                <Button href="https://www.codeforamerica.org/donate" text="Donate" />
+                <Button href="https://discord.gg/jFD8dZP" text="Join" />
             </div>
             <div onClick={() => setOpen(!open)} className={styles.hamburgerWrapper}>
                 <Hamburger active={open} />
