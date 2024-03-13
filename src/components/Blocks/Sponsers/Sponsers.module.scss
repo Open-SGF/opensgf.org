@@ -1,0 +1,54 @@
+@import '@/styles/utils/all';
+
+.wrap {
+    padding: 18px 0;
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
+
+    @include mq-below(mid-small) {
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 375px;
+    max-width: 100%;
+    border-radius: 20px;
+    background-color: #e9f5ff;
+    box-shadow: -2px 4px 10px rgba(19, 54, 84, 0.21);
+    padding: 16px;
+
+    .image {
+        margin-top: -48px !important;
+    }
+
+    h3 {
+        @include responsive-font((
+            min-size: 2.4rem,
+            max-size: 3.6rem,
+            lower-bound: breakpoint(x-tiny),
+            upper-bound: breakpoint(large)
+        ));
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
