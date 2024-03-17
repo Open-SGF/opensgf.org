@@ -1,6 +1,6 @@
 import { ContactForm } from '@/components/Blocks/ContactForm/ContactForm';
 import React from 'react';
-import { Sponsers } from "@/components/Blocks/Sponsers/Sponsers";
+import { Sponsors } from "@/components/Blocks/Sponsors/Sponsors";
 import styles from '@/styles/pages/Partner.module.scss';
 
 export default function partner(): JSX.Element {
@@ -9,7 +9,7 @@ export default function partner(): JSX.Element {
             <div>
                 <ContactForm />
             </div>
-            <Sponsers />
+            <Sponsors />
         </div>
     );
 }

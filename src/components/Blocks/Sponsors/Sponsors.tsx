@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import styles from './Sponsers.module.scss';
+import styles from './Sponsors.module.scss';
 
-export function Sponsers(): JSX.Element {
-    const sponsers = [
+export function Sponsors(): JSX.Element {
+    const sponsors = [
         {
             src: '/images/sponsors/efactory-color.png',
             alt: 'efactory',
@@ -13,9 +13,9 @@ export function Sponsers(): JSX.Element {
 
     return (
         <div className={styles.wrap}>
-            <h2>Our Sponsers</h2>
+            <h2>Our Sponsors</h2>
             <div className={styles.container}>
-                {sponsers.map(({ src, alt, text }, index) => (
+                {sponsors.map(({ src, alt, text }, index) => (
                     <div className={styles.card} key={index}>
                         <Image src={src} width={300} height={75} alt={alt} />
                         <p>{text}</p>

@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import { ImageTextLink } from '@/components/Blocks/ImageTextLink/ImageTextLink';
-import { Sponsers } from '@/components/Blocks/Sponsers/Sponsers';
+import { Sponsors } from '@/components/Blocks/Sponsors/Sponsors';
 import { Stats } from '@/components/Blocks/Stats/Stats';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Home.module.scss';
@@ -71,7 +71,7 @@ export default function Home(): JSX.Element {
                     imageTextSizeRatio={0.35}
                 />
                 <Stats />
-                <Sponsers />
+                <Sponsors />
                 <ImageTextLink
                     image={projectTeaserImage}
                     text={projectTeaserText}
