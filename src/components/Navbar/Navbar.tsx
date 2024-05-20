@@ -82,6 +82,7 @@ export function Navbar(): JSX.Element {
                     </div>
                 )}
                 <SmartLink to="/about">About</SmartLink>
+                <SmartLink to="/code-of-conduct">Code of Conduct</SmartLink>
                 <Button href="https://discord.gg/jFD8dZP" text="Join" />
             </div>
             <div onClick={() => setOpen(!open)} className={styles.hamburgerWrapper}>

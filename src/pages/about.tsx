@@ -14,6 +14,22 @@ export default function About(): JSX.Element {
             title: <figcaption className={'h3 ' + styles.name}>Levi Zitting</figcaption>,
             subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
         },
+        {
+            image: {
+                src: '/images/people/kayla-paden-headshot.jpg',
+                alt: 'Image of Kayla Paden',
+            },
+            title: <figcaption className={'h3 ' + styles.name}>Kayla Paden</figcaption>,
+            subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
+        },
+        {
+            image: {
+                src: '/images/people/thomas-hammon-headshot.jpg',
+                alt: 'Image of Thomas Hammon',
+            },
+            title: <figcaption className={'h3 ' + styles.name}>Thomas Hammon</figcaption>,
+            subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
+        },
     ];
 
     const images = [
