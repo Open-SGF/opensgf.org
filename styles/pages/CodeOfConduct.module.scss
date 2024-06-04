@@ -1,0 +1,23 @@
+@import '@/styles/utils/all';
+
+.codeOfConduct{
+    padding: 3rem;
+        h1{
+            font-size: 3rem;
+            padding: 1rem;
+        }
+
+        p {
+            padding: 1rem;
+        }
+
+        ul{
+            list-style-type:circle;
+            padding: 1rem 5rem;
+        }
+
+        strong {
+        font-size: 2rem;
+        font-weight: bold;
+        }
+}
