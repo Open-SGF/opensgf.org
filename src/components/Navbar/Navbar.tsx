@@ -83,6 +83,7 @@ export function Navbar(): JSX.Element {
                 )}
                 <SmartLink to="/about">About</SmartLink>
                 <SmartLink to="/code-of-conduct">Code of Conduct</SmartLink>
+                <SmartLink to="https://docs.opensgf.org/s/public-docs">Docs</SmartLink>
                 <Button href="https://discord.gg/jFD8dZP" text="Join" />
             </div>
             <div onClick={() => setOpen(!open)} className={styles.hamburgerWrapper}>
