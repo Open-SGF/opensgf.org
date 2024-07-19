@@ -6,8 +6,17 @@ export function Sponsors(): JSX.Element {
     const sponsors = [
         {
             src: '/images/sponsors/efactory-color.png',
+            width: 225,
+            height: 75,
             alt: 'efactory',
             text: 'efactory',
+        },
+        {
+            src: '/images/sponsors/logic-forte.png',
+            width: 225,
+            height: 75,
+            alt: 'Logic Forte',
+            text: 'Logic Forte',
         },
     ];
 
@@ -15,9 +24,9 @@ export function Sponsors(): JSX.Element {
         <div className={styles.wrap}>
             <h2>Our Sponsors</h2>
             <div className={styles.container}>
-                {sponsors.map(({ src, alt, text }, index) => (
+                {sponsors.map(({ src, alt, width, height, text }, index) => (
                     <div className={styles.card} key={index}>
-                        <Image src={src} width={300} height={75} alt={alt} />
+                        <Image src={src} width={width} height={height} alt={alt} />
                         <p>{text}</p>
                     </div>
                 ))}
