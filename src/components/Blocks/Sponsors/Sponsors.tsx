@@ -5,16 +5,16 @@ import styles from './Sponsors.module.scss';
 export function Sponsors(): JSX.Element {
     const sponsors = [
         {
-            src: '/images/sponsors/efactory-color.png',
-            width: 225,
-            height: 75,
+            src: '/images/sponsors/eFactory-sponsor-edit-3.png',
+            width: 275,
+            height: 92,
             alt: 'efactory',
             text: 'efactory',
         },
         {
-            src: '/images/sponsors/logic-forte.png',
-            width: 225,
-            height: 75,
+            src: '/images/sponsors/logic-forte-edit-2.png',
+            width: 275,
+            height: 92,
             alt: 'Logic Forte',
             text: 'Logic Forte',
         },

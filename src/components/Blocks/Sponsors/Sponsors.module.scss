@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: flex-end;
 
-    @include mq-below(mid-small) {
+    @include mq-below(small) {
         flex-direction: column;
         gap: 60px;
         align-items: center;
