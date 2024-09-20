@@ -2,6 +2,7 @@ import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Layout } from '@/components/Layout';
+import PlausibleProvider from 'next-plausible';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -15,6 +16,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="manifest" sizes="512x512" href="/images/favicons/android-chrome-512x512.png" />
                 <link rel="manifest" href="/site.webmanifest" />
                 <title>Open SGF</title>
+                <PlausibleProvider domain="opensgf.org" customDomain="https://plausible.sgf.dev" />
             </Head>
             <Component {...pageProps} />
         </Layout>
