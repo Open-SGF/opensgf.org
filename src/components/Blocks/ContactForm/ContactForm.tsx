@@ -30,7 +30,7 @@ export function ContactForm(): JSX.Element {
     };
 
     const handleSubmit = (e: any) => {
-        fetch('/__forms.html', {
+        fetch('/__form.html', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...formField }),
