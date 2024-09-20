@@ -16,9 +16,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="manifest" sizes="512x512" href="/images/favicons/android-chrome-512x512.png" />
                 <link rel="manifest" href="/site.webmanifest" />
                 <title>Open SGF</title>
-                <PlausibleProvider domain="opensgf.org" customDomain="https://plausible.sgf.dev" />
             </Head>
-            <Component {...pageProps} />
+                <PlausibleProvider domain="opensgf.org" customDomain="https://plausible.sgf.dev">
+                    <Component {...pageProps} />
+                </PlausibleProvider>
         </Layout>
     );
 }
