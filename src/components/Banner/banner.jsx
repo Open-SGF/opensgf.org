@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './banner.module.scss';
 
-export default function Banner() {
+export function Banner() {
     const [displayBanner, setDisplayBanner] = React.useState(true);
 
     const display = displayBanner ? styles.banner : styles.hidden;

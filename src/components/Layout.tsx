@@ -1,7 +1,6 @@
-import React from 'react';
+import { Banner } from '@/components/Banner/banner.jsx';
 import { Footer } from '@/components/Footer/Footer';
 import { Navbar } from '@/components/Navbar/Navbar';
-import Banner from '@/components/Banner/banner.jsx';
 import styles from './layout.module.scss';
 
 interface ILayout {
