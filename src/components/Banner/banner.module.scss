@@ -35,14 +35,14 @@
 }
 
 .textBold{
-    font-family: "Source Sans 3", sans-serif;
+    font-family: sans-serif;
     font-size: 1.5em;
     font-weight: bold;
     color: #0094FF;
 }
 
 .text{
-    font-family: "Source Sans 3", sans-serif;
+    font-family: sans-serif;
     font-size: 1.5em;
     color: #0094FF;
 }
@@ -58,6 +58,10 @@
     min-width: 150px;
 }
 
+.anchor :hover{
+    cursor: pointer;
+}
+
 .exit{
     height: 1em;
 }
@@ -67,6 +71,9 @@
     background-color: #E9F5FF;
 }
 
+.exitButton :hover{
+    cursor: pointer;
+}
 @media (max-width:600px) {
     .banner{
         flex-direction: column;
