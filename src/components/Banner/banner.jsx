@@ -1,12 +1,24 @@
+import { useEffect, useState } from 'react';
 import styles from './banner.module.scss';
-import { useState } from 'react';
 
 export function Banner() {
-    const [displayBanner, setDisplayBanner] = useState(true);
+    const [displayBanner, setDisplayBanner] = useState(null);
 
-    function toggleBanner() {
-        setDisplayBanner((prevState) => !prevState);
-    }
+    useEffect(() => {
+        const stateCondition = localStorage.getItem('displayBanner');
+        console.log('localStorage = ' + localStorage.getItem('displayBanner'));
+        if (stateCondition === 'false') {
+            setDisplayBanner(false);
+        } else {
+            setDisplayBanner(true);
+        }
+        console.log('stateCondition =' + stateCondition);
+    }, []);
+
+    const hideBanner = () => {
+        localStorage.setItem('displayBanner', 'false');
+        setDisplayBanner(false);
+    };
 
     const display = displayBanner ? styles.banner : styles.hidden;
 
@@ -23,7 +35,7 @@ export function Banner() {
                 <a href="https://www.methodconf.com/2024/" target="_blank" className={styles.anchor}>
                     <button className={styles.button}>BUY TICKETS</button>
                 </a>
-                <button className={styles.exitButton} onClick={toggleBanner}>
+                <button className={styles.exitButton} onClick={hideBanner}>
                     {/* eslint-disable */}
                         <img src="/images/icons/exit-cross.png" className={styles.exit} alt="close banner" />
                         {/* eslint-enable */}
