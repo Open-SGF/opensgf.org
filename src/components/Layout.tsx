@@ -1,4 +1,3 @@
-import { Banner } from '@/components/Banner/banner.jsx';
 import { Footer } from '@/components/Footer/Footer';
 import { Navbar } from '@/components/Navbar/Navbar';
 import styles from './layout.module.scss';
@@ -12,7 +11,6 @@ export function Layout({ children }: ILayout): JSX.Element {
         <div className={styles.pageContainer}>
             <div className={styles.contentWrapper}>
                 <Navbar />
-                <Banner />
                 {children}
             </div>
             <Footer />
