@@ -52,3 +52,9 @@ from = "https://www.opensgf.com/*"
 to = "https://www.opensgf.org/:splat"
 status = 301
 force = true
+
+[[redirects]]
+from = "https://www.opensgf.org/register"
+to = "https://forms.gle/BZDKYBAEQ41U8wC59"
+status = 302
+force = true
