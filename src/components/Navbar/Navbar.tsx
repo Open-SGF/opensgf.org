@@ -3,6 +3,7 @@ import { Accordion } from '@/components/Accordion/Accordion';
 import { Button } from '@/components/atoms/Button/Button';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
+import Link from 'next/link';
 import { Logo } from '@/components/Icons/Logo/Logo';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Navbar.module.scss';
@@ -45,7 +46,11 @@ export function Navbar(): JSX.Element {
             </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <div className={styles.contactLink}>
-                <SmartLink to="https://www.OpenSGF.org/register">Register to Volunteer</SmartLink>
+                <Link href="/register" passHref legacyBehavior>
+                    <a target="_blank" rel="noopener noreferrer">
+                        Register to Volunteer
+                    </a>
+                </Link>
             </div>
             <p className={styles.contactLinkDescription}>Fill out the form and get involved</p>
         </>
