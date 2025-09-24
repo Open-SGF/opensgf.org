@@ -45,9 +45,9 @@ export function Navbar(): JSX.Element {
             </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <div className={styles.contactLink}>
-                <SmartLink to="/volunteer">Volunteering</SmartLink>
+                <SmartLink to="https://www.OpenSGF.org/register">Register to Volunteer</SmartLink>
             </div>
-            <p className={styles.contactLinkDescription}>Learn how you can get involved</p>
+            <p className={styles.contactLinkDescription}>Fill out the form and get involved</p>
         </>
     );
 
