@@ -1,7 +1,7 @@
+import { Metadata } from 'next';
 import { Button } from '@/components/atoms/Button/Button';
 import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
 import { CardSet } from '@/components/Blocks/CardSet/CardSet';
-import Head from 'next/head';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import { ImageTextLink } from '@/components/Blocks/ImageTextLink/ImageTextLink';
@@ -10,8 +10,13 @@ import { Stats } from '@/components/Blocks/Stats/Stats';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Home.module.scss';
 
-export default function Home(): JSX.Element {
-    const heroImage = <Image src={'/images/icons/group-working.svg'} alt="group working " width={360} height={220} />;
+export const metadata: Metadata = {
+    title: 'Open SGF | Home',
+    keywords: 'Open SGF',
+};
+
+export default function Home() {
+    const heroImage = <Image src="/images/icons/group-working.svg" alt="group working" width={360} height={220} />;
 
     const heroText = (
         <div className={styles.heroText}>
@@ -65,28 +70,22 @@ export default function Home(): JSX.Element {
     );
 
     return (
-        <>
-            <Head>
-                <title>Open SGF | Home</title>
-                <meta name="keywords" content="Open SGF" />
-            </Head>
-            <div className={styles.pageWrapper}>
-                <ImageText
-                    image={heroImage}
-                    text={heroText}
-                    dotsUrl="/images/icons/dots-one.png"
-                    imageTextSizeRatio={0.35}
-                />
-                <Stats />
-                <Sponsors />
-                <ImageTextLink
-                    image={projectTeaserImage}
-                    text={projectTeaserText}
-                    textRight={true}
-                    link={{ text: 'View All Projects', url: '/projects' }}
-                />
-                <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
-            </div>
-        </>
+        <div className={styles.pageWrapper}>
+            <ImageText
+                image={heroImage}
+                text={heroText}
+                dotsUrl="/images/icons/dots-one.png"
+                imageTextSizeRatio={0.35}
+            />
+            <Stats />
+            <Sponsors />
+            <ImageTextLink
+                image={projectTeaserImage}
+                text={projectTeaserText}
+                textRight={true}
+                link={{ text: 'View All Projects', url: '/projects' }}
+            />
+            <CardSet volunteerCard={volunteerCard} partnerCard={partnerCard} />
+        </div>
     );
 }

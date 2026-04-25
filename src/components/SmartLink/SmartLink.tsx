@@ -3,17 +3,15 @@ import React from 'react';
 
 interface ISmartLink {
     to: string;
-    children: JSX.Element[] | JSX.Element | string;
+    children: React.ReactNode[] | React.ReactNode | string;
 }
 
-export function SmartLink({ to, children }: ISmartLink): JSX.Element {
+export function SmartLink({ to, children }: ISmartLink): React.ReactNode {
     if (to.includes('https://') || to.includes('http://') || to.includes('.')) {
         return (
-            <Link href={to} passHref legacyBehavior>
-                <a target="_blank" rel="noopener noreferrer">
-                    {children}
-                </a>
-            </Link>
+            <a href={to} target="_blank" rel="noopener noreferrer">
+                {children}
+            </a>
         );
     }
     return <Link href={to}>{children}</Link>;

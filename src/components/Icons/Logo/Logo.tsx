@@ -8,7 +8,7 @@ interface ILogo {
     width?: number;
 }
 
-export function Logo({ url = false, width = 133, height = 61 }: ILogo): JSX.Element {
+export function Logo({ url = false, width = 133, height = 61 }: ILogo): React.ReactNode {
     if (typeof url === 'string') {
         return (
             <SmartLink to={url}>

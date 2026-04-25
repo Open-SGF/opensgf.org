@@ -1,26 +1,31 @@
-import type { GetServerSideProps } from 'next';
+import { Metadata } from 'next';
 import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import type { MeetupEvent } from '@/components/Blocks/UpcomingEvents/components/EventCard/EventCard';
-import React from 'react';
 import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
-import { getMeetupEvents } from '@/utils/api';
+import { getMeetupEvents } from '@/server';
 import styles from '@/styles/pages/Volunteer.module.scss';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    const events = await getMeetupEvents();
-
-    return { props: { events } };
+export const metadata: Metadata = {
+    title: 'Volunteer | Open SGF',
 };
 
-export default function volunteer({ events }: { events: MeetupEvent[] }): JSX.Element {
-    const heroImage: JSX.Element = (
-        <Image src={'/images/icons/volunteer-working.svg'} alt="volunteers-working" width={362} height={175} />
+async function getEvents() {
+    return await getMeetupEvents();
+}
+
+export const dynamic = 'force-dynamic';
+
+export default async function Volunteer() {
+    const events = await getEvents();
+
+    const heroImage = (
+        <Image src="/images/icons/volunteer-working.svg" alt="volunteers-working" width={362} height={175} />
     );
 
-    const heroText: JSX.Element = (
+    const heroText = (
         <div className={styles.heroText}>
             <h1>Volunteer With Us</h1>
             <p className={styles.groupDescription}>

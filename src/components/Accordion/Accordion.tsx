@@ -1,14 +1,16 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '@/components/Icons/ArrowDown/ArrowDown';
 import styles from './Accordion.module.scss';
 
 interface IAccordion {
-    children: JSX.Element;
-    heading: JSX.Element;
+    children: React.ReactNode;
+    heading: React.ReactNode;
     forceClosed?: boolean;
 }
 
-export function Accordion({ children, heading, forceClosed = false }: IAccordion): JSX.Element {
+export function Accordion({ children, heading, forceClosed = false }: IAccordion): React.ReactNode {
     const [show, setShow] = useState(false);
 
     useEffect(() => {

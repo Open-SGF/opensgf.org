@@ -5,7 +5,7 @@ type IIconSet = {
     icons: IconData[];
 };
 
-export function IconSet({ icons }: IIconSet): JSX.Element {
+export function IconSet({ icons }: IIconSet): React.ReactNode {
     return (
         <div className={styles.container}>
             <div className={styles.iconWrapper}>

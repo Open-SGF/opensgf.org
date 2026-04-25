@@ -3,7 +3,7 @@ import React from 'react';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Footer.module.scss';
 
-export function Footer(): JSX.Element {
+export function Footer(): React.ReactNode {
     type IconData = {
         url: string;
         src: string;
@@ -23,7 +23,7 @@ export function Footer(): JSX.Element {
         },
     ];
 
-    const socialIconElementGenerator = (iconDataArray: IconData[]): JSX.Element[] => {
+    const socialIconElementGenerator = (iconDataArray: IconData[]): React.ReactNode[] => {
         return iconDataArray.map(({ url, src, alt }) => {
             return (
                 <div className={styles.imageWrapper} key={url}>

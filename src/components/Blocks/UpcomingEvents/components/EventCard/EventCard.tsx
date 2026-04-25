@@ -20,7 +20,7 @@ interface IEventCard {
 
 export function EventCard({
     event: { imageUrl, imageAlt, title, dateTime, description, eventUrl },
-}: IEventCard): JSX.Element {
+}: IEventCard): React.ReactNode {
     extend(advancedFormat);
 
     const timeReadable = dayjs(dateTime).format('dddd, MMMM Do [at] h:mm a');

@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
-    image: JSX.Element;
-    text: JSX.Element;
+    image: React.ReactNode;
+    text: React.ReactNode;
     dotsUrl?: string;
     textRight?: boolean;
     imageTextSizeRatio?: number;
@@ -41,7 +43,7 @@ export function ImageText({
     imageTextSizeRatio = 0.5,
     dotsUrl = '',
     textRight = false,
-}: IImageText): JSX.Element {
+}: IImageText): React.ReactNode {
     const isBreakpoint = useMediaQuery(600);
 
     const textWrapperWidth = isBreakpoint ? '100%' : imageTextSizeRatio * 100 + '%';

@@ -1,13 +1,14 @@
+'use client';
+
 import React, { useCallback, useEffect, useState } from 'react';
 import { Accordion } from '@/components/Accordion/Accordion';
 import { Button } from '@/components/atoms/Button/Button';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
-import Link from 'next/link';
 import { Logo } from '@/components/Icons/Logo/Logo';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Navbar.module.scss';
-import variables from '@/styles/utils/variables.module.scss';
+import { breakpointSmall } from '@/lib/variables';
 
 const useMediaQuery = (width: string) => {
     const [targetReached, setTargetReached] = useState(() => {
@@ -34,8 +35,8 @@ const useMediaQuery = (width: string) => {
     return targetReached;
 };
 
-export function Navbar(): JSX.Element {
-    const isBreakpoint = useMediaQuery(variables.breakpointSmall);
+export function Navbar(): React.ReactNode {
+    const isBreakpoint = useMediaQuery(String(breakpointSmall));
     const [open, setOpen] = useState(false);
 
     const contactLinks = (
@@ -45,11 +46,9 @@ export function Navbar(): JSX.Element {
             </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <div className={styles.contactLink}>
-                <Link href="/register" passHref legacyBehavior>
-                    <a target="_blank" rel="noopener noreferrer">
-                        Register to Volunteer
-                    </a>
-                </Link>
+                <a href="/register" target="_blank" rel="noopener noreferrer">
+                    Register to Volunteer
+                </a>
             </div>
             <p className={styles.contactLinkDescription}>Fill out the form and get involved</p>
         </>

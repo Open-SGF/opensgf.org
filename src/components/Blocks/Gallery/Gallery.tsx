@@ -5,7 +5,7 @@ interface IGallery {
     images: any[];
 }
 
-export function Gallery({ images }: IGallery): JSX.Element {
+export function Gallery({ images }: IGallery): React.ReactNode {
     return (
         <div className={styles.container}>
             <Image src={images[0].src} alt={images[0].alt} key={images[0].src} fill />

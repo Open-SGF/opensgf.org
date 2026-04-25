@@ -5,7 +5,7 @@ type IChatBubble = {
     mirror?: boolean;
 };
 
-export function ChatBubble({ color, mirror = false }: IChatBubble): JSX.Element {
+export function ChatBubble({ color, mirror = false }: IChatBubble): React.ReactNode {
     return (
         <div className={mirror ? styles.mirror : ''}>
             <svg width="571" height="291" viewBox="0 0 571 291" fill="none" xmlns="http://www.w3.org/2000/svg">

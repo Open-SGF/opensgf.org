@@ -1,14 +1,16 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from '@/components/Icons/ArrowDown/ArrowDown';
 import styles from './Dropdown.module.scss';
 
 type IDropdown = {
     children: any;
-    heading: JSX.Element;
+    heading: React.ReactNode;
     forceClosed?: boolean;
-};
+}
 
-export function Dropdown({ children, heading, forceClosed = false }: IDropdown): JSX.Element {
+export function Dropdown({ children, heading, forceClosed = false }: IDropdown): React.ReactNode {
     const [show, setShow] = useState(false);
 
     useEffect(() => {

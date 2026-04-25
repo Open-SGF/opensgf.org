@@ -6,6 +6,6 @@ interface IButton {
     href?: string;
 }
 
-export const Button = ({ text, href = '' }: IButton): JSX.Element => {
+export const Button = ({ text, href = '' }: IButton): React.ReactNode => {
     return <button className={styles.button}>{href ? <SmartLink to={href}>{text}</SmartLink> : <p>{text}</p>}</button>;
 };

@@ -1,8 +1,10 @@
 @use "sass:math";
-@use 'variables.module';
+@use "sass:map";
+@use "sass:meta";
+@use 'variables' as vars;
 
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
+    @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
         @return math.div($number, ($number * 0 + 1));
     }
 
@@ -10,8 +12,8 @@
 }
 
 @function breakpoint($bp) {
-    @if map-has_key($breakpoints, $bp) == true {
-        @return map-get($breakpoints, $bp) + 0px;
+    @if map.has-key(vars.$breakpoints, $bp) == true {
+        @return map.get(vars.$breakpoints, $bp) + 0px;
     } @else {
         @return null;
     }

@@ -1,8 +1,10 @@
+'use client';
+
 import { Button } from '@/components/atoms/Button/Button';
 import styles from './ContactForm.module.scss';
 import { useState } from 'react';
 
-export function ContactForm(): JSX.Element {
+export function ContactForm(): React.ReactNode {
     const [formField, setFormField] = useState({
         name: '',
         email: '',

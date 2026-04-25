@@ -8,20 +8,20 @@ export type IconData = {
         src: string;
         alt: string;
     };
-    title?: JSX.Element | boolean;
-    subtitle?: JSX.Element | boolean;
+    title?: React.ReactNode | boolean;
+    subtitle?: React.ReactNode | boolean;
 };
 
 type IIcon = {
     icon: IconData;
 };
 
-export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): JSX.Element {
-    const imageElement: JSX.Element = <Image src={image.src} alt={image.alt} fill />;
-    const titleElement: JSX.Element = <figcaption className={styles.title}>{title}</figcaption>;
-    const subtitleElement: JSX.Element = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
+export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): React.ReactNode {
+    const imageElement: React.ReactNode = <Image src={image.src} alt={image.alt} fill />;
+    const titleElement: React.ReactNode = <figcaption className={styles.title}>{title}</figcaption>;
+    const subtitleElement: React.ReactNode = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
 
-    const wrapInLink = (element: JSX.Element, url: string): JSX.Element => {
+    const wrapInLink = (element: React.ReactNode, url: string): React.ReactNode => {
         return <SmartLink to={url}>{element}</SmartLink>;
     };
 

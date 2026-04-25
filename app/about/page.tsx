@@ -1,10 +1,15 @@
+import { Metadata } from 'next';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/About.module.scss';
 
-export default function About(): JSX.Element {
+export const metadata: Metadata = {
+    title: 'About Us | Open SGF',
+};
+
+export default function About() {
     const teamIcons: IconData[] = [
         {
             image: {

@@ -4,8 +4,8 @@ import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './ImageTextLink.module.scss';
 
 interface IImageTextLink {
-    image: JSX.Element;
-    text: JSX.Element;
+    image: React.ReactNode;
+    text: React.ReactNode;
     dotsUrl?: string;
     textRight?: boolean;
     imageTextSizeRatio?: number;
@@ -22,7 +22,7 @@ export function ImageTextLink({
     imageTextSizeRatio = 0.5,
     dotsUrl = '',
     textRight = false,
-}: IImageTextLink): JSX.Element {
+}: IImageTextLink): React.ReactNode {
     return (
         <div className={styles.container}>
             <ImageText
