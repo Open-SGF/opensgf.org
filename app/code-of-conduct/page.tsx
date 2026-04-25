@@ -1,5 +1,9 @@
-import React from 'react';
+import type { Metadata } from 'next';
 import styles from '@/styles/pages/CodeOfConduct.module.scss';
+
+export const metadata: Metadata = {
+    title: 'Code of Conduct | Open SGF',
+};
 
 export default function CodeOfConduct() {
     return (
@@ -47,20 +51,24 @@ export default function CodeOfConduct() {
             </ul>
 
             <p>
-                <strong>Reporting Behaviors Inconsistent With Code of Conduct.</strong> Open SGF is a “see-something,
-                say-something” community. If you witness or are subject to any behaviors listed above or those that
-                appear inconsistent with our stated values, you can make a report in one of the following ways:
+                <strong>Reporting Behaviors Inconsistent With Code of Conduct.</strong> Open SGF is a
+                &ldquo;see-something, say-something&rdquo; community. If you witness or are subject to any behaviors
+                listed above or those that appear inconsistent with our stated values, you can make a report in one of
+                the following ways:
             </p>
 
             <ul>
                 <li>
                     Submit an anonymous report through our
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSceeSzpiXFvchwmP2gc-8RMp9mhQDm1GQ4E2KpYCNklBruZpA/viewform">
-                        “Report an Issue”
+                        &ldquo;Report an Issue&rdquo;
                     </a>
                     form
                 </li>
-                <li>Reach out to an organizer. Organizers are recognizable via the “organizers” role in Discord</li>
+                <li>
+                    Reach out to an organizer. Organizers are recognizable via the &ldquo;organizers&rdquo; role in
+                    Discord
+                </li>
             </ul>
 
             <p>

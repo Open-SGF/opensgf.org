@@ -7,7 +7,7 @@ interface ICard {
     project: any;
 }
 
-export function Card({ project, project: { landingImage } }: ICard): JSX.Element {
+export function Card({ project, project: { landingImage } }: ICard): React.ReactNode {
     return (
         <div className={styles.card}>
             {project.helpWanted && (

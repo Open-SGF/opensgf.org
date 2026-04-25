@@ -1,17 +1,24 @@
+'use client';
+
 import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './ImageText.module.scss';
 
 interface IImageText {
-    image: JSX.Element;
-    text: JSX.Element;
+    image: React.ReactNode;
+    text: React.ReactNode;
     dotsUrl?: string;
     textRight?: boolean;
     imageTextSizeRatio?: number;
 }
 
 const useMediaQuery = (width: number) => {
-    const [targetReached, setTargetReached] = useState(false);
+    const [targetReached, setTargetReached] = useState(() => {
+        if (typeof window === 'undefined') {
+            return false;
+        }
+        return window.matchMedia(`(max-width: ${width}px)`).matches;
+    });
 
     const updateTarget = useCallback((e: any) => {
         if (e.matches) {
@@ -24,11 +31,6 @@ const useMediaQuery = (width: number) => {
     useEffect(() => {
         const media = window.matchMedia(`(max-width: ${width}px)`);
         media.addEventListener('change', updateTarget);
-
-        if (media.matches) {
-            setTargetReached(true);
-        }
-
         return () => media.removeEventListener('change', updateTarget);
     }, [updateTarget, width]);
 
@@ -41,7 +43,7 @@ export function ImageText({
     imageTextSizeRatio = 0.5,
     dotsUrl = '',
     textRight = false,
-}: IImageText): JSX.Element {
+}: IImageText): React.ReactNode {
     const isBreakpoint = useMediaQuery(600);
 
     const textWrapperWidth = isBreakpoint ? '100%' : imageTextSizeRatio * 100 + '%';

@@ -1,33 +1,41 @@
 import { ChatBubbles } from '@/components/Blocks/ChatBubbles/ChatBubbles';
-import type { Contributor } from '@/utils/api';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
-import type { GetServerSideProps } from 'next';
+import { getProjectContributors } from '@/server';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
-import React from 'react';
-import { getProjectContributors } from '@/utils/api';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Project.module.scss';
 
-export const getServerSideProps: GetServerSideProps = async ({ query: { index: url } }) => {
-    const projectData = projects.find(({ slug }: { slug: string }) => slug === url);
+interface Props {
+    params: Promise<{ index: string }>;
+}
 
-    if (!projectData) {
-        return {
-            notFound: true,
-        };
-    }
+export async function generateStaticParams() {
+    return projects.map((project) => ({ index: project.slug }));
+}
 
-    const contributors = await getContributors(projectData);
+export const dynamic = 'force-dynamic';
 
-    return { props: { contributors, projectData } };
-};
+async function getPageMetadata({ index }: { index: string }) {
+    const projectData = projects.find((p) => p.slug === index);
+    if (!projectData) return null;
+    return { title: `${projectData.name} | Open SGF` };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { index } = await params;
+    const meta = await getPageMetadata({ index });
+    if (!meta) return { title: 'Not Found | Open SGF' };
+    return meta;
+}
 
 async function getContributors(projectData: any) {
-    const repoNames = projectData.repos.map(({ name }: { name: any }) => name);
+    const repoNames = projectData.repos.map(({ name }: { name: string }) => name);
 
-    const contributorPromises = repoNames.map((name: any) => getProjectContributors(name));
+    const contributorPromises = repoNames.map((name: string) => getProjectContributors(name));
 
     const allContributors = await Promise.all(contributorPromises);
 
@@ -38,7 +46,9 @@ async function getContributors(projectData: any) {
     return uniqueContributors;
 }
 
-function mergeDuplicateContributors(contributors: Contributor[]): Contributor[] {
+function mergeDuplicateContributors(
+    contributors: { total: number; id: string; login: string; avatar_url: string; html_url: string }[],
+) {
     const contributorMap = new Map();
 
     for (const contributor of contributors) {
@@ -57,20 +67,24 @@ function mergeDuplicateContributors(contributors: Contributor[]): Contributor[] 
     return Array.from(contributorMap.values());
 }
 
-interface IProject {
-    contributors: Contributor[];
-    projectData: any;
-}
+export default async function Project({ params }: Props) {
+    const { index } = await params;
+    const projectData = projects.find((p) => p.slug === index);
 
-export default function Project({ contributors, projectData }: IProject): JSX.Element {
-    const projectDetailsImage: JSX.Element = (
+    if (!projectData) {
+        notFound();
+    }
+
+    const contributors = await getContributors(projectData);
+
+    const projectDetailsImage = (
         <Image src={projectData.showCaseImage.src} alt={projectData.showCaseImage.alt} width={500} height={500} />
     );
 
-    const projectDetailsText: JSX.Element = (
+    const projectDetailsText = (
         <div className={styles.projectDetailsText}>
             <h1>{projectData.name}</h1>
-            <p>{projectData.description} </p>
+            <p>{projectData.description}</p>
             {projectData.skillsNeeded.length ? (
                 <>
                     <h2 className="p">Skills/Help Needed</h2>
@@ -80,9 +94,7 @@ export default function Project({ contributors, projectData }: IProject): JSX.El
                         ))}
                     </ul>
                 </>
-            ) : (
-                ''
-            )}
+            ) : null}
         </div>
     );
 

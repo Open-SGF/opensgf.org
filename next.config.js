@@ -2,8 +2,12 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ['via.placeholder.com', 'secure-content.meetupstatic.com', 'avatars.githubusercontent.com'],
+        remotePatterns: [
+            { protocol: 'https', hostname: 'via.placeholder.com' },
+            { protocol: 'https', hostname: 'secure-content.meetupstatic.com' },
+            { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
+        ],
     },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

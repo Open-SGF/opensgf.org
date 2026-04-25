@@ -2,7 +2,7 @@
 import { projects } from '@/utils/projectData';
 import styles from './ProjectGallery.module.scss';
 
-export function ProjectGallery(): JSX.Element {
+export function ProjectGallery(): React.ReactNode {
     return (
         <div className={styles.cardWrapper}>
             {projects.map((project) => (

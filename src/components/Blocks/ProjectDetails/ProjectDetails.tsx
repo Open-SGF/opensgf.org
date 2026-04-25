@@ -9,7 +9,7 @@ interface IProjectDetails {
     contributors: Contributor[];
 }
 
-export function ProjectDetails({ project, contributors }: IProjectDetails): JSX.Element {
+export function ProjectDetails({ project, contributors }: IProjectDetails): React.ReactNode {
     const toolsUsed = project.toolsUsed.map((tool: any) => {
         return tools.find(({ name }) => name === tool);
     });

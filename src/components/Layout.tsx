@@ -6,7 +6,7 @@ interface ILayout {
     children: any;
 }
 
-export function Layout({ children }: ILayout): JSX.Element {
+export function Layout({ children }: ILayout): React.ReactNode {
     return (
         <div className={styles.pageContainer}>
             <div className={styles.contentWrapper}>

@@ -1,4 +1,4 @@
-@import '@/styles/utils/all';
+@use '@/styles/utils/all' as *;
 
 .pageWrapper {
     margin: 0 15vw 0 15vw;
@@ -43,6 +43,10 @@
             upper-bound: breakpoint(large)
         ));
         margin: 0 0 32px 0;
+    }
+
+    p {
+        margin-bottom: 22px;
     }
 }
 

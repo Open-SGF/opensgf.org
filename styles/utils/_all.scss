@@ -1,3 +1,3 @@
-@import 'mixins';
-@import 'variables.module';
-@import 'functions';
+@forward 'variables';
+@forward 'mixins';
+@forward 'functions';

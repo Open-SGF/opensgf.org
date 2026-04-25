@@ -1,11 +1,16 @@
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
-import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
+import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
+import type { Metadata } from 'next';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/About.module.scss';
 
-export default function About(): JSX.Element {
-    const teamIcons: Icon[] = [
+export const metadata: Metadata = {
+    title: 'About Us | Open SGF',
+};
+
+export default function About() {
+    const teamIcons: IconData[] = [
         {
             image: {
                 src: '/images/people/levi-zitting-headshot.jpg',
@@ -44,11 +49,13 @@ export default function About(): JSX.Element {
             <h1>About Us</h1>
             <IconSet icons={teamIcons} />
             <p className={styles.groupDescription}>
-                Open SGF, a volunteer group of designers and developers, provides a forum for local designers; mobile,
-                web, and application developers to tackle technical problems for our community. Many organizations lack
-                the necessary funding to produce quality technical solutions for their problems. This group aims to
-                close that gap by bringing people together to work on these projects weekly. We welcome all skill
-                levels, and no coding experience is necessary.
+                We are a volunteer group of designers and developers out of Springfield, Missouri. We provide a forum
+                for mobile, web, and application designers and developers to tackle technical problems for our
+                community.
+            </p>
+            <p className={styles.groupDescription}>
+                Many organizations lack the necessary funding to produce quality technical solutions for their problems.
+                This group aims to close that gap by bringing people together to work on these projects weekly
             </p>
             <Gallery images={images} />
         </div>

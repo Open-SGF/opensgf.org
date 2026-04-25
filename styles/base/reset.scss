@@ -23,7 +23,7 @@ time, mark, audio, video {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: none;
-
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;

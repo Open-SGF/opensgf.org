@@ -1,4 +1,4 @@
-@import '@/styles/utils/all';
+@use '@/styles/utils/all' as *;
 
 .pageWrapper {
     display: flex;
@@ -35,7 +35,7 @@
     }
 
     .groupDescription {
-        margin: 44px 0;
+        margin: 0px 44px 22px 44px;
     }
 
     &>* {

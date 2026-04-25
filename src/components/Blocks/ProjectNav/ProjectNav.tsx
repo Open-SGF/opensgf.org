@@ -5,7 +5,7 @@ interface IProjectNav {
     buttonText: string;
 }
 
-export function ProjectNav({ buttonText }: IProjectNav): JSX.Element {
+export function ProjectNav({ buttonText }: IProjectNav): React.ReactNode {
     return (
         <div className={buttonText == 'Next' ? styles.flippedContainer : styles.container}>
             <Image

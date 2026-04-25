@@ -1,9 +1,13 @@
 import { ContactForm } from '@/components/Blocks/ContactForm/ContactForm';
-import React from 'react';
+import type { Metadata } from 'next';
 import { Sponsors } from '@/components/Blocks/Sponsors/Sponsors';
 import styles from '@/styles/pages/Partner.module.scss';
 
-export default function partner(): JSX.Element {
+export const metadata: Metadata = {
+    title: 'Partner | Open SGF',
+};
+
+export default function Partner() {
     return (
         <div className={styles.pageWrapper}>
             <div>

@@ -1,16 +1,22 @@
+'use client';
+
 import React, { useCallback, useEffect, useState } from 'react';
 import { Accordion } from '@/components/Accordion/Accordion';
+import { breakpointSmall } from '@/lib/variables';
 import { Button } from '@/components/atoms/Button/Button';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
-import Link from 'next/link';
 import { Logo } from '@/components/Icons/Logo/Logo';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Navbar.module.scss';
-import variables from '@/styles/utils/variables.module.scss';
 
 const useMediaQuery = (width: string) => {
-    const [targetReached, setTargetReached] = useState(false);
+    const [targetReached, setTargetReached] = useState(() => {
+        if (typeof window === 'undefined') {
+            return false;
+        }
+        return window.matchMedia(`(max-width: ${width}px)`).matches;
+    });
 
     const updateTarget = useCallback((e: any) => {
         if (e.matches) {
@@ -23,20 +29,14 @@ const useMediaQuery = (width: string) => {
     useEffect(() => {
         const media = window.matchMedia(`(max-width: ${width}px)`);
         media.addListener(updateTarget);
-
-        // Check on mount (callback is not called until a change occurs)
-        if (media.matches) {
-            setTargetReached(true);
-        }
-
         return () => media.removeListener(updateTarget);
     }, [updateTarget, width]);
 
     return targetReached;
 };
 
-export function Navbar(): JSX.Element {
-    const isBreakpoint = useMediaQuery(variables.breakpointSmall);
+export function Navbar(): React.ReactNode {
+    const isBreakpoint = useMediaQuery(String(breakpointSmall));
     const [open, setOpen] = useState(false);
 
     const contactLinks = (
@@ -46,11 +46,9 @@ export function Navbar(): JSX.Element {
             </div>
             <p className={styles.contactLinkDescription}> See what we can help you with </p>
             <div className={styles.contactLink}>
-                <Link href="/register" passHref legacyBehavior>
-                    <a target="_blank" rel="noopener noreferrer">
-                        Register to Volunteer
-                    </a>
-                </Link>
+                <a href="/register" target="_blank" rel="noopener noreferrer">
+                    Register to Volunteer
+                </a>
             </div>
             <p className={styles.contactLinkDescription}>Fill out the form and get involved</p>
         </>

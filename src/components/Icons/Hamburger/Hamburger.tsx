@@ -4,7 +4,7 @@ interface IHamburger {
     active: boolean;
 }
 
-export function Hamburger({ active }: IHamburger): JSX.Element {
+export function Hamburger({ active }: IHamburger): React.ReactNode {
     return (
         <div className={`${styles.navTrigger} ${active ? styles.active : ''}`}>
             <i />
