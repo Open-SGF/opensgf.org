@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { ChatBubbles } from '@/components/Blocks/ChatBubbles/ChatBubbles';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
@@ -46,7 +46,9 @@ async function getContributors(projectData: any) {
     return uniqueContributors;
 }
 
-function mergeDuplicateContributors(contributors: { total: number; id: string; login: string; avatar_url: string; html_url: string }[]) {
+function mergeDuplicateContributors(
+    contributors: { total: number; id: string; login: string; avatar_url: string; html_url: string }[],
+) {
     const contributorMap = new Map();
 
     for (const contributor of contributors) {

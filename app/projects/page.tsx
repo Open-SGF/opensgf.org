@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { ProjectGallery } from '@/components/Blocks/ProjectGallery/ProjectGallery';
 import styles from '@/styles/pages/Projects.module.scss';
 

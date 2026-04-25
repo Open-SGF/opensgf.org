@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import styles from '@/styles/pages/CodeOfConduct.module.scss';
 
 export const metadata: Metadata = {
@@ -51,9 +51,10 @@ export default function CodeOfConduct() {
             </ul>
 
             <p>
-                <strong>Reporting Behaviors Inconsistent With Code of Conduct.</strong> Open SGF is a &ldquo;see-something,
-                say-something&rdquo; community. If you witness or are subject to any behaviors listed above or those that
-                appear inconsistent with our stated values, you can make a report in one of the following ways:
+                <strong>Reporting Behaviors Inconsistent With Code of Conduct.</strong> Open SGF is a
+                &ldquo;see-something, say-something&rdquo; community. If you witness or are subject to any behaviors
+                listed above or those that appear inconsistent with our stated values, you can make a report in one of
+                the following ways:
             </p>
 
             <ul>
@@ -64,7 +65,10 @@ export default function CodeOfConduct() {
                     </a>
                     form
                 </li>
-                <li>Reach out to an organizer. Organizers are recognizable via the &ldquo;organizers&rdquo; role in Discord</li>
+                <li>
+                    Reach out to an organizer. Organizers are recognizable via the &ldquo;organizers&rdquo; role in
+                    Discord
+                </li>
             </ul>
 
             <p>

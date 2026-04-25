@@ -1,6 +1,6 @@
 import { ChatBubble } from '@/components/Icons/ChatBubble/ChatBubble';
 import styles from './ChatBubbles.module.scss';
-import { lightBlue, darkBlue } from '@/lib/variables';
+import { darkBlue, lightBlue } from '@/lib/variables';
 
 interface IChatBubbles {
     leftText: string;

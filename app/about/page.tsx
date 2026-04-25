@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
@@ -49,16 +49,13 @@ export default function About() {
             <h1>About Us</h1>
             <IconSet icons={teamIcons} />
             <p className={styles.groupDescription}>
-                We are a volunteer group of designers and developers
-                out of Springfield, Missouri. We provide a forum for
-                mobile, web, and application designers and developers
-                to tackle technical problems for our community.
+                We are a volunteer group of designers and developers out of Springfield, Missouri. We provide a forum
+                for mobile, web, and application designers and developers to tackle technical problems for our
+                community.
             </p>
             <p className={styles.groupDescription}>
-                Many organizations lack the necessary funding to
-                produce quality technical solutions for their problems.
-                This group aims to close that gap by bringing people
-                together to work on these projects weekly 
+                Many organizations lack the necessary funding to produce quality technical solutions for their problems.
+                This group aims to close that gap by bringing people together to work on these projects weekly
             </p>
             <Gallery images={images} />
         </div>

@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Button } from '@/components/atoms/Button/Button';
 import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
 import { CardSet } from '@/components/Blocks/CardSet/CardSet';
@@ -22,16 +22,13 @@ export default function Home() {
         <div className={styles.heroText}>
             <h1>Open SGF</h1>
             <p className={styles.groupDescription}>
-                We are a volunteer group of designers and developers
-                out of Springfield, Missouri. We provide a forum for
-                mobile, web, and application designers and developers
-                to tackle technical problems for our community.
+                We are a volunteer group of designers and developers out of Springfield, Missouri. We provide a forum
+                for mobile, web, and application designers and developers to tackle technical problems for our
+                community.
             </p>
             <p className={styles.groupDescription}>
-                Many organizations lack the necessary funding to
-                produce quality technical solutions for their problems.
-                This group aims to close that gap by bringing people
-                together to work on these projects weekly 
+                Many organizations lack the necessary funding to produce quality technical solutions for their problems.
+                This group aims to close that gap by bringing people together to work on these projects weekly
             </p>
         </div>
     );

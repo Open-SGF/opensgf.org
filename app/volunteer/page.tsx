@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
@@ -29,16 +29,13 @@ export default async function Volunteer() {
         <div className={styles.heroText}>
             <h1>Volunteer With Us</h1>
             <p className={styles.groupDescription}>
-                We are a volunteer group of designers and developers
-                out of Springfield, Missouri. We provide a forum for
-                mobile, web, and application designers and developers
-                to tackle technical problems for our community.
+                We are a volunteer group of designers and developers out of Springfield, Missouri. We provide a forum
+                for mobile, web, and application designers and developers to tackle technical problems for our
+                community.
             </p>
             <p className={styles.groupDescription}>
-                Many organizations lack the necessary funding to
-                produce quality technical solutions for their problems.
-                This group aims to close that gap by bringing people
-                together to work on these projects weekly 
+                Many organizations lack the necessary funding to produce quality technical solutions for their problems.
+                This group aims to close that gap by bringing people together to work on these projects weekly
             </p>
             <h2 className="p">Where We Could Use Help</h2>
             <ul>

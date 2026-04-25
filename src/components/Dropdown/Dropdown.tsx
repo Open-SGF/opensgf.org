@@ -8,7 +8,7 @@ type IDropdown = {
     children: any;
     heading: React.ReactNode;
     forceClosed?: boolean;
-}
+};
 
 export function Dropdown({ children, heading, forceClosed = false }: IDropdown): React.ReactNode {
     const [show, setShow] = useState(false);

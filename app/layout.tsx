@@ -9,9 +9,7 @@ export const metadata: Metadata = {
         template: '%s | Open SGF',
     },
     icons: {
-        apple: [
-            { sizes: '180x180', url: '/images/favicons/apple-touch-icon.png' },
-        ],
+        apple: [{ sizes: '180x180', url: '/images/favicons/apple-touch-icon.png' }],
         icon: [
             { sizes: '32x32', url: '/images/favicons/favicon-32x32.png' },
             { sizes: '16x16', url: '/images/favicons/favicon-16x16.png' },
@@ -23,18 +21,12 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <body>
                 <Layout>
-                    <PlausibleProvider src="https://plausible.sgf.dev/js/script.js">
-                        {children}
-                    </PlausibleProvider>
+                    <PlausibleProvider src="https://plausible.sgf.dev/js/script.js">{children}</PlausibleProvider>
                 </Layout>
             </body>
         </html>

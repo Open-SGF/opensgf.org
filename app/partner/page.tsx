@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { ContactForm } from '@/components/Blocks/ContactForm/ContactForm';
 import { Sponsors } from '@/components/Blocks/Sponsors/Sponsors';
 import styles from '@/styles/pages/Partner.module.scss';
