@@ -26,7 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <body>
                 <Layout>
-                    <PlausibleProvider src="https://plausible.sgf.dev/js/script.js">{children}</PlausibleProvider>
+                    <PlausibleProvider src="https://plausible.sgf.dev/js/pa-Dvvm40pDUog5XbUjFVk2F.js">
+                        {children}
+                    </PlausibleProvider>
                 </Layout>
             </body>
         </html>
