@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
 import { Button } from '@/components/atoms/Button/Button';
 import { Card } from '@/components/Blocks/CardSet/components/Card/Card';
 import { CardSet } from '@/components/Blocks/CardSet/CardSet';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
 import { ImageTextLink } from '@/components/Blocks/ImageTextLink/ImageTextLink';
+import type { Metadata } from 'next';
+import { projects } from '@/utils/projectData';
 import { Sponsors } from '@/components/Blocks/Sponsors/Sponsors';
 import { Stats } from '@/components/Blocks/Stats/Stats';
-import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Home.module.scss';
 
 export const metadata: Metadata = {

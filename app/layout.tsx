@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
 import '@/styles/globals.scss';
 import { Layout } from '@/components/Layout';
+import type { Metadata } from 'next';
 import PlausibleProvider from 'next-plausible';
 
 export const metadata: Metadata = {

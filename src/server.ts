@@ -1,6 +1,6 @@
-import { Octokit } from 'octokit';
-import type { MeetupEvent } from '@/components/Blocks/UpcomingEvents/components/EventCard/EventCard';
 import type { Contributor } from '@/utils/api';
+import type { MeetupEvent } from '@/components/Blocks/UpcomingEvents/components/EventCard/EventCard';
+import { Octokit } from 'octokit';
 
 export async function getMeetupEvents(): Promise<MeetupEvent[]> {
     const variables = { groupId: 34547654 };

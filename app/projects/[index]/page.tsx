@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import { ChatBubbles } from '@/components/Blocks/ChatBubbles/ChatBubbles';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
+import { getProjectContributors } from '@/server';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { ProjectDetails } from '@/components/Blocks/ProjectDetails/ProjectDetails';
-import { getProjectContributors } from '@/server';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/Project.module.scss';
 

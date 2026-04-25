@@ -2,13 +2,13 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import { Accordion } from '@/components/Accordion/Accordion';
+import { breakpointSmall } from '@/lib/variables';
 import { Button } from '@/components/atoms/Button/Button';
 import { Dropdown } from '@/components/Dropdown/Dropdown';
 import { Hamburger } from '@/components/Icons/Hamburger/Hamburger';
 import { Logo } from '@/components/Icons/Logo/Logo';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Navbar.module.scss';
-import { breakpointSmall } from '@/lib/variables';
 
 const useMediaQuery = (width: string) => {
     const [targetReached, setTargetReached] = useState(() => {

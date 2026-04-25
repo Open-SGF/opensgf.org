@@ -1,12 +1,11 @@
-import type { Metadata } from 'next';
+import { getMeetupEvents } from '@/server';
 import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
-import type { MeetupEvent } from '@/components/Blocks/UpcomingEvents/components/EventCard/EventCard';
-import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
-import { getMeetupEvents } from '@/server';
+import type { Metadata } from 'next';
 import styles from '@/styles/pages/Volunteer.module.scss';
+import { UpcomingEvents } from '@/components/Blocks/UpcomingEvents/UpcomingEvents';
 
 export const metadata: Metadata = {
     title: 'Volunteer | Open SGF',

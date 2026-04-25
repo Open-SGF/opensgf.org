@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
 import { Gallery } from '@/components/Blocks/Gallery/Gallery';
 import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
+import type { Metadata } from 'next';
 import { projects } from '@/utils/projectData';
 import styles from '@/styles/pages/About.module.scss';
 

@@ -1,8 +1,8 @@
 import dayjs, { extend } from 'dayjs';
+import advancedFormat from 'dayjs/plugin/advancedFormat';
 import Image from 'next/image';
 import React from 'react';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
-import advancedFormat from 'dayjs/plugin/advancedFormat';
 import styles from './EventCard.module.scss';
 
 export type MeetupEvent = {

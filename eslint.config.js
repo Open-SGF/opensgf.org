@@ -43,7 +43,7 @@ const config = [
             'react/hook-use-state': 'error',
             'react-hooks/rules-of-hooks': 'error',
             'react-hooks/exhaustive-deps': 'warn',
-            'sort-imports': 'error',
+            'sort-imports': ['error', { ignoreCase: true }],
         },
     },
     {
