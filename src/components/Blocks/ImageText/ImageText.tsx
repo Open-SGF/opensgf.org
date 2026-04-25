@@ -11,7 +11,12 @@ interface IImageText {
 }
 
 const useMediaQuery = (width: number) => {
-    const [targetReached, setTargetReached] = useState(false);
+    const [targetReached, setTargetReached] = useState(() => {
+        if (typeof window === 'undefined') {
+            return false;
+        }
+        return window.matchMedia(`(max-width: ${width}px)`).matches;
+    });
 
     const updateTarget = useCallback((e: any) => {
         if (e.matches) {
@@ -24,11 +29,6 @@ const useMediaQuery = (width: number) => {
     useEffect(() => {
         const media = window.matchMedia(`(max-width: ${width}px)`);
         media.addEventListener('change', updateTarget);
-
-        if (media.matches) {
-            setTargetReached(true);
-        }
-
         return () => media.removeEventListener('change', updateTarget);
     }, [updateTarget, width]);
 

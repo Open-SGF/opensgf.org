@@ -1,5 +1,5 @@
 import type { GetServerSideProps } from 'next';
-import type { Icon } from '@/components/Blocks/IconSet/components/Icon';
+import type { IconData } from '@/components/Blocks/IconSet/components/Icon';
 import { IconSet } from '@/components/Blocks/IconSet/IconSet';
 import Image from 'next/image';
 import { ImageText } from '@/components/Blocks/ImageText/ImageText';
@@ -44,7 +44,7 @@ export default function volunteer({ events }: { events: MeetupEvent[] }): JSX.El
         </div>
     );
 
-    const socialIcons: Icon[] = [
+    const socialIcons: IconData[] = [
         {
             image: {
                 url: 'https://www.meetup.com/open-sgf/',

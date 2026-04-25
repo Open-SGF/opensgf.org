@@ -23,9 +23,7 @@ export function Footer(): JSX.Element {
         },
     ];
 
-    type IconElementGenerator = (iconDataArray: IconData[]) => JSX.Element[];
-
-    const socialIconElementGenerator: IconElementGenerator = (iconDataArray) => {
+    const socialIconElementGenerator = (iconDataArray: IconData[]): JSX.Element[] => {
         return iconDataArray.map(({ url, src, alt }) => {
             return (
                 <div className={styles.imageWrapper} key={url}>

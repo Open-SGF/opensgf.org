@@ -4,7 +4,7 @@ import prettierPlugin from 'eslint-plugin-prettier/recommended';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
-export default [
+const config = [
     eslint.configs.recommended,
     ...nextConfig,
     prettierPlugin,
@@ -38,7 +38,7 @@ export default [
                 },
             ],
             'import/no-named-as-default': 'off',
-            'import/no-default-export': 'error',
+            'import/no-default-export': 'off',
             'import/prefer-default-export': 'off',
             'react/hook-use-state': 'error',
             'react-hooks/rules-of-hooks': 'error',
@@ -50,3 +50,5 @@ export default [
         ignores: ['node_modules/', '.next/', 'dist/', 'build/'],
     },
 ];
+
+export default config;

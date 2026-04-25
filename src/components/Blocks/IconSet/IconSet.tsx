@@ -1,8 +1,8 @@
-import { Icon } from '@/components/Blocks/IconSet/components/Icon';
+import { Icon, type IconData } from '@/components/Blocks/IconSet/components/Icon';
 import styles from './IconSet.module.scss';
 
 type IIconSet = {
-    icons: Icon[];
+    icons: IconData[];
 };
 
 export function IconSet({ icons }: IIconSet): JSX.Element {

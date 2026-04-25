@@ -32,11 +32,11 @@ export async function getProjectContributors(projectRepoName: string): Promise<C
 
         return contributors.map(({ total, author }: { total: unknown; author: any }): Contributor => {
             return {
-                total: Number(total) ?? 0,
-                id: String(author.id) ?? '',
-                login: String(author.login) ?? '',
-                avatar_url: String(author.avatar_url) ?? '',
-                html_url: String(author.html_url) ?? '',
+                total: typeof total === 'number' ? total : Number(total) || 0,
+                id: author?.id != null ? String(author.id) : String(author?.id) || '',
+                login: author?.login != null ? String(author.login) : String(author?.login) || '',
+                avatar_url: author?.avatar_url != null ? String(author.avatar_url) : String(author?.avatar_url) || '',
+                html_url: author?.html_url != null ? String(author.html_url) : String(author?.html_url) || '',
             };
         });
     } catch (e) {

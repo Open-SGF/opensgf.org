@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Icon.module.scss';
 
-export type Icon = {
+export type IconData = {
     image: {
         url?: string;
         src: string;
@@ -13,7 +13,7 @@ export type Icon = {
 };
 
 type IIcon = {
-    icon: Icon;
+    icon: IconData;
 };
 
 export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): JSX.Element {
@@ -21,9 +21,7 @@ export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon
     const titleElement: JSX.Element = <figcaption className={styles.title}>{title}</figcaption>;
     const subtitleElement: JSX.Element = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
 
-    type WrapElementInLink = (element: JSX.Element, url: string) => JSX.Element;
-
-    const wrapInLink: WrapElementInLink = (element, url) => {
+    const wrapInLink = (element: JSX.Element, url: string): JSX.Element => {
         return <SmartLink to={url}>{element}</SmartLink>;
     };
 

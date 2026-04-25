@@ -10,7 +10,12 @@ import styles from './Navbar.module.scss';
 import variables from '@/styles/utils/variables.module.scss';
 
 const useMediaQuery = (width: string) => {
-    const [targetReached, setTargetReached] = useState(false);
+    const [targetReached, setTargetReached] = useState(() => {
+        if (typeof window === 'undefined') {
+            return false;
+        }
+        return window.matchMedia(`(max-width: ${width}px)`).matches;
+    });
 
     const updateTarget = useCallback((e: any) => {
         if (e.matches) {
@@ -23,12 +28,6 @@ const useMediaQuery = (width: string) => {
     useEffect(() => {
         const media = window.matchMedia(`(max-width: ${width}px)`);
         media.addListener(updateTarget);
-
-        // Check on mount (callback is not called until a change occurs)
-        if (media.matches) {
-            setTargetReached(true);
-        }
-
         return () => media.removeListener(updateTarget);
     }, [updateTarget, width]);
 
