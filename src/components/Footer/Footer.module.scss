@@ -1,20 +1,13 @@
  @use '@/styles/utils/all' as *;
 
-.pageContainer {
-    margin-top: auto;
-}
-
 .footer {
-    flex: 1;
     display: flex;
     gap: 20px;
     border-top: 1px solid #eaeaea;
     justify-content: space-between;
     align-items: center;
 
-    height: 216px;
-    max-height: 30vh;
-    width: 100vw;
+    width: 100%;
     padding: 5.2%;
     background-color: $dark-blue;
 
