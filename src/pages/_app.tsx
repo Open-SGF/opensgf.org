@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 <link rel="manifest" href="/site.webmanifest" />
                 <title>Open SGF</title>
             </Head>
-            <PlausibleProvider domain="opensgf.org" customDomain="https://plausible.sgf.dev">
+            <PlausibleProvider src="https://plausible.sgf.dev/js/script.js">
                 <Component {...pageProps} />
             </PlausibleProvider>
         </Layout>
