@@ -1,8 +1,8 @@
 import dayjs, { extend } from 'dayjs';
+import advancedFormat from 'dayjs/plugin/advancedFormat';
 import Image from 'next/image';
 import React from 'react';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
-import advancedFormat from 'dayjs/plugin/advancedFormat';
 import styles from './EventCard.module.scss';
 
 export type MeetupEvent = {
@@ -20,7 +20,7 @@ interface IEventCard {
 
 export function EventCard({
     event: { imageUrl, imageAlt, title, dateTime, description, eventUrl },
-}: IEventCard): JSX.Element {
+}: IEventCard): React.ReactNode {
     extend(advancedFormat);
 
     const timeReadable = dayjs(dateTime).format('dddd, MMMM Do [at] h:mm a');

@@ -6,7 +6,7 @@ interface IIconCallout {
     text: string;
 }
 
-export function IconCallout({ link, text }: IIconCallout): JSX.Element {
+export function IconCallout({ link, text }: IIconCallout): React.ReactNode {
     return (
         <div className={styles.container}>
             <SmartLink to={link}>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './Sponsors.module.scss';
 
-export function Sponsors(): JSX.Element {
+export function Sponsors(): React.ReactNode {
     const sponsors = [
         {
             src: '/images/sponsors/eFactory-sponsor-edit-3.png',

@@ -2,28 +2,26 @@ import Image from 'next/image';
 import { SmartLink } from '@/components/SmartLink/SmartLink';
 import styles from './Icon.module.scss';
 
-export type Icon = {
+export type IconData = {
     image: {
         url?: string;
         src: string;
         alt: string;
     };
-    title?: JSX.Element | boolean;
-    subtitle?: JSX.Element | boolean;
+    title?: React.ReactNode | boolean;
+    subtitle?: React.ReactNode | boolean;
 };
 
 type IIcon = {
-    icon: Icon;
+    icon: IconData;
 };
 
-export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): JSX.Element {
-    const imageElement: JSX.Element = <Image src={image.src} alt={image.alt} fill />;
-    const titleElement: JSX.Element = <figcaption className={styles.title}>{title}</figcaption>;
-    const subtitleElement: JSX.Element = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
+export function Icon({ icon: { image, title = <></>, subtitle = false } }: IIcon): React.ReactNode {
+    const imageElement: React.ReactNode = <Image src={image.src} alt={image.alt} fill />;
+    const titleElement: React.ReactNode = <figcaption className={styles.title}>{title}</figcaption>;
+    const subtitleElement: React.ReactNode = <figcaption className={styles.subtitle}>{subtitle}</figcaption>;
 
-    type WrapElementInLink = (element: JSX.Element, url: string) => JSX.Element;
-
-    const wrapInLink: WrapElementInLink = (element, url) => {
+    const wrapInLink = (element: React.ReactNode, url: string): React.ReactNode => {
         return <SmartLink to={url}>{element}</SmartLink>;
     };
 

@@ -1,4 +1,4 @@
-@import '@/styles/utils/all';
+@use '@/styles/utils/all' as *;
 
 .container {
     position: relative;

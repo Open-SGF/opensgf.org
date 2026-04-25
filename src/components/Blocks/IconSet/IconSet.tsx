@@ -1,11 +1,11 @@
-import { Icon } from '@/components/Blocks/IconSet/components/Icon';
+import { Icon, type IconData } from '@/components/Blocks/IconSet/components/Icon';
 import styles from './IconSet.module.scss';
 
 type IIconSet = {
-    icons: Icon[];
+    icons: IconData[];
 };
 
-export function IconSet({ icons }: IIconSet): JSX.Element {
+export function IconSet({ icons }: IIconSet): React.ReactNode {
     return (
         <div className={styles.container}>
             <div className={styles.iconWrapper}>

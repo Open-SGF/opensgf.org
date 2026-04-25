@@ -1,16 +1,6 @@
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
-export default function NotFound(): JSX.Element {
-    const router = useRouter();
-
-    useEffect(() => {
-        setTimeout(() => {
-            router.push('/');
-        }, 3000);
-    });
-
+export default function NotFound() {
     return (
         <div className="not-found">
             <h1>Ooops...</h1>

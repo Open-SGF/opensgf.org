@@ -7,7 +7,7 @@ interface IUpcomingEvents {
     events: MeetupEvent[];
 }
 
-export function UpcomingEvents({ events }: IUpcomingEvents): JSX.Element {
+export function UpcomingEvents({ events }: IUpcomingEvents): React.ReactNode {
     if (!events || events.length < 1) {
         return <></>;
     }
