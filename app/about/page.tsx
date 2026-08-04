@@ -26,7 +26,7 @@ export default function About() {
             },
             title: <figcaption className={'h3 ' + styles.name}>Kayla Paden</figcaption>,
             subtitle: <figcaption className={'h6 ' + styles.position}>Co-Organizer</figcaption>,
-        }
+        },
     ];
 
     const images = [
