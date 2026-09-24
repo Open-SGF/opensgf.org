@@ -1,0 +1,20 @@
+version: 2
+updates:
+    - package-ecosystem: npm
+      directory: /
+      schedule:
+          interval: monthly
+      # typescript-eslint requires TypeScript <6.1.
+      ignore:
+          - dependency-name: typescript
+            versions: ['>=6.1.0']
+      groups:
+          npm:
+              patterns: ['*']
+    - package-ecosystem: github-actions
+      directory: /
+      schedule:
+          interval: monthly
+      groups:
+          actions:
+              patterns: ['*']
