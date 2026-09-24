@@ -1,8 +1,7 @@
 import eslint from '@eslint/js';
 import nextConfig from 'eslint-config-next';
 import prettierPlugin from 'eslint-plugin-prettier/recommended';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import { parser as tsParser, plugin as tsPlugin } from 'typescript-eslint';
 
 const config = [
     eslint.configs.recommended,
