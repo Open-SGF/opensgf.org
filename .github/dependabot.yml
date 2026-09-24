@@ -4,12 +4,8 @@ updates:
       directory: /
       schedule:
           interval: monthly
-      # Next.js lint plugins require ESLint 9; typescript-eslint requires TypeScript <6.1.
+      # typescript-eslint requires TypeScript <6.1.
       ignore:
-          - dependency-name: eslint
-            update-types: ['version-update:semver-major']
-          - dependency-name: '@eslint/js'
-            update-types: ['version-update:semver-major']
           - dependency-name: typescript
             versions: ['>=6.1.0']
       groups:

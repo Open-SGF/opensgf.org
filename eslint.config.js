@@ -1,3 +1,4 @@
+import { fixupConfigRules } from '@eslint/compat';
 import eslint from '@eslint/js';
 import nextConfig from 'eslint-config-next';
 import prettierPlugin from 'eslint-plugin-prettier/recommended';
@@ -6,6 +7,14 @@ import { parser as tsParser, plugin as tsPlugin } from 'typescript-eslint';
 const config = [
     eslint.configs.recommended,
     ...nextConfig,
+    {
+        // Next.js's bundled Babel parser lacks ESLint 10's scope-manager API.
+        files: ['**/*.{js,jsx,mjs,cjs}'],
+        languageOptions: {
+            parser: tsParser,
+            parserOptions: { ecmaFeatures: { jsx: true } },
+        },
+    },
     prettierPlugin,
     {
         files: ['**/*.ts', '**/*.tsx'],
@@ -50,4 +59,6 @@ const config = [
     },
 ];
 
-export default config;
+// Next.js still bundles React, import, and accessibility plugins that use pre-ESLint 10 APIs.
+// The version-scoped peer overrides in package.json accompany this compatibility wrapper.
+export default fixupConfigRules(config);
